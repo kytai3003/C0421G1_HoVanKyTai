@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>calculator</title>
+</head>
+<body>
+<h2>Calculator</h2>
+<div>
+<input type="text" id = "input1">
+<input type="text" id = "input2">
+</div>
+<div><br>
+<input type="button" onclick="addd()" value="Addition(+)">
+<input type="button" onclick="minn()" value="Subtraction(-)">
+<input type="button" onclick="mull()" value="Multiplication(x)">
+<input type="button" onclick="divv()" value="Division(/)">
+</div>
+<p id="ketqua"></p>
+</body>
+<script>
+    function addd() {
+        var a = parseFloat(document.getElementById("input1").value);
+        var b = parseFloat(document.getElementById("input2").value);
+        var c = a+b;
+    document.getElementById("ketqua").innerHTML = ("Result Addition: " + c)
+    }
+    function minn() {
+        var a = parseFloat(document.getElementById("input1").value);
+        var b = parseFloat(document.getElementById("input2").value);
+        var c = a-b;
+        document.getElementById("ketqua").innerHTML = ("Result Subtraction: " + c)
+    }
+    function mull() {
+        var a = parseFloat(document.getElementById("input1").value);
+        var b = parseFloat(document.getElementById("input2").value);
+        var c = a*b;
+        document.getElementById("ketqua").innerHTML = ("Result Multiplication: " + c)
+    }
+    function divv() {
+        var a = parseFloat(document.getElementById("input1").value);
+        var b = parseFloat(document.getElementById("input2").value);
+        var c = a/b;
+        document.getElementById("ketqua").innerHTML = ("Result Division: " + c)
+    }
+</script>
+</html>

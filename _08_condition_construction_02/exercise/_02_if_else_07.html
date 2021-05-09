@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+</body>
+<script>
+    confirm("Phương trình có dạng: a(x^2) + bx + c = 0");
+    a = parseFloat(prompt("Nhập hệ số a: "));
+    b = parseFloat(prompt("Nhập hệ số b: "));
+    c = parseFloat(prompt("Nhập hệ số c: "));
+    m = Math.pow(b,2) - (4*a*c);
+    let x1, x2;
+    if (a==0) {
+        x1 = -c / b;
+        alert("Nghiệm PT: " + x1)
+    }   else if (a+b+c ==0) {
+        x1 = 1;
+        x2 = c/a;
+        alert("Nghiệm PT: " +x1 + ", " +x2)
+    }   else if (m>=0) {
+            if (m>0) {
+                x1= (-b-Math.sqrt(m))/(2*a);
+                x2= (-b+Math.sqrt(m))/(2*a);
+                alert("Nghiệm PT: " +x1 + ", " +x2);
+            } else {
+                x1 = -b/2*a;
+                ("PT có 2 nghiệm kép: " +x1);
+            }
+    }   else {
+        alert("PT vô nghiệm");
+    }
+
+</script>
+</html>

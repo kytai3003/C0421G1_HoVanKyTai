@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+</body>
+<script>
+    // Công thức tính lãi suất theo dư nợ giảm dần:
+    // Tiền gốc hàng tháng = Số tiền vay/Số tháng vay
+    // Tiền lãi tháng đầu = Số tiền vay * Lãi suất vay theo tháng
+    // Tiền lãi các tháng tiếp theo = Số tiền gốc còn lại * Lãi suất vay
+    // Vd: lãi suất 15%/năm, kì hạn tối đa 12 tháng
+    let amount = parseInt(prompt("Nhập số tiền vay: "))
+    let month = parseInt(prompt("Nhập tháng muốn xem lãi suất "))
+    let rate;
+    let monthpay = amount/12;
+    if (0<month && month <=12) {
+        switch (month) {
+            case 1:
+                rate = (amount * 0.15) / 12;
+                break;
+            case 2:
+                rate = (amount - monthpay) * 0.15 / 12;
+                break;
+            case 3:
+                rate = (amount - 2 * monthpay) * 0.15 / 12;
+                break;
+            case 4:
+                rate = (amount - 3 * monthpay) * 0.15 / 12;
+                break;
+            case 5:
+                rate = (amount - 4 * monthpay) * 0.15 / 12;
+                break;
+            case 6:
+                rate = (amount - 5 * monthpay) * 0.15 / 12;
+                break;
+            case 7:
+                rate = (amount - 6 * monthpay) * 0.15 / 12;
+                break;
+            case 8:
+                rate = (amount - 7 * monthpay) * 0.15 / 12;
+                break;
+            case 9:
+                rate = (amount - 8 * monthpay) * 0.15 / 12;
+                break;
+            case 10:
+                rate = (amount - 9 * monthpay) * 0.15 / 12;
+                break;
+            case 11:
+                rate = (amount - 10 * monthpay) * 0.15 / 12;
+                break;
+            case 12:
+                rate = (amount - 11 * monthpay) * 0.15 / 12;
+                break;
+        }
+    } else {
+        alert("Nhập từ 1 tới 12")
+    }
+    console.log(rate + " VNĐ");
+</script>
+</html>

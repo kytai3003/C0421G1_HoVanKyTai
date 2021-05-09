@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>if_else</title>
+</head>
+<body>
+</body>
+<script>
+    let a  = parseInt(prompt("Nhập điểm kiểm tra miệng"));
+    let b  = parseInt(prompt("Nhập điểm kiểm tra 1 tiết"));
+    let c  = parseInt(prompt("Nhập điểm kiểm tra học kỳ"));
+    let result = (a + b*2 + c*3)/6;
+    if (result>=4.5) {
+        if (result>=6) {
+            if (result>=8) {
+                if (result>=9) {
+                    alert("Loại Xuất sắc");
+                } else {
+                    alert("Loại Giỏi");
+                }
+            } else {
+                alert("Loại Khá");
+            }
+        } else {
+            alert("Loại Trung bình");
+        }
+    } else {
+        alert("Loại Yếu");
+    }
+</script>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+</body>
+<script>
+    confirm("Phương trình có dạng: ax + b =0");
+    a = parseFloat(prompt("Nhập hệ số a: "));
+    b = parseFloat(prompt("Nhập hệ số b: "));
+    let x;
+    if (a==0) {
+        alert("PT vô nghiệm");
+    } else if (b==0) {
+        alert("PT vô số nghiệm");
+    }   else {
+        x = -b/a;
+        alert("X = " +x);
+    }
+</script>
+</html>

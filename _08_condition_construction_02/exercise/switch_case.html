@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<form>
+    <input type="number" id="number" placeholder="input here" name="month">
+    <input type="button" value="Tính số ngày" onclick="getresult()"><br>
+    <p id="result"></p>
+</form>
+</body>
+<script>
+    function getresult() {
+        var a = document.getElementById("number").value;
+        var c;
+        switch (a) {
+            case '1':
+            case '3':
+            case '5':
+            case '7':
+            case '8':
+            case '10':
+            case '12': {
+                c = "có 31 ngày";
+                break;
+            }
+            case '2': {
+                c = "có 28 hoặc 29 ngày";
+                break;
+            }
+            case '4':
+            case '6':
+            case '9':
+            case '11': {
+                c= "có 30 ngày";
+                break;
+            }
+            default:
+                c = "không có thực";
+        }
+        document.getElementById("result").innerText = "Tháng " + a + " "+ c;
+    }
+
+
+</script>
+</html>

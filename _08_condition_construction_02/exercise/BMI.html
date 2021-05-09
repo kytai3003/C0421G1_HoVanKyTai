@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>switch_case</title>
+</head>
+<body>
+</body>
+<script>
+    let weight = parseFloat(prompt("Nhập cân nặng đơn vi kg"));
+    let height = parseFloat(prompt("Nhập chiều cao đơn vi m"));
+    let bmi = weight / ( height ^ 2)
+    if (bmi >= 18.5) {
+        if (bmi>=25) {
+            if  (bmi>30) {
+                alert("Obese");
+            }  else {
+                alert("Overweight");
+            }
+        } else {
+            alert("Normal");
+        }
+    }   else {
+        alert("Underweight");
+    }
+
+</script>
+</html>

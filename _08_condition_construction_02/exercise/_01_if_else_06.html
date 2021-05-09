@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>if_else</title>
+</head>
+<body>
+</body>
+<script>
+    let amount = parseInt(prompt("Nhập doanh số của bạn(VNĐ)"));
+    let commission;
+    if (amount >= 15000000) {
+        commission = amount*0.1;
+        alert("% hoa hồng của bạn là: " + commission + " VNĐ");
+    }   else if (amount >= 12000000) {
+        commission = amount*0.05;
+        alert("% hoa hồng của bạn là: " + commission + " VNĐ");
+    }       else {
+        commission = amount*0.02;
+        alert("% hoa hồng của bạn là: " + commission + " VNĐ");
+    }
+
+</script>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div>
+    <p id="result"></p>
+</div>
+</body>
+<script>
+// 30% thuế thu nhập nếu lương là 15 triệu
+// 20% thuế thu nhập nếu lương từ 7 đến 15 triệu
+// 10% thuế thu nhập nếu lương dưới 7 triệu
+    let a = parseInt(prompt("Nhập mức lương: "));
+    let amount;
+    let tax;
+    if (a>=15000000) {
+        tax = a*0.3;
+        amount = a - tax;
+        alert("Thuế phải nộp là: " + tax + " đồng" + " /Thực nhận: " + amount + " đồng");
+    } else if (a>=7000000) {
+        tax = a*0.2;
+        amount = a - tax;
+        alert("Thuế phải nộp là: " + tax + " đồng" + " /Thực nhận: " + amount + " đồng");
+    }   else {
+        tax = a*0.1;
+        amount = a - tax;
+        alert("Thuế phải nộp là: " + tax + " đồng" + " /Thực nhận: " + amount + " đồng");
+    }
+</script>
+</html>

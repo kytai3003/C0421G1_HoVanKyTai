@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>if_else</title>
+</head>
+<body>
+</body>
+<script>
+    // Phí thuê bao bắt buộc là 25 nghìn.
+    // 600 đồng cho mỗi gọi của 50 phút đầu tiên.
+    // 400 đồng cho mỗi phút gọi của 150 phút tiếp theo.
+    // 200 đồng cho bất kỳ mỗi phút nào sau 200 phút đầu tiên.
+    let minute = parseInt(prompt("Nhập số phút đã gọi: "));
+    let charge;
+    if (minute<=50) {
+        charge = (minute*600) + 25000;
+        alert("Tổng cước phí là: " + charge);
+    } else if (minute<=200) {
+        charge = (minute - 50)*400 + 55000;
+        alert("Tổng cước phí là: " + charge);
+    }   else {
+        charge = (minute - 200)*200 + 115000;
+        alert("Tổng cước phí là: " + charge);
+    }
+</script>
+</html>

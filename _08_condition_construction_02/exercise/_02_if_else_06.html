@@ -13,12 +13,15 @@
     b = parseFloat(prompt("Nhập hệ số b: "));
     let x;
     if (a==0) {
-        alert("PT vô nghiệm");
-    } else if (b==0) {
-        alert("PT vô số nghiệm");
-    }   else {
-        x = -b/a;
-        alert("X = " +x);
+        if (b==0) {
+            alert("PT có vô số nghiệm");
+        } else {
+            alert("PT vô nghiệm");
+        }
+    } else {
+        x=-b/a;
+        alert("x = " +x);
     }
+
 </script>
 </html>

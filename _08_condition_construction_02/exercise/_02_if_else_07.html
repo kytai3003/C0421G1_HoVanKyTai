@@ -15,24 +15,60 @@
     m = Math.pow(b,2) - (4*a*c);
     let x1, x2;
     if (a==0) {
-        x1 = -c / b;
-        alert("Nghiệm PT: " + x1)
-    }   else if (a+b+c ==0) {
-        x1 = 1;
-        x2 = c/a;
-        alert("Nghiệm PT: " +x1 + ", " +x2)
-    }   else if (m>=0) {
-            if (m>0) {
-                x1= (-b-Math.sqrt(m))/(2*a);
-                x2= (-b+Math.sqrt(m))/(2*a);
-                alert("Nghiệm PT: " +x1 + ", " +x2);
+        if (b == 0) {
+            if (c == 0) {
+                alert("Phương trình có vô số nghiệm");
             } else {
-                x1 = -b/2*a;
-                ("PT có 2 nghiệm kép: " +x1);
+                alert("Phương trình vô nghiệm");
             }
-    }   else {
-        alert("PT vô nghiệm");
-    }
+        } else if (c==0) {
+            alert("X = 0");
+        }   else {
+            x1 = -c/b;
+            alert("X = " + x1);
+        }
+    }   else if (b==0) {
+                if (c==0) {
+                    alert("X = 0");
+                }    else {
+                    x1 = Math.sqrt(c/a);
+                    alert("X = "+x1 + ", X2 = -"+x1)
+                }
+    }   else if (c==0) {
+        x1 = 0;
+        x2 = -b/a;
+        alert("X1 = " + x1 +", X2 = " +x2)
+    }   else if (m>0) {
+            m = Math.pow(b,2) - (4*a*c);
+            x1= (-b-Math.sqrt(m))/(2*a);
+            x2= (-b+Math.sqrt(m))/(2*a);
+            alert("Nghiệm PT: " +x1 + ", " +x2);
+        }   else if (m=0) {
+            x1 = -b/2*a;
+            ("PT có 2 nghiệm kép: " +x1);
+    }       else
+        {
+            alert("PT vô nghiệm");
+        }
+    // if (a==0) {
+    //     x1 = -c / b;
+    //     alert("Nghiệm PT: " + x1)
+    // }   else if (a+b+c ==0) {
+    //     x1 = 1;
+    //     x2 = c/a;
+    //     alert("Nghiệm PT: " +x1 + ", " +x2)
+    // }   else if (m>=0) {
+    //         if (m>0) {
+    //             x1= (-b-Math.sqrt(m))/(2*a);
+    //             x2= (-b+Math.sqrt(m))/(2*a);
+    //             alert("Nghiệm PT: " +x1 + ", " +x2);
+    //         } else {
+    //             x1 = -b/2*a;
+    //             ("PT có 2 nghiệm kép: " +x1);
+    //         }
+    // }   else {
+    //     alert("PT vô nghiệm");
+    // }
 
 </script>
 </html>

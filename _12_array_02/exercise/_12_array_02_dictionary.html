@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="input">
+<input type="button" value="Dịch" onclick="translator()">
+<p id = "result"></p>
+</body>
+<script>
+    //Từ điển
+    let vn = ["chó", "mèo" , 'gà', "chuột"];
+    let en = ["dog" , "cat" , "chicken" , "mouse"];
+
+    function translator() {
+        let a = document.getElementById("input").value;
+        for (i=0; i<vn.length;i++) {
+            if (a == en[i]) {
+                document.getElementById("result").innerText = vn[i];
+                break;
+            } else {
+                document.getElementById("result").innerText = "Not available";
+            }
+        }
+    }
+</script>
+</html>

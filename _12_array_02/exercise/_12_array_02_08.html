@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+<script>
+    // Viết chương trình đếm số nguyên âm trong một chuỗi
+    let x = parseInt(prompt("input size of the array:"))
+    let array = Array(x);
+    let count = 0;
+    for (i=0; i<array.length; i++) {
+        array[i] = parseInt(prompt("input elements: "));
+        if (array[i] < 0) {
+            count++;
+        }
+    }
+    alert(array);
+    alert("Number of negative number: " + count);
+</script>
+</html>

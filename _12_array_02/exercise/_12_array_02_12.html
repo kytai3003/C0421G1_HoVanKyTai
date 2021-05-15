@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    // Viết chương trình khởi tạo/nhập vào 2 mảng số nguyên gồm 10 phần tử,
+    // gọi là mảng a và b. Mảng c là một mảng được khai báo gồm 20 phần tử số nguyên.
+    // Chương trình sẽ lưu các phần tử được nối từ hai mảng b và a vào mảng c. Hiển thị mảng c.
+    let arrayA = Array(10);
+    for (let i=0; i<arrayA.length; i++) {
+        arrayA[i] = prompt("input elements into array A: ")
+    }
+
+    let arrayB = Array(10);
+    for (let j=0; j<arrayB.length; j++) {
+        arrayB[j] = prompt("input elements in to array B: ")
+    }
+
+    let arrayC = arrayA.concat(arrayB);
+    document.write("Array C= " + arrayC + "<br>")
+    document.write("Length = " + arrayC.length)
+</script>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+<script>
+    // Viết chương trình khởi tạo mảng số nguyên gồm 10 phần tử khác nhau.
+    // Chương trình hiển thị ra được phần tử có giá trị lớn nhất trong mảng và vị trí của phần tử đó.
+    let array = Array(10);
+    let max = 0;
+    let index = 0;
+    for (i=0; i<array.length; i++) {
+        array[i] = parseInt(prompt("input elements: "));
+        if (array[i]>max) {
+            max = array[i];
+            index = i;
+        }
+    }
+    alert("max: " + max + " position: " + index );
+</script>
+</html>

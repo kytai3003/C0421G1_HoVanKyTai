@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 style="background-color: lightgoldenrodyellow; text-align: center">Bảng Cửu Chương</h1>
+</body>
+<script>
+    let sout;
+    let i;
+    let j;
+    sout = "<table border='1' width='100%' style='text-align: center; border-collapse: collapse'>"
+    for (i = 1; i<=10 ;i++ ) {
+        sout = sout + "<tr>";
+        for (j = 2 ;j<=9 ;j++) {
+            sout = sout + "<td>"+ j + "x" + i + "=" + i*j + "</td>";
+        }
+        sout = sout + "</tr>";
+        }
+    sout = sout + "</table>";
+    document.write(sout);
+</script>
+</html>

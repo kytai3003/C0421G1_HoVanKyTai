@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+<script>
+    // Viết chương trình khởi tạo mảng số nguyên gồm 10 phần tử.
+    // Chương trình thực hiện tính và hiển thị xem có bao nhiêu số nguyên lớn hơn hoặc bằng 10.
+    let array = Array(10);
+    let index = 0;
+    for (let i=0; i<array.length; i++) {
+        array[i] = prompt("input elements: ")
+        if (array[i]>=10) {
+            index++;
+        }
+    }
+    alert("số phần từ lớn hơn hoặc bằng 10 là: " +index)
+</script>
+</html>

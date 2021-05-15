@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" onclick="letplay()" value="Chơi">
+</body>
+<script>
+    function letplay() {
+        let a = parseInt(prompt("Nhập số bé nhất"))
+        let b = parseInt(prompt("Nhập số lớn nhất"))
+        let c = Math.floor(Math.random() * (b - a + 1)) + a;
+        console.log(c);
+        for (i=0;i<3;i++) {
+            let d=  parseInt(prompt("Nhập số dự đoán:"));
+            if (d===c) {
+                alert("Chính xác!");
+                break;
+            } else if (d<c) {
+                if (i <= 1) {
+                    d = confirm("Bạn đã nhập số bé hơn. Hãy nhập lại!");
+                } else {
+                    d = confirm("Bạn đã nhập sai 3 lần. Trò chơi kết thúc!");
+                }
+            } else {
+                if (i<=1) {
+                    d = confirm("Bạn đã nhập số lớn hơn. Hãy nhập lại!")
+                } else {
+                    d = confirm("Bạn đã nhập sai 3 lần. Trò chơi kết thúc!");
+                }
+            }
+        }
+    }
+
+</script>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h4>Nhập 2 chuỗi muốn so sánh</h4>
+<input type="text" id = "input1" >
+<input type="text" id = "input2" >
+<input type="button" id="compare" value="So sánh" onclick="compString()">
+<p id="result"></p>
+</body>
+<script>
+    // Viết một chương trình nhập vào 2 chuỗi, sau đó kiểm tra xem hai chuỗi có giống nhau hay không.
+    function compString() {
+       let a =  document.getElementById("input1").value;
+       let b =  document.getElementById("input2").value;
+       if (a==b) {
+           document.getElementById("result").innerText = "2 chuỗi giống nhau";
+       } else {
+           document.getElementById("result").innerText = "2 chuỗi khác nhau";
+       }
+    }
+
+</script>
+</html>

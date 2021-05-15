@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h4>Nhập chuỗi muốn đếm:</h4>
+<input type="text" id = "input" >
+<input type="button" id="estimate" value="Đếm" onclick="estiLetter()">
+<p id="result"></p>
+</body>
+<script>
+    // Viết một chương trình để đếm số từ trong một chuỗi
+    function estiLetter() {
+       let a =  document.getElementById("input").value;
+       let b = a.length;
+       document.getElementById("result").innerText = "Sô ký tự là " + b;
+    }
+
+</script>
+</html>

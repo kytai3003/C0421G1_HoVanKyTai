@@ -14,8 +14,13 @@
     // Viết một chương trình để đếm số từ trong một chuỗi
     function estiLetter() {
        let a =  document.getElementById("input").value;
-       let b = a.length;
-       document.getElementById("result").innerText = "Sô ký tự là " + b;
+        let count = 0;
+       for (let i=0; i<a.length;i++) {
+           if (a[i] === ' ') {
+               count++
+           }
+       }
+        document.getElementById("result").innerText = "chuỗi có " + (count +1) + " từ"
     }
 
 </script>

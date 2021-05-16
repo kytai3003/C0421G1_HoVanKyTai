@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+<script>
+    // Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lại con) khi biết số tiền ban đầu,
+    //     số tháng cho vay và lãi suất hàng tháng.
+    // Vd: Lãi suất là 15%/năm (1,25%/tháng) vay 120tr, 12 tháng
+    let a = 0; //Tiền lãi hàng tháng
+    let b = 120000000; //Tiền vay
+    let c = 10000000; // Tiền gốc trả hàng tháng
+    for (i = 1; i<=12; i++) {
+        a = b*0.0125;
+        document.write("Tiền lãi tháng thứ " + i +" là " + a + " đồng" + "<br>")
+        b -= c;
+    }
+</script>
+</html>

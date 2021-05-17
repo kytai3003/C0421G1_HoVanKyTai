@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2> Xóa thẻ HTML </h2>
+<table border="1" style="border-collapse: collapse">
+    <tr id="tr1">
+        <td>1</td>
+        <td>Tiêu đề thứ nhất</td>
+        <td><input type="button" onclick="delete1()" value="Delete"> </td>
+    </tr>
+    <tr id="tr2">
+        <td>2</td>
+        <td>Tiêu đề thứ hai</td>
+        <td><input type="button" onclick="delete2()" value="Delete"> </td>
+    </tr>
+    <tr id="tr3">
+        <td>3</td>
+        <td>Tiêu đề thứ ba</td>
+        <td><input type="button" onclick="delete3()" value="Delete"> </td>
+    </tr>
+    <tr id="tr4">
+        <td>4</td>
+        <td>Tiêu đề thứ tư</td>
+        <td><input type="button" onclick="delete4()" value="Delete"> </td>
+    </tr>
+</table>
+</body>
+<script>
+    function delete1() {
+        document.getElementById("tr1").innerText= '';
+    }
+    function delete2() {
+        document.getElementById("tr2").innerText= '';
+    }
+    function delete3() {
+        document.getElementById("tr3").innerText= '';
+    }
+    function delete4() {
+        document.getElementById("tr4").innerText= '';
+    }
+
+</script>
+</html>

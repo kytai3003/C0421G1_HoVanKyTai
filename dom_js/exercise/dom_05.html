@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2> Tạo checkbox checked bằng javascript </h2>
+<h4>Bạn là thành viên của lớp C0421G1</h4>
+<input type="checkbox" id="checkboxx">Vâng, đúng rồi<br><br>
+<input type="button" onclick="confirmm()" value="Chọn">
+<input type="button" onclick="cancel()" value="Bỏ chọn">
+</body>
+<script>
+    // 5.	Tạo checkbox checked bằng javascript
+    function confirmm() {
+        document.getElementById("checkboxx").checked = true;
+    }
+    function cancel() {
+        document.getElementById("checkboxx").checked = false;
+    }
+</script>
+</html>

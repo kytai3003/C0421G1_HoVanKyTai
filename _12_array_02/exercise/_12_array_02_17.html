@@ -16,10 +16,27 @@
     function compString() {
        let a =  document.getElementById("input1").value;
        let b =  document.getElementById("input2").value;
-       if (a==b) {
-           document.getElementById("result").innerText = "2 chuỗi giống nhau";
-       } else {
-           document.getElementById("result").innerText = "2 chuỗi khác nhau";
+       if (a.length !== b.length) {
+           document.getElementById("result").innerText = "2 chuỗi không giống nhau";
+       }   else {
+           let arrayA = [];
+           let arrayB = [];
+           for (let i = 0; i < a.length; i++) {
+               arrayA.push(a[i]);
+           }
+           console.log(arrayA);
+           for (let i = 0; i < b.length; i++) {
+               arrayB.push(b[i]);
+           }
+           console.log(arrayB);
+           for (let i = 0; i < a.length; i++) {
+               if (arrayA[i] == arrayB[i]) {
+                   document.getElementById("result").innerText = "2 chuỗi giống nhau";
+               } else {
+                   document.getElementById("result").innerText = "2 chuỗi không giống nhau";
+                   break;
+               }
+           }
        }
     }
 

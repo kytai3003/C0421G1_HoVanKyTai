@@ -29,13 +29,16 @@
                arrayB.push(b[i]);
            }
            console.log(arrayB);
+           let arraySimilar = false;
            for (let i = 0; i < a.length; i++) {
                if (arrayA[i] == arrayB[i]) {
-                   document.getElementById("result").innerText = "2 chuỗi giống nhau";
-               } else {
-                   document.getElementById("result").innerText = "2 chuỗi không giống nhau";
-                   break;
+                   arraySimilar = true;
                }
+           }
+           if (arraySimilar) {
+               document.getElementById("result").innerText = "2 chuỗi giống nhau";
+           } else {
+               document.getElementById("result").innerText = "2 chuỗi không giống nhau";
            }
        }
     }

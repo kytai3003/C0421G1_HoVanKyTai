@@ -15,21 +15,21 @@
     // và gán 0 cho phần tử cuối cùng của mảng)
     let array = Array(10);
     for (let i=0; i<array.length; i++) {
-        array[i] = prompt("input elements: ")
+        array[i] = prompt("input elements: ");
     }
-    let v = parseInt(prompt("input element V: "))
-    let a = false;
+    let inputV = parseInt(prompt("input element V: "));
+    let isExist = false;
     for (let i = 0; i<array.length;i++) {
-        if (v==array[i]) {
+        if (inputV==array[i]) {
             alert("Element V found at position: "+ i);
-            a = true;
+            isExist = true;
             array.splice(i,1);
             array[array.length] = 0;
         }
     }
-    if (a===false) {
+    if (isExist===false) {
         alert("Element V is not found");
     }
-    document.write(array)
+    document.write(array);
 </script>
 </html>

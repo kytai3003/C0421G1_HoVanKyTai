@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    //                      Kiểm tra từ đối xứng
+    // Kiểm tra một chuỗi là một palindrome được chia thành hai bài toán con:
+    //
+    // (1) Kiểm tra xem ký tự đầu tiên và ký tự cuối cùng của chuỗi có bằng nhau.
+    //
+    // (2) Bỏ qua hai ký tự đầu và cuối, kiểm tra xem phần còn lại của chuỗi con là một palindrome.
+    //
+    //     Bài toán con thứ hai (2) giống như vấn đề ban đầu nhưng nhỏ hơn về kích thước.
+
+    let string = prompt("Nhập chuỗi muốn kiểm tra: ")
+
+    function checkPalindrome(str) {
+
+        let array = string.split('');
+
+        reverseArray = array.reverse();
+
+        let reverseString = reverseArray.join('');
+
+        if (string == reverseString) {
+            alert("Đây là chuỗi palindrome");
+        } else {
+            alert("Đây không phải chuỗi palindrome");
+        }
+    }
+
+    checkPalindrome(string);
+</script>
+</html>

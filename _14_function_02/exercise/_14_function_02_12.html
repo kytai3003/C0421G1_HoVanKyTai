@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    // Viết hàm truyền vào 2 số nguyên bất kì, thực hiện đổi chỗ hai số nguyên đó.
+
+    let a = Array();
+    for (i = 0; i < 2; i++) {
+        a[i] = parseInt(prompt("Nhập số: "));
+    }
+
+    function swapNumber(numb) {
+        var temp = numb[0];
+        numb[0] = numb[1];
+        numb[1] = temp;
+    }
+
+    swapNumber(a);
+    console.log(a);
+
+
+</script>
+</html>

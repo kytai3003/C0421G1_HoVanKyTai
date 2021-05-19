@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    // Viết hàm kiểm tra xem ký tự nhập vào có phải là ký tự số không.
+    // Nếu là ký tự số hàm trả về true, ngược lại trả về false.
+    let input = prompt("Nhập kí tự: ");
+    function check(a) {
+        if (isNaN(a)==false) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    if (check(input)) {
+        console.log("Là số");
+    } else {
+        console.log("Không phải số");
+    }
+</script>
+</html>

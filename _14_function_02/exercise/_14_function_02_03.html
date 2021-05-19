@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    // Tạo hàm nhận vào hai tham số. Nếu giá trị của tham số thứ nhất lớn hơn tham số thứ hai,
+    //              hiển thị hộp thoại thông báo cho người dùng.
+    // Nếu giá trị của tham số thứ nhất nhỏ hơn hoặc bằng tham số thứ hai,
+    //                 trả về tổng của hai tham số.
+    function compareValue(value1,value2) {
+        if (value1>value2) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+    let val1 = parseInt(prompt("Nhập tham số 1:"));
+    let val2 = parseInt(prompt("Nhập tham số 2:"));
+    if (compareValue(val1,val2)) {
+        total = val1 + val2;
+        alert(total)
+    } else {
+        alert("Tham số 1 lớn hơn tham số 2")
+    }
+</script>
+</html>

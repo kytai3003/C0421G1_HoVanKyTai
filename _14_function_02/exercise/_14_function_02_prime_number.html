@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function primeNumber(inputNumber) {
+        let count = 0;
+        for (let i = 1; i <= inputNumber; i++) {
+            if (inputNumber % i == 0) {
+                count++;
+            }
+        }
+        if (count == 2) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    let a = parseInt(prompt("Nhập số:"));
+    if (a>10000) {
+        alert("Phạm vi số nhỏ hơn 10.000");
+    } else if (a<2) {
+        alert(a + " không phải số nguyên tố");
+    } else {
+        let b = primeNumber(a);
+        if (b) {
+            alert(a + " là số nguyên tố");
+        } else {
+            alert(a + " không phải số nguyên tố");
+        }
+    }
+</script>
+</body>
+</html>

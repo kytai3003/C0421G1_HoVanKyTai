@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    // Viết hàm nhận vào một số, kiểm tra xem nếu số đưa vào có phải là nguyên dương không.
+    // Nếu là nguyên dương trả về true, ngược lại trả về false.
+    let input = parseFloat(prompt("Nhập số : "))
+    function checkValue(number) {
+        if (number>0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    if (checkValue(input)) {
+        alert(input + " là số nguyên dương");
+    } else {
+        alert(input + " không phải là số nguyên dương");
+    }
+</script>
+</html>

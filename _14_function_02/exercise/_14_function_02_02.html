@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="inputNumber">
+<input type="button" onclick="increase()" value="Add"><br>
+<span id="result"></span>
+</body>
+<script>
+    // Tạo hàm nhận vào một đối số dạng số, tăng giá trị đối số đó lên 1 và trả lại
+    // giá trị cho lời gọi hàm. Gọi hàm từ trong phần <body> của trang web
+    //  và hiển thị kết quả lên màn hình.
+
+    function increase(number) {
+        let a = document.getElementById("inputNumber").value;
+        let b = parseInt(a);
+        b+=1;
+        document.getElementById("result").innerText = b;
+    }
+
+</script>
+</html>

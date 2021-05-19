@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    // Viết hàm truyền vào mảng số nguyên bất kỳ, sau đó đảo ngược mảng số nguyên đó.
+
+    let x = parseInt(prompt("Nhập kích thước mảng: "));
+    let a = Array(x);
+    for (i = 0; i < a.length; i++) {
+        a[i] = parseInt(prompt("Nhập số: "));
+    }
+    console.log(a);
+
+    function arrayRev(array) {
+        array = array.reverse();
+    }
+
+    arrayRev(a);
+    console.log(a);
+
+
+</script>
+</html>

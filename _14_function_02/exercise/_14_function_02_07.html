@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    // Viết hàm tính diện tích, hàm tính chu vi hình tròn. Gọi hàm vừa xây dựng được
+    let inputRadius = parseFloat(prompt("Nhập bán kính: "));
+    function sqrtCircle(number) {
+        sqrt = (Math.pow(number,2))*3.14;
+        return alert("Diện tích: " + sqrt);
+    }
+    function periCircle(number) {
+        peri = number*2*3.14;
+        return alert("Chu vi: " + peri);
+    }
+    sqrtCircle(inputRadius);
+    periCircle(inputRadius);
+</script>
+</html>

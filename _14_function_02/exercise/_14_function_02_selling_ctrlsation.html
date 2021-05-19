@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 style="text-align: center">Phone List</h1>
+<div style="text-align: center">
+    <h3>Add New Product</h3>
+    <input type="text" id="input" placeholder="New product">
+    <input type="button" value="Add" onclick="addItem()">
+    <h4>Display All Product</h4>
+</div>
+<div id="displayTable">
+
+</div>
+</body>
+<script>
+    // Ứng dụng quản lý sản phẩm sử dụng hàm
+    let phone = ["Sony Experia", "Nokia6", "Oppo A71", "Fujitsu F-04E", "Apple Iphone 8 Plus",
+        "Xiaomi Mi 5S Plus", "Apple Iphone 6S", "Xiaomi Redmi Note 4", "Samsung Galaxy"];
+
+    function displayItem(array) {
+        let html =
+            "<table border=\"1\" style='margin: 0px auto'>\n" +
+            "    <tr>\n" +
+            "        <th>No</th>\n" +
+            "        <th>Product name</th>\n" +
+            "        <th>Edit</th>\n" +
+            "        <th>Delete</th>\n" +
+            "    </tr>\n";
+
+        for (let i = 0; i < array.length; i++) {
+            html = html +
+                "    <tr>\n" +
+                "        <td>" + (i+1) + "</td>\n" +
+                "        <td>" + array[i] + "</td>\n" +
+                "        <td><button onclick='editItem(" + i + ")'>Edit</button></td>\n" +
+                "        <td><button onclick='delItem(" + i + ")'>Delete</button></td>\n" +
+                "    </tr>\n";
+        }
+
+        html = html +
+            "</table>";
+
+        document.getElementById("displayTable").innerHTML = html;
+    }
+
+    function addItem() {
+        let newItem = document.getElementById("input").value;
+        if (newItem == "") {
+            alert("Please input product name:");
+        } else {
+            phone.push(newItem);
+            displayItem(phone);
+            document.getElementById("input").value = "";
+        }
+    }
+
+    function editItem(index) {
+        let newName = prompt("Input new name: ");
+        if (newName == "") {
+            alert("Please input product name:");
+        } else {
+            phone[index] = newName;
+            displayItem(phone);
+        }
+    }
+    
+    function delItem(index) {
+        if(confirm("Do you really want to delete item " + phone[index] + " ?")){
+            phone.splice(index,1);
+            displayItem(phone);
+        }
+    }
+
+    displayItem(phone);
+</script>
+</html>

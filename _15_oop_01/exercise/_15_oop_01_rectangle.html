@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="1368px" height="768px" style="border:1px solid #d3d3d3;">
+</body>
+<script>
+    //Xây dựng lớp mô tả hình chữ nhật
+    //Khai báo và khởi tạo một đối tượng kiểu Rectangle.
+    // Hiển thị hình chữ nhật trên màn hình web
+    // Thay đổi chiều dài và chiều rộng của hình chữ nhật.
+    // In ra màn hình diện tích và chu vi của hình chữ nhật đó.
+    class Rectangle {
+        constructor(length, width) {
+
+            this.length = length;
+
+            this.width = width;
+
+        }
+
+        square(length,width) {
+            return this.length * this.width;
+        }
+
+        perimeter(length,width) {
+            return (this.length + this.width) * 2;
+        }
+    }
+
+
+    let lengthRec = parseInt(prompt("Length: "));
+    let widthRec = parseInt(prompt("Width: "));
+
+    let canvasContext = new Rectangle(lengthRec, widthRec);
+
+    let result1 = canvasContext.square(lengthRec, widthRec);
+    console.log("Diện tích: " + result1);
+
+    let result2 = canvasContext.perimeter(lengthRec, widthRec);
+    console.log("Chu vi: " + result2);
+
+    let canvasHTML = document.getElementById("myCanvas");
+    canvasContext = canvasHTML.getContext("2d");
+
+    canvasContext.rect(50, 50, lengthRec, widthRec);
+    canvasContext.stroke();
+
+</script>
+</html>

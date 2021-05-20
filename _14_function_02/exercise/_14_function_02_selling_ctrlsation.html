@@ -61,12 +61,13 @@
     function editItem(index) {
         let newName = prompt("Input new name: ");
         if (newName == "") {
-            alert("Please input product name:");
-        } else {
-            phone[index] = newName;
-            displayItem(phone);
+            alert("Please input!");
         }
-    }
+        if (newName) {
+                phone[index] = newName;
+                displayItem(phone);
+            }
+        }
     
     function delItem(index) {
         if(confirm("Do you really want to delete item " + phone[index] + " ?")){

@@ -15,18 +15,17 @@
     for (i = 0; i < a.length; i++) {
         a[i] = prompt("Nhập kí tự: ");
     }
+    console.log(a);
     let input = prompt("Nhập kí tự để kiểm tra: ");
 
     function frequency(array, letter) {
         var count = 0;
-        let isExist = false;
         for (i = 0; i < array.length; i++) {
             if (a[i] == letter) {
                 count++;
-                isExist = true;
             }
         }
-        if (isExist) {
+        if (count != 0) {
             return alert("Số lần xuất hiện: " + count);
         } else {
             return alert("-1");

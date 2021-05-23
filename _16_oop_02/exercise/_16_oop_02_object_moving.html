@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="game"></div>
+</body>
+<script>
+    class Hero {
+        constructor(image, top, left, size) {
+            this.image = image;
+            this.top = top;
+            this.left = left;
+            this.size = size;
+        }
+
+        getHeroElement() {
+            return '<img width="' + this.size + '"' +
+                ' height="' + this.size + '"' +
+                ' src="' + this.image + '"' +
+                ' style="top: ' + this.top + 'px; left:' + this.left + 'px;position:absolute;" />';
+        }
+
+        moveRight() {
+            this.left += 50;
+            console.log('ok: ' + this.left);
+        }
+
+        moveLeft() {
+            this.left -= 50;
+            console.log('ok: ' + this.left);
+        }
+
+        moveDown() {
+            this.top += 50;
+            console.log('ok: ' + this.top);
+        }
+
+        moveUp() {
+            this.top -= 50;
+            console.log('ok: ' + this.top);
+        }
+    }
+        let hero = new Hero('darius.png', 20, 30, 200);
+
+        function
+
+        start() {
+            if (hero.left < window.innerWidth - hero.size) {
+                hero.moveRight();
+            } else {
+                hero.moveLeft();
+            }
+            if (hero.top < window.innerHeight - hero.size) {
+                hero.moveDown();
+            } else {
+                hero.moveUp()
+            }
+            document.getElementById('game').innerHTML = hero.getHeroElement();
+            setTimeout(start, 500)
+        }
+
+    start();
+</script>
+</html>

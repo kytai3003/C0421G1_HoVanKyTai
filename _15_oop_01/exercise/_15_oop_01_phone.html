@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+<script>
+    //Xây dựng lớp mô tả điện thoại
+    //Khởi tạo các đối tượng điện thoại và thực hiện kịch bản sau:
+    // - Có một chiếc điện thoại nokia và một chiếc iphone
+    // - Chiếc điện thoại nokia soạn tin nhắn với nội dung bất kỳ và gửi cho chiếc iphone
+    //          Chiếc iphone kiểm tra inbox và hiển thị tin đó.
+
+    class Mobile {
+        constructor(name, battery, status, draft, inbox, sent) {
+
+            this.name = name;
+
+            this.battery = battery;
+
+            this.status = status;
+
+            this.draft = draft;
+
+            this.inbox = inbox;
+
+            this.sent = sent;
+
+        }
+
+        checkCharge(battery) {
+            if (this.battery === "Đang sạc pin" ) {
+                this.battery += 1;
+            } else {
+                return this.battery;
+            }
+        }
+
+        write(message) {
+            if (this.battery > 0) {
+                this.draft = message;
+                this.battery -= 1;
+            } else {
+                console.log(this.name + " đã hết pin");
+            }
+        }
+
+        receive(message) {
+            if (this.battery > 0) {
+                this.inbox = this.name + " đã nhận tin nhắn nội dung: " + nokiaObj.draft;
+                this.battery -= 1;
+            } else {
+                console.log(this.name + " đã hết pin");
+            }
+        }
+
+        send(message) {
+            if (this.battery > 0) {
+                this.sent = this.name + " đã gửi tin nhắn nội dung : " + this.draft;
+                this.battery -= 1;
+            } else {
+                console.log(this.name + " đã hết pin");
+            }
+        }
+    }
+
+    let iPhoneObj = new Mobile("iPhone", 76, "bat", "", "", "");
+    let nokiaObj = new Mobile("Nokia", 20, "bat", "", "", "");
+
+    nokiaObj.write("How are you doing?");
+
+    nokiaObj.send();
+
+    iPhoneObj.receive();
+
+    console.log(nokiaObj);
+
+    console.log(iPhoneObj);
+</script>
+</html>

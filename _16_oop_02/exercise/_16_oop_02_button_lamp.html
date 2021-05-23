@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div></div>
+</body>
+<script>
+    // Sử dụng các lớp vừa tạo xây dựng chương trình java theo kịch bản sau:
+    //
+    //     Khai báo và khởi tạo một đối tượng công tắc và một đối tượng bóng đèn điện.
+    //
+    //     Kết nối công tắc với bóng đèn.
+    //
+    //     Bật tắt công tắc 10 lần.
+
+    class SwitchButton {
+        constructor(status, lamp) {
+            this.status = status;
+            this.lamp = lamp;
+        }
+
+        connectToLamp(electricLamp) {
+            this.lamp = electricLamp;
+        }
+
+        switchOff(lamp) {
+            lamp.turnOff();
+            return false;
+        }
+
+        switchOn(lamp) {
+            lamp.turnOn();
+            return true;
+            }
+    }
+
+    class ElectricLamp {
+        constructor(status) {
+            this.status = status;
+        }
+
+        turnOff() {
+            this.status = false;
+            console.log("Tat");
+        }
+
+        turnOn() {
+            this.status = true;
+            console.log("Bat");
+        }
+    }
+
+    let redLamp = new ElectricLamp("Tat");
+    let button = new SwitchButton("Bat", redLamp);
+
+    for (i=0; i<10; i++) {
+        button.switchOn(redLamp);
+        button.switchOff(redLamp);
+    }
+
+
+
+</script>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div></div>
+</body>
+<script>
+    // Viết một chương trình sử dụng Remote để điều khiển TiVi theo kịch bản như sau:
+    //
+    //     Khai báo và khởi tạo một chiếc Tivi.
+    //
+    //     Khai báo và khởi tạo một chiếc Remote.
+    //
+    //     Bật tivi.
+    //
+    //     Chuyển đến kênh 7.
+    //
+    // Dùng remote chuyển đến kênh 3.
+    //
+    // Tăng âm lượng lên 2 đơn vị.
+    //
+    //     Dùng remote tắt tivi.
+
+    class Remote {
+        constructor(code) {
+            this.code = code;
+        }
+
+        changeChannel(tv, newChannel) {
+            tv.recentChannel =  newChannel;
+            console.log("Đã dùng remote hiệu: " + this.code + " chuyển đến kênh: " + newChannel);
+        }
+
+        turnOn(tv) {
+            return tv.turnOn();
+        }
+
+        turnOff(tv) {
+            return tv.turnOff();
+        }
+
+        adjustVolume(tv, number) {
+            tv.recentVolume += number;
+        }
+    }
+
+    class TV {
+        constructor(recentChannel, recentVolume, status) {
+            this.recentChannel = recentChannel;
+            this.recentVolume = recentVolume;
+            this.status = status;
+        }
+
+        checkStatus() {
+            if(this.status) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        turnOn() {
+            this.status = true;
+            console.log("Đã bật tv. Hiện đang ở kênh: " + this.recentChannel + ", mức volume " + this.recentVolume);
+        }
+
+        turnOff() {
+            this.status = false;
+            console.log("Đã tắt tv");
+        }
+
+        changeChannel(newChannel) {
+            this.recentChannel = newChannel;
+            console.log("Tv chuyển sang kênh: " + newChannel);
+        }
+
+        adjustVolume(newVolume) {
+            this.recentVolume = newVolume;
+            console.log("Tv đã được tăng: " + newVolume + " âm lượng. Mức âm lượng hiên thời: " +this.recentVolume + newVolume);
+        }
+    }
+
+    let tv = new TV(0, 0, "tat");
+    let remote = new Remote("X1000");
+
+    tv.turnOn();
+    tv.changeChannel(7);
+    remote.changeChannel(tv,3);
+    tv.adjustVolume(2)
+    remote.turnOff(tv);
+</script>
+</html>

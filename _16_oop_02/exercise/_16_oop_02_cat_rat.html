@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div></div>
+</body>
+<script>
+    // Viết một đoạn chương trình mô phỏng lại quá trình mèo bắt chuột và ăn chuột
+    // dựa trên các lớp vừa mô tả trên.
+
+    class Animal {
+        constructor(name, weight, speed, status) {
+            this.name = name;
+            this.weight = weight;
+            this.speed = speed;
+            this.status = status;
+        }
+
+        call(sound) {
+            console.log(sound);
+        }
+
+        catch(ratObj) {
+            if (this.speed>ratObj.speed) {
+                console.log(this.name + " đã bắt được " + ratObj.name);
+            } else {
+                console.log(ratObj + " đã chạy thoát");
+            }
+        }
+
+        eat(ratObj) {
+            if (ratObj.status === "song") {
+                this.weight += ratObj.weight;
+                console.log(this.name + " đã ăn " + ratObj.name+  " và tăng "+ ratObj.weight + " kg");
+            } else {
+                console.log(ratObj.name + " đã thiu, " + this.name + " không ăn");
+            }
+        }
+    }
+
+    let tom = new Animal("Tom" , 15 , 20, "song");
+    let jerry = new Animal("Jerry", 5, 10, "song");
+
+    tom.catch(jerry);
+    tom.eat(jerry);
+</script>
+</html>

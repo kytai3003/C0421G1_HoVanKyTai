@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div></div>
+</body>
+<script>
+    // A Very Big Sum
+    // Complete the aVeryBigSum function in the editor below. It must return the sum of all array elements.
+    // aVeryBigSum has the following parameter(s):
+    // int ar[n]: an array of integers .
+    //     Return:
+    // long: the sum of all array elements
+
+    let array = [1001458909, 1004570889, 1007019111, 1003302837, 1002514638, 1006431461,
+                        1002575010, 1007514041, 1007548981, 1004402249];
+
+    function aVeryBigSum(arr) {
+        let sumArr = 0;
+        let i = 0;
+        while(i<arr.length) {
+            sumArr += arr[i];
+            i++;
+        }
+        return sumArr;
+    }
+
+    console.log(aVeryBigSum(array));
+</script>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div>
+    <input type="text" id="input">
+    <input type="button" value="Change" onclick="timeConversion()">
+    <p id="result"></p>
+</div>
+</body>
+<script>
+    // Time Conversion
+    // Complete the timeConversion function in the editor below.
+    // It should return a new string representing the input time in 24 hour format.
+    //
+    // timeConversion has the following parameter(s):
+    //      string s: a time in  hour format
+    // Returns
+    //      string: the time in  hour format
+
+    function timeConversion(string) {
+
+        let x = document.getElementById("input").value;
+
+        let [time, modifier] = x.split(" ");
+
+        let [hours, minutes, second] = time.split(':');
+
+        if (hours === "12") {
+            hours = "00";
+        }
+
+        if (modifier === "PM") {
+            hours = parseInt(hours) + 12;
+        }
+
+        return document.getElementById("result").innerText = hours + ":" + minutes + ":" + second;
+    }
+
+
+</script>
+</html>

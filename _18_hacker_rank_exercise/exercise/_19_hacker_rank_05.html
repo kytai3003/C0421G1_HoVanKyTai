@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div></div>
+</body>
+<script>
+    // Plus Minus
+    //Complete the plusMinus function in the editor below.
+
+    // plusMinus has the following parameter(s):
+    //
+    // int arr[n]: an array of integers
+
+
+    let x = parseInt(prompt("input array size: "))
+    let array = Array(x);
+
+    for (let i = 0; i < array.length; i++) {
+        array[i] = parseInt(prompt("input number: "));
+    }
+    console.log(array);
+
+    function plusMinus(arr) {
+        var positive = 0;
+        var negative = 0;
+        var zeros = 0;
+
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] < 0) {
+                negative++;
+            } else if (arr[i] == 0) {
+                zeros++;
+            } else {
+                positive++;
+            }
+        }
+        var positiveRatio = positive / arr.length;
+        var negativeRatio = negative / arr.length
+        var zerosRatio = zeros / arr.length;
+
+        return document.write(positiveRatio + "<br>" + negativeRatio + "<br>" + zerosRatio);
+    }
+
+    plusMinus(array)
+
+
+</script>
+</html>

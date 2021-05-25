@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div></div>
+</body>
+<script>
+    // Birthday Cake Candles
+    // Complete the function birthdayCakeCandles in the editor below.
+
+    // birthdayCakeCandles has the following parameter(s):
+    //
+    //  int candles[n]: the candle heights
+
+    let x = parseInt(prompt("input amount of candle: "))
+    let candles = Array(x);
+    for (let i = 0; i < candles.length; i++) {
+        candles[i] = parseInt(prompt("input the height of each candle: "));
+    }
+    console.log(candles);
+
+    function birthdayCakeCandles(arr) {
+        var count = 0;
+        var max = 0;
+        for (let i = 0; i<arr.length;i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+            }
+        }
+        for (let j =0; j<arr.length;j++) {
+            if(arr[j] == max) {
+                count++;
+            }
+        }
+        return console.log("Max: " + max +", frequency: " + count);
+    }
+
+    birthdayCakeCandles(candles);
+
+</script>
+</html>

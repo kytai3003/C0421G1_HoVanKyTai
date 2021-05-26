@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+</body>
+<script>
+    // Viết một chương trình nhập một số từ bàn phím và in ra màn hình bằng chữ.
+    //          Ví dụ 1234, kết quả in ra màn hình là một hai ba bốn.
+
+
+    function printWord(arr) {
+        let number = [1,2,3,4,5,6,7,8,9,0];
+        let word = ["mot", "hai", "ba", "bon", "nam", "sau", "bay", "tam", "chin", "khong"];
+        let result = [];
+        for (let i = 0; i<arr.length;i++) {
+            for (let j = 0; j<number.length; j++) {
+                if (arr[i] == number[j]) {
+                    result.push(word[j]);
+                }
+            }
+        }
+        return result;
+    }
+
+    let x = prompt("Nhập số: ");
+    x = x.split('')
+    console.log(x);
+
+    console.log(printWord(x).join(' '));
+    
+</script>
+</html>

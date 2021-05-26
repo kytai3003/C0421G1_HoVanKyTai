@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Vẽ tam giác cân đặc có chiều cao h.
+
+    let height = parseInt(prompt("Nhập cao: "));
+
+    for (let i = 0; i <= height; i++) {
+        for (let j = height-i ; j >0; j--) {
+            document.write("&nbsp;&nbsp;");
+        }
+        for (let j = 0; j < i; j++) {
+            document.write("*");
+        }
+        for (let j = 1; j <i; j++) {
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+</script>
+</body>
+</html>

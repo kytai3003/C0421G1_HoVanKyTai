@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+</body>
+<script>
+    // Viết chương trình kiểm tra một ký tự trong bảng chữ cái tiếng anh
+    // là nguyên âm hay phụ âm. Ký tự là bất kỳ được nhập từ bàn phím.
+    // Các ký tự nguyên âm bao gồm: 'o', 'u', 'i', 'a', 'e' hoặc
+    //                              'O', 'U', 'I', 'A', 'E'
+
+    function checkLetter(str) {
+        switch (str) {
+            case 'o':
+            case 'u':
+            case 'i':
+            case 'a':
+            case 'e':
+            case 'O':
+            case 'I':
+            case 'A':
+            case 'E':
+            case 'U':
+            alert("Vowel");
+            break;
+
+            default:
+            alert("Consonant");
+            break;
+        }
+    }
+
+    let input = prompt("Input letter: ");
+    checkLetter(input);
+
+</script>
+</html>

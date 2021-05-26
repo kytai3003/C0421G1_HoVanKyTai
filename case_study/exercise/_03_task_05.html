@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<h2>Drinks list</h2>
+<table>
+    <tr>
+        <th>No</th>
+        <th>Thức uống</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Cafe</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Cam vắt</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Nước ép cà rốt</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>Nước ép cà chua</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>Nước lọc</td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>Nước dừa</td>
+    </tr>
+    <tr>
+        <td>7</td>
+        <td>Thoát gọi món</td>
+    </tr>
+
+</table>
+</body>
+<script>
+    // Viết một chương trình gọi thức uống đơn giản.
+    // Gợi ý: Trước tiên in ra màn hinh danh sách các loại thức uống cho người dùng chọn lựa
+    //  Đánh dấu theo thứ tự 1 (cafe), 2 (cam vắt), 3(nước ép cà rốt),
+    //  4(nước ép cà chua), 5(nước lọc), 6(nước dừa), 7(thoát gọi món)
+    //  Khi người dùng lựa chọn 1 trong số các thức uống, chương trình sẽ hiện
+    //      đơn giá của thức uống đó và cho phép người dùng nhập số lượng.
+    //      Cuối cùng hiển thị tổng số tiền người dùng cần phải trả.
+    // Sử dụng vòng lặp do while lặp lại cho người dùng đặt thức uống,
+    //      kết thúc quá trình đặt thức uống khi người nhấn số 7
+
+    do {
+        let input = parseInt(prompt("Nhập mã thứ tự thức uống: "));
+        let amount = 0;
+        let output = 0;
+        switch (input) {
+            case 1:
+                amount = parseInt(prompt("Cafe, 15.000 đồng. Nhập số lượng: "));
+                output = 15000 * amount;
+                alert("Tổng tiền: " + output + " đồng");
+                break;
+            case 2:
+                amount = parseInt(prompt("Cam vắt, 30.000 đồng. Nhập số lượng: "));
+                output = 30000 * amount;
+                alert("Tổng tiền: " + output + " đồng");
+                break;
+            case 3:
+                amount = parseInt(prompt("Nước ép cà rốt, 25.000 đồng. Nhập số lượng: "));
+                output = 25000 * amount;
+                alert("Tổng tiền: " + output + " đồng");
+                break;
+            case 4:
+                amount = parseInt(prompt("Nước ép cà chua, 20.000 đồng. Nhập số lượng: "));
+                output = 20000 * amount;
+                alert("Tổng tiền: " + output + " đồng");
+                break;
+            case 5:
+                amount = parseInt(prompt("Nước lọc, 10.000 đồng. Nhập số lượng: "));
+                output = 10000 * amount;
+                alert("Tổng tiền: " + output + " đồng");
+                break;
+            case 6:
+                amount = parseInt(prompt("Nước dừa, 40.000 đồng. Nhập số lượng: "));
+                output = 40000 * amount;
+                alert("Tổng tiền: " + output + " đồng");
+                break;
+        }
+        if (input == 7) {
+            alert("Thoát gọi món");
+            break;
+        }
+    } while (true);
+
+
+</script>
+</html>

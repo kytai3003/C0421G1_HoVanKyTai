@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+</body>
+<script>
+    // Cho mảng a chỉ chứa các số nguyên
+    // Xây dựng mảng b là prefix sums của mảng a cụ thể theo công thức:
+    //      b[0]   = a[0]
+    //      b[1]   = a[0] + a[1]
+    //      b[2]   = a[0] + a[1] + a[2]
+    //      ...
+    //      b[n - 1] = a[0] + a[1] + ... + a[n - 1]
+    //          với n là độ dài của mảng a.
+
+
+    function prefixSums(arr) {
+        let b = [];
+        b[0] = arr[0];
+        for (let i = 1; i < arr.length; i++) {
+            b[i] = arr[i - 1] + arr[i];
+        }
+        return b;
+    }
+
+    let x = parseInt(prompt("Nhập độ dài mảng: "))
+    let input = Array(x);
+    for (let i = 0; i < input.length; i++) {
+        input[i] = parseInt(prompt("Nhập giá trị thành phần: "))
+    }
+    console.log(input);
+
+    console.log(prefixSums(input));
+
+</script>
+</html>

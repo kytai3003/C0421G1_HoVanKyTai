@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Viết hàm liệt kê các số nguyên tố trong mảng 2 chiều,
+    //     đếm các số nguyên tố có trong mảng đó.
+
+
+    function matrix(rows, cols) {
+
+        let arr = [];
+
+        for (let i = 0; i < rows; i++) {
+
+            arr.push([]);
+
+            arr[i].push(Array(cols));
+
+            for (let j = 0; j < cols; j++) {
+                arr[i][j] = parseInt(prompt("Nhập các phần tử của mảng con: "));
+            }
+        }
+        return arr;
+    }
+
+    let m = parseInt(prompt("Nhập kích thước mảng lớn: "));
+    let n = parseInt(prompt("Nhập kích thước mảng con: "));
+    let array = matrix(m, n);
+    console.log(array);
+    let countPrime = 0
+    for (let i = 0; i < array.length; i++) {
+        for (let j = 0; j < array[i].length; j++) {
+            let count = 0;
+            for (let k = 1; k <= array[i][j]; k++) {
+                if (array[i][j] % k === 0) {
+                    count++;
+                }
+            }
+            if (count === 2) {
+                console.log(array[i][j]);
+                countPrime++;
+
+            }
+        }
+    }
+    console.log("Số lượng số nguyên tố: " + countPrime);
+
+
+</script>
+
+</body>
+</html>

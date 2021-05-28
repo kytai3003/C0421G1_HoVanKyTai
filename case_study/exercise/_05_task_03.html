@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div>
+
+</div>
+</body>
+<script>
+    // Viết hàm tìm giá trị lớn nhất, nhỏ nhất trong mảng 2 chiều
+
+    function matrix(rows, cols) {
+
+        let arr = [];
+
+        for (let i = 0; i < rows; i++) {
+
+            arr.push([]);
+
+            arr[i].push(Array(cols));
+
+            for (let j = 0; j < cols; j++) {
+                arr[i][j] = parseInt(prompt("Nhập các phần tử của mảng con: "));
+            }
+        }
+        console.log(arr);
+
+        let max = arr[0][0];
+        let min = arr[0][0];
+
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr[i].length; j++) {
+                if ((arr[i][j])>max) {
+                    max=arr[i][j]
+                }
+                if(arr[i][j]<min)
+                {
+                    min = arr[i][j];
+                }
+            }
+        }
+        return "max " + max + " min " + min
+    }
+
+    let m = parseInt(prompt("Nhập kích thước mảng lớn: "));
+    let n = parseInt(prompt("Nhập kích thước mảng con: "));
+    let array = matrix(m, n);
+    console.log(array);
+
+
+</script>
+</html>

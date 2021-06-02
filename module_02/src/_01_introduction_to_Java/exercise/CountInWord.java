@@ -15,72 +15,7 @@ public class CountInWord {
         System.out.print("Input ones: ");
         int one = scanner.nextInt();
         int number = hundred * 100 + teen * 10 + one;
-        if (number < 20) {
-            switch (number) {
-                case 1:
-                    System.out.print("one");
-                    break;
-                case 2:
-                    System.out.print("two");
-                    break;
-                case 3:
-                    System.out.print("three");
-                    break;
-                case 4:
-                    System.out.print("four");
-                    break;
-                case 5:
-                    System.out.print("five");
-                    break;
-                case 6:
-                    System.out.print("six");
-                    break;
-                case 7:
-                    System.out.print("seven");
-                    break;
-                case 8:
-                    System.out.print("eight");
-                    break;
-                case 9:
-                    System.out.print("nine");
-                    break;
-                case 0:
-                    System.out.print("zero");
-                    break;
-                case 10:
-                    System.out.print("ten");
-                    break;
-                case 11:
-                    System.out.print("eleven");
-                    break;
-                case 12:
-                    System.out.print("twelve");
-                    break;
-                case 13:
-                    System.out.print("thirdteen");
-                    break;
-                case 14:
-                    System.out.print("fourteen");
-                    break;
-                case 15:
-                    System.out.print("fifteen");
-                    break;
-                case 16:
-                    System.out.print("sixteen");
-                    break;
-                case 17:
-                    System.out.print("seventeen");
-                    break;
-                case 18:
-                    System.out.print("eightteen");
-                    break;
-                case 19:
-                    System.out.print("nineteen");
-                    break;
-            }
-        } else {
-
-            String x = "";
+        String x = "";
             switch (hundred) {
                 case 1:
                     x = "one hundred and";
@@ -117,28 +52,28 @@ public class CountInWord {
             String y = "";
             switch (teen) {
                 case 2:
-                    y = " twenty ";
+                    y = " twenty";
                     break;
                 case 3:
-                    y = " thirty ";
+                    y = " thirty";
                     break;
                 case 4:
-                    y = " fourty ";
+                    y = " fourty";
                     break;
                 case 5:
-                    y = " fifty ";
+                    y = " fifty";
                     break;
                 case 6:
-                    y = " sixty ";
+                    y = " sixty";
                     break;
                 case 7:
-                    y = " seventy ";
+                    y = " seventy";
                     break;
                 case 8:
-                    y = " eighty ";
+                    y = " eighty";
                     break;
                 case 9:
-                    y = " ninety ";
+                    y = " ninety";
                     break;
                 case 0:
                     y = "";
@@ -148,40 +83,45 @@ public class CountInWord {
             String z = "";
             switch (one) {
                 case 1:
-                    z = "one";
+                    z = " one";
                     break;
                 case 2:
-                    z = "two";
+                    z = " two";
                     break;
                 case 3:
-                    z = "three";
+                    z = " three";
                     break;
                 case 4:
-                    z = "four";
+                    z = " four";
                     break;
                 case 5:
-                    z = "five";
+                    z = " five";
                     break;
                 case 6:
                     z = " six";
                     break;
                 case 7:
-                    z = "seven";
+                    z = " seven";
                     break;
                 case 8:
-                    z = "eight";
+                    z = " eight";
                     break;
                 case 9:
-                    z = "nine";
+                    z = " nine";
                     break;
                 case 0:
                     z = "";
                     break;
             }
-            String result = "";
-            int special = teen * 10 + one;
-            if (special > 10 && special < 20) {
+
+        String result = "";
+        int special = teen * 10 + one;
+            if (special >= 10 && special < 20) {
                 switch (special) {
+                    case 10:
+                        result = x + " ten";
+                        System.out.printf(result);
+                        break;
                     case 11:
                         result = x + " eleven";
                         System.out.printf(result);
@@ -191,7 +131,7 @@ public class CountInWord {
                         System.out.printf(result);
                         break;
                     case 13:
-                        result = x + " thirdteen";
+                        result = x + " thirteen";
                         System.out.printf(result);
                         break;
                     case 14:
@@ -225,4 +165,3 @@ public class CountInWord {
             }
         }
     }
-}

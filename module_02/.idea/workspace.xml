@@ -20,183 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce9c8f28-a9f2-4011-89a0-d696222ad2a7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module_02.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_01_khoa_hoc_code.org/bai_tap/course1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_01_khoa_hoc_code.org/bai_tap/course1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_01_khoa_hoc_code.org/bai_tap/course2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_01_khoa_hoc_code.org/bai_tap/course2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_01_khoa_hoc_code.org/bai_tap/course3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_01_khoa_hoc_code.org/bai_tap/course3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_02_pseudo_code_flowchart/exercise/chuyen_doi_tien_te.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_02_pseudo_code_flowchart/exercise/chuyen_doi_tien_te.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_02_pseudo_code_flowchart/exercise/mo_ta_thuat_toan_co_cau_truc_dieu_kien.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_02_pseudo_code_flowchart/exercise/mo_ta_thuat_toan_co_cau_truc_dieu_kien.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_02_pseudo_code_flowchart/exercise/tim_gia_tri_lon_nhat.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_02_pseudo_code_flowchart/exercise/tim_gia_tri_lon_nhat.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_02_pseudo_code_flowchart/exercise/tim_gia_tri_lon_nhat_trong_n_so.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_02_pseudo_code_flowchart/exercise/tim_gia_tri_lon_nhat_trong_n_so.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_02_pseudo_code_flowchart/exercise/tinh_diem_TB.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_02_pseudo_code_flowchart/exercise/tinh_diem_TB.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_02_pseudo_code_flowchart/practise/game_doan_so.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_02_pseudo_code_flowchart/practise/game_doan_so.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_02_pseudo_code_flowchart/practise/thay_doi_nhiet_do.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_02_pseudo_code_flowchart/practise/thay_doi_nhiet_do.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_03_git_html/exercise/BT_tao_danh_sach.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_03_git_html/exercise/BT_tao_danh_sach.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_03_git_html/exercise/tao_CV.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_03_git_html/exercise/tao_CV.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_03_git_html/practise/thuc_hanh.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_03_git_html/practise/thuc_hanh.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_04_form_table/exercise/_01_advance_table.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_04_form_table/exercise/_01_advance_table.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_04_form_table/exercise/_02_advance_table.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_04_form_table/exercise/_02_advance_table.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_04_form_table/exercise/hobby_regis_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_04_form_table/exercise/hobby_regis_form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_04_form_table/exercise/registration_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_04_form_table/exercise/registration_form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_04_form_table/exercise/simple_table.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_04_form_table/exercise/simple_table.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_04_form_table/exercise/survey_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_04_form_table/exercise/survey_form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_04_form_table/practise/advance_table.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_04_form_table/practise/advance_table.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_04_form_table/practise/basic_table.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_04_form_table/practise/basic_table.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_04_form_table/practise/google_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_04_form_table/practise/google_form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_04_form_table/practise/simple_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_04_form_table/practise/simple_form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_05_js_overview/practise/add_js_01.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_05_js_overview/practise/add_js_01.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_05_js_overview/practise/add_js_02.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_05_js_overview/practise/add_js_02.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_05_js_overview/practise/add_js_03.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_05_js_overview/practise/add_js_03.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_05_js_overview/practise/output_01.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_05_js_overview/practise/output_01.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_05_js_overview/practise/output_02.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_05_js_overview/practise/output_02.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_05_js_overview/practise/output_03.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_05_js_overview/practise/output_03.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_05_js_overview/practise/output_04.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_05_js_overview/practise/output_04.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_05_js_overview/practise/show_message.js" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_05_js_overview/practise/show_message.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_06_datatype_variation_operator/exercise/c_to_f.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_06_datatype_variation_operator/exercise/c_to_f.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_06_datatype_variation_operator/exercise/calculator.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_06_datatype_variation_operator/exercise/calculator.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_06_datatype_variation_operator/exercise/circle_p.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_06_datatype_variation_operator/exercise/circle_p.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_06_datatype_variation_operator/exercise/circle_s.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_06_datatype_variation_operator/exercise/circle_s.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_06_datatype_variation_operator/exercise/currency_exchange.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_06_datatype_variation_operator/exercise/currency_exchange.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_06_datatype_variation_operator/exercise/total_average.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_06_datatype_variation_operator/exercise/total_average.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_06_datatype_variation_operator/practise/practise_01.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_06_datatype_variation_operator/practise/practise_01.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_06_datatype_variation_operator/practise/practise_02.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_06_datatype_variation_operator/practise/practise_02.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_06_datatype_variation_operator/practise/practise_03.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_06_datatype_variation_operator/practise/practise_03.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_06_datatype_variation_operator/practise/practise_04.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_06_datatype_variation_operator/practise/practise_04.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_07_condition_construction_01/practise/ECMAScript.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_07_condition_construction_01/practise/ECMAScript.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_07_condition_construction_01/practise/browser.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_07_condition_construction_01/practise/browser.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_07_condition_construction_01/practise/leap_year.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_07_condition_construction_01/practise/leap_year.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_07_condition_construction_01/practise/ternacy_01.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_07_condition_construction_01/practise/ternacy_01.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_07_condition_construction_01/practise/ternacy_02.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_07_condition_construction_01/practise/ternacy_02.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_07_condition_construction_01/practise/the_admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_07_condition_construction_01/practise/the_admin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_08_condition_construction_02/exercise/BMI.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_08_condition_construction_02/exercise/BMI.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_08_condition_construction_02/exercise/_01_if_else_01.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_08_condition_construction_02/exercise/_01_if_else_01.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_08_condition_construction_02/exercise/_01_if_else_02.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_08_condition_construction_02/exercise/_01_if_else_02.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_08_condition_construction_02/exercise/_01_if_else_03.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_08_condition_construction_02/exercise/_01_if_else_03.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_08_condition_construction_02/exercise/_01_if_else_04.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_08_condition_construction_02/exercise/_01_if_else_04.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_08_condition_construction_02/exercise/_01_if_else_05.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_08_condition_construction_02/exercise/_01_if_else_05.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_08_condition_construction_02/exercise/_01_if_else_06.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_08_condition_construction_02/exercise/_01_if_else_06.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_08_condition_construction_02/exercise/_01_if_else_07.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_08_condition_construction_02/exercise/_01_if_else_07.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_08_condition_construction_02/exercise/_02_if_else_01.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_08_condition_construction_02/exercise/_02_if_else_01.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_08_condition_construction_02/exercise/_02_if_else_02.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_08_condition_construction_02/exercise/_02_if_else_02.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_08_condition_construction_02/exercise/_02_if_else_03.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_08_condition_construction_02/exercise/_02_if_else_03.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_08_condition_construction_02/exercise/_02_if_else_04.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_08_condition_construction_02/exercise/_02_if_else_04.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_08_condition_construction_02/exercise/_02_if_else_05.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_08_condition_construction_02/exercise/_02_if_else_05.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_08_condition_construction_02/exercise/_02_if_else_06.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_08_condition_construction_02/exercise/_02_if_else_06.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_08_condition_construction_02/exercise/_02_if_else_07.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_08_condition_construction_02/exercise/_02_if_else_07.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_08_condition_construction_02/exercise/_02_if_else_08.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_08_condition_construction_02/exercise/_02_if_else_08.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_08_condition_construction_02/exercise/_02_if_else_09.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_08_condition_construction_02/exercise/_02_if_else_09.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_08_condition_construction_02/exercise/_02_if_else_10.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_08_condition_construction_02/exercise/_02_if_else_10.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_08_condition_construction_02/exercise/_02_if_else_11.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_08_condition_construction_02/exercise/_02_if_else_11.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_08_condition_construction_02/exercise/_02_if_else_12.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_08_condition_construction_02/exercise/_02_if_else_12.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_08_condition_construction_02/exercise/calculator_02.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_08_condition_construction_02/exercise/calculator_02.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_08_condition_construction_02/exercise/switch_case.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_08_condition_construction_02/exercise/switch_case.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_08_condition_construction_02/practise/mouse_event.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_08_condition_construction_02/practise/mouse_event.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_08_condition_construction_02/practise/nobita.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_08_condition_construction_02/practise/nobita.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_08_condition_construction_02/practise/nobita.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_08_condition_construction_02/practise/nobita.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_08_condition_construction_02/practise/soccer-ball-on-isolated-260nw-535561051.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_08_condition_construction_02/practise/soccer-ball-on-isolated-260nw-535561051.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_09_loop_01/practice/_01_loop_01.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_09_loop_01/practice/_01_loop_01.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_09_loop_01/practice/_01_loop_02.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_09_loop_01/practice/_01_loop_02.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_09_loop_01/practice/_01_loop_03.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_09_loop_01/practice/_01_loop_03.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_09_loop_01/practice/_01_loop_04.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_09_loop_01/practice/_01_loop_04.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_09_loop_01/practice/_01_loop_05.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_09_loop_01/practice/_01_loop_05.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_09_loop_01/practice/_01_loop_06.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_09_loop_01/practice/_01_loop_06.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_10_loop_02/exercise/_02_loop_multiplication_table.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_10_loop_02/exercise/_02_loop_multiplication_table.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_10_loop_02/exercise/_02_loop_prime_number.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_10_loop_02/exercise/_02_loop_prime_number.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_10_loop_02/exercise/_10_loop_02_01.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_10_loop_02/exercise/_10_loop_02_01.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_10_loop_02/exercise/_10_loop_02_02.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_10_loop_02/exercise/_10_loop_02_02.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_10_loop_02/exercise/_10_loop_02_03.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_10_loop_02/exercise/_10_loop_02_03.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_10_loop_02/exercise/_10_loop_02_04.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_10_loop_02/exercise/_10_loop_02_04.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_10_loop_02/exercise/_10_loop_02_05.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_10_loop_02/exercise/_10_loop_02_05.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_10_loop_02/exercise/_10_loop_02_06.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_10_loop_02/exercise/_10_loop_02_06.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_10_loop_02/exercise/_10_loop_02_07.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_10_loop_02/exercise/_10_loop_02_07.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_10_loop_02/exercise/_10_loop_02_08.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_10_loop_02/exercise/_10_loop_02_08.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_10_loop_02/exercise/_10_loop_02_09.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_10_loop_02/exercise/_10_loop_02_09.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_10_loop_02/exercise/_10_loop_02_12.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_10_loop_02/exercise/_10_loop_02_12.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_10_loop_02/exercise/_10_loop_02_guess_game.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_10_loop_02/exercise/_10_loop_02_guess_game.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_11_array_01/practice/_11_array_01_01.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_11_array_01/practice/_11_array_01_01.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_11_array_01/practice/_11_array_01_02.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_11_array_01/practice/_11_array_01_02.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_11_array_01/practice/_11_array_01_03.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_11_array_01/practice/_11_array_01_03.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_11_array_01/practice/_11_array_01_04.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_11_array_01/practice/_11_array_01_04.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_11_array_01/practice/_11_array_01_05.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_11_array_01/practice/_11_array_01_05.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_12_array_02/exercise/_12_array_02_04.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_12_array_02/exercise/_12_array_02_04.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_12_array_02/exercise/_12_array_02_05.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_12_array_02/exercise/_12_array_02_05.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_12_array_02/exercise/_12_array_02_06.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_12_array_02/exercise/_12_array_02_06.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_12_array_02/exercise/_12_array_02_07.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_12_array_02/exercise/_12_array_02_07.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_12_array_02/exercise/_12_array_02_08.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_12_array_02/exercise/_12_array_02_08.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_12_array_02/exercise/_12_array_02_09.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_12_array_02/exercise/_12_array_02_09.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_12_array_02/exercise/_12_array_02_10.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_12_array_02/exercise/_12_array_02_10.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_12_array_02/exercise/_12_array_02_11.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_12_array_02/exercise/_12_array_02_11.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_12_array_02/exercise/_12_array_02_12.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_12_array_02/exercise/_12_array_02_12.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_12_array_02/exercise/_12_array_02_13.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_12_array_02/exercise/_12_array_02_13.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_12_array_02/exercise/_12_array_02_14.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_12_array_02/exercise/_12_array_02_14.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_12_array_02/exercise/_12_array_02_15.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_12_array_02/exercise/_12_array_02_15.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_12_array_02/exercise/_12_array_02_16.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_12_array_02/exercise/_12_array_02_16.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_12_array_02/exercise/_12_array_02_17.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_12_array_02/exercise/_12_array_02_17.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_12_array_02/exercise/_12_array_02_18.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_12_array_02/exercise/_12_array_02_18.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_12_array_02/exercise/_12_array_02_dictionary.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_12_array_02/exercise/_12_array_02_dictionary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_12_array_02/exercise/_12_array_02_function_01.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_12_array_02/exercise/_12_array_02_function_01.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_12_array_02/exercise/_12_array_02_function_02.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_12_array_02/exercise/_12_array_02_function_02.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_12_array_02/exercise/_12_array_02_function_03.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_12_array_02/exercise/_12_array_02_function_03.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_13_function_01/practise/_13_function_01_01.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_13_function_01/practise/_13_function_01_01.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_13_function_01/practise/_13_function_01_02.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_13_function_01/practise/_13_function_01_02.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_13_function_01/practise/_13_function_01_03.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_13_function_01/practise/_13_function_01_03.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_14_function_02/exercise/_14_function_02_01.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_14_function_02/exercise/_14_function_02_01.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_14_function_02/exercise/_14_function_02_02.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_14_function_02/exercise/_14_function_02_02.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_14_function_02/exercise/_14_function_02_03.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_14_function_02/exercise/_14_function_02_03.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_14_function_02/exercise/_14_function_02_04.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_14_function_02/exercise/_14_function_02_04.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_14_function_02/exercise/_14_function_02_05.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_14_function_02/exercise/_14_function_02_05.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_14_function_02/exercise/_14_function_02_06.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_14_function_02/exercise/_14_function_02_06.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_14_function_02/exercise/_14_function_02_07.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_14_function_02/exercise/_14_function_02_07.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_14_function_02/exercise/_14_function_02_08.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_14_function_02/exercise/_14_function_02_08.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_14_function_02/exercise/_14_function_02_09.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_14_function_02/exercise/_14_function_02_09.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_14_function_02/exercise/_14_function_02_10.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_14_function_02/exercise/_14_function_02_10.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_14_function_02/exercise/_14_function_02_11.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_14_function_02/exercise/_14_function_02_11.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_14_function_02/exercise/_14_function_02_12.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_14_function_02/exercise/_14_function_02_12.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_14_function_02/exercise/_14_function_02_13.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_14_function_02/exercise/_14_function_02_13.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_14_function_02/exercise/_14_function_02_14.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_14_function_02/exercise/_14_function_02_14.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_14_function_02/exercise/_14_function_02_foot_meter.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_14_function_02/exercise/_14_function_02_foot_meter.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_14_function_02/exercise/_14_function_02_palindrome.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_14_function_02/exercise/_14_function_02_palindrome.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_14_function_02/exercise/_14_function_02_prime_number.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_14_function_02/exercise/_14_function_02_prime_number.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_14_function_02/exercise/_14_function_02_selling_ctrlsation.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_14_function_02/exercise/_14_function_02_selling_ctrlsation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_15_oop_01/exercise/_15_oop_01_phone.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_15_oop_01/exercise/_15_oop_01_phone.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_15_oop_01/exercise/_15_oop_01_rectangle.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_15_oop_01/exercise/_15_oop_01_rectangle.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_15_oop_01/exercise/_15_oop_01_temperature.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_15_oop_01/exercise/_15_oop_01_temperature.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_15_oop_01/practise/_15_oop_01_01.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_15_oop_01/practise/_15_oop_01_01.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_15_oop_01/practise/_15_oop_01_02.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_15_oop_01/practise/_15_oop_01_02.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_15_oop_01/practise/_15_oop_01_03.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_15_oop_01/practise/_15_oop_01_03.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_16_oop_02/exercise/_16_oop_02_adam_eva.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_16_oop_02/exercise/_16_oop_02_adam_eva.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_16_oop_02/exercise/_16_oop_02_button_lamp.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_16_oop_02/exercise/_16_oop_02_button_lamp.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_16_oop_02/exercise/_16_oop_02_cat_rat.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_16_oop_02/exercise/_16_oop_02_cat_rat.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_16_oop_02/exercise/_16_oop_02_object_moving.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_16_oop_02/exercise/_16_oop_02_object_moving.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_16_oop_02/exercise/_16_oop_02_remote_tv.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_16_oop_02/exercise/_16_oop_02_remote_tv.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_16_oop_02/exercise/darius.png" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_16_oop_02/exercise/darius.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_16_oop_02/practise/_16_oop_02_lighting.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/_16_oop_02/practise/_16_oop_02_lighting.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../case_study/exercise/_01_task_01.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/case_study/exercise/_01_task_01.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../case_study/exercise/_01_task_02.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/case_study/exercise/_01_task_02.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../case_study/exercise/_01_task_03.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/case_study/exercise/_01_task_03.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../case_study/exercise/_01_task_04.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/case_study/exercise/_01_task_04.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../case_study/exercise/_02_task_01.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/case_study/exercise/_02_task_01.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../case_study/exercise/_02_task_02.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/case_study/exercise/_02_task_02.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../case_study/exercise/_03_task_01.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/case_study/exercise/_03_task_01.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../case_study/exercise/_03_task_02.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/case_study/exercise/_03_task_02.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../case_study/exercise/_03_task_03.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/case_study/exercise/_03_task_03.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../case_study/exercise/_03_task_04.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/case_study/exercise/_03_task_04.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../case_study/exercise/_03_task_05.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/case_study/exercise/_03_task_05.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../case_study/exercise/_04_task_01.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/case_study/exercise/_04_task_01.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../case_study/exercise/_04_task_02.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/case_study/exercise/_04_task_02.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../case_study/exercise/_05_task_01.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/case_study/exercise/_05_task_01.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../case_study/exercise/_05_task_02.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/case_study/exercise/_05_task_02.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../case_study/exercise/_05_task_03.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/case_study/exercise/_05_task_03.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../case_study/exercise/_06_task.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/case_study/exercise/_06_task.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dom_js/exercise/dom_01.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/dom_js/exercise/dom_01.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dom_js/exercise/dom_02.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/dom_js/exercise/dom_02.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dom_js/exercise/dom_03.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/dom_js/exercise/dom_03.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dom_js/exercise/dom_04.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/dom_js/exercise/dom_04.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dom_js/exercise/dom_05.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/dom_js/exercise/dom_05.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dom_js/exercise/dom_06.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_01/dom_js/exercise/dom_06.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,13 +51,13 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
   </component>
-  <component name="RunManager" selected="Application.Main5">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_01_introduction_to_Java.practise.Main" />
+  <component name="RunManager" selected="Application.CountInWord">
+    <configuration name="CountInWord" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_01_introduction_to_Java.exercise.CountInWord" />
       <module name="module_02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_01_introduction_to_Java.practise.*" />
+          <option name="PATTERN" value="_01_introduction_to_Java.exercise.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -241,12 +65,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_01_introduction_to_Java.practise.Main2" />
+    <configuration name="Currency" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_01_introduction_to_Java.exercise.Currency" />
       <module name="module_02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_01_introduction_to_Java.practise.*" />
+          <option name="PATTERN" value="_01_introduction_to_Java.exercise.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -254,25 +78,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_01_introduction_to_Java.practise.Main3" />
+    <configuration name="HelloName" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_01_introduction_to_Java.exercise.HelloName" />
       <module name="module_02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_01_introduction_to_Java.practise.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_01_introduction_to_Java.practise.Main4" />
-      <module name="module_02" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="_01_introduction_to_Java.practise.*" />
+          <option name="PATTERN" value="_01_introduction_to_Java.exercise.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -293,13 +104,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Main6" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_01_introduction_to_Java.practise.Main6" />
+      <module name="module_02" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="_01_introduction_to_Java.practise.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.CountInWord" />
+        <item itemvalue="Application.Currency" />
+        <item itemvalue="Application.HelloName" />
+        <item itemvalue="Application.Main6" />
         <item itemvalue="Application.Main5" />
-        <item itemvalue="Application.Main4" />
-        <item itemvalue="Application.Main3" />
-        <item itemvalue="Application.Main2" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -314,6 +138,7 @@
       <option name="presentableId" value="Default" />
       <updated>1622535748109</updated>
       <workItem from="1622535751423" duration="6386000" />
+      <workItem from="1622604734535" duration="18613000" />
     </task>
     <servers />
   </component>
@@ -330,23 +155,24 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1622568554153">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1622632180971">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1622568554153" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1622568554153">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1622632180971" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1622632180970">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1622568554153" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1622568554153">
+    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1622632180970" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1622632180970">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1622568554153" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1622568554153">
+    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1622632180970" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1622632180971">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1622568554153" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1622632180971" />
   </component>
 </project>

@@ -21,7 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ce9c8f28-a9f2-4011-89a0-d696222ad2a7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_01_introduction_to_Java/exercise/CountInWord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_01_introduction_to_Java/exercise/CountInWord.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,13 +51,13 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
   </component>
-  <component name="RunManager" selected="Application.CountInWord">
-    <configuration name="CountInWord" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_01_introduction_to_Java.exercise.CountInWord" />
+  <component name="RunManager" selected="Application.DisplayShape">
+    <configuration name="DisplayShape" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_02_Java_loop.exercise.DisplayShape" />
       <module name="module_02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_01_introduction_to_Java.exercise.*" />
+          <option name="PATTERN" value="_02_Java_loop.exercise.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -66,12 +65,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Currency" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_01_introduction_to_Java.exercise.Currency" />
+    <configuration name="Main3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_02_Java_loop.practise.Main3" />
       <module name="module_02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_01_introduction_to_Java.exercise.*" />
+          <option name="PATTERN" value="_02_Java_loop.practise.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -79,12 +78,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HelloName" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_01_introduction_to_Java.exercise.HelloName" />
+    <configuration name="Main4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_02_Java_loop.practise.Main4" />
       <module name="module_02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_01_introduction_to_Java.exercise.*" />
+          <option name="PATTERN" value="_02_Java_loop.practise.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -92,12 +91,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main5" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_01_introduction_to_Java.practise.Main5" />
+    <configuration name="PrimeNumberSmallerThan100" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_02_Java_loop.exercise.PrimeNumberSmallerThan100" />
       <module name="module_02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_01_introduction_to_Java.practise.*" />
+          <option name="PATTERN" value="_02_Java_loop.exercise.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -105,12 +104,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main6" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_01_introduction_to_Java.practise.Main6" />
+    <configuration name="TwentyPrimeNumber" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_02_Java_loop.exercise.TwentyPrimeNumber" />
       <module name="module_02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_01_introduction_to_Java.practise.*" />
+          <option name="PATTERN" value="_02_Java_loop.exercise.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -120,11 +119,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.CountInWord" />
-        <item itemvalue="Application.Currency" />
-        <item itemvalue="Application.HelloName" />
-        <item itemvalue="Application.Main6" />
-        <item itemvalue="Application.Main5" />
+        <item itemvalue="Application.DisplayShape" />
+        <item itemvalue="Application.TwentyPrimeNumber" />
+        <item itemvalue="Application.PrimeNumberSmallerThan100" />
+        <item itemvalue="Application.Main4" />
+        <item itemvalue="Application.Main3" />
       </list>
     </recent_temporary>
   </component>
@@ -139,7 +138,8 @@
       <option name="presentableId" value="Default" />
       <updated>1622535748109</updated>
       <workItem from="1622535751423" duration="6386000" />
-      <workItem from="1622604734535" duration="19407000" />
+      <workItem from="1622604734535" duration="20064000" />
+      <workItem from="1622690499586" duration="12871000" />
     </task>
     <servers />
   </component>
@@ -159,21 +159,21 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1622645823175">
+    <state width="1323" height="170" key="GridCell.Tab.0.bottom" timestamp="1622708001915">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1622645823175" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1622645823175">
+    <state width="1323" height="170" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1622708001915" />
+    <state width="1323" height="170" key="GridCell.Tab.0.center" timestamp="1622708001915">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1622645823175" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1622645823175">
+    <state width="1323" height="170" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1622708001915" />
+    <state width="1323" height="170" key="GridCell.Tab.0.left" timestamp="1622708001915">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1622645823175" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1622645823175">
+    <state width="1323" height="170" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1622708001915" />
+    <state width="1323" height="170" key="GridCell.Tab.0.right" timestamp="1622708001915">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1622645823175" />
+    <state width="1323" height="170" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1622708001915" />
   </component>
 </project>

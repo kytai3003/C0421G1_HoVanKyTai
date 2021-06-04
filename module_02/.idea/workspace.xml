@@ -51,13 +51,13 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
   </component>
-  <component name="RunManager" selected="Application.DisplayShape">
-    <configuration name="DisplayShape" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_02_Java_loop.exercise.DisplayShape" />
+  <component name="RunManager" selected="Application.BiggestInMatrix">
+    <configuration name="AddNewElement" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_03_Java_array_method.exercise.AddNewElement" />
       <module name="module_02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_02_Java_loop.exercise.*" />
+          <option name="PATTERN" value="_03_Java_array_method.exercise.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -65,12 +65,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_02_Java_loop.practise.Main3" />
+    <configuration name="BiggestInMatrix" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_03_Java_array_method.exercise.BiggestInMatrix" />
       <module name="module_02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_02_Java_loop.practise.*" />
+          <option name="PATTERN" value="_03_Java_array_method.exercise.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -78,12 +78,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_02_Java_loop.practise.Main4" />
+    <configuration name="DeleteElement" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_03_Java_array_method.exercise.DeleteElement" />
       <module name="module_02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_02_Java_loop.practise.*" />
+          <option name="PATTERN" value="_03_Java_array_method.exercise.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -91,12 +91,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PrimeNumberSmallerThan100" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_02_Java_loop.exercise.PrimeNumberSmallerThan100" />
+    <configuration name="MergeArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_03_Java_array_method.exercise.MergeArray" />
       <module name="module_02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_02_Java_loop.exercise.*" />
+          <option name="PATTERN" value="_03_Java_array_method.exercise.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -104,12 +104,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TwentyPrimeNumber" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_02_Java_loop.exercise.TwentyPrimeNumber" />
+    <configuration name="SmallestInArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_03_Java_array_method.exercise.SmallestInArray" />
       <module name="module_02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_02_Java_loop.exercise.*" />
+          <option name="PATTERN" value="_03_Java_array_method.exercise.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -119,11 +119,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.DisplayShape" />
-        <item itemvalue="Application.TwentyPrimeNumber" />
-        <item itemvalue="Application.PrimeNumberSmallerThan100" />
-        <item itemvalue="Application.Main4" />
-        <item itemvalue="Application.Main3" />
+        <item itemvalue="Application.BiggestInMatrix" />
+        <item itemvalue="Application.DeleteElement" />
+        <item itemvalue="Application.MergeArray" />
+        <item itemvalue="Application.AddNewElement" />
+        <item itemvalue="Application.SmallestInArray" />
       </list>
     </recent_temporary>
   </component>
@@ -139,7 +139,8 @@
       <updated>1622535748109</updated>
       <workItem from="1622535751423" duration="6386000" />
       <workItem from="1622604734535" duration="20064000" />
-      <workItem from="1622690499586" duration="12871000" />
+      <workItem from="1622690499586" duration="20956000" />
+      <workItem from="1622770581863" duration="23736000" />
     </task>
     <servers />
   </component>
@@ -159,21 +160,21 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1323" height="170" key="GridCell.Tab.0.bottom" timestamp="1622708001915">
+    <state width="1323" height="129" key="GridCell.Tab.0.bottom" timestamp="1622804036101">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="170" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1622708001915" />
-    <state width="1323" height="170" key="GridCell.Tab.0.center" timestamp="1622708001915">
+    <state width="1323" height="129" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1622804036101" />
+    <state width="1323" height="129" key="GridCell.Tab.0.center" timestamp="1622804036101">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="170" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1622708001915" />
-    <state width="1323" height="170" key="GridCell.Tab.0.left" timestamp="1622708001915">
+    <state width="1323" height="129" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1622804036101" />
+    <state width="1323" height="129" key="GridCell.Tab.0.left" timestamp="1622804036101">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="170" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1622708001915" />
-    <state width="1323" height="170" key="GridCell.Tab.0.right" timestamp="1622708001915">
+    <state width="1323" height="129" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1622804036101" />
+    <state width="1323" height="129" key="GridCell.Tab.0.right" timestamp="1622804036101">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="170" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1622708001915" />
+    <state width="1323" height="129" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1622804036101" />
   </component>
 </project>

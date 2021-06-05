@@ -21,6 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ce9c8f28-a9f2-4011-89a0-d696222ad2a7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_03_Java_array_method/exercise/AddNewElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_03_Java_array_method/exercise/AddNewElement.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,9 +52,9 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
   </component>
-  <component name="RunManager" selected="Application.CrossLineSum">
-    <configuration name="BiggestInMatrix" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_03_Java_array_method.exercise.BiggestInMatrix" />
+  <component name="RunManager" selected="Application.AddNewElement">
+    <configuration name="AddNewElement" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_03_Java_array_method.exercise.AddNewElement" />
       <module name="module_02" />
       <extension name="coverage">
         <pattern>
@@ -119,11 +120,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.AddNewElement" />
         <item itemvalue="Application.CrossLineSum" />
         <item itemvalue="Application.CharacterFrequency" />
         <item itemvalue="Application.ColumnSum" />
         <item itemvalue="Application.Main6" />
-        <item itemvalue="Application.BiggestInMatrix" />
       </list>
     </recent_temporary>
   </component>
@@ -140,7 +141,7 @@
       <workItem from="1622535751423" duration="6386000" />
       <workItem from="1622604734535" duration="20064000" />
       <workItem from="1622690499586" duration="20956000" />
-      <workItem from="1622770581863" duration="29333000" />
+      <workItem from="1622770581863" duration="30025000" />
     </task>
     <servers />
   </component>
@@ -164,21 +165,21 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="0" width="816" height="728" key="#Intentions/0.0.1366.728@0.0.1366.728" timestamp="1622814092288" />
-    <state width="1323" height="129" key="GridCell.Tab.0.bottom" timestamp="1622814555437">
+    <state width="1323" height="129" key="GridCell.Tab.0.bottom" timestamp="1622872717102">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="129" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1622814555437" />
-    <state width="1323" height="129" key="GridCell.Tab.0.center" timestamp="1622814555437">
+    <state width="1323" height="129" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1622872717102" />
+    <state width="1323" height="129" key="GridCell.Tab.0.center" timestamp="1622872717102">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="129" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1622814555437" />
-    <state width="1323" height="129" key="GridCell.Tab.0.left" timestamp="1622814555437">
+    <state width="1323" height="129" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1622872717102" />
+    <state width="1323" height="129" key="GridCell.Tab.0.left" timestamp="1622872717102">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="129" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1622814555437" />
-    <state width="1323" height="129" key="GridCell.Tab.0.right" timestamp="1622814555437">
+    <state width="1323" height="129" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1622872717102" />
+    <state width="1323" height="129" key="GridCell.Tab.0.right" timestamp="1622872717102">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="129" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1622814555437" />
+    <state width="1323" height="129" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1622872717102" />
   </component>
 </project>

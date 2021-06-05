@@ -29,7 +29,6 @@ public class AddNewElement {
         if (index <= 1 || index > number.length - 1) {
             System.out.println("Không thể chèn");
         } else {
-            int temp = 0;
             for (int i = number.length - 1; i > index; i--) {
                 number[i] = number[i - 1];
             }

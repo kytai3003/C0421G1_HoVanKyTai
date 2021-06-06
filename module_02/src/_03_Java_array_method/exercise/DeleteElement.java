@@ -27,13 +27,13 @@ public class DeleteElement {
         for (int i = 0; i < number.length; i++) {
             if (x == number[i]) {
                 isExist = true;
-                index = i;
+                index = number[i];
             }
         }
         if (!isExist) {
             System.out.println("Không tìm thấy giá trị X trong mảng.");
         } else {
-            System.out.println("Tìm thấy giá trị của X tại vị trí: " + index);
+            System.out.println("Tìm thấy giá trị của X tại các vị trí: " + index);
             for (int i = index; i < number.length - 1; i++) {
                 number[i] = number[i + 1];
             }

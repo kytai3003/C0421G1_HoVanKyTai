@@ -1,10 +1,10 @@
-package _02_Java_loop.exercise;
+package student_management;
 
 import java.util.Scanner;
 
 public class StudentManagement {
+    public static Scanner scanner =  new Scanner(System.in);
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
         System.out.println("-------------------Chương trình quản lý sinh viên------------------");
         String students[] = new String[50];
         while (true) {
@@ -19,45 +19,19 @@ public class StudentManagement {
 
             switch (choice) {
                 case 1:
-                    for (String student: students) {
-                        if (student != null) {
-                            System.out.println(student);
-                        }
-                    }
+                    displayStudent(students);
                     break;
 
                 case 2:
-                    System.out.println("Nhập tên sinh viên muốn xóa: ");
-                    String deleteStudent = scanner.nextLine();
-                    for (int i = 0; i < students.length; i++) {
-                        if (deleteStudent.equals(students[i])) {
-                            students[i] = null;
-                        }
-                    }
+                    deleteStudent(students);
                     break;
 
                 case 3:
-                    System.out.println("Nhập tên sinh viên muốn chỉnh sửa:");
-                    String oldStudent = scanner.nextLine();
-                    System.out.println("Nhập tên mới:");
-                    String editStudent = scanner.nextLine();
-                    for (int i = 0; i < students.length; i++) {
-                        if (oldStudent.equals(students[i])) {
-                            students[i] = editStudent;
-                            break;
-                        }
-                    }
+                    editStudent(students);
                     break;
 
                 case 4:
-                    System.out.println("Mời nhập tên sinh viên mới:");
-                    String newStudent = scanner.nextLine();
-                    for (int i = 0; i < students.length; i++) {
-                        if (students[i] == null) {
-                            students[i] = newStudent;
-                            break;
-                        }
-                    }
+                    creatNewStudent(students);
                     break;
 
                 case 5:
@@ -68,5 +42,48 @@ public class StudentManagement {
                     System.out.println("Mời nhập lại.");
             }
         }
+    }
+    private static void displayStudent (String []students) {
+        for (String student : students) {
+            if (student != null) {
+                System.out.println(student);
+            }
+        }
+    }
+
+    private static void deleteStudent (String []students) {
+        String deleteStudent = inputOutput("Nhập tên của sinh viên muốn xóa: ");
+        for (int i = 0; i < students.length; i++) {
+            if (deleteStudent.equals(students[i])) {
+                students[i] = null;
+            }
+        }
+    }
+
+    private static void creatNewStudent (String []students) {
+        String newStudent = inputOutput("Nhập tên sinh viên mới: ");
+        for (int i = 0; i < students.length; i++) {
+            if (students[i] == null) {
+                students[i] = newStudent;
+                break;
+            }
+        }
+    }
+
+    private static void editStudent (String []students) {
+        String editStudent = inputOutput("Nhập tên sinh viên muốn chỉnh sửa: ");
+        String changeStudent = inputOutput("Nhập tên mới: ");
+        for (int i = 0; i < students.length; i++) {
+            if (editStudent.equals(students[i])) {
+                students[i] = changeStudent;
+                break;
+            }
+        }
+    }
+
+    private static String inputOutput (String message) {
+        System.out.println(message);
+        String output = scanner.nextLine();
+        return output;
     }
 }

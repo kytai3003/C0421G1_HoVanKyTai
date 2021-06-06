@@ -22,22 +22,19 @@ public class DeleteElement {
         // Nhập X và xóa X trong mảng
         System.out.println("Nhập phần tử muốn xóa: ");
         int x = scanner.nextInt();
-        int index = 0;
         boolean isExist = false;
         for (int i = 0; i < number.length; i++) {
             if (x == number[i]) {
                 isExist = true;
-                index = number[i];
+                for (int j = i; j < number.length - 1; j++) {
+                    number[j] = number[j + 1];
+                    number[j + 1] = 0;
+                }
             }
         }
         if (!isExist) {
             System.out.println("Không tìm thấy giá trị X trong mảng.");
-        } else {
-            System.out.println("Tìm thấy giá trị của X tại các vị trí: " + index);
-            for (int i = index; i < number.length - 1; i++) {
-                number[i] = number[i + 1];
-            }
-            number[number.length - 1] = 0;
+        }
 
             // Hiển thị lại mảng đã xóa X
             for (int a: number) {
@@ -45,4 +42,3 @@ public class DeleteElement {
             }
         }
     }
-}

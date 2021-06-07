@@ -6,7 +6,7 @@ public class StudentManagement {
     public static Scanner scanner =  new Scanner(System.in);
     public static void main(String[] args) {
         System.out.println("-------------------Chương trình quản lý sinh viên------------------");
-        String students[] = new String[50];
+        Student []students = new Student[50];
         while (true) {
             System.out.println("Menu chương trình");
             System.out.println("1. Xem danh sách sinh viên");
@@ -43,25 +43,39 @@ public class StudentManagement {
             }
         }
     }
-    private static void displayStudent (String []students) {
-        for (String student : students) {
+
+    private static void displayStudent (Student[] students) {
+        for (Student student : students) {
             if (student != null) {
                 System.out.println(student);
             }
         }
     }
 
-    private static void deleteStudent (String []students) {
-        String deleteStudent = inputOutput("Nhập tên của sinh viên muốn xóa: ");
+    private static void deleteStudent (Student[] students) {
+        System.out.println("Nhập id sinh viên muốn xóa: ");
+        int id = Integer.parseInt(scanner.nextLine());
         for (int i = 0; i < students.length; i++) {
-            if (deleteStudent.equals(students[i])) {
-                students[i] = null;
+            if (students[i].getId() == id) {
+                students[i].setName(null);
+                students[i].setAddress(null);
+                students[i].setAge(0);
+                students[i].setId(0);
+                break;
             }
         }
     }
 
-    private static void creatNewStudent (String []students) {
-        String newStudent = inputOutput("Nhập tên sinh viên mới: ");
+    private static void creatNewStudent (Student[] students) {
+        System.out.println("Nhập id cho sinh viên mới: ");
+        int id = Integer.parseInt(scanner.nextLine());
+        System.out.println("Nhập tên sinh viên mới: ");
+        String name = scanner.nextLine();
+        System.out.println("Nhập tuổi sinh viên mới: ");
+        int age = Integer.parseInt(scanner.nextLine());
+        System.out.println("Nhập địa chỉ sinh viên mới: ");
+        String address = scanner.nextLine();
+        Student newStudent = new Student(id, name, age, address);
         for (int i = 0; i < students.length; i++) {
             if (students[i] == null) {
                 students[i] = newStudent;
@@ -70,20 +84,66 @@ public class StudentManagement {
         }
     }
 
-    private static void editStudent (String []students) {
-        String editStudent = inputOutput("Nhập tên sinh viên muốn chỉnh sửa: ");
-        String changeStudent = inputOutput("Nhập tên mới: ");
-        for (int i = 0; i < students.length; i++) {
-            if (editStudent.equals(students[i])) {
-                students[i] = changeStudent;
+    private static void editStudent (Student[] students) {
+        System.out.println("Nhập id sinh viên muốn sửa thông tin: ");
+        int id = Integer.parseInt(scanner.nextLine());
+        System.out.println("Nhập mục thông tin muốn chỉnh sửa: ");
+        System.out.println("1. Sửa id");
+        System.out.println("2. Sửa tên");
+        System.out.println("3. Sửa tuổi");
+        System.out.println("4. Sửa địa chỉ");
+        int choice = Integer.parseInt(scanner.nextLine());
+        switch (choice) {
+            case 1:
+                System.out.println("Nhập id mới: ");
+                int newId = Integer.parseInt(scanner.nextLine());
+                for (int i = 0; i < students.length; i++) {
+                    if (students[i].getId() == id) {
+                        students[i].setId(newId);
+                        break;
+                    } else if (newId == id) {
+                        System.out.println("Id đã bị trùng");
+                        students[i].setId(id);
+                        break;
+                    }
+                }
                 break;
-            }
-        }
-    }
 
-    private static String inputOutput (String message) {
-        System.out.println(message);
-        String output = scanner.nextLine();
-        return output;
+            case 2:
+                System.out.println("Nhập tên mới: ");
+                String newName = scanner.nextLine();
+                for (int i = 0; i < students.length; i++) {
+                    if (id == students[i].getId()) {
+                        students[i].setName(newName);
+                        break;
+                    }
+                }
+                break;
+
+            case 3:
+                System.out.println("Nhập tuổi mới: ");
+                int newAge = Integer.parseInt(scanner.nextLine());
+                for (int i = 0; i < students.length; i++) {
+                    if (id == students[i].getId()) {
+                        students[i].setAge(newAge);
+                        break;
+                    }
+                }
+                break;
+
+            case 4:
+                System.out.println("Nhập địa chỉ mới: ");
+                String newAddress = scanner.nextLine();
+                for (int i = 0; i < students.length; i++) {
+                    if (id == students[i].getId()) {
+                        students[i].setAddress(newAddress);
+                        break;
+                    }
+                }
+                break;
+
+            default:
+                System.out.println("Mời nhập lại");
+        }
     }
 }

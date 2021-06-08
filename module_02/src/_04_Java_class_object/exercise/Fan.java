@@ -1,7 +1,10 @@
 package _04_Java_class_object.exercise;
 
 public class Fan {
-    private int speed = 1;
+    private final int SLOW = 1;
+    private final int MEDIUM = 2;
+    private final int FAST = 3;
+    private int speed = SLOW;
     private boolean on = false;
     private double radius = 5;
     private String color = "blue";
@@ -11,18 +14,6 @@ public class Fan {
         this.on = on;
         this.radius = radius;
         this.color = color;
-    }
-
-    private final int SLOW() {
-        return this.speed = 1;
-    }
-
-    private final int MEDIUM() {
-        return this.speed = 2;
-    }
-
-    private final int FAST() {
-        return this.speed = 3;
     }
 
     public Fan() {
@@ -79,7 +70,6 @@ public class Fan {
     public static void main(String[] args) {
 
         Fan newFan1 = new Fan(3, true, 10, "yellow");
-        newFan1.MEDIUM();
         String fan1 = newFan1.toString();
         System.out.println(fan1);
 

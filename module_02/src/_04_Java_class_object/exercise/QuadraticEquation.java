@@ -30,17 +30,29 @@ public class QuadraticEquation {
         return (this.b*this.b - this.c * this.a * 4);
     }
 
-    public void getRoots() {
-        double root1, root2;
+    public void getRoot1() {
+        double root1;
         if (getDiscriminant() < 0) {
             System.out.println("The equation has no roots");
         } else if (getDiscriminant() == 0) {
-            root1 = root2 = -this.b / (this.a * 2);
-            System.out.println("Roots are: " + root1 + "; " +root2);
+            root1 = -this.b / (this.a * 2);
+            System.out.println("Root1 is: " + root1);
         } else {
             root1 = (-this.b + Math.pow(getDiscriminant(), 0.5)) / 2*this.a;
+            System.out.println("Root1 is: " + root1);
+        }
+    }
+
+    public void getRoot2() {
+        double root2;
+        if (getDiscriminant() < 0) {
+            System.out.println("The equation has no roots");
+        } else if (getDiscriminant() == 0) {
+            root2 = -this.b / (this.a * 2);
+            System.out.println("Root2 is: " + root2);
+        } else {
             root2 = (-this.b - Math.pow(getDiscriminant(), 0.5)) / 2*this.a;
-            System.out.println("Roots are: " + root1 + "; " +root2);
+            System.out.println("Root2 is: " + root2);
         }
     }
 
@@ -55,6 +67,8 @@ public class QuadraticEquation {
         QuadraticEquation equation = new QuadraticEquation(a, b, c);
 
         System.out.println("Discriminant is: " + equation.getDiscriminant());
-        equation.getRoots();
+        equation.getDiscriminant();
+        equation.getRoot1();
+        equation.getRoot2();
     }
 }

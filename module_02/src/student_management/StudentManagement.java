@@ -4,9 +4,16 @@ import java.util.Scanner;
 
 public class StudentManagement {
     public static Scanner scanner =  new Scanner(System.in);
+    public static Student[] students;
+    static {
+        students = new Student[50];
+        students[0] = new Student(1, "Trung", 33, "Đà Nẵng");
+        students[1] = new Student(2, "Nhật", 23, "Quảng Nam");
+        students[2] = new Student(3, "Tài", 24, "Quảng Ngãi");
+        students[3] = new Student(4, "Minh", 25, "Vinh");
+    }
     public static void main(String[] args) {
         System.out.println("-------------------Chương trình quản lý sinh viên------------------");
-        Student []students = new Student[50];
         while (true) {
             System.out.println("Menu chương trình");
             System.out.println("1. Xem danh sách sinh viên");
@@ -44,7 +51,7 @@ public class StudentManagement {
         }
     }
 
-    private static void displayStudent (Student[] students) {
+    public static void displayStudent (Student[] students) {
         for (Student student : students) {
             if (student != null) {
                 System.out.println(student);
@@ -52,7 +59,7 @@ public class StudentManagement {
         }
     }
 
-    private static void deleteStudent (Student[] students) {
+    public static void deleteStudent (Student[] students) {
         System.out.println("Nhập id sinh viên muốn xóa: ");
         int id = Integer.parseInt(scanner.nextLine());
         for (int i = 0; i < students.length; i++) {
@@ -66,7 +73,7 @@ public class StudentManagement {
         }
     }
 
-    private static void creatNewStudent (Student[] students) {
+    public static void creatNewStudent (Student[] students) {
         System.out.println("Nhập id cho sinh viên mới: ");
         int id = Integer.parseInt(scanner.nextLine());
         System.out.println("Nhập tên sinh viên mới: ");
@@ -84,7 +91,7 @@ public class StudentManagement {
         }
     }
 
-    private static void editStudent (Student[] students) {
+    public static void editStudent (Student[] students) {
         System.out.println("Nhập id sinh viên muốn sửa thông tin: ");
         int id = Integer.parseInt(scanner.nextLine());
         System.out.println("Nhập mục thông tin muốn chỉnh sửa: ");

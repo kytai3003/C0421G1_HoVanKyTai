@@ -21,9 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ce9c8f28-a9f2-4011-89a0-d696222ad2a7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_04_Java_class_object/exercise/Fan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_04_Java_class_object/exercise/Fan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_04_Java_class_object/exercise/QuadraticEquation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_04_Java_class_object/exercise/QuadraticEquation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/student_management/StudentManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/student_management/StudentManagement.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,13 +51,13 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
   </component>
-  <component name="RunManager" selected="Application.StudentManagement">
-    <configuration name="StudentManagement" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="student_management.StudentManagement" />
+  <component name="RunManager" selected="Application.TestTriangle">
+    <configuration name="TestMovablePoint" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_06_Java_inheritance_polymorphism.exercise.TestMovablePoint" />
       <module name="module_02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="student_management.*" />
+          <option name="PATTERN" value="_06_Java_inheritance_polymorphism.exercise.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -68,12 +65,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestCar" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_05_Java_access_modifier_encapsulation.practise.TestCar" />
+    <configuration name="TestPoint" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_06_Java_inheritance_polymorphism.exercise.TestPoint" />
       <module name="module_02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_05_Java_access_modifier_encapsulation.practise.*" />
+          <option name="PATTERN" value="_06_Java_inheritance_polymorphism.exercise.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -81,12 +78,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestCircle" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_05_Java_access_modifier_encapsulation.exercise.TestCircle" />
+    <configuration name="TestPoint2D" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_06_Java_inheritance_polymorphism.exercise.TestPoint2D" />
       <module name="module_02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_05_Java_access_modifier_encapsulation.exercise.*" />
+          <option name="PATTERN" value="_06_Java_inheritance_polymorphism.exercise.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -94,12 +91,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestStudent (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_05_Java_access_modifier_encapsulation.practise.TestStudent" />
+    <configuration name="TestPoint3D" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_06_Java_inheritance_polymorphism.exercise.TestPoint3D" />
       <module name="module_02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_05_Java_access_modifier_encapsulation.practise.*" />
+          <option name="PATTERN" value="_06_Java_inheritance_polymorphism.exercise.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -107,12 +104,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestStudent" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_05_Java_access_modifier_encapsulation.exercise.TestStudent" />
+    <configuration name="TestTriangle" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_06_Java_inheritance_polymorphism.exercise.shape_triangle.TestTriangle" />
       <module name="module_02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_05_Java_access_modifier_encapsulation.exercise.*" />
+          <option name="PATTERN" value="_06_Java_inheritance_polymorphism.exercise.shape_triangle.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -122,11 +119,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.StudentManagement" />
-        <item itemvalue="Application.TestCar" />
-        <item itemvalue="Application.TestStudent" />
-        <item itemvalue="Application.TestStudent (1)" />
-        <item itemvalue="Application.TestCircle" />
+        <item itemvalue="Application.TestTriangle" />
+        <item itemvalue="Application.TestMovablePoint" />
+        <item itemvalue="Application.TestPoint" />
+        <item itemvalue="Application.TestPoint3D" />
+        <item itemvalue="Application.TestPoint2D" />
       </list>
     </recent_temporary>
   </component>
@@ -148,7 +145,8 @@
       <workItem from="1622955994446" duration="1384000" />
       <workItem from="1622990506099" duration="4731000" />
       <workItem from="1623029136291" duration="25613000" />
-      <workItem from="1623121923438" duration="15126000" />
+      <workItem from="1623121923438" duration="15978000" />
+      <workItem from="1623201418347" duration="19134000" />
     </task>
     <servers />
   </component>
@@ -176,25 +174,29 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="0" width="816" height="728" key="#Intentions/0.0.1366.728@0.0.1366.728" timestamp="1622814092288" />
-    <state x="488" y="79" key="#com.intellij.ide.util.MemberChooser" timestamp="1623139312636">
+    <state x="488" y="79" key="#com.intellij.ide.util.MemberChooser" timestamp="1623237474892">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="488" y="79" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1623139312636" />
-    <state width="1323" height="180" key="GridCell.Tab.0.bottom" timestamp="1623141502275">
+    <state x="488" y="79" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1623237474892" />
+    <state width="1323" height="166" key="GridCell.Tab.0.bottom" timestamp="1623237441151">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="180" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1623141502275" />
-    <state width="1323" height="180" key="GridCell.Tab.0.center" timestamp="1623141502275">
+    <state width="1323" height="166" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1623237441151" />
+    <state width="1323" height="166" key="GridCell.Tab.0.center" timestamp="1623237441151">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="180" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1623141502275" />
-    <state width="1323" height="180" key="GridCell.Tab.0.left" timestamp="1623141502275">
+    <state width="1323" height="166" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1623237441151" />
+    <state width="1323" height="166" key="GridCell.Tab.0.left" timestamp="1623237441151">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="180" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1623141502275" />
-    <state width="1323" height="180" key="GridCell.Tab.0.right" timestamp="1623141502275">
+    <state width="1323" height="166" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1623237441151" />
+    <state width="1323" height="166" key="GridCell.Tab.0.right" timestamp="1623237441151">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="180" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1623141502275" />
+    <state width="1323" height="166" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1623237441151" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1623237165295">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1623237165295" />
   </component>
 </project>

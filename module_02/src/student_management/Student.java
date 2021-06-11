@@ -1,51 +1,34 @@
 package student_management;
 
-public class Student {
-    private int id;
-    private String name;
-    private int age;
-    private String address;
+public class Student extends Person{
+    private String _class;
 
-    public Student(int id, String name, int age, String address) {
-        this.id = id;
-        this.name = name;
-        this.age = age;
-        this.address = address;
+    public Student(int id, String name, int age, String address, String _class) {
+        super(id, name, age, address);
+        this._class = _class;
     }
 
     public Student() {
     }
 
-    public int getId() {
-        return id;
+    public String get_class() {
+        return _class;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void set_class(String _class) {
+        this._class = _class;
     }
 
-    public String getName() {
-        return name;
+    public void move() {
+        System.out.println("Đi bằng xe đạp");
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void study() {
+        System.out.println("Học tiếng anh");
     }
 
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
+    public void study(String subject){
+        System.out.println("Học môn " + subject);
     }
 
     @Override
@@ -55,6 +38,7 @@ public class Student {
                 ", name='" + name + '\'' +
                 ", age=" + age +
                 ", address='" + address + '\'' +
+                "_class='" + _class + '\'' +
                 '}';
     }
 }

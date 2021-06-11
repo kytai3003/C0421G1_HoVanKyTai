@@ -21,6 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="ce9c8f28-a9f2-4011-89a0-d696222ad2a7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module_02/student_management/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module_02/student_management/Student.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module_02/student_management/StudentManagement.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module_02/student_management/StudentManagement.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/student_management/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/student_management/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/student_management/StudentManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/student_management/StudentManagement.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +34,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -50,14 +55,25 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
-  <component name="RunManager" selected="Application.TestTriangle">
-    <configuration name="TestMovablePoint" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_06_Java_inheritance_polymorphism.exercise.TestMovablePoint" />
+  <component name="RecentsManager">
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="_07_Java_abstract_interface.practise.interface_comparator" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="_07_Java_abstract_interface.exercise.interface_colorable" />
+      <recent name="_07_Java_abstract_interface.exercise.interface_resizeable" />
+      <recent name="_07_Java_abstract_interface.practise.interface_comparable" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.TestResizeable">
+    <configuration name="AbstractAndInterfaceTests (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_07_Java_abstract_interface.practise.animal_interface_edible.AbstractAndInterfaceTests" />
       <module name="module_02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_06_Java_inheritance_polymorphism.exercise.*" />
+          <option name="PATTERN" value="_07_Java_abstract_interface.practise.animal_interface_edible.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -65,12 +81,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestPoint" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_06_Java_inheritance_polymorphism.exercise.TestPoint" />
+    <configuration name="CircleComparatorTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_07_Java_abstract_interface.practise.interface_comparator.CircleComparatorTest" />
       <module name="module_02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_06_Java_inheritance_polymorphism.exercise.*" />
+          <option name="PATTERN" value="_07_Java_abstract_interface.practise.interface_comparator.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -78,12 +94,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestPoint2D" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_06_Java_inheritance_polymorphism.exercise.TestPoint2D" />
+    <configuration name="ComparableCircleTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_07_Java_abstract_interface.practise.interface_comparable.ComparableCircleTest" />
       <module name="module_02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_06_Java_inheritance_polymorphism.exercise.*" />
+          <option name="PATTERN" value="_07_Java_abstract_interface.practise.interface_comparable.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -91,12 +107,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestPoint3D" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_06_Java_inheritance_polymorphism.exercise.TestPoint3D" />
+    <configuration name="TestColorable" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_07_Java_abstract_interface.exercise.interface_colorable.TestColorable" />
       <module name="module_02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_06_Java_inheritance_polymorphism.exercise.*" />
+          <option name="PATTERN" value="_07_Java_abstract_interface.exercise.interface_colorable.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -104,12 +120,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestTriangle" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_06_Java_inheritance_polymorphism.exercise.shape_triangle.TestTriangle" />
+    <configuration name="TestResizeable" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_07_Java_abstract_interface.exercise.interface_resizeable.TestResizeable" />
       <module name="module_02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_06_Java_inheritance_polymorphism.exercise.shape_triangle.*" />
+          <option name="PATTERN" value="_07_Java_abstract_interface.exercise.interface_resizeable.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -119,11 +135,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TestTriangle" />
-        <item itemvalue="Application.TestMovablePoint" />
-        <item itemvalue="Application.TestPoint" />
-        <item itemvalue="Application.TestPoint3D" />
-        <item itemvalue="Application.TestPoint2D" />
+        <item itemvalue="Application.TestResizeable" />
+        <item itemvalue="Application.TestColorable" />
+        <item itemvalue="Application.CircleComparatorTest" />
+        <item itemvalue="Application.ComparableCircleTest" />
+        <item itemvalue="Application.AbstractAndInterfaceTests (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -146,7 +162,9 @@
       <workItem from="1622990506099" duration="4731000" />
       <workItem from="1623029136291" duration="25613000" />
       <workItem from="1623121923438" duration="15978000" />
-      <workItem from="1623201418347" duration="19134000" />
+      <workItem from="1623201418347" duration="19530000" />
+      <workItem from="1623288186253" duration="23945000" />
+      <workItem from="1623381746202" duration="15672000" />
     </task>
     <servers />
   </component>
@@ -174,29 +192,37 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="0" width="816" height="728" key="#Intentions/0.0.1366.728@0.0.1366.728" timestamp="1622814092288" />
-    <state x="488" y="79" key="#com.intellij.ide.util.MemberChooser" timestamp="1623237474892">
+    <state x="488" y="79" key="#com.intellij.ide.util.MemberChooser" timestamp="1623396317758">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="488" y="79" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1623237474892" />
-    <state width="1323" height="166" key="GridCell.Tab.0.bottom" timestamp="1623237441151">
+    <state x="488" y="79" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1623396317758" />
+    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1623321442145">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="166" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1623237441151" />
-    <state width="1323" height="166" key="GridCell.Tab.0.center" timestamp="1623237441151">
+    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1623321442145" />
+    <state width="1323" height="280" key="GridCell.Tab.0.bottom" timestamp="1623406126782">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="166" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1623237441151" />
-    <state width="1323" height="166" key="GridCell.Tab.0.left" timestamp="1623237441151">
+    <state width="1323" height="280" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1623406126782" />
+    <state width="1323" height="280" key="GridCell.Tab.0.center" timestamp="1623406126782">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="166" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1623237441151" />
-    <state width="1323" height="166" key="GridCell.Tab.0.right" timestamp="1623237441151">
+    <state width="1323" height="280" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1623406126782" />
+    <state width="1323" height="280" key="GridCell.Tab.0.left" timestamp="1623406126782">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="166" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1623237441151" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1623237165295">
+    <state width="1323" height="280" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1623406126782" />
+    <state width="1323" height="280" key="GridCell.Tab.0.right" timestamp="1623406126782">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1623237165295" />
+    <state width="1323" height="280" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1623406126782" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1623334322950">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1623334322950" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1623393999712">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1623393999712" />
   </component>
 </project>

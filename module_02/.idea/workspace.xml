@@ -21,10 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ce9c8f28-a9f2-4011-89a0-d696222ad2a7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module_02/student_management/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module_02/student_management/Student.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module_02/student_management/StudentManagement.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module_02/student_management/StudentManagement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/student_management/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/student_management/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/student_management/StudentManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/student_management/StudentManagement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_07_Java_abstract_interface/exercise/interface_colorable/TestColorable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_07_Java_abstract_interface/exercise/interface_colorable/TestColorable.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +64,7 @@
       <recent name="_07_Java_abstract_interface.practise.interface_comparable" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TestResizeable">
+  <component name="RunManager" selected="Application.TestColorable">
     <configuration name="AbstractAndInterfaceTests (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="_07_Java_abstract_interface.practise.animal_interface_edible.AbstractAndInterfaceTests" />
       <module name="module_02" />
@@ -135,8 +132,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TestResizeable" />
         <item itemvalue="Application.TestColorable" />
+        <item itemvalue="Application.TestResizeable" />
         <item itemvalue="Application.CircleComparatorTest" />
         <item itemvalue="Application.ComparableCircleTest" />
         <item itemvalue="Application.AbstractAndInterfaceTests (1)" />
@@ -164,7 +161,7 @@
       <workItem from="1623121923438" duration="15978000" />
       <workItem from="1623201418347" duration="19530000" />
       <workItem from="1623288186253" duration="23945000" />
-      <workItem from="1623381746202" duration="15672000" />
+      <workItem from="1623381746202" duration="18565000" />
     </task>
     <servers />
   </component>

@@ -16,7 +16,7 @@ public class TestColorable {
         System.out.println("Area: " + ((Square) shapes[3]).getArea());
 
         for (int i = 0; i < shapes.length; i++){
-            if (shapes[i] instanceof Square) {
+            if (shapes[i] instanceof Colorable) {
                 System.out.println("Shape " + (i+1) + " is a square.");
                 ((Square)shapes[i]).howToColor();
             }

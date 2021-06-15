@@ -124,8 +124,11 @@ public class StudentManagement {
         String _class = scanner.nextLine();
         Student newStudent = new Student(id, name, age, address, _class);
         for (int i = 0; i < people.length; i++) {
-            if (people[i].getId() == 0) {
+            if (people[i] == null) {
                 people[i] = newStudent;
+                break;
+            } else {
+                System.out.println("Đã có thông tin. Mời nhập ID khác.");
                 break;
             }
         }
@@ -144,8 +147,11 @@ public class StudentManagement {
         String level = scanner.nextLine();
         Teacher newTeacher = new Teacher(id, name, age, address, level);
         for (int i = 0; i < people.length; i++) {
-            if (people[i].getId() == 0) {
+            if (people[i] == null) {
                 people[i] = newTeacher;
+                break;
+            } else {
+                System.out.println("Đã có thông tin. Mời nhập ID khác.");
                 break;
             }
         }

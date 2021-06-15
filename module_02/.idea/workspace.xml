@@ -19,7 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce9c8f28-a9f2-4011-89a0-d696222ad2a7" name="Default Changelist" comment="" />
+    <list default="true" id="ce9c8f28-a9f2-4011-89a0-d696222ad2a7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module_02.iml" beforeDir="false" afterPath="$PROJECT_DIR$/module_02.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_08_Java_cleancode_refactoring/practise/variable_constance/CalculatorTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/student_management/StudentManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/student_management/StudentManagement.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,10 +50,15 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/_08_Java_cleancode_refactoring/practise/variable_constance" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
@@ -60,14 +70,17 @@
       <recent name="_07_Java_abstract_interface.exercise.interface_resizeable" />
       <recent name="_07_Java_abstract_interface.practise.interface_comparable" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\C2401G1_HoVanKyTai\module_02\src\_08_Java_cleancode_refactoring\practise\variable_constance" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.TestColorable">
-    <configuration name="AbstractAndInterfaceTests (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_07_Java_abstract_interface.practise.animal_interface_edible.AbstractAndInterfaceTests" />
+  <component name="RunManager" selected="Application.StudentManagement">
+    <configuration name="StudentManagement" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="student_management.StudentManagement" />
       <module name="module_02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_07_Java_abstract_interface.practise.animal_interface_edible.*" />
+          <option name="PATTERN" value="student_management.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -75,12 +88,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CircleComparatorTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_07_Java_abstract_interface.practise.interface_comparator.CircleComparatorTest" />
+    <configuration name="TennisTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_08_Java_cleancode_refactoring.exercise.TennisTest" />
       <module name="module_02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_07_Java_abstract_interface.practise.interface_comparator.*" />
+          <option name="PATTERN" value="_08_Java_cleancode_refactoring.exercise.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -88,12 +101,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ComparableCircleTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_07_Java_abstract_interface.practise.interface_comparable.ComparableCircleTest" />
+    <configuration name="TestResort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="resort_management.TestResort" />
       <module name="module_02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_07_Java_abstract_interface.practise.interface_comparable.*" />
+          <option name="PATTERN" value="resort_management.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -101,39 +114,43 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestColorable" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_07_Java_abstract_interface.exercise.interface_colorable.TestColorable" />
+    <configuration name="CylinderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="module_02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_07_Java_abstract_interface.exercise.interface_colorable.*" />
+          <option name="PATTERN" value="_08_Java_cleancode_refactoring.practise.methods_refactoring.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="_08_Java_cleancode_refactoring.practise.methods_refactoring" />
+      <option name="MAIN_CLASS_NAME" value="_08_Java_cleancode_refactoring.practise.methods_refactoring.CylinderTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestResizeable" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_07_Java_abstract_interface.exercise.interface_resizeable.TestResizeable" />
+    <configuration name="FizzBuzzTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="module_02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_07_Java_abstract_interface.exercise.interface_resizeable.*" />
+          <option name="PATTERN" value="_08_Java_cleancode_refactoring.practise.refactoring.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="_08_Java_cleancode_refactoring.practise.refactoring" />
+      <option name="MAIN_CLASS_NAME" value="_08_Java_cleancode_refactoring.practise.refactoring.FizzBuzzTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TestColorable" />
-        <item itemvalue="Application.TestResizeable" />
-        <item itemvalue="Application.CircleComparatorTest" />
-        <item itemvalue="Application.ComparableCircleTest" />
-        <item itemvalue="Application.AbstractAndInterfaceTests (1)" />
+        <item itemvalue="Application.StudentManagement" />
+        <item itemvalue="Application.TennisTest" />
+        <item itemvalue="JUnit.FizzBuzzTest" />
+        <item itemvalue="Application.TestResort" />
+        <item itemvalue="JUnit.CylinderTest" />
       </list>
     </recent_temporary>
   </component>
@@ -158,7 +175,10 @@
       <workItem from="1623121923438" duration="15978000" />
       <workItem from="1623201418347" duration="19530000" />
       <workItem from="1623288186253" duration="23945000" />
-      <workItem from="1623381746202" duration="19202000" />
+      <workItem from="1623381746202" duration="19835000" />
+      <workItem from="1623601608708" duration="366000" />
+      <workItem from="1623634388006" duration="11635000" />
+      <workItem from="1623724129302" duration="7693000" />
     </task>
     <servers />
   </component>
@@ -186,30 +206,34 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="0" width="816" height="728" key="#Intentions/0.0.1366.728@0.0.1366.728" timestamp="1622814092288" />
-    <state x="488" y="79" key="#com.intellij.ide.util.MemberChooser" timestamp="1623396317758">
+    <state x="488" y="79" key="#com.intellij.ide.util.MemberChooser" timestamp="1623644360988">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="488" y="79" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1623396317758" />
+    <state x="488" y="79" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1623644360988" />
     <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1623321442145">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1623321442145" />
-    <state width="1323" height="280" key="GridCell.Tab.0.bottom" timestamp="1623420612984">
+    <state width="1323" height="89" key="GridCell.Tab.0.bottom" timestamp="1623745536400">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="280" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1623420612984" />
-    <state width="1323" height="280" key="GridCell.Tab.0.center" timestamp="1623420612984">
+    <state width="1323" height="89" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1623745536400" />
+    <state width="1323" height="89" key="GridCell.Tab.0.center" timestamp="1623745536400">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="280" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1623420612984" />
-    <state width="1323" height="280" key="GridCell.Tab.0.left" timestamp="1623420612984">
+    <state width="1323" height="89" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1623745536400" />
+    <state width="1323" height="89" key="GridCell.Tab.0.left" timestamp="1623745536400">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="280" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1623420612984" />
-    <state width="1323" height="280" key="GridCell.Tab.0.right" timestamp="1623420612984">
+    <state width="1323" height="89" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1623745536400" />
+    <state width="1323" height="89" key="GridCell.Tab.0.right" timestamp="1623745536400">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="280" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1623420612984" />
+    <state width="1323" height="89" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1623745536400" />
+    <state x="387" y="255" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1623638203629">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="387" y="255" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1366.728@0.0.1366.728" timestamp="1623638203629" />
     <state x="339" y="162" key="run.anything.popup" timestamp="1623334322950">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

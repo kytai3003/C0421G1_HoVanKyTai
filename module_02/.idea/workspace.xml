@@ -21,9 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="ce9c8f28-a9f2-4011-89a0-d696222ad2a7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module_02.iml" beforeDir="false" afterPath="$PROJECT_DIR$/module_02.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_08_Java_cleancode_refactoring/practise/variable_constance/CalculatorTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/student_management/StudentManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/student_management/StudentManagement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module_02/_08_Java_cleancode_refactoring/exercise/TennisGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module_02/_08_Java_cleancode_refactoring/exercise/TennisGame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_08_Java_cleancode_refactoring/exercise/TennisGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_08_Java_cleancode_refactoring/exercise/TennisGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_08_Java_cleancode_refactoring/exercise/TennisTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_08_Java_cleancode_refactoring/exercise/TennisTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +65,9 @@
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="_07_Java_abstract_interface.practise.interface_comparator" />
     </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="_10_Java_DSA.practise.MyLinkedList" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="_07_Java_abstract_interface.exercise.interface_colorable" />
       <recent name="_07_Java_abstract_interface.exercise.interface_resizeable" />
@@ -74,20 +77,7 @@
       <recent name="D:\C2401G1_HoVanKyTai\module_02\src\_08_Java_cleancode_refactoring\practise\variable_constance" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.StudentManagement">
-    <configuration name="StudentManagement" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="student_management.StudentManagement" />
-      <module name="module_02" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="student_management.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.TennisTest">
     <configuration name="TennisTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="_08_Java_cleancode_refactoring.exercise.TennisTest" />
       <module name="module_02" />
@@ -101,12 +91,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestResort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="resort_management.TestResort" />
+    <configuration name="TestMyLinkedList (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_10_Java_DSA.exercise.MyLinkedList.TestMyLinkedList" />
       <module name="module_02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="resort_management.*" />
+          <option name="PATTERN" value="_10_Java_DSA.exercise.MyLinkedList.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -114,43 +104,52 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CylinderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestMyLinkedList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_10_Java_DSA.practise.MyLinkedList.TestMyLinkedList" />
       <module name="module_02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_08_Java_cleancode_refactoring.practise.methods_refactoring.*" />
+          <option name="PATTERN" value="_10_Java_DSA.practise.MyLinkedList.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="_08_Java_cleancode_refactoring.practise.methods_refactoring" />
-      <option name="MAIN_CLASS_NAME" value="_08_Java_cleancode_refactoring.practise.methods_refactoring.CylinderTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FizzBuzzTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestMyList (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_10_Java_DSA.practise.MyList.TestMyList" />
       <module name="module_02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_08_Java_cleancode_refactoring.practise.refactoring.*" />
+          <option name="PATTERN" value="_10_Java_DSA.practise.MyList.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="_08_Java_cleancode_refactoring.practise.refactoring" />
-      <option name="MAIN_CLASS_NAME" value="_08_Java_cleancode_refactoring.practise.refactoring.FizzBuzzTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestMyList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_10_Java_DSA.practise.TestMyList" />
+      <module name="module_02" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="_10_Java_DSA.practise.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.StudentManagement" />
         <item itemvalue="Application.TennisTest" />
-        <item itemvalue="JUnit.FizzBuzzTest" />
-        <item itemvalue="Application.TestResort" />
-        <item itemvalue="JUnit.CylinderTest" />
+        <item itemvalue="Application.TestMyLinkedList (1)" />
+        <item itemvalue="Application.TestMyLinkedList" />
+        <item itemvalue="Application.TestMyList (1)" />
+        <item itemvalue="Application.TestMyList" />
       </list>
     </recent_temporary>
   </component>
@@ -178,7 +177,7 @@
       <workItem from="1623381746202" duration="19835000" />
       <workItem from="1623601608708" duration="366000" />
       <workItem from="1623634388006" duration="11635000" />
-      <workItem from="1623724129302" duration="7693000" />
+      <workItem from="1623724129302" duration="29574000" />
     </task>
     <servers />
   </component>
@@ -206,34 +205,38 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="0" width="816" height="728" key="#Intentions/0.0.1366.728@0.0.1366.728" timestamp="1622814092288" />
-    <state x="488" y="79" key="#com.intellij.ide.util.MemberChooser" timestamp="1623644360988">
+    <state x="488" y="79" key="#com.intellij.ide.util.MemberChooser" timestamp="1623837820352">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="488" y="79" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1623644360988" />
+    <state x="488" y="79" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1623837820352" />
     <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1623321442145">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1623321442145" />
-    <state width="1323" height="89" key="GridCell.Tab.0.bottom" timestamp="1623745536400">
+    <state width="1323" height="188" key="GridCell.Tab.0.bottom" timestamp="1623863717468">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="89" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1623745536400" />
-    <state width="1323" height="89" key="GridCell.Tab.0.center" timestamp="1623745536400">
+    <state width="1323" height="188" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1623863717468" />
+    <state width="1323" height="188" key="GridCell.Tab.0.center" timestamp="1623863717468">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="89" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1623745536400" />
-    <state width="1323" height="89" key="GridCell.Tab.0.left" timestamp="1623745536400">
+    <state width="1323" height="188" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1623863717468" />
+    <state width="1323" height="188" key="GridCell.Tab.0.left" timestamp="1623863717468">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="89" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1623745536400" />
-    <state width="1323" height="89" key="GridCell.Tab.0.right" timestamp="1623745536400">
+    <state width="1323" height="188" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1623863717468" />
+    <state width="1323" height="188" key="GridCell.Tab.0.right" timestamp="1623863717468">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="89" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1623745536400" />
+    <state width="1323" height="188" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1623863717468" />
     <state x="387" y="255" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1623638203629">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="387" y="255" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1366.728@0.0.1366.728" timestamp="1623638203629" />
+    <state x="389" y="121" key="refactoring.ChangeSignatureDialog" timestamp="1623747289968">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="389" y="121" key="refactoring.ChangeSignatureDialog/0.0.1366.728@0.0.1366.728" timestamp="1623747289968" />
     <state x="339" y="162" key="run.anything.popup" timestamp="1623334322950">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

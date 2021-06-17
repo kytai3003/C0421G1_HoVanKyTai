@@ -1,5 +1,8 @@
 package _10_Java_DSA.exercise.MyLinkedList;
 
+import java.util.LinkedList;
+import java.util.NoSuchElementException;
+
 public class MyLinkedList<E> {
     private int numNodes = 0;
     private Node head;
@@ -147,6 +150,10 @@ public class MyLinkedList<E> {
     }
 
     public E getFirst() {
+        Node first = head;
+        if (first == null) {
+            throw new NoSuchElementException();
+        }
         return (E) head.data;
     }
 
@@ -164,6 +171,7 @@ public class MyLinkedList<E> {
             temp.setData(null);
             temp = temp.next;
         }
+        temp.setData(null);
         setNumNodes(0);
     }
 }

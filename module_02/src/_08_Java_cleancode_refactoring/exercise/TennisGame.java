@@ -34,7 +34,7 @@ public class TennisGame {
             score = "Advantage player 1";
         } else if (minusResult == -1) {
             score = "Advantage player 2";
-        } else {
+        } else if (minusResult < -1){
             score = "Win for player 2";
         }
     }

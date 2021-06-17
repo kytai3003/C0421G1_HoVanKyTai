@@ -22,8 +22,11 @@
     <list default="true" id="ce9c8f28-a9f2-4011-89a0-d696222ad2a7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/module_02/_08_Java_cleancode_refactoring/exercise/TennisGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module_02/_08_Java_cleancode_refactoring/exercise/TennisGame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module_02/_08_Java_cleancode_refactoring/exercise/TennisTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module_02/_08_Java_cleancode_refactoring/exercise/TennisTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/_08_Java_cleancode_refactoring/exercise/TennisGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_08_Java_cleancode_refactoring/exercise/TennisGame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/_08_Java_cleancode_refactoring/exercise/TennisTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_08_Java_cleancode_refactoring/exercise/TennisTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_10_Java_DSA/exercise/MyLinkedList/MyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_10_Java_DSA/exercise/MyLinkedList/MyLinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_10_Java_DSA/exercise/MyList/MyList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_10_Java_DSA/exercise/MyList/MyList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +80,20 @@
       <recent name="D:\C2401G1_HoVanKyTai\module_02\src\_08_Java_cleancode_refactoring\practise\variable_constance" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TennisTest">
+  <component name="RunManager" selected="Application.TestMyList">
+    <configuration name="MyList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_10_Java_DSA.exercise.MyList.MyList" />
+      <module name="module_02" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="_10_Java_DSA.exercise.MyList.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TennisTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="_08_Java_cleancode_refactoring.exercise.TennisTest" />
       <module name="module_02" />
@@ -117,25 +133,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestMyList (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_10_Java_DSA.practise.MyList.TestMyList" />
-      <module name="module_02" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="_10_Java_DSA.practise.MyList.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="TestMyList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_10_Java_DSA.practise.TestMyList" />
+      <option name="MAIN_CLASS_NAME" value="_10_Java_DSA.exercise.MyList.TestMyList" />
       <module name="module_02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_10_Java_DSA.practise.*" />
+          <option name="PATTERN" value="_10_Java_DSA.exercise.MyList.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -145,11 +148,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TestMyList" />
         <item itemvalue="Application.TennisTest" />
+        <item itemvalue="Application.MyList" />
         <item itemvalue="Application.TestMyLinkedList (1)" />
         <item itemvalue="Application.TestMyLinkedList" />
-        <item itemvalue="Application.TestMyList (1)" />
-        <item itemvalue="Application.TestMyList" />
       </list>
     </recent_temporary>
   </component>
@@ -177,7 +180,8 @@
       <workItem from="1623381746202" duration="19835000" />
       <workItem from="1623601608708" duration="366000" />
       <workItem from="1623634388006" duration="11635000" />
-      <workItem from="1623724129302" duration="29574000" />
+      <workItem from="1623724129302" duration="29833000" />
+      <workItem from="1623893807893" duration="7182000" />
     </task>
     <servers />
   </component>
@@ -205,30 +209,30 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="0" width="816" height="728" key="#Intentions/0.0.1366.728@0.0.1366.728" timestamp="1622814092288" />
-    <state x="488" y="79" key="#com.intellij.ide.util.MemberChooser" timestamp="1623837820352">
+    <state x="488" y="79" key="#com.intellij.ide.util.MemberChooser" timestamp="1623901707189">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="488" y="79" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1623837820352" />
+    <state x="488" y="79" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1623901707189" />
     <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1623321442145">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1623321442145" />
-    <state width="1323" height="188" key="GridCell.Tab.0.bottom" timestamp="1623863717468">
+    <state width="1323" height="150" key="GridCell.Tab.0.bottom" timestamp="1623901931465">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="188" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1623863717468" />
-    <state width="1323" height="188" key="GridCell.Tab.0.center" timestamp="1623863717468">
+    <state width="1323" height="150" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1623901931465" />
+    <state width="1323" height="150" key="GridCell.Tab.0.center" timestamp="1623901931465">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="188" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1623863717468" />
-    <state width="1323" height="188" key="GridCell.Tab.0.left" timestamp="1623863717468">
+    <state width="1323" height="150" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1623901931465" />
+    <state width="1323" height="150" key="GridCell.Tab.0.left" timestamp="1623901931464">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="188" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1623863717468" />
-    <state width="1323" height="188" key="GridCell.Tab.0.right" timestamp="1623863717468">
+    <state width="1323" height="150" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1623901931464" />
+    <state width="1323" height="150" key="GridCell.Tab.0.right" timestamp="1623901931465">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="188" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1623863717468" />
+    <state width="1323" height="150" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1623901931465" />
     <state x="387" y="255" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1623638203629">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

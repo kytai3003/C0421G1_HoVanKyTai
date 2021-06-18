@@ -21,24 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ce9c8f28-a9f2-4011-89a0-d696222ad2a7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module_02/_10_Java_DSA/exercise/MyLinkedList/MyLinkedList$Node.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module_02/_10_Java_DSA/exercise/MyLinkedList/MyLinkedList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module_02/_10_Java_DSA/exercise/MyLinkedList/TestMyLinkedList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module_02/_10_Java_DSA/exercise/MyList/MyList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module_02/_10_Java_DSA/exercise/MyList/TestMyList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module_02/_10_Java_DSA/practise/MyLinkedList/MyLinkedList$Node.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module_02/_10_Java_DSA/practise/MyLinkedList/MyLinkedList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module_02/_10_Java_DSA/practise/MyLinkedList/TestMyLinkedList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module_02/_10_Java_DSA/practise/MyList/MyList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module_02/_10_Java_DSA/practise/MyList/TestMyList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_10_Java_DSA/exercise/MyLinkedList/MyLinkedList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_10_Java_DSA/exercise/MyLinkedList/TestMyLinkedList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_10_Java_DSA/exercise/MyList/MyList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_10_Java_DSA/exercise/MyList/TestMyList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_10_Java_DSA/practise/MyLinkedList/MyLinkedList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_10_Java_DSA/practise/MyLinkedList/TestMyLinkedList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_10_Java_DSA/practise/MyList/MyList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_10_Java_DSA/practise/MyList/TestMyList.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,13 +74,13 @@
       <recent name="D:\C2401G1_HoVanKyTai\module_02\src\_08_Java_cleancode_refactoring\practise\variable_constance" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.WordCount">
-    <configuration name="LinkedListQueueClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_11_Java_stack_queue.practise.linkedlist_queue.LinkedListQueueClient" />
+  <component name="RunManager" selected="Application.PalindromeTest">
+    <configuration name="PalindromeTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_11_Java_stack_queue.exercise.palindrome.PalindromeTest" />
       <module name="module_02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_11_Java_stack_queue.practise.linkedlist_queue.*" />
+          <option name="PATTERN" value="_11_Java_stack_queue.exercise.palindrome.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -160,11 +142,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.PalindromeTest" />
         <item itemvalue="Application.WordCount" />
         <item itemvalue="Application.Solution" />
         <item itemvalue="Application.ReverseStack" />
         <item itemvalue="Application.TestMyLinkedList" />
-        <item itemvalue="Application.LinkedListQueueClient" />
       </list>
     </recent_temporary>
   </component>
@@ -194,7 +176,7 @@
       <workItem from="1623634388006" duration="11635000" />
       <workItem from="1623724129302" duration="29833000" />
       <workItem from="1623893807893" duration="22001000" />
-      <workItem from="1623983169447" duration="16367000" />
+      <workItem from="1623983169447" duration="18814000" />
     </task>
     <servers />
   </component>
@@ -222,30 +204,30 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="0" width="816" height="728" key="#Intentions/0.0.1366.728@0.0.1366.728" timestamp="1623924319698" />
-    <state x="488" y="79" key="#com.intellij.ide.util.MemberChooser" timestamp="1623991449137">
+    <state x="488" y="79" key="#com.intellij.ide.util.MemberChooser" timestamp="1624011948016">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="488" y="79" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1623991449137" />
+    <state x="488" y="79" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1624011948016" />
     <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1623321442145">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1623321442145" />
-    <state width="1323" height="176" key="GridCell.Tab.0.bottom" timestamp="1624010507314">
+    <state width="1323" height="176" key="GridCell.Tab.0.bottom" timestamp="1624013065155">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="176" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1624010507314" />
-    <state width="1323" height="176" key="GridCell.Tab.0.center" timestamp="1624010507314">
+    <state width="1323" height="176" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1624013065155" />
+    <state width="1323" height="176" key="GridCell.Tab.0.center" timestamp="1624013065155">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="176" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1624010507314" />
-    <state width="1323" height="176" key="GridCell.Tab.0.left" timestamp="1624010507314">
+    <state width="1323" height="176" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1624013065155" />
+    <state width="1323" height="176" key="GridCell.Tab.0.left" timestamp="1624013065155">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="176" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1624010507314" />
-    <state width="1323" height="176" key="GridCell.Tab.0.right" timestamp="1624010507314">
+    <state width="1323" height="176" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1624013065155" />
+    <state width="1323" height="176" key="GridCell.Tab.0.right" timestamp="1624013065155">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="176" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1624010507314" />
+    <state width="1323" height="176" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1624013065155" />
     <state x="387" y="255" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1623638203629">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

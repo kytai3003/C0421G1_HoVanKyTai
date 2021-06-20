@@ -1,39 +1,48 @@
 package _11_Java_stack_queue.exercise.wordcount_treemap;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.TreeMap;
 
 class WordCount {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+
+        // Tạo chuỗi
         System.out.println("Nhập chuỗi: ");
         String input = scanner.nextLine();
 
         // toLowerCase
         String lowerInput = input.toLowerCase();
 
-        // Chuyển chuỗi thành mảng
+        // Chuyển chuỗi thành List và xóa khoảng trắng
         String[] inputArr = new String[0];
+        ArrayList<String> list = new ArrayList<>();
+
         if (input.equals("")) {
             System.out.println("Chuỗi rỗng.");
         } else {
             inputArr = lowerInput.split(" ");
+            for (int i = 0; i < inputArr.length; i++) {
+                if (!inputArr[i].isEmpty()) {
+                    list.add(inputArr[i]);
+                }
+            }
         }
-        
-        // Hiển thị mảng chuỗi
-        for (String x : inputArr) {
-            System.out.println(x);
-        }
+
+        // Hiển thị List
+        System.out.println(list);
+        System.out.println(list.size());
+
 
         // Tạo TreeMap
-        TreeMap<String, Integer> treeMap = new TreeMap<String, Integer>();
-
-        for (int i = 0; i < inputArr.length; i++) {
-            if (treeMap.containsKey(inputArr[i])) {
-                int count = treeMap.get(inputArr[i]) + 1;
-                treeMap.put(inputArr[i], count);
+        TreeMap<String, Integer> treeMap = new TreeMap<>();
+        for (int i = 0; i < list.size(); i++) {
+            if (treeMap.containsKey(list.get(i))) {
+                int count = treeMap.get(list.get(i)) + 1;
+                treeMap.put(list.get(i), count);
             } else {
-                treeMap.put(inputArr[i], 1);
+                treeMap.put(list.get(i), 1);
             }
         }
         System.out.println(treeMap);

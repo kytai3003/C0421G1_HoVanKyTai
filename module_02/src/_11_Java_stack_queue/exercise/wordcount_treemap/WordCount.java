@@ -34,7 +34,6 @@ class WordCount {
         System.out.println(list);
         System.out.println(list.size());
 
-
         // Tạo TreeMap
         TreeMap<String, Integer> treeMap = new TreeMap<>();
         for (int i = 0; i < list.size(); i++) {

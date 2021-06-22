@@ -21,6 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="ce9c8f28-a9f2-4011-89a0-d696222ad2a7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module_02/_11_Java_stack_queue/exercise/binary_stack/Binary.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module_02/_11_Java_stack_queue/exercise/binary_stack/Binary.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module_02/_11_Java_stack_queue/exercise/wordcount_treemap/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module_02/_11_Java_stack_queue/exercise/wordcount_treemap/WordCount.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module_02/_11_Java_stack_queue/exercise/wordcount_treemap/WordCount.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_11_Java_stack_queue/exercise/binary_stack/Binary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_11_Java_stack_queue/exercise/binary_stack/Binary.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/_11_Java_stack_queue/exercise/wordcount_treemap/WordCount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_11_Java_stack_queue/exercise/wordcount_treemap/WordCount.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,7 +79,7 @@
       <recent name="D:\C2401G1_HoVanKyTai\module_02\src\_08_Java_cleancode_refactoring\practise\variable_constance" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.WordCount">
+  <component name="RunManager" selected="Application.ProductManager">
     <configuration name="Binary" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="_11_Java_stack_queue.exercise.binary_stack.Binary" />
       <module name="module_02" />
@@ -89,12 +93,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PalindromeTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_11_Java_stack_queue.exercise.palindrome.PalindromeTest" />
+    <configuration name="Bracket" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_11_Java_stack_queue.exercise.bracket_check.Bracket" />
       <module name="module_02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_11_Java_stack_queue.exercise.palindrome.*" />
+          <option name="PATTERN" value="_11_Java_stack_queue.exercise.bracket_check.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -102,12 +106,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_11_Java_stack_queue.exercise.circular_linked_list.Solution" />
+    <configuration name="ProductManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_12_Java_collection_framework.exercise.product_management.ProductManager" />
       <module name="module_02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_11_Java_stack_queue.exercise.circular_linked_list.*" />
+          <option name="PATTERN" value="_12_Java_collection_framework.exercise.product_management.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -115,12 +119,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_11_Java_stack_queue.exercise.wordcount_treemap.Test" />
+    <configuration name="ProductManager2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_12_Java_collection_framework.exercise.product_management.ProductManager2" />
       <module name="module_02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_11_Java_stack_queue.exercise.wordcount_treemap.*" />
+          <option name="PATTERN" value="_12_Java_collection_framework.exercise.product_management.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -143,11 +147,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ProductManager" />
+        <item itemvalue="Application.ProductManager2" />
         <item itemvalue="Application.WordCount" />
-        <item itemvalue="Application.Test" />
         <item itemvalue="Application.Binary" />
-        <item itemvalue="Application.PalindromeTest" />
-        <item itemvalue="Application.Solution" />
+        <item itemvalue="Application.Bracket" />
       </list>
     </recent_temporary>
   </component>
@@ -178,7 +182,9 @@
       <workItem from="1623724129302" duration="29833000" />
       <workItem from="1623893807893" duration="22001000" />
       <workItem from="1623983169447" duration="22726000" />
-      <workItem from="1624183883683" duration="6710000" />
+      <workItem from="1624183883683" duration="6877000" />
+      <workItem from="1624240425560" duration="24719000" />
+      <workItem from="1624325662593" duration="19783000" />
     </task>
     <servers />
   </component>
@@ -206,30 +212,30 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="0" width="816" height="728" key="#Intentions/0.0.1366.728@0.0.1366.728" timestamp="1623924319698" />
-    <state x="488" y="79" key="#com.intellij.ide.util.MemberChooser" timestamp="1624011948016">
+    <state x="488" y="79" key="#com.intellij.ide.util.MemberChooser" timestamp="1624246881274">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="488" y="79" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1624011948016" />
+    <state x="488" y="79" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1624246881274" />
     <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1623321442145">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1623321442145" />
-    <state width="1323" height="148" key="GridCell.Tab.0.bottom" timestamp="1624190584960">
+    <state width="1323" height="2" key="GridCell.Tab.0.bottom" timestamp="1624357431101">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="148" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1624190584960" />
-    <state width="1323" height="148" key="GridCell.Tab.0.center" timestamp="1624190584960">
+    <state width="1323" height="2" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1624357431101" />
+    <state width="1323" height="2" key="GridCell.Tab.0.center" timestamp="1624357431101">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="148" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1624190584960" />
-    <state width="1323" height="148" key="GridCell.Tab.0.left" timestamp="1624190584960">
+    <state width="1323" height="2" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1624357431101" />
+    <state width="1323" height="2" key="GridCell.Tab.0.left" timestamp="1624357431101">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="148" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1624190584960" />
-    <state width="1323" height="148" key="GridCell.Tab.0.right" timestamp="1624190584960">
+    <state width="1323" height="2" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1624357431101" />
+    <state width="1323" height="2" key="GridCell.Tab.0.right" timestamp="1624357431101">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="148" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1624190584960" />
+    <state width="1323" height="2" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1624357431101" />
     <state x="387" y="255" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1623638203629">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

@@ -22,7 +22,7 @@ public class Binary {
 
         System.out.println("Số nhị phân tương ứng là: ");
         for (int i = 0; i < size; i++) {
-            System.out.println(binary.pop());
+            System.out.print(binary.pop());
         }
 
     }

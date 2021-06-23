@@ -21,11 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ce9c8f28-a9f2-4011-89a0-d696222ad2a7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module_02/_11_Java_stack_queue/exercise/binary_stack/Binary.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module_02/_11_Java_stack_queue/exercise/binary_stack/Binary.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module_02/_11_Java_stack_queue/exercise/wordcount_treemap/Test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module_02/_11_Java_stack_queue/exercise/wordcount_treemap/WordCount.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module_02/_11_Java_stack_queue/exercise/wordcount_treemap/WordCount.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_11_Java_stack_queue/exercise/binary_stack/Binary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_11_Java_stack_queue/exercise/binary_stack/Binary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_11_Java_stack_queue/exercise/wordcount_treemap/WordCount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_11_Java_stack_queue/exercise/wordcount_treemap/WordCount.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,13 +74,13 @@
       <recent name="D:\C2401G1_HoVanKyTai\module_02\src\_08_Java_cleancode_refactoring\practise\variable_constance" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ProductManager">
-    <configuration name="Binary" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_11_Java_stack_queue.exercise.binary_stack.Binary" />
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="BinarySearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_13_Java_searching_algorithm.practise.BinarySearch" />
       <module name="module_02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_11_Java_stack_queue.exercise.binary_stack.*" />
+          <option name="PATTERN" value="_13_Java_searching_algorithm.practise.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -93,12 +88,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Bracket" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_11_Java_stack_queue.exercise.bracket_check.Bracket" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_13_Java_searching_algorithm.exercise.Main" />
       <module name="module_02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_11_Java_stack_queue.exercise.bracket_check.*" />
+          <option name="PATTERN" value="_13_Java_searching_algorithm.exercise.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -147,11 +142,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.BinarySearch" />
         <item itemvalue="Application.ProductManager" />
         <item itemvalue="Application.ProductManager2" />
         <item itemvalue="Application.WordCount" />
-        <item itemvalue="Application.Binary" />
-        <item itemvalue="Application.Bracket" />
       </list>
     </recent_temporary>
   </component>
@@ -184,7 +179,8 @@
       <workItem from="1623983169447" duration="22726000" />
       <workItem from="1624183883683" duration="6877000" />
       <workItem from="1624240425560" duration="24719000" />
-      <workItem from="1624325662593" duration="19783000" />
+      <workItem from="1624325662593" duration="25580000" />
+      <workItem from="1624421589436" duration="6234000" />
     </task>
     <servers />
   </component>
@@ -220,22 +216,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1623321442145" />
-    <state width="1323" height="2" key="GridCell.Tab.0.bottom" timestamp="1624357431101">
+    <state width="1323" height="99" key="GridCell.Tab.0.bottom" timestamp="1624442596997">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="2" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1624357431101" />
-    <state width="1323" height="2" key="GridCell.Tab.0.center" timestamp="1624357431101">
+    <state width="1323" height="99" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1624442596997" />
+    <state width="1323" height="99" key="GridCell.Tab.0.center" timestamp="1624442596997">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="2" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1624357431101" />
-    <state width="1323" height="2" key="GridCell.Tab.0.left" timestamp="1624357431101">
+    <state width="1323" height="99" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1624442596997" />
+    <state width="1323" height="99" key="GridCell.Tab.0.left" timestamp="1624442596997">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="2" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1624357431101" />
-    <state width="1323" height="2" key="GridCell.Tab.0.right" timestamp="1624357431101">
+    <state width="1323" height="99" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1624442596997" />
+    <state width="1323" height="99" key="GridCell.Tab.0.right" timestamp="1624442596997">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="2" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1624357431101" />
+    <state width="1323" height="99" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1624442596997" />
     <state x="387" y="255" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1623638203629">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

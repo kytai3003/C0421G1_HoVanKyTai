@@ -74,13 +74,13 @@
       <recent name="D:\C2401G1_HoVanKyTai\module_02\src\_08_Java_cleancode_refactoring\practise\variable_constance" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="BinarySearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_13_Java_searching_algorithm.practise.BinarySearch" />
+  <component name="RunManager" selected="Application.InsertionSortByStep">
+    <configuration name="BubbleSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_14_Java_sorting_algorithm.practise.BubbleSort" />
       <module name="module_02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_13_Java_searching_algorithm.practise.*" />
+          <option name="PATTERN" value="_14_Java_sorting_algorithm.practise.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -88,12 +88,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_13_Java_searching_algorithm.exercise.Main" />
+    <configuration name="BubbleSortByStep" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_14_Java_sorting_algorithm.practise.BubbleSortByStep" />
       <module name="module_02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_13_Java_searching_algorithm.exercise.*" />
+          <option name="PATTERN" value="_14_Java_sorting_algorithm.practise.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -101,12 +101,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProductManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_12_Java_collection_framework.exercise.product_management.ProductManager" />
+    <configuration name="InsertionSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_14_Java_sorting_algorithm.exercise.InsertionSort" />
       <module name="module_02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_12_Java_collection_framework.exercise.product_management.*" />
+          <option name="PATTERN" value="_14_Java_sorting_algorithm.exercise.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -114,12 +114,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProductManager2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_12_Java_collection_framework.exercise.product_management.ProductManager2" />
+    <configuration name="InsertionSortByStep" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_14_Java_sorting_algorithm.exercise.InsertionSortByStep" />
       <module name="module_02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_12_Java_collection_framework.exercise.product_management.*" />
+          <option name="PATTERN" value="_14_Java_sorting_algorithm.exercise.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -127,12 +127,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WordCount" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_11_Java_stack_queue.exercise.wordcount_treemap.WordCount" />
+    <configuration name="SelectionSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_14_Java_sorting_algorithm.practise.SelectionSort" />
       <module name="module_02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_11_Java_stack_queue.exercise.wordcount_treemap.*" />
+          <option name="PATTERN" value="_14_Java_sorting_algorithm.practise.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -142,11 +142,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Application.BinarySearch" />
-        <item itemvalue="Application.ProductManager" />
-        <item itemvalue="Application.ProductManager2" />
-        <item itemvalue="Application.WordCount" />
+        <item itemvalue="Application.InsertionSortByStep" />
+        <item itemvalue="Application.InsertionSort" />
+        <item itemvalue="Application.SelectionSort" />
+        <item itemvalue="Application.BubbleSortByStep" />
+        <item itemvalue="Application.BubbleSort" />
       </list>
     </recent_temporary>
   </component>
@@ -180,7 +180,8 @@
       <workItem from="1624183883683" duration="6877000" />
       <workItem from="1624240425560" duration="24719000" />
       <workItem from="1624325662593" duration="25580000" />
-      <workItem from="1624421589436" duration="6234000" />
+      <workItem from="1624421589436" duration="7546000" />
+      <workItem from="1624499564177" duration="6869000" />
     </task>
     <servers />
   </component>
@@ -216,22 +217,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1623321442145" />
-    <state width="1323" height="99" key="GridCell.Tab.0.bottom" timestamp="1624442596997">
+    <state width="1323" height="259" key="GridCell.Tab.0.bottom" timestamp="1624509229503">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="99" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1624442596997" />
-    <state width="1323" height="99" key="GridCell.Tab.0.center" timestamp="1624442596997">
+    <state width="1323" height="259" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1624509229503" />
+    <state width="1323" height="259" key="GridCell.Tab.0.center" timestamp="1624509229503">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="99" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1624442596997" />
-    <state width="1323" height="99" key="GridCell.Tab.0.left" timestamp="1624442596997">
+    <state width="1323" height="259" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1624509229503" />
+    <state width="1323" height="259" key="GridCell.Tab.0.left" timestamp="1624509229503">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="99" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1624442596997" />
-    <state width="1323" height="99" key="GridCell.Tab.0.right" timestamp="1624442596997">
+    <state width="1323" height="259" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1624509229503" />
+    <state width="1323" height="259" key="GridCell.Tab.0.right" timestamp="1624509229503">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="99" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1624442596997" />
+    <state width="1323" height="259" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1624509229503" />
     <state x="387" y="255" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1623638203629">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

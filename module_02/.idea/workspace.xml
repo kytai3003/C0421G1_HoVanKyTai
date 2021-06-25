@@ -62,51 +62,25 @@
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="_07_Java_abstract_interface.practise.interface_comparator" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="_10_Java_DSA.practise.MyLinkedList" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\C2401G1_HoVanKyTai\module_02\src\_08_Java_cleancode_refactoring\practise\variable_constance" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="_07_Java_abstract_interface.exercise.interface_colorable" />
       <recent name="_07_Java_abstract_interface.exercise.interface_resizeable" />
       <recent name="_07_Java_abstract_interface.practise.interface_comparable" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\C2401G1_HoVanKyTai\module_02\src\_08_Java_cleancode_refactoring\practise\variable_constance" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="_10_Java_DSA.practise.MyLinkedList" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.InsertionSortByStep">
-    <configuration name="BubbleSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_14_Java_sorting_algorithm.practise.BubbleSort" />
+  <component name="RunManager" selected="Application.TriangleExample">
+    <configuration name="CalculationExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_15_Java_exceptions_debug.practise.number_format.CalculationExample" />
       <module name="module_02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_14_Java_sorting_algorithm.practise.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BubbleSortByStep" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_14_Java_sorting_algorithm.practise.BubbleSortByStep" />
-      <module name="module_02" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="_14_Java_sorting_algorithm.practise.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="InsertionSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_14_Java_sorting_algorithm.exercise.InsertionSort" />
-      <module name="module_02" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="_14_Java_sorting_algorithm.exercise.*" />
+          <option name="PATTERN" value="_15_Java_exceptions_debug.practise.number_format.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -127,12 +101,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SelectionSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_14_Java_sorting_algorithm.practise.SelectionSort" />
+    <configuration name="LinearEquationResolver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_15_Java_exceptions_debug.practise.LinearEquationResolver" />
       <module name="module_02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_14_Java_sorting_algorithm.practise.*" />
+          <option name="PATTERN" value="_15_Java_exceptions_debug.practise.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_15_Java_exceptions_debug.practise.out_of_bounds.Main" />
+      <module name="module_02" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="_15_Java_exceptions_debug.practise.out_of_bounds.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TriangleExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_15_Java_exceptions_debug.exercise.TriangleExample" />
+      <module name="module_02" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="_15_Java_exceptions_debug.exercise.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -142,11 +142,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TriangleExample" />
+        <item itemvalue="Application.CalculationExample" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.LinearEquationResolver" />
         <item itemvalue="Application.InsertionSortByStep" />
-        <item itemvalue="Application.InsertionSort" />
-        <item itemvalue="Application.SelectionSort" />
-        <item itemvalue="Application.BubbleSortByStep" />
-        <item itemvalue="Application.BubbleSort" />
       </list>
     </recent_temporary>
   </component>
@@ -181,7 +181,8 @@
       <workItem from="1624240425560" duration="24719000" />
       <workItem from="1624325662593" duration="25580000" />
       <workItem from="1624421589436" duration="7546000" />
-      <workItem from="1624499564177" duration="6869000" />
+      <workItem from="1624499564177" duration="14518000" />
+      <workItem from="1624591288532" duration="16178000" />
     </task>
     <servers />
   </component>
@@ -209,30 +210,46 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="0" width="816" height="728" key="#Intentions/0.0.1366.728@0.0.1366.728" timestamp="1623924319698" />
-    <state x="488" y="79" key="#com.intellij.ide.util.MemberChooser" timestamp="1624246881274">
+    <state x="488" y="79" key="#com.intellij.ide.util.MemberChooser" timestamp="1624610902727">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="488" y="79" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1624246881274" />
+    <state x="488" y="79" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1624610902727" />
     <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1623321442145">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1623321442145" />
-    <state width="1323" height="259" key="GridCell.Tab.0.bottom" timestamp="1624509229503">
+    <state width="1323" height="153" key="GridCell.Tab.0.bottom" timestamp="1624613909916">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="259" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1624509229503" />
-    <state width="1323" height="259" key="GridCell.Tab.0.center" timestamp="1624509229503">
+    <state width="1323" height="153" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1624613909916" />
+    <state width="1323" height="153" key="GridCell.Tab.0.center" timestamp="1624613909916">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="259" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1624509229503" />
-    <state width="1323" height="259" key="GridCell.Tab.0.left" timestamp="1624509229503">
+    <state width="1323" height="153" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1624613909916" />
+    <state width="1323" height="153" key="GridCell.Tab.0.left" timestamp="1624613909916">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="259" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1624509229503" />
-    <state width="1323" height="259" key="GridCell.Tab.0.right" timestamp="1624509229503">
+    <state width="1323" height="153" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1624613909916" />
+    <state width="1323" height="153" key="GridCell.Tab.0.right" timestamp="1624613909916">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="259" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1624509229503" />
+    <state width="1323" height="153" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1624613909916" />
+    <state width="1323" height="170" key="GridCell.Tab.1.bottom" timestamp="1624550282023">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="170" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1624550282023" />
+    <state width="1323" height="170" key="GridCell.Tab.1.center" timestamp="1624550282023">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="170" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1624550282023" />
+    <state width="1323" height="170" key="GridCell.Tab.1.left" timestamp="1624550282023">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="170" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1624550282023" />
+    <state width="1323" height="170" key="GridCell.Tab.1.right" timestamp="1624550282023">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="170" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1624550282023" />
     <state x="387" y="255" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1623638203629">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

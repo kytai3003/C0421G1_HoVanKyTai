@@ -21,10 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ce9c8f28-a9f2-4011-89a0-d696222ad2a7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module_02/_15_Java_exceptions_debug/exercise/IllegalTriangleException2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module_02/_15_Java_exceptions_debug/exercise/TriangleExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module_02/_15_Java_exceptions_debug/exercise/TriangleExample.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_15_Java_exceptions_debug/exercise/IllegalTriangleException2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_15_Java_exceptions_debug/exercise/TriangleExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_15_Java_exceptions_debug/exercise/TriangleExample.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +57,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/_08_Java_cleancode_refactoring/practise/variable_constance" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="ExtractSuperBase.RECENT_KEYS">
@@ -78,13 +75,26 @@
       <recent name="_10_Java_DSA.practise.MyLinkedList" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TriangleExample">
-    <configuration name="CalculationExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_15_Java_exceptions_debug.practise.number_format.CalculationExample" />
+  <component name="RunManager" selected="Application.ReadCSV">
+    <configuration name="CopyAndPasteFile" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_16_Java_IO_textfile.exercise.copy_filetext.CopyAndPasteFile" />
       <module name="module_02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_15_Java_exceptions_debug.practise.number_format.*" />
+          <option name="PATTERN" value="_16_Java_IO_textfile.exercise.copy_filetext.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FindMaxValue" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_16_Java_IO_textfile.practise.greatest_filewriter.FindMaxValue" />
+      <module name="module_02" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="_16_Java_IO_textfile.practise.greatest_filewriter.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -93,11 +103,11 @@
       </method>
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_15_Java_exceptions_debug.practise.out_of_bounds.Main" />
+      <option name="MAIN_CLASS_NAME" value="_16_Java_IO_textfile.exercise.copy_filetext.Main" />
       <module name="module_02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_15_Java_exceptions_debug.practise.out_of_bounds.*" />
+          <option name="PATTERN" value="_16_Java_IO_textfile.exercise.copy_filetext.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -112,19 +122,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StringException" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="student_management.StringException" />
+    <configuration name="ReadCSV" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_16_Java_IO_textfile.exercise.file.csv_reader.ReadCSV" />
       <module name="module_02" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="_16_Java_IO_textfile.exercise.file.csv_reader.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TriangleExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_15_Java_exceptions_debug.exercise.TriangleExample" />
+    <configuration name="ReadFileExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_16_Java_IO_textfile.practise.ReadFileExample" />
       <module name="module_02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_15_Java_exceptions_debug.exercise.*" />
+          <option name="PATTERN" value="_16_Java_IO_textfile.practise.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -134,11 +150,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TriangleExample" />
-        <item itemvalue="Application.StringException" />
-        <item itemvalue="Application.Main (1)" />
-        <item itemvalue="Application.CalculationExample" />
+        <item itemvalue="Application.ReadCSV" />
+        <item itemvalue="Application.CopyAndPasteFile" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.FindMaxValue" />
+        <item itemvalue="Application.ReadFileExample" />
       </list>
     </recent_temporary>
   </component>
@@ -174,7 +190,17 @@
       <workItem from="1624325662593" duration="25580000" />
       <workItem from="1624421589436" duration="7546000" />
       <workItem from="1624499564177" duration="14518000" />
-      <workItem from="1624591288532" duration="25923000" />
+      <workItem from="1624591288532" duration="26490000" />
+      <workItem from="1624763939076" duration="26000" />
+      <workItem from="1624763989226" duration="137000" />
+      <workItem from="1624764148375" duration="403000" />
+      <workItem from="1624764583118" duration="33000" />
+      <workItem from="1624764649853" duration="528000" />
+      <workItem from="1624765266273" duration="231000" />
+      <workItem from="1624765582358" duration="38000" />
+      <workItem from="1624765664433" duration="1645000" />
+      <workItem from="1624808419268" duration="2836000" />
+      <workItem from="1624844529020" duration="23333000" />
     </task>
     <servers />
   </component>
@@ -214,42 +240,50 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1623321442145" />
-    <state width="1323" height="234" key="GridCell.Tab.0.bottom" timestamp="1624639278373">
+    <state width="1323" height="196" key="GridCell.Tab.0.bottom" timestamp="1624895118326">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="234" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1624639278373" />
-    <state width="1323" height="234" key="GridCell.Tab.0.center" timestamp="1624639278373">
+    <state width="1323" height="196" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1624895118326" />
+    <state width="1323" height="196" key="GridCell.Tab.0.center" timestamp="1624895118326">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="234" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1624639278373" />
-    <state width="1323" height="234" key="GridCell.Tab.0.left" timestamp="1624639278373">
+    <state width="1323" height="196" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1624895118326" />
+    <state width="1323" height="196" key="GridCell.Tab.0.left" timestamp="1624895118326">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="234" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1624639278373" />
-    <state width="1323" height="234" key="GridCell.Tab.0.right" timestamp="1624639278373">
+    <state width="1323" height="196" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1624895118326" />
+    <state width="1323" height="196" key="GridCell.Tab.0.right" timestamp="1624895118326">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="234" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1624639278373" />
-    <state width="1323" height="170" key="GridCell.Tab.1.bottom" timestamp="1624550282023">
+    <state width="1323" height="196" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1624895118326" />
+    <state width="1323" height="170" key="GridCell.Tab.1.bottom" timestamp="1624894940398">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="170" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1624550282023" />
-    <state width="1323" height="170" key="GridCell.Tab.1.center" timestamp="1624550282023">
+    <state width="1323" height="170" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1624894940398" />
+    <state width="1323" height="170" key="GridCell.Tab.1.center" timestamp="1624894940398">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="170" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1624550282023" />
-    <state width="1323" height="170" key="GridCell.Tab.1.left" timestamp="1624550282023">
+    <state width="1323" height="170" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1624894940398" />
+    <state width="1323" height="170" key="GridCell.Tab.1.left" timestamp="1624894940398">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="170" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1624550282023" />
-    <state width="1323" height="170" key="GridCell.Tab.1.right" timestamp="1624550282023">
+    <state width="1323" height="170" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1624894940398" />
+    <state width="1323" height="170" key="GridCell.Tab.1.right" timestamp="1624894940398">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="170" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1624550282023" />
+    <state width="1323" height="170" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1624894940398" />
+    <state x="184" y="8" key="SettingsEditor" timestamp="1624893086320">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="184" y="8" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1624893086320" />
     <state x="387" y="255" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1623638203629">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="387" y="255" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1366.728@0.0.1366.728" timestamp="1623638203629" />
+    <state x="263" y="18" key="editAsTableFormatDialogDimension" timestamp="1624890009467">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="263" y="18" key="editAsTableFormatDialogDimension/0.0.1366.728@0.0.1366.728" timestamp="1624890009467" />
     <state x="389" y="121" key="refactoring.ChangeSignatureDialog" timestamp="1623747289968">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

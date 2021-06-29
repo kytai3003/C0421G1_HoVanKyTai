@@ -1,5 +1,6 @@
 package resort_management.controller;
 
+import resort_management.services.CustomerServiceImpl;
 import resort_management.services.EmployeeServiceImpl;
 
 import java.util.Scanner;
@@ -50,6 +51,7 @@ public class FuramaController {
                     break;
 
                 case 2:
+                    CustomerServiceImpl customerService = new CustomerServiceImpl();
                     System.out.println("You chose Customer Management.");
                     System.out.println("Choose the next function: ");
                     System.out.println("1) Display list customers");
@@ -59,12 +61,15 @@ public class FuramaController {
                     int choiceTwo = sc.nextInt();
                     switch (choiceTwo) {
                         case 1:
+                            customerService.displayList();
                             break;
 
                         case 2:
+                            customerService.addNew();
                             break;
 
                         case 3:
+                            customerService.editCustomer();
                             break;
 
                         case 4:

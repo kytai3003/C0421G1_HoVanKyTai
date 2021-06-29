@@ -21,6 +21,7 @@ public class CustomerServiceImpl implements CustomerService{
         customers.add(customer2);
         customers.add(customer3);
     }
+    String[] typeCustomer = {"Diamond", "Platinium", "Gold", "Silver", "Member"};
 
     @Override
     public void displayList() {
@@ -46,29 +47,160 @@ public class CustomerServiceImpl implements CustomerService{
         int idNumber = Integer.parseInt(sc.nextLine());
         System.out.println("Input phone number: ");
         String phone = sc.nextLine();
+        System.out.println("Input address: ");
+        String address = sc.nextLine();
         System.out.println("Input type. Choose one: ");
-        String[] typeCustomer = {"Diamond", "Platinium", "Gold", "Silver", "Member"};
-        String type = sc.nextLine();
+        for (int i = 0; i < typeCustomer.length; i++) {
+            System.out.println(i + ") " + typeCustomer[i]);
+        }
+        String type = "";
         boolean isExist = false;
-        for (int i = 0; i< typeCustomer.length; i++) {
-            if (type.equals(typeCustomer[i])) {
-                isExist = true;
-                break;
+        while (!isExist) {
+            int choiceType = Integer.parseInt(sc.nextLine());
+            switch (choiceType) {
+                case 0:
+                    isExist = true;
+                    type = typeCustomer[0];
+                    break;
+                case 1:
+                    isExist = true;
+                    type = typeCustomer[1];
+                    break;
+                case 2:
+                    isExist = true;
+                    type = typeCustomer[2];
+                    break;
+                case 3:
+                    isExist = true;
+                    type = typeCustomer[3];
+                    break;
+                default:
+                    System.err.println("Input qualification false. Please retry.");
             }
         }
-        if (isExist) {
-            System.out.println("Input address: ");
-            String address = sc.nextLine();
-            System.out.println("Successful!");
-            Customer newCustomer = new Customer(code, name, dayOfBirth, sex, email, idNumber, phone, type, address);
-            customers.add(newCustomer);
-        } else {
-            System.err.println("Input type false. Please retry.");
-        }
+        Customer newCustomer = new Customer(code, name, dayOfBirth, sex, email, idNumber, phone, type, address);
+        customers.add(newCustomer);
+        System.out.println("Successful!");
     }
 
     @Override
     public void editCustomer() {
+        System.out.println("You chose Customer Editing.");
+        boolean isTrueCode = false;
+        while (!isTrueCode) {
+            System.out.println("Input customer code: ");
+            int input = Integer.parseInt(sc.nextLine());
+            boolean isExist = false;
+            int index = 0;
+            for (int i = 0; i < customers.size(); i++) {
+                if (customers.get(i).getCode() == input) {
+                    isExist = true;
+                    index = i;
+                    break;
+                }
+            }
+            if (!isExist) {
+                System.err.println("Code not found!");
+            } else {
+                isTrueCode = true;
+                System.out.println("Choose the property: ");
+                System.out.println("1) Edit name");
+                System.out.println("2) Edit day of birth");
+                System.out.println("3) Edit sex");
+                System.out.println("4) Edit email");
+                System.out.println("5) Edit ID number");
+                System.out.println("6) Edit phone");
+                System.out.println("7) Edit type");
+                System.out.println("8) Edit address");
+                System.out.println("9) Back.");
+                int customerChoice = Integer.parseInt(sc.nextLine());
+                switch (customerChoice) {
+                    case 1:
+                        System.out.println("Input new name: ");
+                        String newName = sc.nextLine();
+                        customers.get(index).setName(newName);
+                        break;
 
+                    case 2:
+                        System.out.println("Input new day of birth: ");
+                        String newDob = sc.nextLine();
+                        customers.get(index).setDayOfBirth(newDob);
+                        break;
+
+                    case 3:
+                        System.out.println("Input new sex: ");
+                        String newSex = sc.nextLine();
+                        customers.get(index).setSex(newSex);
+                        break;
+
+                    case 4:
+                        System.out.println("Input new email: ");
+                        String newEmail = sc.nextLine();
+                        customers.get(index).setEmail(newEmail);
+                        break;
+
+                    case 5:
+                        System.out.println("Input new ID number: ");
+                        int newIdNumb = Integer.parseInt(sc.nextLine());
+                        customers.get(index).setIdNumber(newIdNumb);
+                        break;
+
+                    case 6:
+                        System.out.println("Input phone number: ");
+                        String newPhone = sc.nextLine();
+                        customers.get(index).setPhoneNumber(newPhone);
+                        break;
+
+                    case 7:
+                        System.out.println("Choose one type: ");
+                        for (int i = 0; i < typeCustomer.length; i++) {
+                            System.out.println(i + ") " + typeCustomer[i]);
+                        }
+                        String newType = "";
+                        boolean isTrue = false;
+                        while (!isTrue) {
+                            int choiceType = Integer.parseInt(sc.nextLine());
+                            switch (choiceType) {
+                                case 0:
+                                    isTrue = true;
+                                    newType = typeCustomer[0];
+                                    break;
+                                case 1:
+                                    isTrue = true;
+                                    newType = typeCustomer[1];
+                                    break;
+                                case 2:
+                                    isTrue = true;
+                                    newType = typeCustomer[2];
+                                    break;
+                                case 3:
+                                    isTrue = true;
+                                    newType = typeCustomer[3];
+                                    break;
+                                case 4:
+                                    isTrue = true;
+                                    newType = typeCustomer[4];
+                                    break;
+                                default:
+                                    System.err.println("Input qualification false. Please retry.");
+                            }
+                        }
+                        customers.get(index).setType(newType);
+                        break;
+
+                    case 8:
+                        System.out.println("Input new address: ");
+                        String newAddress = sc.nextLine();
+                        customers.get(index).setAddress(newAddress);
+                        break;
+
+                    case 9:
+                        return;
+
+                    default:
+                        System.err.println("False input. Please retry.");
+                }
+            }
+        }
     }
 }

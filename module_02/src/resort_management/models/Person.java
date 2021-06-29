@@ -2,10 +2,10 @@ package resort_management.models;
 
 public abstract class Person {
     protected int code;
-    protected String name, dayOfBirth, sex, email;
-    protected int idNumber, phoneNumber;
+    protected String name, dayOfBirth, sex, email, phoneNumber;
+    protected int idNumber;
 
-    public Person(int code, String name, String dayOfBirth, String sex, String email, int idNumber, int phoneNumber) {
+    public Person(int code, String name, String dayOfBirth, String sex, String email, int idNumber, String phoneNumber) {
         this.code = code;
         this.name = name;
         this.dayOfBirth = dayOfBirth;
@@ -66,11 +66,11 @@ public abstract class Person {
         this.idNumber = idNumber;
     }
 
-    public int getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(int phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 

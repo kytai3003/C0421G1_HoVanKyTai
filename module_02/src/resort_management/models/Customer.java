@@ -3,8 +3,13 @@ package resort_management.models;
 public class Customer extends Person {
     private String type, address;
 
+    public Customer(int code, String name, String dayOfBirth, String sex, String email, int idNumber, String phoneNumber, String type, String address) {
+        super(code, name, dayOfBirth, sex, email, idNumber, phoneNumber);
+        this.type = type;
+        this.address = address;
+    }
+
     public Customer(String type, String address) {
-        super();
         this.type = type;
         this.address = address;
     }

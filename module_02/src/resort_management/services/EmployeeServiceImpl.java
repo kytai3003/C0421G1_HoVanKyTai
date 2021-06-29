@@ -139,6 +139,7 @@ public class EmployeeServiceImpl implements EmployeeService{
                 System.err.println("Code not found!");
             } else {
                 isTrueCode = true;
+                System.out.println(employees.get(index).toString());
                 System.out.println("Choose the property: ");
                 System.out.println("1) Edit name");
                 System.out.println("2) Edit day of birth");

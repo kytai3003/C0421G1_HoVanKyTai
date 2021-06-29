@@ -54,24 +54,24 @@ public class CustomerServiceImpl implements CustomerService{
             System.out.println(i + ") " + typeCustomer[i]);
         }
         String type = "";
-        boolean isExist = false;
-        while (!isExist) {
+        boolean isTrueType = false;
+        while (!isTrueType) {
             int choiceType = Integer.parseInt(sc.nextLine());
             switch (choiceType) {
                 case 0:
-                    isExist = true;
+                    isTrueType = true;
                     type = typeCustomer[0];
                     break;
                 case 1:
-                    isExist = true;
+                    isTrueType = true;
                     type = typeCustomer[1];
                     break;
                 case 2:
-                    isExist = true;
+                    isTrueType = true;
                     type = typeCustomer[2];
                     break;
                 case 3:
-                    isExist = true;
+                    isTrueType = true;
                     type = typeCustomer[3];
                     break;
                 default:
@@ -103,6 +103,7 @@ public class CustomerServiceImpl implements CustomerService{
                 System.err.println("Code not found!");
             } else {
                 isTrueCode = true;
+                System.out.println(customers.get(index).toString());
                 System.out.println("Choose the property: ");
                 System.out.println("1) Edit name");
                 System.out.println("2) Edit day of birth");

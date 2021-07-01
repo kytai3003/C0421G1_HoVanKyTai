@@ -1,7 +1,8 @@
 package resort_management.services;
 
 public interface FacilityService{
-    void listFacility();
+    void displayListFacility();
     void addNew();
     void displayListMaintenance();
+
 }

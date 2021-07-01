@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class ReadFileExample {
     public void readFileText(String filePath) {
         try {
+
             // Đọc file theo đường dẫn
             File file = new File(filePath);
 

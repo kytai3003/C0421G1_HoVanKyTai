@@ -1,6 +1,6 @@
 package resort_management.services;
 
-public interface ContactService {
+public interface ContractService {
     void displayUseService();
     void displayGetVoucher();
 }

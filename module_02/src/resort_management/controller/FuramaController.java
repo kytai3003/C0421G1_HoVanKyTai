@@ -2,6 +2,7 @@ package resort_management.controller;
 
 import resort_management.services.CustomerServiceImpl;
 import resort_management.services.EmployeeServiceImpl;
+import resort_management.services.FacilityServiceImpl;
 
 import java.util.Scanner;
 
@@ -26,7 +27,7 @@ public class FuramaController {
                     System.out.println("1) Display list employees");
                     System.out.println("2) Add new employee");
                     System.out.println("3) Edit employee");
-                    System.out.println("4) Return main menu");
+                    System.out.println("4) Back to menu");
                     int choiceOne = sc.nextInt();
                     switch (choiceOne) {
                         case 1:
@@ -57,7 +58,7 @@ public class FuramaController {
                     System.out.println("1) Display list customers");
                     System.out.println("2) Add new customer");
                     System.out.println("3) Edit customer");
-                    System.out.println("4) Return main menu");
+                    System.out.println("4) Back to menu");
                     int choiceTwo = sc.nextInt();
                     switch (choiceTwo) {
                         case 1:
@@ -82,13 +83,34 @@ public class FuramaController {
                     break;
 
                 case 3:
+                    FacilityServiceImpl facilityService = new FacilityServiceImpl();
                     System.out.println("You chose Facility Management.");
                     System.out.println("Choose the next function: ");
                     System.out.println("1) Display list facilities");
                     System.out.println("2) Add new facility");
-                    System.out.println("3) Edit facility maintenance");
+                    System.out.println("3) Display list facility maintenance");
                     System.out.println("4) Return main menu");
                     int choiceThree = sc.nextInt();
+                    switch (choiceThree) {
+                        case 1:
+                            facilityService.displayListFacility();
+                            break;
+
+                        case 2:
+                            facilityService.addNew();
+                            break;
+
+                        case 3:
+                            facilityService.displayListMaintenance();
+                            break;
+
+                        case 4:
+                            displayMainMenu();
+                            break;
+
+                        default:
+                            System.err.println("False input. Please retry.");
+                    }
                     break;
 
                 case 4:

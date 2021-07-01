@@ -1,9 +1,10 @@
 package resort_management.models;
 
 public class Booking {
-    private String bookingCode, dayStart, dayEnd, customerCode, nameService, typeService;
+    private String bookingCode, customerCode, nameService, typeService;
+    private int dayStart, dayEnd;
 
-    public Booking(String bookingCode, String dayStart, String dayEnd, String customerCode, String nameService, String typeService) {
+    public Booking(String bookingCode, int dayStart, int dayEnd, String customerCode, String nameService, String typeService) {
         this.bookingCode = bookingCode;
         this.dayStart = dayStart;
         this.dayEnd = dayEnd;
@@ -23,19 +24,19 @@ public class Booking {
         this.bookingCode = bookingCode;
     }
 
-    public String getDayStart() {
+    public int getDayStart() {
         return dayStart;
     }
 
-    public void setDayStart(String dayStart) {
+    public void setDayStart(int dayStart) {
         this.dayStart = dayStart;
     }
 
-    public String getDayEnd() {
+    public int getDayEnd() {
         return dayEnd;
     }
 
-    public void setDayEnd(String dayEnd) {
+    public void setDayEnd(int dayEnd) {
         this.dayEnd = dayEnd;
     }
 

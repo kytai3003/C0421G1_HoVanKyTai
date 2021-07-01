@@ -1,6 +1,6 @@
 package resort_management.services;
 
-public class ContactServiceImpl implements ContactService{
+public class ContractServiceImpl implements ContractService {
     @Override
     public void displayUseService() {
 

@@ -11,11 +11,11 @@ public class CustomerServiceImpl implements CustomerService{
     public static List<Customer> customers = new LinkedList<>();
 
     static {
-        Customer customer1 = new Customer(11, "Khach hang A", "11/12/1999", "Male",
+        Customer customer1 = new Customer("B1", "Khach hang A", "11/12/1999", "Male",
                 "khachhangA@gmail.com", 200123123, "1234567890", "Diamond", "Da Nang");
-        Customer customer2 = new Customer(12, "Khach hang B", "20/06/1995", "Female",
+        Customer customer2 = new Customer("B2", "Khach hang B", "20/06/1995", "Female",
                 "khachhangB@gmail.com", 200123456, "1234567891", "Gold", "Ha Noi");
-        Customer customer3 = new Customer(13, "Khach hang C", "18/12/1988", "Female",
+        Customer customer3 = new Customer("B3", "Khach hang C", "18/12/1988", "Female",
                 "khachhangC@gmail.com", 200123789, "1234567892", "Platinum", "TP. HCM");
         customers.add(customer1);
         customers.add(customer2);
@@ -34,7 +34,7 @@ public class CustomerServiceImpl implements CustomerService{
     @Override
     public void addNew() {
         System.out.println("Input code: ");
-        int code = Integer.parseInt(sc.nextLine());
+        String code = sc.nextLine();
         System.out.println("Input name: ");
         String name = sc.nextLine();
         System.out.println("Input day of birth: ");
@@ -89,11 +89,11 @@ public class CustomerServiceImpl implements CustomerService{
         boolean isTrueCode = false;
         while (!isTrueCode) {
             System.out.println("Input customer code: ");
-            int input = Integer.parseInt(sc.nextLine());
+            String input = sc.nextLine();
             boolean isExist = false;
             int index = 0;
             for (int i = 0; i < customers.size(); i++) {
-                if (customers.get(i).getCode() == input) {
+                if (customers.get(i).getCode().equals(input)) {
                     isExist = true;
                     index = i;
                     break;

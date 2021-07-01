@@ -1,13 +1,12 @@
 package resort_management.models;
 
-public abstract class Facility {
-    protected String nameOfService;
-    protected double usingArea;
-    protected double price;
-    protected int capacity;
-    protected String typeOfHiring;
+import java.util.Objects;
 
-    public Facility(String nameOfService, double usingArea, double price, int capacity, String typeOfHiring) {
+public abstract class Facility {
+    protected String nameOfService, typeOfHiring, usingArea, price;
+    protected int capacity;
+
+    public Facility(String nameOfService, String usingArea, String price, int capacity, String typeOfHiring) {
         this.nameOfService = nameOfService;
         this.usingArea = usingArea;
         this.price = price;
@@ -26,19 +25,19 @@ public abstract class Facility {
         this.nameOfService = nameOfService;
     }
 
-    public double getUsingArea() {
+    public String getUsingArea() {
         return usingArea;
     }
 
-    public void setUsingArea(double usingArea) {
+    public void setUsingArea(String usingArea) {
         this.usingArea = usingArea;
     }
 
-    public double getPrice() {
+    public String getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(String price) {
         this.price = price;
     }
 
@@ -58,4 +57,31 @@ public abstract class Facility {
         this.typeOfHiring = typeOfHiring;
     }
 
+    @Override
+    public String toString() {
+        return "Facility{" +
+                "nameOfService='" + nameOfService + '\'' +
+                ", usingArea=" + usingArea +
+                ", price=" + price +
+                ", capacity=" + capacity +
+                ", typeOfHiring='" + typeOfHiring + '\'' +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Facility)) return false;
+        Facility facility = (Facility) o;
+        return capacity == facility.capacity &&
+                Objects.equals(nameOfService, facility.nameOfService) &&
+                Objects.equals(typeOfHiring, facility.typeOfHiring) &&
+                Objects.equals(usingArea, facility.usingArea) &&
+                Objects.equals(price, facility.price);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(nameOfService, typeOfHiring, usingArea, price, capacity);
+    }
 }

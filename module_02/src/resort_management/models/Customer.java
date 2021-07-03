@@ -1,7 +1,8 @@
 package resort_management.models;
 
 public class Customer extends Person {
-    private String type, address;
+    private String type;
+    private String address;
 
     public Customer(String code, String name, String dayOfBirth, String sex, String email, int idNumber, String phoneNumber, String type, String address) {
         super(code, name, dayOfBirth, sex, email, idNumber, phoneNumber);

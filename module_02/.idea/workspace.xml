@@ -21,35 +21,34 @@
   <component name="ChangeListManager">
     <list default="true" id="ce9c8f28-a9f2-4011-89a0-d696222ad2a7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module_02/_16_Java_IO_textfile/practise/filetext_sum/ReadFileExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module_02/_16_Java_IO_textfile/practise/filetext_sum/ReadFileExample.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module_02/_17_Java_IO_binaryfile_serialization/exercise/ProductManagement.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module_02/_17_Java_IO_binaryfile_serialization/exercise/ProductManagement.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/module_02/resort_management/controller/FuramaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module_02/resort_management/controller/FuramaController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module_02/resort_management/models/Booking.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module_02/resort_management/models/Booking.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module_02/resort_management/models/Contract.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module_02/resort_management/models/Contract.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/module_02/resort_management/models/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module_02/resort_management/models/Customer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module_02/resort_management/models/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module_02/resort_management/models/Employee.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/module_02/resort_management/models/Facility.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module_02/resort_management/models/Facility.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module_02/resort_management/models/House.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module_02/resort_management/models/House.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/module_02/resort_management/models/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module_02/resort_management/models/Person.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module_02/resort_management/models/Room.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module_02/resort_management/models/Room.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/module_02/resort_management/models/Villa.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module_02/resort_management/models/Villa.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module_02/resort_management/services/BookingService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module_02/resort_management/services/BookingService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module_02/resort_management/services/ContactService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module_02/resort_management/services/ContactServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module_02/resort_management/services/CustomerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module_02/resort_management/services/CustomerService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/module_02/resort_management/services/CustomerServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module_02/resort_management/services/CustomerServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module_02/resort_management/services/EmployeeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module_02/resort_management/services/EmployeeServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/module_02/resort_management/services/EmployeeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module_02/resort_management/services/EmployeeService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/module_02/resort_management/services/FacilityService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module_02/resort_management/services/FacilityService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/module_02/resort_management/services/FacilityServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module_02/resort_management/services/FacilityServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_16_Java_IO_textfile/practise/filetext_sum/ReadFileExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_16_Java_IO_textfile/practise/filetext_sum/ReadFileExample.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resort_management/controller/FuramaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resort_management/controller/FuramaController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resort_management/models/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resort_management/models/Booking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resort_management/models/Contract.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resort_management/models/Contract.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resort_management/models/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resort_management/models/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resort_management/models/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resort_management/models/Employee.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resort_management/models/Facility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resort_management/models/Facility.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resort_management/models/House.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resort_management/models/House.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resort_management/models/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resort_management/models/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resort_management/models/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resort_management/models/Room.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resort_management/models/Villa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resort_management/models/Villa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resort_management/services/BookingComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resort_management/library/BookingComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resort_management/services/BookingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resort_management/services/BookingService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resort_management/services/BookingServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resort_management/services/BookingServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resort_management/services/ContactService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resort_management/services/ContractService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resort_management/services/ContactServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resort_management/services/ContractServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resort_management/services/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resort_management/services/CustomerService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resort_management/services/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resort_management/services/CustomerServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resort_management/services/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resort_management/services/EmployeeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resort_management/services/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resort_management/services/EmployeeService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resort_management/services/FacilityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resort_management/services/FacilityService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resort_management/services/FacilityServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resort_management/services/FacilityServiceImpl.java" afterDir="false" />
     </list>
@@ -94,19 +93,32 @@
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="_07_Java_abstract_interface.practise.interface_comparator" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="_10_Java_DSA.practise.MyLinkedList" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\C2401G1_HoVanKyTai\module_02\src\_08_Java_cleancode_refactoring\practise\variable_constance" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="_07_Java_abstract_interface.exercise.interface_colorable" />
       <recent name="_07_Java_abstract_interface.exercise.interface_resizeable" />
       <recent name="_07_Java_abstract_interface.practise.interface_comparable" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\C2401G1_HoVanKyTai\module_02\src\_08_Java_cleancode_refactoring\practise\variable_constance" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="_10_Java_DSA.practise.MyLinkedList" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.BookingServiceImpl">
+    <configuration name="BookingServiceImpl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="resort_management.services.BookingServiceImpl" />
+      <module name="module_02" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="resort_management.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="resort_management.view.Main" />
       <module name="module_02" />
@@ -130,19 +142,6 @@
     <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Test" />
       <module name="module_02" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ValidateClassName" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_19_Java_string_regex.exercise.ValidateClassName" />
-      <module name="module_02" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="_19_Java_string_regex.exercise.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -176,10 +175,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.files" />
+        <item itemvalue="Application.BookingServiceImpl" />
         <item itemvalue="Application.Test" />
+        <item itemvalue="Application.files" />
         <item itemvalue="Application.ValidatePhoneNumber" />
-        <item itemvalue="Application.ValidateClassName" />
       </list>
     </recent_temporary>
   </component>
@@ -228,7 +227,9 @@
       <workItem from="1624844529020" duration="24831000" />
       <workItem from="1624930281456" duration="41299000" />
       <workItem from="1625016040017" duration="24903000" />
-      <workItem from="1625102770953" duration="30413000" />
+      <workItem from="1625102770953" duration="31122000" />
+      <workItem from="1625193212684" duration="29545000" />
+      <workItem from="1625282422668" duration="19358000" />
     </task>
     <servers />
   </component>
@@ -256,10 +257,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="0" width="816" height="728" key="#Intentions/0.0.1366.728@0.0.1366.728" timestamp="1623924319698" />
-    <state x="884" y="50" key="#com.intellij.ide.util.MemberChooser" timestamp="1625156759389">
+    <state x="884" y="50" key="#com.intellij.ide.util.MemberChooser" timestamp="1625313836781">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="884" y="50" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1625156759389" />
+    <state x="884" y="50" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1625313836781" />
     <state x="466" y="258" width="433" height="218" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1624636879995">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -268,26 +269,26 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="412" y="108" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1625149269051" />
-    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1623321442145">
+    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1625214701402">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1623321442145" />
-    <state width="1323" height="260" key="GridCell.Tab.0.bottom" timestamp="1625148816668">
+    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1625214701402" />
+    <state width="1323" height="257" key="GridCell.Tab.0.bottom" timestamp="1625331380764">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="260" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1625148816668" />
-    <state width="1323" height="260" key="GridCell.Tab.0.center" timestamp="1625148816668">
+    <state width="1323" height="257" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1625331380764" />
+    <state width="1323" height="257" key="GridCell.Tab.0.center" timestamp="1625331380764">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="260" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1625148816668" />
-    <state width="1323" height="260" key="GridCell.Tab.0.left" timestamp="1625148816668">
+    <state width="1323" height="257" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1625331380764" />
+    <state width="1323" height="257" key="GridCell.Tab.0.left" timestamp="1625331380764">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="260" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1625148816668" />
-    <state width="1323" height="260" key="GridCell.Tab.0.right" timestamp="1625148816668">
+    <state width="1323" height="257" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1625331380764" />
+    <state width="1323" height="257" key="GridCell.Tab.0.right" timestamp="1625331380764">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="260" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1625148816668" />
+    <state width="1323" height="257" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1625331380764" />
     <state width="1323" height="170" key="GridCell.Tab.1.bottom" timestamp="1624897492670">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -316,10 +317,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="263" y="18" key="editAsTableFormatDialogDimension/0.0.1366.728@0.0.1366.728" timestamp="1624890009467" />
-    <state x="413" y="124" key="extract.method.dialog" timestamp="1625114131351">
+    <state x="413" y="124" key="extract.method.dialog" timestamp="1625217885688">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="124" key="extract.method.dialog/0.0.1366.728@0.0.1366.728" timestamp="1625114131351" />
+    <state x="413" y="124" key="extract.method.dialog/0.0.1366.728@0.0.1366.728" timestamp="1625217885688" />
     <state x="389" y="121" key="refactoring.ChangeSignatureDialog" timestamp="1623747289968">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

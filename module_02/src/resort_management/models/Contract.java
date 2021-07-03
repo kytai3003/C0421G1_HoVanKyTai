@@ -2,8 +2,10 @@ package resort_management.models;
 
 public class Contract {
     private int contractNumb;
-    private String bookingCode, customerCode;
-    private double deposit, totalPay;
+    private String bookingCode;
+    private String customerCode;
+    private double deposit;
+    private double totalPay;
 
     public Contract(int contractNumb, String bookingCode, String customerCode, double deposit, double totalPay) {
         this.contractNumb = contractNumb;

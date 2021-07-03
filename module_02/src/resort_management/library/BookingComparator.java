@@ -1,4 +1,4 @@
-package resort_management.services;
+package resort_management.library;
 
 import resort_management.models.Booking;
 

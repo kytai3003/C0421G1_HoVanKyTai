@@ -1,8 +1,6 @@
 package resort_management.services;
 
-public interface BookingService{
-    void displayListBooking();
-    void addNewBooking();
+public interface BookingService extends Service {
     void creatNewContract();
     void displayListContract();
     void editContract();

@@ -1,7 +1,12 @@
 package resort_management.models;
 
 public abstract class Person {
-    protected String name, dayOfBirth, sex, email, phoneNumber, code;
+    protected String name;
+    protected String dayOfBirth;
+    protected String sex;
+    protected String email;
+    protected String phoneNumber;
+    protected String code;
     protected int idNumber;
 
     public Person(String code, String name, String dayOfBirth, String sex, String email, int idNumber, String phoneNumber) {

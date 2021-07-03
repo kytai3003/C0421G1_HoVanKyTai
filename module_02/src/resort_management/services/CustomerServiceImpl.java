@@ -30,6 +30,10 @@ public class CustomerServiceImpl implements CustomerService{
         }
     }
 
+    public List<Customer> getList() {
+        return customers;
+    }
+
 
     @Override
     public void addNew() {

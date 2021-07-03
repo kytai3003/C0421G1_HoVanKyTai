@@ -1,7 +1,5 @@
 package resort_management.services;
 
-public interface EmployeeService{
-    void displayList();
-    void addNew();
+public interface EmployeeService extends Service{
     void editEmployee();
 }

@@ -4,9 +4,8 @@ import resort_management.models.Facility;
 import resort_management.models.House;
 import resort_management.models.Room;
 import resort_management.models.Villa;
-import java.util.LinkedHashMap;
-import java.util.Map;
-import java.util.Scanner;
+
+import java.util.*;
 
 public class FacilityServiceImpl implements FacilityService{
     static Scanner sc = new Scanner(System.in);
@@ -26,13 +25,6 @@ public class FacilityServiceImpl implements FacilityService{
             facilityMap.put(room101, 6);
             facilityMap.put(room102, 2);
             }
-
-    @Override
-    public void displayListFacility() {
-        for (Map.Entry<Facility, Integer> entry : facilityMap.entrySet()) {
-            System.out.println(entry.getKey() + "\n"  + "Used times: " + entry.getValue());
-        }
-    }
 
     @Override
     public void addNew() {
@@ -90,6 +82,13 @@ public class FacilityServiceImpl implements FacilityService{
     }
 
     @Override
+    public void displayList() {
+        for (Map.Entry<Facility, Integer> entry : facilityMap.entrySet()) {
+            System.out.println(entry.getKey() + "\n"  + "Used times: " + entry.getValue());
+        }
+    }
+
+    @Override
     public void displayListMaintenance() {
         System.err.println("Facilities need to maintain: ");
         for (Map.Entry<Facility, Integer> entry : facilityMap.entrySet()) {
@@ -111,6 +110,10 @@ public class FacilityServiceImpl implements FacilityService{
         f.setCapacity(Integer.parseInt(sc.nextLine()));
         System.out.println("Input type of hiring: ");
         f.setTypeOfHiring(sc.nextLine());
+    }
+
+    public LinkedHashMap<Facility, Integer> getList() {
+        return facilityMap;
     }
 
     @Override

@@ -1,7 +1,13 @@
 package resort_management.models;
 
-public class Booking {
-    private String bookingCode, customerCode, nameService, typeService;
+import java.util.Comparator;
+import java.util.Objects;
+
+public class Booking implements Comparator<Booking>, Comparable<Booking> {
+    private String bookingCode;
+    private String customerCode;
+    private String nameService;
+    private String typeService;
     private int dayStart, dayEnd;
 
     public Booking(String bookingCode, int dayStart, int dayEnd, String customerCode, String nameService, String typeService) {
@@ -74,5 +80,55 @@ public class Booking {
                 ", nameService='" + nameService + '\'' +
                 ", typeService='" + typeService + '\'' +
                 '}';
+    }
+
+    @Override
+    public int compare(Booking o1, Booking o2) {
+        if (o1.getDayStart() > o2.getDayStart()) {
+            return 1;
+        }
+        else if (o1.getDayStart() < o2.getDayStart()) {
+            return -1;
+        }
+        else {
+            if (o1.getDayEnd() > o2.getDayEnd()) {
+                return 1;
+            } else if (o1.getDayEnd() < o2.getDayEnd()){
+                return -1;
+            } else {
+                return 0;
+            }
+        }
+    }
+
+    @Override
+    public int compareTo(Booking o) {
+        if (getDayStart() > o.getDayStart()) {
+            return 1;
+        }
+        else if (getDayStart() < o.getDayStart()) {
+            return -1;
+        }
+        else {
+            return 1;
+        }
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Booking)) return false;
+        Booking booking = (Booking) o;
+        return dayStart == booking.dayStart &&
+                dayEnd == booking.dayEnd &&
+                Objects.equals(bookingCode, booking.bookingCode) &&
+                Objects.equals(customerCode, booking.customerCode) &&
+                Objects.equals(nameService, booking.nameService) &&
+                Objects.equals(typeService, booking.typeService);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(bookingCode, customerCode, nameService, typeService, dayStart, dayEnd);
     }
 }

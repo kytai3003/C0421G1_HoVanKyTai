@@ -3,7 +3,8 @@ package resort_management.models;
 import java.util.Objects;
 
 public class Villa extends Facility{
-    private String roomStandard, poolArea;
+    private String roomStandard;
+    private String poolArea;
     private int numberOfLevel;
 
     public Villa() {

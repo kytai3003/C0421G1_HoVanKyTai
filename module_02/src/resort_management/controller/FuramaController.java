@@ -1,5 +1,6 @@
 package resort_management.controller;
 
+import resort_management.services.BookingServiceImpl;
 import resort_management.services.CustomerServiceImpl;
 import resort_management.services.EmployeeServiceImpl;
 import resort_management.services.FacilityServiceImpl;
@@ -93,7 +94,7 @@ public class FuramaController {
                     int choiceThree = sc.nextInt();
                     switch (choiceThree) {
                         case 1:
-                            facilityService.displayListFacility();
+                            facilityService.displayList();
                             break;
 
                         case 2:
@@ -114,7 +115,8 @@ public class FuramaController {
                     break;
 
                 case 4:
-                    System.out.println("You chose Booking Managerment.");
+                    BookingServiceImpl bookingService = new BookingServiceImpl();
+                    System.out.println("You chose Booking Management.");
                     System.out.println("Choose the next function: ");
                     System.out.println("1) Add new booking");
                     System.out.println("2) Display list booking");
@@ -123,6 +125,34 @@ public class FuramaController {
                     System.out.println("5) Edit contracts");
                     System.out.println("6) Return main menu");
                     int choiceFour = sc.nextInt();
+                    switch (choiceFour) {
+                        case 1:
+                            bookingService.addNew();
+                            break;
+
+                        case 2:
+                            bookingService.displayList();
+                            break;
+
+                        case 3:
+                            bookingService.creatNewContract();
+                            break;
+
+                        case 4:
+                            bookingService.displayListContract();
+                            break;
+
+                        case 5:
+                            bookingService.editContract();
+                            break;
+
+                        case 6:
+                            displayMainMenu();
+                            break;
+
+                        default:
+                            System.err.println("False input. Please retry.");
+                    }
                     break;
 
                 case 5:

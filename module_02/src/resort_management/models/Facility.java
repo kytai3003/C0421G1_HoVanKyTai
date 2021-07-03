@@ -3,7 +3,10 @@ package resort_management.models;
 import java.util.Objects;
 
 public abstract class Facility {
-    protected String nameOfService, typeOfHiring, usingArea, price;
+    protected String nameOfService;
+    protected String typeOfHiring;
+    protected String usingArea;
+    protected String price;
     protected int capacity;
 
     public Facility(String nameOfService, String usingArea, String price, int capacity, String typeOfHiring) {

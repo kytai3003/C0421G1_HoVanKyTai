@@ -1,15 +1,13 @@
 package resort_management.services;
 
 import resort_management.models.Customer;
-
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
 
-public class CustomerServiceImpl implements CustomerService{
+public class CustomerServiceImpl implements CustomerService {
     static Scanner sc = new Scanner(System.in);
     public static List<Customer> customers = new LinkedList<>();
-
     static {
         Customer customer1 = new Customer("B1", "Khach hang A", "11/12/1999", "Male",
                 "khachhangA@gmail.com", 200123123, "1234567890", "Diamond", "Da Nang");
@@ -48,7 +46,17 @@ public class CustomerServiceImpl implements CustomerService{
         System.out.println("Input email: ");
         String email = sc.nextLine();
         System.out.println("Input ID number: ");
-        int idNumber = Integer.parseInt(sc.nextLine());
+        boolean isLegalNumber = false;
+        int idNumber = 0;
+        while (!isLegalNumber){
+            try {
+                idNumber = Integer.parseInt(sc.nextLine());
+                isLegalNumber = true;
+                System.out.println("Success");
+            } catch (Exception e) {
+                System.err.println("Input number only. Retry:");
+            }
+        }
         System.out.println("Input phone number: ");
         String phone = sc.nextLine();
         System.out.println("Input address: ");
@@ -60,26 +68,27 @@ public class CustomerServiceImpl implements CustomerService{
         String type = "";
         boolean isTrueType = false;
         while (!isTrueType) {
-            int choiceType = Integer.parseInt(sc.nextLine());
-            switch (choiceType) {
-                case 0:
-                    isTrueType = true;
-                    type = typeCustomer[0];
-                    break;
-                case 1:
-                    isTrueType = true;
-                    type = typeCustomer[1];
-                    break;
-                case 2:
-                    isTrueType = true;
-                    type = typeCustomer[2];
-                    break;
-                case 3:
-                    isTrueType = true;
-                    type = typeCustomer[3];
-                    break;
-                default:
-                    System.err.println("Input qualification false. Please retry.");
+            try {
+                int choiceType = Integer.parseInt(sc.nextLine());
+                switch (choiceType) {
+                    case 0:
+                        type = typeCustomer[0];
+                        break;
+                    case 1:
+                        type = typeCustomer[1];
+                        break;
+                    case 2:
+                        type = typeCustomer[2];
+                        break;
+                    case 3:
+                        type = typeCustomer[3];
+                        break;
+                    default:
+                        System.err.println("Input qualification false. Please retry.");
+                }
+                isTrueType = true;
+            } catch (Exception e) {
+                System.err.println("Input number only. Retry:");
             }
         }
         Customer newCustomer = new Customer(code, name, dayOfBirth, sex, email, idNumber, phone, type, address);
@@ -107,7 +116,8 @@ public class CustomerServiceImpl implements CustomerService{
                 System.err.println("Code not found!");
             } else {
                 isTrueCode = true;
-                System.out.println(customers.get(index).toString());
+                boolean isLegalEdit = false;
+                System.out.println("Result: " + "\n" + customers.get(index).toString());
                 System.out.println("Choose the property: ");
                 System.out.println("1) Edit name");
                 System.out.println("2) Edit day of birth");
@@ -118,92 +128,108 @@ public class CustomerServiceImpl implements CustomerService{
                 System.out.println("7) Edit type");
                 System.out.println("8) Edit address");
                 System.out.println("9) Back.");
-                int customerChoice = Integer.parseInt(sc.nextLine());
-                switch (customerChoice) {
-                    case 1:
-                        System.out.println("Input new name: ");
-                        String newName = sc.nextLine();
-                        customers.get(index).setName(newName);
-                        break;
+                while (!isLegalEdit) {
+                    try {
+                        int customerChoice = Integer.parseInt(sc.nextLine());
+                        switch (customerChoice) {
+                            case 1:
+                                System.out.println("Input new name: ");
+                                String newName = sc.nextLine();
+                                customers.get(index).setName(newName);
+                                break;
 
-                    case 2:
-                        System.out.println("Input new day of birth: ");
-                        String newDob = sc.nextLine();
-                        customers.get(index).setDayOfBirth(newDob);
-                        break;
+                            case 2:
+                                System.out.println("Input new day of birth: ");
+                                String newDob = sc.nextLine();
+                                customers.get(index).setDayOfBirth(newDob);
+                                break;
 
-                    case 3:
-                        System.out.println("Input new sex: ");
-                        String newSex = sc.nextLine();
-                        customers.get(index).setSex(newSex);
-                        break;
+                            case 3:
+                                System.out.println("Input new sex: ");
+                                String newSex = sc.nextLine();
+                                customers.get(index).setSex(newSex);
+                                break;
 
-                    case 4:
-                        System.out.println("Input new email: ");
-                        String newEmail = sc.nextLine();
-                        customers.get(index).setEmail(newEmail);
-                        break;
+                            case 4:
+                                System.out.println("Input new email: ");
+                                String newEmail = sc.nextLine();
+                                customers.get(index).setEmail(newEmail);
+                                break;
 
-                    case 5:
-                        System.out.println("Input new ID number: ");
-                        int newIdNumb = Integer.parseInt(sc.nextLine());
-                        customers.get(index).setIdNumber(newIdNumb);
-                        break;
+                            case 5:
+                                System.out.println("Input new ID number: ");
+                                boolean isLegalID = false;
+                                while (!isLegalID) {
+                                    try {
+                                        int newIdNumb = Integer.parseInt(sc.nextLine());
+                                        customers.get(index).setIdNumber(newIdNumb);
+                                        System.out.println("Success");
+                                        isLegalID = true;
+                                    } catch (Exception e) {
+                                        System.err.println("Input number only. Retry:");
+                                    }
+                                }
+                                break;
 
-                    case 6:
-                        System.out.println("Input phone number: ");
-                        String newPhone = sc.nextLine();
-                        customers.get(index).setPhoneNumber(newPhone);
-                        break;
+                            case 6:
+                                System.out.println("Input phone number: ");
+                                String newPhone = sc.nextLine();
+                                customers.get(index).setPhoneNumber(newPhone);
+                                break;
 
-                    case 7:
-                        System.out.println("Choose one type: ");
-                        for (int i = 0; i < typeCustomer.length; i++) {
-                            System.out.println(i + ") " + typeCustomer[i]);
+                            case 7:
+                                System.out.println("Choose one type: ");
+                                for (int i = 0; i < typeCustomer.length; i++) {
+                                    System.out.println(i + ") " + typeCustomer[i]);
+                                }
+                                String newType = "";
+                                boolean isTrue = false;
+                                while (!isTrue) {
+                                    int choiceType = Integer.parseInt(sc.nextLine());
+                                    switch (choiceType) {
+                                        case 0:
+                                            isTrue = true;
+                                            newType = typeCustomer[0];
+                                            break;
+                                        case 1:
+                                            isTrue = true;
+                                            newType = typeCustomer[1];
+                                            break;
+                                        case 2:
+                                            isTrue = true;
+                                            newType = typeCustomer[2];
+                                            break;
+                                        case 3:
+                                            isTrue = true;
+                                            newType = typeCustomer[3];
+                                            break;
+                                        case 4:
+                                            isTrue = true;
+                                            newType = typeCustomer[4];
+                                            break;
+                                        default:
+                                            System.err.println("Input qualification false. Please retry.");
+                                    }
+                                }
+                                customers.get(index).setType(newType);
+                                break;
+
+                            case 8:
+                                System.out.println("Input new address: ");
+                                String newAddress = sc.nextLine();
+                                customers.get(index).setAddress(newAddress);
+                                break;
+
+                            case 9:
+                                return;
+
+                            default:
+                                System.err.println("False input. Please retry.");
                         }
-                        String newType = "";
-                        boolean isTrue = false;
-                        while (!isTrue) {
-                            int choiceType = Integer.parseInt(sc.nextLine());
-                            switch (choiceType) {
-                                case 0:
-                                    isTrue = true;
-                                    newType = typeCustomer[0];
-                                    break;
-                                case 1:
-                                    isTrue = true;
-                                    newType = typeCustomer[1];
-                                    break;
-                                case 2:
-                                    isTrue = true;
-                                    newType = typeCustomer[2];
-                                    break;
-                                case 3:
-                                    isTrue = true;
-                                    newType = typeCustomer[3];
-                                    break;
-                                case 4:
-                                    isTrue = true;
-                                    newType = typeCustomer[4];
-                                    break;
-                                default:
-                                    System.err.println("Input qualification false. Please retry.");
-                            }
-                        }
-                        customers.get(index).setType(newType);
-                        break;
-
-                    case 8:
-                        System.out.println("Input new address: ");
-                        String newAddress = sc.nextLine();
-                        customers.get(index).setAddress(newAddress);
-                        break;
-
-                    case 9:
-                        return;
-
-                    default:
-                        System.err.println("False input. Please retry.");
+                        isLegalEdit = true;
+                    } catch (Exception e) {
+                        System.err.println("Input number only. Retry: ");
+                    }
                 }
             }
         }

@@ -28,57 +28,81 @@ public class FacilityServiceImpl implements FacilityService{
 
     @Override
     public void addNew() {
-        do {
-            System.out.println("You chose Add new facility. Choose the next function: ");
-            System.out.println("1) Add new villa");
-            System.out.println("2) Add new house");
-            System.out.println("3) Add new room");
-            System.out.println("4) Back to menu");
-            int addNewChoice = sc.nextInt();
-            switch (addNewChoice) {
-                case 1:
-                    System.out.println("You chose Add new villa.");
-                    Villa newVilla = new Villa();
-                    addRegularProperties(newVilla);
-                    System.out.println("Input room standard: ");
-                    newVilla.setRoomStandard(sc.nextLine());
-                    System.out.println("Input pool area: ");
-                    newVilla.setPoolArea(sc.nextLine());
-                    System.out.println("Input number of level(s): ");
-                    newVilla.setNumberOfLevel(Integer.parseInt(sc.nextLine()));
-                    facilityMap.put(newVilla, 0);
-                    System.out.println("Success.");
-                    break;
+        boolean isLegalInfo = false;
+        while (!isLegalInfo) {
+            try {
+                System.out.println("You chose Add new facility. Choose the next function: ");
+                System.out.println("1) Add new villa");
+                System.out.println("2) Add new house");
+                System.out.println("3) Add new room");
+                System.out.println("4) Back to menu");
+                int addNewChoice = Integer.parseInt(sc.nextLine());
+                switch (addNewChoice) {
+                    case 1:
+                        System.out.println("You chose Add new villa.");
+                        Villa newVilla = new Villa();
+                        addRegularProperties(newVilla);
+                        System.out.println("Input room standard: ");
+                        newVilla.setRoomStandard(sc.nextLine());
+                        System.out.println("Input pool area: ");
+                        newVilla.setPoolArea(sc.nextLine());
+                        System.out.println("Input number of level(s): ");
+                        boolean isLegalLevelVilla = false;
+                        while (!isLegalLevelVilla) {
+                            try {
+                                newVilla.setNumberOfLevel(Integer.parseInt(sc.nextLine()));
+                                System.out.println("Success.");
+                                isLegalLevelVilla = true;
+                            } catch (Exception e) {
+                                System.err.println("Input number only. Retry.");
+                            }
+                        }
+                        facilityMap.put(newVilla, 0);
+                        System.out.println("Success.");
+                        break;
 
-                case 2:
-                    System.out.println("You chose Add new house.");
-                    House newHouse = new House();
-                    addRegularProperties(newHouse);
-                    System.out.println("Input room standard: ");
-                    newHouse.setRoomStandard(sc.nextLine());
-                    System.out.println("Input number of level(s): ");
-                    newHouse.setNumberOfLevel(Integer.parseInt(sc.nextLine()));
-                    facilityMap.put(newHouse, 0);
-                    System.out.println("Success.");
-                    break;
+                    case 2:
+                        System.out.println("You chose Add new house.");
+                        House newHouse = new House();
+                        addRegularProperties(newHouse);
+                        System.out.println("Input room standard: ");
+                        newHouse.setRoomStandard(sc.nextLine());
+                        System.out.println("Input number of level(s): ");
+                        boolean isLegalLevelHouse = false;
+                        while (!isLegalLevelHouse) {
+                            try {
+                                newHouse.setNumberOfLevel(Integer.parseInt(sc.nextLine()));
+                                System.out.println("Success.");
+                                isLegalLevelHouse = true;
+                            } catch (Exception e) {
+                                System.err.println("Input number only. Retry.");
+                            }
+                        }
+                        facilityMap.put(newHouse, 0);
+                        System.out.println("Success.");
+                        break;
 
-                case 3:
-                    System.out.println("You chose Add new room.");
-                    Room newRoom = new Room();
-                    addRegularProperties(newRoom);
-                    System.out.println("Input free service(s): ");
-                    newRoom.setFreeServices(sc.nextLine());
-                    facilityMap.put(newRoom, 0);
-                    System.out.println("Success.");
-                    break;
+                    case 3:
+                        System.out.println("You chose Add new room.");
+                        Room newRoom = new Room();
+                        addRegularProperties(newRoom);
+                        System.out.println("Input free service(s): ");
+                        newRoom.setFreeServices(sc.nextLine());
+                        facilityMap.put(newRoom, 0);
+                        System.out.println("Success.");
+                        break;
 
-                case 4:
-                    return;
+                    case 4:
+                        return;
 
-                default:
-                    System.err.println("False input. Please retry.");
+                    default:
+                        System.err.println("False input. Please retry.");
+                }
+                isLegalInfo = true;
+            } catch (Exception e) {
+                System.err.println("Input number only. Retry: ");
             }
-        } while (true);
+        }
     }
 
     @Override
@@ -107,6 +131,16 @@ public class FacilityServiceImpl implements FacilityService{
         System.out.println("Input price: ");
         f.setPrice(sc.nextLine());
         System.out.println("Input capacity: ");
+        boolean isLegalCap = false;
+        while (!isLegalCap) {
+            try {
+                f.setCapacity(Integer.parseInt(sc.nextLine()));
+                System.out.println("Success.");
+                isLegalCap = true;
+            } catch (Exception e) {
+                System.err.println("Input number only. Retry.");
+            }
+        }
         f.setCapacity(Integer.parseInt(sc.nextLine()));
         System.out.println("Input type of hiring: ");
         f.setTypeOfHiring(sc.nextLine());

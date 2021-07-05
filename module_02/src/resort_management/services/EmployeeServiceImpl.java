@@ -43,7 +43,16 @@ public class EmployeeServiceImpl implements EmployeeService{
         System.out.println("Input email: ");
         String email = sc.nextLine();
         System.out.println("Input ID number: ");
-        int idNumber = Integer.parseInt(sc.nextLine());
+        int idNumber = 0;
+        boolean isLegalID = false;
+        while (!isLegalID) {
+            try {
+                idNumber = Integer.parseInt(sc.nextLine());
+                isLegalID = true;
+            } catch (Exception e) {
+                System.err.println("Input number only. Retry: ");
+            }
+        }
         System.out.println("Input phone number: ");
         String phone = sc.nextLine();
         System.out.println("Input position. Choose one: ");
@@ -51,67 +60,84 @@ public class EmployeeServiceImpl implements EmployeeService{
             System.out.println(i + ") " + positionArr[i]);
         }
         String position = "";
-        boolean isLegal = false;
-        while (!isLegal) {
-            int choicePos = Integer.parseInt(sc.nextLine());
-            switch (choicePos) {
-                case 0:
-                    isLegal = true;
-                    position = positionArr[0];
-                    break;
-                case 1:
-                    isLegal = true;
-                    position = positionArr[1];
-                    break;
-                case 2:
-                    isLegal = true;
-                    position = positionArr[2];
-                    break;
-                case 3:
-                    isLegal = true;
-                    position = positionArr[3];
-                    break;
-                case 4:
-                    isLegal = true;
-                    position = positionArr[4];
-                    break;
-                case 5:
-                    isLegal = true;
-                    position = positionArr[5];
-                    break;
-                default:
-                    System.err.println("Input position false. Please retry.");
+        boolean isLegalPosition = false;
+        while (!isLegalPosition) {
+            try {
+                int choicePos = Integer.parseInt(sc.nextLine());
+                switch (choicePos) {
+                    case 0:
+                        isLegalPosition = true;
+                        position = positionArr[0];
+                        break;
+                    case 1:
+                        isLegalPosition = true;
+                        position = positionArr[1];
+                        break;
+                    case 2:
+                        isLegalPosition = true;
+                        position = positionArr[2];
+                        break;
+                    case 3:
+                        isLegalPosition = true;
+                        position = positionArr[3];
+                        break;
+                    case 4:
+                        isLegalPosition = true;
+                        position = positionArr[4];
+                        break;
+                    case 5:
+                        isLegalPosition = true;
+                        position = positionArr[5];
+                        break;
+                    default:
+                        System.err.println("Input position false. Please retry.");
+                }
+            } catch (Exception e) {
+                System.err.println("Input number only. Retry.");
             }
         }
         System.out.println("Input salary: ");
-        double salary = Integer.parseInt(sc.nextLine());
+        double salary = 0;
+        boolean isLegalSalary = false;
+        while (!isLegalSalary) {
+            try {
+                idNumber = Integer.parseInt(sc.nextLine());
+                isLegalSalary = true;
+            } catch (Exception e) {
+                System.err.println("Input number only. Retry: ");
+            }
+        }
         System.out.println("Input qualification. Choose one: ");
         for (int i = 0; i < qualificationArr.length; i++) {
             System.out.println(i + ") " + qualificationArr[i]);
         }
         String qualification = "";
-        boolean isTrue = false;
-        while (!isTrue) {
-            int choiceQual = Integer.parseInt(sc.nextLine());
-            switch (choiceQual) {
-                case 0:
-                    isTrue = true;
-                    qualification = qualificationArr[0];
-                    break;
-                case 1:
-                    isTrue = true;
-                    qualification = qualificationArr[1];
-                    break;
-                case 2:
-                    isTrue = true;
-                    qualification = qualificationArr[2];
-                    break;
-                case 3:
-                    isTrue = true;
-                    qualification = qualificationArr[3];
-                    break;
-                default:
-                    System.err.println("Input qualification false. Please retry.");
+        boolean isLegalQualification = false;
+        while (!isLegalQualification) {
+            try {
+                int choiceQual = Integer.parseInt(sc.nextLine());
+                switch (choiceQual) {
+                    case 0:
+                        isLegalQualification = true;
+                        qualification = qualificationArr[0];
+                        break;
+                    case 1:
+                        isLegalQualification = true;
+                        qualification = qualificationArr[1];
+                        break;
+                    case 2:
+                        isLegalQualification = true;
+                        qualification = qualificationArr[2];
+                        break;
+                    case 3:
+                        isLegalQualification = true;
+                        qualification = qualificationArr[3];
+                        break;
+                    default:
+                        System.err.println("Input qualification false. Please retry.");
+                }
+            } catch (Exception e) {
+                System.err.println("Input number only. Retry.");
             }
         }
             Employee newEmployee = new Employee(code, name, dayOfBirth, sex, email, idNumber, phone, position, salary, qualification);
@@ -139,133 +165,160 @@ public class EmployeeServiceImpl implements EmployeeService{
                 System.err.println("Code not found!");
             } else {
                 isTrueCode = true;
-                System.out.println(employees.get(index).toString());
-                System.out.println("Choose the property: ");
-                System.out.println("1) Edit name");
-                System.out.println("2) Edit day of birth");
-                System.out.println("3) Edit sex");
-                System.out.println("4) Edit email");
-                System.out.println("5) Edit ID number");
-                System.out.println("6) Edit phone");
-                System.out.println("7) Edit position");
-                System.out.println("8) Edit salary");
-                System.out.println("9) Edit qualification");
-                System.out.println("0) Back.");
-                int empChoice = Integer.parseInt(sc.nextLine());
-                switch (empChoice) {
-                    case 1:
-                        System.out.println("Input new name: ");
-                        String newName = sc.nextLine();
-                        employees.get(index).setName(newName);
-                        break;
+                boolean isLegalEdit = false;
+                    System.out.println("Result: " + "\n" + employees.get(index).toString());
+                    System.out.println("Choose the property: ");
+                    System.out.println("1) Edit name");
+                    System.out.println("2) Edit day of birth");
+                    System.out.println("3) Edit sex");
+                    System.out.println("4) Edit email");
+                    System.out.println("5) Edit ID number");
+                    System.out.println("6) Edit phone");
+                    System.out.println("7) Edit position");
+                    System.out.println("8) Edit salary");
+                    System.out.println("9) Edit qualification");
+                    System.out.println("0) Back.");
+                    while (!isLegalEdit) {
+                    try {
+                        int empChoice = Integer.parseInt(sc.nextLine());
+                        switch (empChoice) {
+                            case 1:
+                                System.out.println("Input new name: ");
+                                String newName = sc.nextLine();
+                                employees.get(index).setName(newName);
+                                break;
 
-                    case 2:
-                        System.out.println("Input new day of birth: ");
-                        String newDob = sc.nextLine();
-                        employees.get(index).setDayOfBirth(newDob);
-                        break;
+                            case 2:
+                                System.out.println("Input new day of birth: ");
+                                String newDob = sc.nextLine();
+                                employees.get(index).setDayOfBirth(newDob);
+                                break;
 
-                    case 3:
-                        System.out.println("Input new sex: ");
-                        String newSex = sc.nextLine();
-                        employees.get(index).setSex(newSex);
-                        break;
+                            case 3:
+                                System.out.println("Input new sex: ");
+                                String newSex = sc.nextLine();
+                                employees.get(index).setSex(newSex);
+                                break;
 
-                    case 4:
-                        System.out.println("Input new email: ");
-                        String newEmail = sc.nextLine();
-                        employees.get(index).setEmail(newEmail);
-                        break;
+                            case 4:
+                                System.out.println("Input new email: ");
+                                String newEmail = sc.nextLine();
+                                employees.get(index).setEmail(newEmail);
+                                break;
 
-                    case 5:
-                        System.out.println("Input new ID number: ");
-                        int newIdNumb = Integer.parseInt(sc.nextLine());
-                        employees.get(index).setIdNumber(newIdNumb);
-                        break;
+                            case 5:
+                                System.out.println("Input new ID number: ");
+                                boolean isLegalID = false;
+                                while (!isLegalID) {
+                                    try {
+                                        int newIdNumb = Integer.parseInt(sc.nextLine());
+                                        employees.get(index).setIdNumber(newIdNumb);
+                                        System.out.println("Success");
+                                        isLegalID = true;
+                                    } catch (Exception e) {
+                                        System.err.println("Input number only. Retry: ");
+                                    }
+                                }
+                                break;
 
-                    case 6:
-                        System.out.println("Input phone number: ");
-                        String newPhone = sc.nextLine();
-                        employees.get(index).setPhoneNumber(newPhone);
-                        break;
+                            case 6:
+                                System.out.println("Input phone number: ");
+                                String newPhone = sc.nextLine();
+                                employees.get(index).setPhoneNumber(newPhone);
+                                break;
 
-                    case 7:
-                        System.out.println("Choose new position: ");
-                        for (int i = 0; i < positionArr.length; i++) {
-                            System.out.println(i + ") " + positionArr[i]);
+                            case 7:
+                                System.out.println("Choose new position: ");
+                                for (int i = 0; i < positionArr.length; i++) {
+                                    System.out.println(i + ") " + positionArr[i]);
+                                }
+                                String newPos = "";
+                                boolean isPosition = false;
+                                while (!isPosition) {
+                                    int choicePos = Integer.parseInt(sc.nextLine());
+                                    switch (choicePos) {
+                                        case 0:
+                                            isPosition = true;
+                                            newPos = positionArr[0];
+                                            break;
+                                        case 1:
+                                            isPosition = true;
+                                            newPos = positionArr[1];
+                                            break;
+                                        case 2:
+                                            isPosition = true;
+                                            newPos = positionArr[2];
+                                            break;
+                                        case 3:
+                                            isPosition = true;
+                                            newPos = positionArr[3];
+                                            break;
+                                        default:
+                                            System.err.println("Input position false. Please retry.");
+                                    }
+                                }
+                                employees.get(index).setPosition(newPos);
+                                break;
+
+                            case 8:
+                                System.out.println("Input new salary: ");
+                                boolean isLegalSalary = false;
+                                double newSalary = 0;
+                                while (!isLegalSalary) {
+                                    try {
+                                        newSalary = Integer.parseInt(sc.nextLine());
+                                        employees.get(index).setSalary(newSalary);
+                                        System.out.println("Success");
+                                        isLegalSalary = true;
+                                    } catch (Exception e) {
+                                        System.err.println("Input number only. Retry: ");
+                                    }
+                                }
+                                break;
+
+                            case 9:
+                                System.out.println("Choose new qualification: ");
+                                for (int i = 0; i < qualificationArr.length; i++) {
+                                    System.out.println(i + ") " + qualificationArr[i]);
+                                }
+                                String qualification = "";
+                                boolean isLegal = false;
+                                while (!isLegal) {
+                                    int choiceQual = Integer.parseInt(sc.nextLine());
+                                    switch (choiceQual) {
+                                        case 0:
+                                            isLegal = true;
+                                            qualification = qualificationArr[0];
+                                            break;
+                                        case 1:
+                                            isLegal = true;
+                                            qualification = qualificationArr[1];
+                                            break;
+                                        case 2:
+                                            isLegal = true;
+                                            qualification = qualificationArr[2];
+                                            break;
+                                        case 3:
+                                            isLegal = true;
+                                            qualification = qualificationArr[3];
+                                            break;
+                                        default:
+                                            System.err.println("Input qualification false. Please retry.");
+                                    }
+                                }
+                                employees.get(index).setQualification(qualification);
+                                break;
+
+                            case 0:
+                                return;
+
+                            default:
+                                System.err.println("False input. Please retry.");
                         }
-                        String newPos = "";
-                        boolean isPosition = false;
-                        while (!isPosition) {
-                            int choicePos = Integer.parseInt(sc.nextLine());
-                            switch (choicePos) {
-                                case 0:
-                                    isPosition = true;
-                                    newPos = positionArr[0];
-                                    break;
-                                case 1:
-                                    isPosition = true;
-                                    newPos = positionArr[1];
-                                    break;
-                                case 2:
-                                    isPosition = true;
-                                    newPos = positionArr[2];
-                                    break;
-                                case 3:
-                                    isPosition = true;
-                                    newPos = positionArr[3];
-                                    break;
-                                default:
-                                    System.err.println("Input position false. Please retry.");
-                            }
-                        }
-                        employees.get(index).setPosition(newPos);
-                        break;
-
-                    case 8:
-                        System.out.println("Input new salary: ");
-                        double newSalary = Integer.parseInt(sc.nextLine());
-                        employees.get(index).setSalary(newSalary);
-                        break;
-
-                    case 9:
-                        System.out.println("Choose new qualification: ");
-                        for (int i = 0; i < qualificationArr.length; i++) {
-                            System.out.println(i + ") " + qualificationArr[i]);
-                        }
-                        String qualification = "";
-                        boolean isLegal = false;
-                        while (!isLegal) {
-                            int choiceQual = Integer.parseInt(sc.nextLine());
-                            switch (choiceQual) {
-                                case 0:
-                                    isLegal = true;
-                                    qualification = qualificationArr[0];
-                                    break;
-                                case 1:
-                                    isLegal = true;
-                                    qualification = qualificationArr[1];
-                                    break;
-                                case 2:
-                                    isLegal = true;
-                                    qualification = qualificationArr[2];
-                                    break;
-                                case 3:
-                                    isLegal = true;
-                                    qualification = qualificationArr[3];
-                                    break;
-                                default:
-                                    System.err.println("Input qualification false. Please retry.");
-                            }
-                        }
-                        employees.get(index).setQualification(qualification);
-                        break;
-
-                    case 0:
-                        return;
-
-                    default:
-                        System.err.println("False input. Please retry.");
+                        isLegalEdit = true;
+                    } catch (Exception e) {
+                        System.err.println("Input number only. Retry.");
+                    }
                 }
             }
         }

@@ -12,6 +12,7 @@ public class BookingServiceImpl implements BookingService {
     static TreeSet<Booking> bookingList = new TreeSet<>();
     static PriorityQueue<Booking> fromBookingToContract = new PriorityQueue<>();
     static LinkedList<Contract> contracts = new LinkedList<>();
+
     static {
         Booking bookingVilla1 = new Booking("V01", 20, 30, "B1", "Honeymoon", "Villa rent");
         Booking bookingRoom1 = new Booking("R01", 22, 23, "B2", "Special guest", "Room rent");
@@ -19,14 +20,14 @@ public class BookingServiceImpl implements BookingService {
         bookingList.add(bookingVilla1);
         fromBookingToContract.offer(bookingVilla1);
     }
+
     static CustomerServiceImpl cs = new CustomerServiceImpl();
 
     public void putIntoContractList(Booking booking) {
         // Mã booking đối với Room bắt đầu là R (không tạo contract), House bắt đầu là H, Villa bắt đầu là V
-        String check = "R";
+        String[] check = {"V", "H"};
         String[] code = booking.getBookingCode().split("");
-        boolean isLegal = check.equals(code[0]);
-        if (!isLegal) {
+        if (check[0].equals(code[0]) || check[1].equals(code[0])) {
             fromBookingToContract.offer(booking);
         }
     }
@@ -36,7 +37,16 @@ public class BookingServiceImpl implements BookingService {
         Contract newContract = new Contract();
         System.out.println("You chose Creat new contract.");
         System.out.println("Input contract number: ");
-        newContract.setContractNumb(sc.nextInt());
+        boolean isLegalNumbContract = false;
+        while (!isLegalNumbContract) {
+            try {
+                newContract.setContractNumb(Integer.parseInt(sc.nextLine()));
+                System.out.println("Success.");
+                isLegalNumbContract = true;
+            } catch (Exception e) {
+                System.err.println("Input number only. Retry.");
+            }
+        }
         if (fromBookingToContract.peek() != null) {
             newContract.setBookingCode(fromBookingToContract.peek().getBookingCode());
             newContract.setCustomerCode(fromBookingToContract.peek().getCustomerCode());
@@ -46,9 +56,27 @@ public class BookingServiceImpl implements BookingService {
             return;
         }
         System.out.println("Input deposit amount: ");
-        newContract.setDeposit(sc.nextInt());
+        boolean isLegalDeposit = false;
+        while (!isLegalDeposit) {
+            try {
+                newContract.setDeposit(Integer.parseInt(sc.nextLine()));
+                System.out.println("Success.");
+                isLegalDeposit = true;
+            } catch (Exception e) {
+                System.err.println("Input number only. Retry.");
+            }
+        }
         System.out.println("Input total pay amount: ");
-        newContract.setTotalPay(sc.nextInt());
+        boolean isLegalTotal = false;
+        while (!isLegalTotal) {
+            try {
+                newContract.setTotalPay(Integer.parseInt(sc.nextLine()));
+                System.out.println("Success.");
+                isLegalTotal = true;
+            } catch (Exception e) {
+                System.err.println("Input number only. Retry.");
+            }
+        }
         System.out.println("New contract created:" + newContract.toString());
         contracts.offer(newContract);
     }
@@ -56,7 +84,7 @@ public class BookingServiceImpl implements BookingService {
     @Override
     public void displayListContract() {
         System.out.println("Available contract: ");
-        for (Contract c: contracts) {
+        for (Contract c : contracts) {
             System.out.println(c.toString());
         }
     }
@@ -72,13 +100,17 @@ public class BookingServiceImpl implements BookingService {
             int numberContract;
             int index = 0;
             while (!isLegal) {
-                numberContract = sc.nextInt();
-                for (int i = 0; i < contracts.size(); i++) {
-                    if (numberContract == contracts.get(i).getContractNumb()) {
-                        isLegal = true;
-                        index = i;
-                        break;
+                try {
+                    numberContract = Integer.parseInt(sc.nextLine());
+                    for (int i = 0; i < contracts.size(); i++) {
+                        if (numberContract == contracts.get(i).getContractNumb()) {
+                            isLegal = true;
+                            index = i;
+                            break;
+                        }
                     }
+                } catch (Exception e) {
+                    System.err.println("Input number only. Retry. ");
                 }
                 if (!isLegal) {
                     System.err.println("Wrong code. Please retry. ");
@@ -89,51 +121,83 @@ public class BookingServiceImpl implements BookingService {
                     System.out.println("3) Deposit amount");
                     System.out.println("4) Total amount");
                     System.out.println("5) Exit");
-                    int choice = sc.nextInt();
-                    switch (choice) {
-                        case 1:
-                            System.out.println("Input new booking code: ");
-                            contracts.get(index).setContractNumb(sc.nextInt());
-                            System.out.println("Success.");
-                            break;
-
-                        case 2:
-                            System.out.println("Customer code available. Choose one: ");
-                            for (Customer c : cs.getList()) {
-                                System.out.println(c.getCode());
-                            }
-                            boolean isAvailable = false;
-                            while (!isAvailable) {
-                                String newCustomerCode = sc.nextLine();
-                                for (Customer c : cs.getList()) {
-                                    if (newCustomerCode.equals(c.getCode())) {
-                                        isAvailable = true;
-                                        break;
+                    boolean isLegalEdit = false;
+                    while (!isLegalEdit) {
+                        try {
+                            int choice = Integer.parseInt(sc.nextLine());
+                            switch (choice) {
+                                case 1:
+                                    System.out.println("Input new booking code: ");
+                                    boolean isLegalCode = false;
+                                    while (!isLegalCode) {
+                                        try {
+                                            contracts.get(index).setContractNumb(Integer.parseInt(sc.nextLine()));
+                                            System.out.println("Success.");
+                                            isLegalCode = true;
+                                        } catch (Exception e) {
+                                            System.err.println("Input number only. Retry: ");
+                                        }
                                     }
-                                }
-                                if (isAvailable) {
-                                    contracts.get(index).setCustomerCode(newCustomerCode);
-                                    System.out.println("Success.");
-                                } else {
-                                    System.err.println("Input false. Please retry. ");
-                                }
+                                    break;
+
+                                case 2:
+                                    System.out.println("Customer code available. Choose one: ");
+                                    for (Customer c : cs.getList()) {
+                                        System.out.println(c.getCode());
+                                    }
+                                    boolean isAvailable = false;
+                                    while (!isAvailable) {
+                                        String newCustomerCode = sc.nextLine();
+                                        for (Customer c : cs.getList()) {
+                                            if (newCustomerCode.equals(c.getCode())) {
+                                                isAvailable = true;
+                                                break;
+                                            }
+                                        }
+                                        if (isAvailable) {
+                                            contracts.get(index).setCustomerCode(newCustomerCode);
+                                            System.out.println("Success.");
+                                        } else {
+                                            System.err.println("Input false. Please retry. ");
+                                        }
+                                    }
+                                    break;
+
+                                case 3:
+                                    System.out.println("Input new deposit amount: ");
+                                    boolean isLegalDeposit = false;
+                                    while (!isLegalDeposit) {
+                                        try {
+                                            contracts.get(index).setDeposit(Integer.parseInt(sc.nextLine()));
+                                            System.out.println("Success.");
+                                            isLegalDeposit = true;
+                                        } catch (Exception e) {
+                                            System.err.println("Input number only. Retry: ");
+                                        }
+                                    }
+                                    break;
+
+                                case 4:
+                                    System.out.println("Input new total amount: ");
+                                    boolean isLegalTotal = false;
+                                    while (!isLegalTotal) {
+                                        try {
+                                            contracts.get(index).setTotalPay(Integer.parseInt(sc.nextLine()));
+                                            System.out.println("Success.");
+                                            isLegalTotal = true;
+                                        } catch (Exception e) {
+                                            System.err.println("Input number only. Retry: ");
+                                        }
+                                    }
+                                    break;
+
+                                default:
+                                    return;
                             }
-                            break;
-
-                        case 3:
-                            System.out.println("Input new deposit amount: ");
-                            contracts.get(index).setDeposit(sc.nextInt());
-                            System.out.println("Success.");
-                            break;
-
-                        case 4:
-                            System.out.println("Input new total amount: ");
-                            contracts.get(index).setTotalPay(sc.nextInt());
-                            System.out.println("Success.");
-                            break;
-
-                        default:
-                            return;
+                            isLegalEdit = true;
+                        } catch (Exception e) {
+                            System.err.println("Input number only. Retry: ");
+                        }
                     }
                 }
             }
@@ -166,9 +230,38 @@ public class BookingServiceImpl implements BookingService {
             }
         }
         System.out.println("Input starting day: ");
-        newBooking.setDayStart(Integer.parseInt(sc.nextLine()));
+        boolean isLegalStartDay = false;
+        int startDay = 1;
+        while (!isLegalStartDay) {
+            try {
+                startDay = Integer.parseInt(sc.nextLine());
+                if (startDay > 0 && startDay < 31) {
+                    newBooking.setDayStart(startDay);
+                    System.out.println("Success.");
+                    isLegalStartDay = true;
+                } else {
+                    throw new Exception();
+                }
+            } catch (Exception e) {
+                System.err.println("Input day between 1 and 31. Retry: ");
+            }
+        }
         System.out.println("Input ending day: ");
-        newBooking.setDayEnd(Integer.parseInt(sc.nextLine()));
+        boolean isLegalEndDay = false;
+        while (!isLegalEndDay) {
+            try {
+                int endDay = Integer.parseInt(sc.nextLine());
+                if (endDay > 0 && endDay < 31 && endDay > startDay) {
+                    newBooking.setDayEnd(endDay);
+                    System.out.println("Success.");
+                    isLegalEndDay = true;
+                } else {
+                    throw new Exception();
+                }
+            } catch (Exception e) {
+                System.err.println("Input day between 1 and 31 and after the start day. Retry: ");
+            }
+        }
         boolean isAvailable = false;
         while (!isAvailable) {
             System.out.println("Customer code available. Choose one: ");
@@ -193,16 +286,21 @@ public class BookingServiceImpl implements BookingService {
         }
         System.out.println("Input name of service: ");
         newBooking.setNameService(sc.nextLine());
-        System.out.println("Facilities available. Input name: ");
-        fs.displayList();
+        System.out.println("Facilities available. Choose one type of service field by inputting facility name: ");
+        for (Map.Entry<Facility, Integer> entry : fs.getList().entrySet()) {
+            if (entry.getValue() < 5) {
+                System.out.println(entry.getKey().getNameOfService() + ", used times: " + entry.getValue());
+            }
+        }
         String choose = "";
         boolean isLegal = false;
         while (!isLegal) {
             choose = sc.nextLine();
-            for (Map.Entry<Facility, Integer> f: fs.getList().entrySet()) {
+            for (Map.Entry<Facility, Integer> f : fs.getList().entrySet()) {
                 if (choose.equals(f.getKey().getNameOfService())) {
                     isLegal = true;
                     f.setValue(f.getValue() + 1);
+                    fs.getList().remove(f.getKey());
                     break;
                 }
             }
@@ -221,8 +319,12 @@ public class BookingServiceImpl implements BookingService {
     @Override
     public void displayList() {
         System.out.println("Available booking(s): ");
-        for (Booking bk: bookingList) {
+        for (Booking bk : bookingList) {
             System.out.println(bk);
         }
+    }
+
+    public TreeSet<Booking> getBookingList() {
+        return bookingList;
     }
 }

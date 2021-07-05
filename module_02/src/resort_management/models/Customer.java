@@ -1,6 +1,6 @@
 package resort_management.models;
 
-public class Customer extends Person {
+public class Customer extends Person implements Comparable<Customer> {
     private String type;
     private String address;
 
@@ -47,5 +47,18 @@ public class Customer extends Person {
                 ", idNumber=" + idNumber +
                 ", phoneNumber=" + phoneNumber +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Customer o) {
+        if (getIdNumber() > o.getIdNumber()) {
+            return 1;
+        }
+        else if (getIdNumber() < o.getIdNumber()) {
+            return -1;
+        }
+        else {
+            return 0;
+        }
     }
 }

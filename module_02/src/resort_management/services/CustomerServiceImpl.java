@@ -1,6 +1,9 @@
 package resort_management.services;
 
+import resort_management.common.CustomerReadAndWriteFile;
 import resort_management.models.Customer;
+import resort_management.services.interfaces.CustomerService;
+
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
@@ -8,23 +11,13 @@ import java.util.Scanner;
 public class CustomerServiceImpl implements CustomerService {
     static Scanner sc = new Scanner(System.in);
     public static List<Customer> customers = new LinkedList<>();
-    static {
-        Customer customer1 = new Customer("B1", "Khach hang A", "11/12/1999", "Male",
-                "khachhangA@gmail.com", 200123123, "1234567890", "Diamond", "Da Nang");
-        Customer customer2 = new Customer("B2", "Khach hang B", "20/06/1995", "Female",
-                "khachhangB@gmail.com", 200123456, "1234567891", "Gold", "Ha Noi");
-        Customer customer3 = new Customer("B3", "Khach hang C", "18/12/1988", "Female",
-                "khachhangC@gmail.com", 200123789, "1234567892", "Platinum", "TP. HCM");
-        customers.add(customer1);
-        customers.add(customer2);
-        customers.add(customer3);
-    }
+    private static final String FILE_PATH = "D:\\C2401G1_HoVanKyTai\\module_02\\src\\resort_management\\data\\customer.csv";
     String[] typeCustomer = {"Diamond", "Platinium", "Gold", "Silver", "Member"};
 
     @Override
     public void displayList() {
-        for (Customer c: customers) {
-            System.out.println(c);
+        for (Customer e: new CustomerReadAndWriteFile().readFile(FILE_PATH)) {
+            System.out.println(e.toString());
         }
     }
 
@@ -32,9 +25,9 @@ public class CustomerServiceImpl implements CustomerService {
         return customers;
     }
 
-
     @Override
     public void addNew() {
+        customers = new CustomerReadAndWriteFile().readFile(FILE_PATH);
         System.out.println("Input code: ");
         String code = sc.nextLine();
         System.out.println("Input name: ");
@@ -61,43 +54,16 @@ public class CustomerServiceImpl implements CustomerService {
         String phone = sc.nextLine();
         System.out.println("Input address: ");
         String address = sc.nextLine();
-        System.out.println("Input type. Choose one: ");
-        for (int i = 0; i < typeCustomer.length; i++) {
-            System.out.println(i + ") " + typeCustomer[i]);
-        }
-        String type = "";
-        boolean isTrueType = false;
-        while (!isTrueType) {
-            try {
-                int choiceType = Integer.parseInt(sc.nextLine());
-                switch (choiceType) {
-                    case 0:
-                        type = typeCustomer[0];
-                        break;
-                    case 1:
-                        type = typeCustomer[1];
-                        break;
-                    case 2:
-                        type = typeCustomer[2];
-                        break;
-                    case 3:
-                        type = typeCustomer[3];
-                        break;
-                    default:
-                        System.err.println("Input qualification false. Please retry.");
-                }
-                isTrueType = true;
-            } catch (Exception e) {
-                System.err.println("Input number only. Retry:");
-            }
-        }
+        String type = inputType();
         Customer newCustomer = new Customer(code, name, dayOfBirth, sex, email, idNumber, phone, type, address);
         customers.add(newCustomer);
         System.out.println("Successful!");
+        new CustomerReadAndWriteFile().writeFile(FILE_PATH,customers);
     }
 
     @Override
     public void editCustomer() {
+        customers = new CustomerReadAndWriteFile().readFile(FILE_PATH);
         System.out.println("You chose Customer Editing.");
         boolean isTrueCode = false;
         while (!isTrueCode) {
@@ -178,39 +144,7 @@ public class CustomerServiceImpl implements CustomerService {
                                 break;
 
                             case 7:
-                                System.out.println("Choose one type: ");
-                                for (int i = 0; i < typeCustomer.length; i++) {
-                                    System.out.println(i + ") " + typeCustomer[i]);
-                                }
-                                String newType = "";
-                                boolean isTrue = false;
-                                while (!isTrue) {
-                                    int choiceType = Integer.parseInt(sc.nextLine());
-                                    switch (choiceType) {
-                                        case 0:
-                                            isTrue = true;
-                                            newType = typeCustomer[0];
-                                            break;
-                                        case 1:
-                                            isTrue = true;
-                                            newType = typeCustomer[1];
-                                            break;
-                                        case 2:
-                                            isTrue = true;
-                                            newType = typeCustomer[2];
-                                            break;
-                                        case 3:
-                                            isTrue = true;
-                                            newType = typeCustomer[3];
-                                            break;
-                                        case 4:
-                                            isTrue = true;
-                                            newType = typeCustomer[4];
-                                            break;
-                                        default:
-                                            System.err.println("Input qualification false. Please retry.");
-                                    }
-                                }
+                                String newType = inputType();
                                 customers.get(index).setType(newType);
                                 break;
 
@@ -233,5 +167,43 @@ public class CustomerServiceImpl implements CustomerService {
                 }
             }
         }
+        new CustomerReadAndWriteFile().writeFile(FILE_PATH, customers);
+    }
+
+    public String inputType() {
+        System.out.println("Input type. Choose one: ");
+        for (int i = 0; i < typeCustomer.length; i++) {
+            System.out.println(i + ") " + typeCustomer[i]);
+        }
+        String type = "";
+        boolean isTrueType = false;
+        while (!isTrueType) {
+            try {
+                int choiceType = Integer.parseInt(sc.nextLine());
+                switch (choiceType) {
+                    case 0:
+                        type = typeCustomer[0];
+                        break;
+                    case 1:
+                        type = typeCustomer[1];
+                        break;
+                    case 2:
+                        type = typeCustomer[2];
+                        break;
+                    case 3:
+                        type = typeCustomer[3];
+                        break;
+                    case 4:
+                        type = typeCustomer[4];
+                        break;
+                    default:
+                        System.err.println("Input type false. Please retry.");
+                }
+                isTrueType = true;
+            } catch (NumberFormatException e) {
+                System.err.println(e.getMessage());
+            }
+        }
+        return type;
     }
 }

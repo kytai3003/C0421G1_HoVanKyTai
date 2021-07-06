@@ -1,15 +1,16 @@
 package resort_management.models;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public abstract class Facility {
+public abstract class Facility implements Serializable {
     protected String nameOfService;
     protected String typeOfHiring;
     protected String usingArea;
     protected String price;
-    protected int capacity;
+    protected String capacity;
 
-    public Facility(String nameOfService, String usingArea, String price, int capacity, String typeOfHiring) {
+    public Facility(String nameOfService, String usingArea, String price, String capacity, String typeOfHiring) {
         this.nameOfService = nameOfService;
         this.usingArea = usingArea;
         this.price = price;
@@ -44,11 +45,11 @@ public abstract class Facility {
         this.price = price;
     }
 
-    public int getCapacity() {
+    public String getCapacity() {
         return capacity;
     }
 
-    public void setCapacity(int capacity) {
+    public void setCapacity(String capacity) {
         this.capacity = capacity;
     }
 

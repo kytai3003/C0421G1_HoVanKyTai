@@ -8,14 +8,18 @@ public class CustomerController {
     static CustomerServiceImpl customerService = new CustomerServiceImpl();
     static Scanner sc = new Scanner(System.in);
     public static void customerFunction() {
-        try {
             System.out.println("You chose Customer Management.");
             System.out.println("Choose the next function: ");
             System.out.println("1) Display list customers");
             System.out.println("2) Add new customer");
             System.out.println("3) Edit customer");
             System.out.println("4) Back to menu");
-            int choiceTwo = Integer.parseInt(sc.nextLine());
+            int choiceTwo = 0;
+            try {
+                choiceTwo = Integer.parseInt(sc.nextLine());
+            } catch (NumberFormatException e) {
+                System.err.println("Input number only.");
+            }
             switch (choiceTwo) {
                 case 1:
                     customerService.displayList();
@@ -36,8 +40,5 @@ public class CustomerController {
                 default:
                     System.err.println("False input. Please retry.");
             }
-        } catch (Exception e) {
-            System.err.println("Input number only. Retry.");
         }
     }
-}

@@ -1,23 +1,24 @@
 package resort_management.models;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Villa extends Facility{
+public class Villa extends Facility  implements Serializable {
     private String roomStandard;
     private String poolArea;
-    private int numberOfLevel;
+    private String numberOfLevel;
 
     public Villa() {
     }
 
-    public Villa(String nameOfService, String usingArea, String price, int capacity, String typeOfHiring, String roomStandard, String poolArea, int numberOfLevel) {
+    public Villa(String nameOfService, String usingArea, String price, String capacity, String typeOfHiring, String roomStandard, String poolArea, String numberOfLevel) {
         super(nameOfService, usingArea, price, capacity, typeOfHiring);
         this.roomStandard = roomStandard;
         this.poolArea = poolArea;
         this.numberOfLevel = numberOfLevel;
     }
 
-    public Villa(String roomStandard, String poolArea, int numberOfLevel) {
+    public Villa(String roomStandard, String poolArea, String numberOfLevel) {
         this.roomStandard = roomStandard;
         this.poolArea = poolArea;
         this.numberOfLevel = numberOfLevel;
@@ -39,11 +40,11 @@ public class Villa extends Facility{
         this.poolArea = poolArea;
     }
 
-    public int getNumberOfLevel() {
+    public String getNumberOfLevel() {
         return numberOfLevel;
     }
 
-    public void setNumberOfLevel(int numberOfLevel) {
+    public void setNumberOfLevel(String numberOfLevel) {
         this.numberOfLevel = numberOfLevel;
     }
 

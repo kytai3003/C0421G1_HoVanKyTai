@@ -1,11 +1,12 @@
 package resort_management.models;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Room extends Facility{
+public class Room extends Facility  implements Serializable {
     private String freeServices;
 
-    public Room(String nameOfService, String usingArea, String price, int capacity, String typeOfHiring, String freeServices) {
+    public Room(String nameOfService, String usingArea, String price, String capacity, String typeOfHiring, String freeServices) {
         super(nameOfService, usingArea, price, capacity, typeOfHiring);
         this.freeServices = freeServices;
     }

@@ -1,9 +1,10 @@
 package resort_management.models;
 
+import java.io.Serializable;
 import java.util.Comparator;
 import java.util.Objects;
 
-public class Booking implements Comparator<Booking>, Comparable<Booking> {
+public class Booking implements Comparator<Booking>, Comparable<Booking>, Serializable {
     private String bookingCode;
     private String customerCode;
     private String nameService;

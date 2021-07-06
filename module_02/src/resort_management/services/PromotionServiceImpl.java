@@ -2,31 +2,33 @@ package resort_management.services;
 
 import resort_management.models.Booking;
 import resort_management.models.Customer;
+import resort_management.services.interfaces.PromotionService;
 
 import java.util.Scanner;
 import java.util.Stack;
 import java.util.TreeSet;
 
 public class PromotionServiceImpl implements PromotionService {
-    static Scanner sc = new Scanner(System.in);
-    static TreeSet<Customer> customerUseService = new TreeSet<>();
-    static CustomerServiceImpl customerService = new CustomerServiceImpl();
-    static BookingServiceImpl bookingService = new BookingServiceImpl();
-    static Stack<String> vouchers = new Stack<>();
+    private static final Scanner sc = new Scanner(System.in);
+    private static final TreeSet<Customer> customerUseService = new TreeSet<>(); // Set lưu danh sách khách nhận vé số vietlot
+    private static final CustomerServiceImpl customerService = new CustomerServiceImpl();
+    private static final BookingServiceImpl bookingService = new BookingServiceImpl();
+    private static final Stack<String> vouchers = new Stack<>(); // Kho stack lưu vé số vietlot
 
     @Override
     public void displayServiceList() {
         addToServiceList();
-        if (!bookingService.getBookingList().isEmpty()) {
+        if (customerUseService.isEmpty()) {
+            System.err.println("Patrons list is empty.");
+        } else {
             System.out.println("Patrons list: ");
             for (Customer c : customerUseService) {
                 System.out.println(c.toString());
             }
-        } else {
-            System.out.println("Patrons list is empty.");
         }
     }
 
+    // Phương thức đưa khách hàng vào danh sách nhận vé số
     public void addToServiceList() {
         for (Booking b : bookingService.getBookingList()) {
             for (Customer c : customerService.getList()) {
@@ -43,9 +45,9 @@ public class PromotionServiceImpl implements PromotionService {
         if (vouchers.size() > customerUseService.size()) {
             for (Booking b : bookingService.getBookingList()) {
                 System.out.print("Customer code : " + b.getCustomerCode() + " receives ");
-                System.out.println(vouchers.pop());
+                System.out.println(vouchers.pop()); // Nhận xong vé nào thì xóa vé đó
             }
-            customerUseService.clear();
+            customerUseService.clear(); // Nhận xong xóa khỏi danh sách
         } else if (customerUseService.size() == 0){
             System.out.println("Patrons list is empty.");
         } else {

@@ -1,10 +1,12 @@
 package resort_management.controller;
 
 import resort_management.services.BookingServiceImpl;
+import resort_management.services.ContractServiceImpl;
 import java.util.Scanner;
 
-public class BookingController {
-    static BookingServiceImpl bookingService = new BookingServiceImpl();
+public class BookingAndContractController {
+    private static final BookingServiceImpl bookingService = new BookingServiceImpl();
+    private static final ContractServiceImpl contractService = new ContractServiceImpl();
     static Scanner sc = new Scanner(System.in);
     public static void bookingFunction() {
         try {
@@ -27,15 +29,15 @@ public class BookingController {
                     break;
 
                 case 3:
-                    bookingService.creatNewContract();
+                    contractService.addNew();
                     break;
 
                 case 4:
-                    bookingService.displayListContract();
+                    contractService.displayList();
                     break;
 
                 case 5:
-                    bookingService.editContract();
+                    contractService.editContract();
                     break;
 
                 case 6:

@@ -1,4 +1,4 @@
-package resort_management.services;
+package resort_management.services.interfaces;
 
 public interface CustomerService extends Service{
     void editCustomer();

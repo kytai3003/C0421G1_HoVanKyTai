@@ -1,6 +1,8 @@
 package resort_management.models;
 
-public abstract class Person {
+import java.io.Serializable;
+
+public abstract class Person implements Serializable {
     protected String name;
     protected String dayOfBirth;
     protected String sex;

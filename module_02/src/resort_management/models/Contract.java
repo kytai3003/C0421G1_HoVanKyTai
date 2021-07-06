@@ -1,13 +1,15 @@
 package resort_management.models;
 
-public class Contract {
+import java.io.Serializable;
+
+public class Contract implements Serializable {
     private int contractNumb;
     private String bookingCode;
     private String customerCode;
     private double deposit;
     private double totalPay;
 
-    public Contract(int contractNumb, String bookingCode, String customerCode, double deposit, double totalPay) {
+    public Contract (int contractNumb, String bookingCode, String customerCode, double deposit, double totalPay) {
         this.contractNumb = contractNumb;
         this.bookingCode = bookingCode;
         this.customerCode = customerCode;

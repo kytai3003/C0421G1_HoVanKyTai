@@ -93,97 +93,104 @@ public class ContractServiceImpl implements ContractService<Contract> {
                             break;
                         }
                     }
-                } catch (Exception e) {
+                } catch (NumberFormatException e) {
                     System.err.println("Input number only. Retry. ");
                 }
                 if (!isLegal) {
                     System.err.println("Wrong code. Please retry. ");
                 } else {
-                    System.out.println("Choose property to edit: ");
-                    System.out.println("1) Booking code");
-                    System.out.println("2) Customer code");
-                    System.out.println("3) Deposit amount");
-                    System.out.println("4) Total amount");
-                    System.out.println("5) Exit");
-                    boolean isLegalEdit = false;
-                    while (!isLegalEdit) {
-                        try {
-                            int choice = Integer.parseInt(sc.nextLine());
-                            switch (choice) {
-                                case 1:
-                                    System.out.println("Input new booking code: ");
-                                    boolean isLegalCode = false;
-                                    while (!isLegalCode) {
-                                        try {
-                                            contracts.get(index).setContractNumb(Integer.parseInt(sc.nextLine()));
-                                            System.out.println("Success.");
-                                            isLegalCode = true;
-                                        } catch (Exception e) {
-                                            System.err.println("Input number only. Retry: ");
-                                        }
-                                    }
-                                    break;
-
-                                case 2:
-                                    System.out.println("Customer code available. Choose one: ");
-                                    for (Customer c : customerService.getList()) {
-                                        System.out.println(c.getCode());
-                                    }
-                                    boolean isAvailable = false;
-                                    while (!isAvailable) {
-                                        String newCustomerCode = sc.nextLine();
-                                        for (Customer c : customerService.getList()) {
-                                            if (newCustomerCode.equals(c.getCode())) {
-                                                isAvailable = true;
-                                                break;
-                                            }
-                                        }
-                                        if (isAvailable) {
-                                            contracts.get(index).setCustomerCode(newCustomerCode);
-                                            System.out.println("Success.");
-                                        } else {
-                                            System.err.println("Input false. Please retry. ");
-                                        }
-                                    }
-                                    break;
-
-                                case 3:
-                                    System.out.println("Input new deposit amount: ");
-                                    boolean isLegalDeposit = false;
-                                    while (!isLegalDeposit) {
-                                        try {
-                                            contracts.get(index).setDeposit(Integer.parseInt(sc.nextLine()));
-                                            System.out.println("Success.");
-                                            isLegalDeposit = true;
-                                        } catch (Exception e) {
-                                            System.err.println("Input number only. Retry: ");
-                                        }
-                                    }
-                                    break;
-
-                                case 4:
-                                    System.out.println("Input new total amount: ");
-                                    boolean isLegalTotal = false;
-                                    while (!isLegalTotal) {
-                                        try {
-                                            contracts.get(index).setTotalPay(Integer.parseInt(sc.nextLine()));
-                                            System.out.println("Success.");
-                                            isLegalTotal = true;
-                                        } catch (Exception e) {
-                                            System.err.println("Input number only. Retry: ");
-                                        }
-                                    }
-                                    break;
-
-                                default:
-                                    return;
-                            }
-                            isLegalEdit = true;
-                        } catch (Exception e) {
-                            System.err.println("Input number only. Retry: ");
-                        }
-                    }
+                    editContractIfTrue(index);
                 }
+            }
+        }
+    }
+
+    public void editContractIfTrue(int index) {
+        System.out.println("Choose property to edit: ");
+        System.out.println("1) Booking code");
+        System.out.println("2) Customer code");
+        System.out.println("3) Deposit amount");
+        System.out.println("4) Total amount");
+        System.out.println("5) Exit");
+        boolean isLegalEdit = false;
+        while (!isLegalEdit) {
+            try {
+                int choice = Integer.parseInt(sc.nextLine());
+                switch (choice) {
+                    case 1:
+                        System.out.println("Input new booking code: ");
+                        boolean isLegalCode = false;
+                        while (!isLegalCode) {
+                            try {
+                                contracts.get(index).setContractNumb(Integer.parseInt(sc.nextLine()));
+                                System.out.println("Success.");
+                                isLegalCode = true;
+                            } catch (NumberFormatException e) {
+                                System.err.println("Input number only. Retry: ");
+                            }
+                        }
+                        break;
+
+                    case 2:
+                        System.out.println("Customer code available. Choose one: ");
+                        for (Customer c : customerService.getList()) {
+                            System.out.println(c.getCode());
+                        }
+                        boolean isAvailable = false;
+                        while (!isAvailable) {
+                            String newCustomerCode = sc.nextLine();
+                            for (Customer c : customerService.getList()) {
+                                if (newCustomerCode.equals(c.getCode())) {
+                                    isAvailable = true;
+                                    break;
+                                }
+                            }
+                            if (isAvailable) {
+                                contracts.get(index).setCustomerCode(newCustomerCode);
+                                System.out.println("Success.");
+                            } else {
+                                System.err.println("Input false. Please retry. ");
+                            }
+                        }
+                        break;
+
+                    case 3:
+                        System.out.println("Input new deposit amount: ");
+                        boolean isLegalDeposit = false;
+                        while (!isLegalDeposit) {
+                            try {
+                                contracts.get(index).setDeposit(Integer.parseInt(sc.nextLine()));
+                                System.out.println("Success.");
+                                isLegalDeposit = true;
+                            } catch (NumberFormatException e) {
+                                System.err.println("Input number only. Retry: ");
+                            }
+                        }
+                        break;
+
+                    case 4:
+                        System.out.println("Input new total amount: ");
+                        boolean isLegalTotal = false;
+                        while (!isLegalTotal) {
+                            try {
+                                contracts.get(index).setTotalPay(Integer.parseInt(sc.nextLine()));
+                                System.out.println("Success.");
+                                isLegalTotal = true;
+                            } catch (NumberFormatException e) {
+                                System.err.println("Input number only. Retry: ");
+                            }
+                        }
+                        break;
+
+                    case 5:
+                        return;
+
+                    default:
+                        System.out.println("Input false. Try again");
+                }
+                isLegalEdit = true;
+            } catch (Exception e) {
+                System.err.println("Input number only. Retry: ");
             }
         }
     }

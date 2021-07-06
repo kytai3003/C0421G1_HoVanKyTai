@@ -65,9 +65,9 @@ public class BookingServiceImpl implements BookingService {
                     System.out.println("Success.");
                     isLegalStartDay = true;
                 } else {
-                    throw new Exception();
+                    throw new NumberFormatException();
                 }
-            } catch (Exception e) {
+            } catch (NumberFormatException e) {
                 System.err.println("Input day between 1 and 31. Retry: ");
             }
         }
@@ -81,9 +81,9 @@ public class BookingServiceImpl implements BookingService {
                     System.out.println("Success.");
                     isLegalEndDay = true;
                 } else {
-                    throw new Exception();
+                    throw new NumberFormatException();
                 }
-            } catch (Exception e) {
+            } catch (NumberFormatException e) {
                 System.err.println("Input day between 1 and 31 and after the start day. Retry: ");
             }
         }

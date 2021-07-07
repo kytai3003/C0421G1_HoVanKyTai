@@ -9,7 +9,7 @@ import java.util.*;
 
 public class FacilityServiceImpl implements FacilityService<Facility> {
     static Scanner sc = new Scanner(System.in);
-    public static LinkedHashMap<Facility, Integer> facilityMap = new LinkedHashMap<>();
+    private static final LinkedHashMap<Facility, Integer> facilityMap = new LinkedHashMap<>();
     private static final String FILE_PATH_VILLA = "D:\\C2401G1_HoVanKyTai\\module_02\\src\\resort_management\\data\\villa.csv";
     private static final String FILE_PATH_HOUSE = "D:\\C2401G1_HoVanKyTai\\module_02\\src\\resort_management\\data\\house.csv";
     private static final String FILE_PATH_ROOM = "D:\\C2401G1_HoVanKyTai\\module_02\\src\\resort_management\\data\\room.csv";

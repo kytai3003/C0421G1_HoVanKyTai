@@ -9,8 +9,8 @@ import java.util.List;
 import java.util.Scanner;
 
 public class CustomerServiceImpl implements CustomerService {
-    static Scanner sc = new Scanner(System.in);
-    public static List<Customer> customers = new LinkedList<>();
+    private static final Scanner sc = new Scanner(System.in);
+    private static List<Customer> customers = new LinkedList<>();
     private static final String FILE_PATH = "D:\\C2401G1_HoVanKyTai\\module_02\\src\\resort_management\\data\\customer.csv";
     String[] typeCustomer = {"Diamond", "Platinium", "Gold", "Silver", "Member"};
 

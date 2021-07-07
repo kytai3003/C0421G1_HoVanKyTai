@@ -1,20 +1,29 @@
 package resort_management.services;
 
+import resort_management.common.ContractReadAndWriteFile;
+import resort_management.common.LegalBookingRAW;
+import resort_management.models.Booking;
 import resort_management.models.Contract;
 import resort_management.models.Customer;
 import resort_management.services.interfaces.ContractService;
-
 import java.util.LinkedList;
+import java.util.PriorityQueue;
+import java.util.Queue;
 import java.util.Scanner;
 
 public class ContractServiceImpl implements ContractService<Contract> {
     private final static Scanner sc = new Scanner(System.in);
-    private final static LinkedList<Contract> contracts = new LinkedList<>(); // List lưu trữ các hợp đồng
-    private final static BookingServiceImpl bookingService = new BookingServiceImpl();
+    private final static String FILE_PATH_CONTRACT = "D:\\C2401G1_HoVanKyTai\\module_02\\src\\resort_management\\data\\contract.csv";
+    private final static String FILE_PATH_LEGALBOOKING = "D:\\C2401G1_HoVanKyTai\\module_02\\src\\resort_management\\data\\legalBooking.csv";
     private final static CustomerServiceImpl customerService = new CustomerServiceImpl();
+    private final static ContractReadAndWriteFile contractReadAndWrite = new ContractReadAndWriteFile();
+    private static LinkedList<Contract> contracts = new LinkedList<>(); // List lưu trữ các hợp đồng
+    private static Queue<Booking> fromBookingToContract = new PriorityQueue<>(); // Queue trung gian lưu trữ các booking hợp lệ để làm hợp đồng (trừ Room)
 
     @Override
-    public void addNew() { // Lấy các booking từ fromBookingToContract ra để làm hợp đồng
+    public void addNew() { // Lấy các booking từ Queue fromBookingToContract ra để làm hợp đồng
+        fromBookingToContract = (Queue<Booking>) new LegalBookingRAW().readFile(FILE_PATH_LEGALBOOKING);
+        contracts = (LinkedList<Contract>) contractReadAndWrite.readFile(FILE_PATH_CONTRACT);
         Contract newContract = new Contract();
         System.out.println("You chose Creat new contract.");
         System.out.println("Input contract number: ");
@@ -28,42 +37,31 @@ public class ContractServiceImpl implements ContractService<Contract> {
                 System.err.println("Input false, number only. Retry.");
             }
         }
-        if (bookingService.getLegalBooking().peek() != null) {
-            newContract.setBookingCode(bookingService.getLegalBooking().peek().getBookingCode());
-            newContract.setCustomerCode(bookingService.getLegalBooking().peek().getCustomerCode());
-            bookingService.getLegalBooking().poll();
+        if (fromBookingToContract.peek() != null) {
+            newContract.setBookingCode(fromBookingToContract.peek().getBookingCode());
+            newContract.setCustomerCode(fromBookingToContract.peek().getCustomerCode());
+            fromBookingToContract.poll();
         } else {
             System.out.println("No booking available. System out.");
             return;
         }
         System.out.println("Input deposit amount: ");
-        boolean isLegalDeposit = false;
-        while (!isLegalDeposit) {
-            try {
-                newContract.setDeposit(Integer.parseInt(sc.nextLine()));
-                System.out.println("Success.");
-                isLegalDeposit = true;
-            } catch (Exception e) {
-                System.err.println("Input false, number only. Retry.");
-            }
-        }
+        double deposit = inputAmount();
+        newContract.setDeposit(deposit);
         System.out.println("Input total pay amount: ");
-        boolean isLegalTotal = false;
-        while (!isLegalTotal) {
-            try {
-                newContract.setTotalPay(Integer.parseInt(sc.nextLine()));
-                System.out.println("Success.");
-                isLegalTotal = true;
-            } catch (Exception e) {
-                System.err.println("Input false, number only. Retry.");
-            }
-        }
+        double totalPay = inputAmount();
+        newContract.setTotalPay(totalPay);
         System.out.println("New contract created:" + newContract.toString());
         contracts.offer(newContract);
+        contractReadAndWrite.writeFile(FILE_PATH_CONTRACT, contracts);
+        fromBookingToContract = (Queue<Booking>) new LegalBookingRAW().readFile(FILE_PATH_LEGALBOOKING); // Sau khi đã làm hợp đồng xong thì remove khỏi hàng đợi làm contract
+        fromBookingToContract.remove();
+        new LegalBookingRAW().writeFile(FILE_PATH_LEGALBOOKING, fromBookingToContract);
     }
 
     @Override
     public void displayList() {
+        contracts = (LinkedList<Contract>) new ContractReadAndWriteFile().readFile(FILE_PATH_CONTRACT);
         if (contracts.isEmpty()) {
             System.err.println("No contract available.");
         } else {
@@ -75,6 +73,7 @@ public class ContractServiceImpl implements ContractService<Contract> {
 
     @Override
     public void editContract() {
+        contracts = (LinkedList<Contract>) new ContractReadAndWriteFile().readFile(FILE_PATH_CONTRACT);
         if (contracts.isEmpty()) {
             System.err.println("No contract available.");
         } else {
@@ -103,6 +102,7 @@ public class ContractServiceImpl implements ContractService<Contract> {
                 }
             }
         }
+        contractReadAndWrite.writeFile(FILE_PATH_CONTRACT, contracts);
     }
 
     public void editContractIfTrue(int index) {
@@ -118,68 +118,25 @@ public class ContractServiceImpl implements ContractService<Contract> {
                 int choice = Integer.parseInt(sc.nextLine());
                 switch (choice) {
                     case 1:
-                        System.out.println("Input new booking code: ");
-                        boolean isLegalCode = false;
-                        while (!isLegalCode) {
-                            try {
-                                contracts.get(index).setContractNumb(Integer.parseInt(sc.nextLine()));
-                                System.out.println("Success.");
-                                isLegalCode = true;
-                            } catch (NumberFormatException e) {
-                                System.err.println("Input number only. Retry: ");
-                            }
-                        }
+                        String bookingCode = inputBookingCode();
+                        contracts.get(index).setBookingCode(bookingCode);
                         break;
 
                     case 2:
-                        System.out.println("Customer code available. Choose one: ");
-                        for (Customer c : customerService.getList()) {
-                            System.out.println(c.getCode());
-                        }
-                        boolean isAvailable = false;
-                        while (!isAvailable) {
-                            String newCustomerCode = sc.nextLine();
-                            for (Customer c : customerService.getList()) {
-                                if (newCustomerCode.equals(c.getCode())) {
-                                    isAvailable = true;
-                                    break;
-                                }
-                            }
-                            if (isAvailable) {
-                                contracts.get(index).setCustomerCode(newCustomerCode);
-                                System.out.println("Success.");
-                            } else {
-                                System.err.println("Input false. Please retry. ");
-                            }
-                        }
+                        String customerCode = inputCode();
+                        contracts.get(index).setCustomerCode(customerCode);
                         break;
 
                     case 3:
                         System.out.println("Input new deposit amount: ");
-                        boolean isLegalDeposit = false;
-                        while (!isLegalDeposit) {
-                            try {
-                                contracts.get(index).setDeposit(Integer.parseInt(sc.nextLine()));
-                                System.out.println("Success.");
-                                isLegalDeposit = true;
-                            } catch (NumberFormatException e) {
-                                System.err.println("Input number only. Retry: ");
-                            }
-                        }
+                        double deposit = inputAmount();
+                        contracts.get(index).setDeposit(deposit);
                         break;
 
                     case 4:
                         System.out.println("Input new total amount: ");
-                        boolean isLegalTotal = false;
-                        while (!isLegalTotal) {
-                            try {
-                                contracts.get(index).setTotalPay(Integer.parseInt(sc.nextLine()));
-                                System.out.println("Success.");
-                                isLegalTotal = true;
-                            } catch (NumberFormatException e) {
-                                System.err.println("Input number only. Retry: ");
-                            }
-                        }
+                        double totalPay = inputAmount();
+                        contracts.get(index).setTotalPay(totalPay);
                         break;
 
                     case 5:
@@ -193,5 +150,60 @@ public class ContractServiceImpl implements ContractService<Contract> {
                 System.err.println("Input number only. Retry: ");
             }
         }
+    }
+
+    public int inputAmount() {
+        boolean isLegalTotal = false;
+        int amount = 0;
+        while (!isLegalTotal) {
+            try {
+                amount = Integer.parseInt(sc.nextLine());
+                System.out.println("Success.");
+                isLegalTotal = true;
+            } catch (NumberFormatException e) {
+                System.err.println("Input number only. Retry: ");
+            }
+        }
+        return amount;
+    }
+
+    public String inputCode() {
+        System.out.println("Customer code available. Choose one: ");
+        String code = "";
+        for (Customer c : customerService.getList()) {
+            System.out.println(c.getCode());
+        }
+        boolean isAvailable = false;
+        while (!isAvailable) {
+            String newCustomerCode = sc.nextLine();
+            for (Customer c : customerService.getList()) {
+                if (newCustomerCode.equals(c.getCode())) {
+                    isAvailable = true;
+                    break;
+                }
+            }
+            if (isAvailable) {
+                System.out.println("Success.");
+            } else {
+                System.err.println("Input false. Please retry. ");
+            }
+        }
+        return code;
+    }
+
+    public String inputBookingCode() {
+        System.out.println("Input new booking code: ");
+        boolean isLegalCode = false;
+        String code = "";
+        while (!isLegalCode) {
+            try {
+                code = sc.nextLine();
+                System.out.println("Success.");
+                isLegalCode = true;
+            } catch (NumberFormatException e) {
+                System.err.println("Input number only. Retry: ");
+            }
+        }
+        return code;
     }
 }

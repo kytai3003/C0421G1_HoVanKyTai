@@ -79,47 +79,65 @@ public class FacilityInformationRegex {
     }
 
     public String legalLivingAndPoolArea() {
-        String area = "";
+        String stringArea = "";
+        int area = 0;
         boolean check = false;
         while (!check) {
-                area = sc.nextLine();
-            if (Integer.parseInt(area) < 30) {
+            stringArea = sc.nextLine();
+                try {
+                    area = Integer.parseInt(stringArea);
+                } catch (NumberFormatException e) {
+                    System.err.println("Input number only");
+                }
+            if (area < 30) {
                 System.err.println("Input false. Retry.");
             } else {
                 System.out.println("Success.");
                 check = true;
             }
         }
-        return area;
+        return stringArea;
     }
 
     public String legalPriceAndLevel() {
-        String price = "";
+        String stringPrice = "";
+        double price = 0;
         boolean check = false;
         while (!check) {
-                price = sc.nextLine();
-            if (Integer.parseInt(price) < 0) {
+            stringPrice = sc.nextLine();
+            try {
+                price = Integer.parseInt(stringPrice);
+            } catch (NumberFormatException e) {
+                System.err.println("Input number only");
+            }
+            if (price <= 0) {
                 System.err.println("Input false. Retry.");
             } else {
                 System.out.println("Success.");
                 check = true;
             }
         }
-        return price;
+        return stringPrice;
     }
 
     public String legalCapacity() {
-        String capacity = "";
+        String stringCapacity = "";
+        int capacity = 0;
         boolean check = false;
         while (!check) {
-            capacity = sc.nextLine();
-            if (Integer.parseInt(capacity) < 0 || Integer.parseInt(capacity) > 20) {
+            stringCapacity = sc.nextLine();
+            try {
+                capacity = Integer.parseInt(stringCapacity);
+            } catch (NumberFormatException e) {
+                System.err.println("Input number only");
+            }
+            if (capacity <= 0 || capacity > 20) {
                 System.err.println("Input false. Retry.");
             } else {
                 System.out.println("Success.");
                 check = true;
             }
         }
-        return capacity;
+        return stringCapacity;
     }
 }

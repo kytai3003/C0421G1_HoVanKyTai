@@ -9,6 +9,9 @@ public class DayOfBirthRegex {
         String legalRegex = "^\\d{1,2}[/]\\d{1,2}[/]\\d{4}$";
         boolean check = false;
         String stringDob = "";
+        int day = 0;
+        int month = 0;
+        int year = 0;
         while (!check) {
             stringDob = sc.nextLine();
             if (stringDob.length() > 10) {
@@ -17,9 +20,13 @@ public class DayOfBirthRegex {
                 System.err.println("Wrong format. Retry");
             } else {
                 String[] arrDob = stringDob.split("/");
-                int day = Integer.parseInt(arrDob[0]);
-                int month = Integer.parseInt(arrDob[1]);
-                int year = Integer.parseInt(arrDob[2]);
+                try {
+                    day = Integer.parseInt(arrDob[0]);
+                    month = Integer.parseInt(arrDob[1]);
+                    year = Integer.parseInt(arrDob[2]);
+                } catch (NumberFormatException e) {
+                    System.err.println("Input number only");
+                }
                 check = Pattern.matches(legalRegex, stringDob);
                 if (check) {
                     if (day > 0 && day <= 31 && month > 0 && month <= 12 && year > 1921 && year <= 2003) {

@@ -34,7 +34,7 @@ public class CustomerServiceImpl implements CustomerService {
         String code = sc.nextLine();
         System.out.println("Input name: ");
         String name = sc.nextLine();
-        System.out.println("Input day of birth (Format: dd/mm/yyyy and the age must be in 18 - 100 range)"); // Sử dụng Regex Expression
+        System.out.println("Input day of birth (Format: dd/mm/yyyy and the age must be in 18 - 100 range)"); // Sử dụng Regular Expression
         String dayOfBirth = dayOfBirthRegex.legalDayOfBirth();
         System.out.println("Input sex: ");
         String sex = sc.nextLine();
@@ -107,7 +107,7 @@ public class CustomerServiceImpl implements CustomerService {
                                 break;
 
                             case 2:
-                                System.out.println("Input new day of birth (Format: dd/mm/yyyy and the age must be in 18 - 100 range)"); // Sử dụng Regex Expression
+                                System.out.println("Input new day of birth (Format: dd/mm/yyyy and the age must be in 18 - 100 range)"); // Sử dụng Regular Expression
                                 String newDob = dayOfBirthRegex.legalDayOfBirth();
                                 customers.get(index).setDayOfBirth(newDob);
                                 break;

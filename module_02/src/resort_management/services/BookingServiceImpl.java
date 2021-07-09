@@ -8,7 +8,6 @@ import resort_management.models.Booking;
 import resort_management.models.Customer;
 import resort_management.models.Facility;
 import resort_management.services.interfaces.BookingService;
-
 import java.util.*;
 
 public class BookingServiceImpl implements BookingService {
@@ -28,14 +27,13 @@ public class BookingServiceImpl implements BookingService {
     private static final String FILE_PATH_ROOM = "D:\\C2401G1_HoVanKyTai\\module_02\\src\\resort_management\\data\\room.csv";
 
 
-
     //Phương thức kiểm tra booking vừa được tạo mới có hợp lệ để làm hợp đồng hay không
     public void putIntoContractList(Booking booking) {
         // Mã booking đối với Room bắt đầu là R (không tạo contract), House bắt đầu là H, Villa bắt đầu là V
         fromBookingToContract = (Queue<Booking>) new LegalBookingRAW().readFile(FILE_PATH_LEGALBOOKING);
         String[] check = {"V", "H"};
         String[] code = booking.getBookingCode().split("");
-        if (check[0].equals(code[0]) || check[1].equals(code[0])) {
+        if (check[0].equals(code[3]) || check[1].equals(code[3])) {
             fromBookingToContract.offer(booking);
         }
         new LegalBookingRAW().writeFile(FILE_PATH_LEGALBOOKING, fromBookingToContract);
@@ -52,7 +50,7 @@ public class BookingServiceImpl implements BookingService {
         } else {
             boolean isExist = true;
             System.out.println("Input booking code: " + "\n" + "(Starting with 'V' for villa booking, 'H' for house booking and 'R' for room booking)");
-            String booking = "";
+            String booking;
             while (isExist) {
                 booking = sc.nextLine();
                 for (Booking bk : bookingList) {

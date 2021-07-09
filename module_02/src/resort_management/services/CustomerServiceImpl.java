@@ -2,6 +2,7 @@ package resort_management.services;
 
 import resort_management.common.CustomerReadAndWriteFile;
 import resort_management.models.Customer;
+import resort_management.regex.DayOfBirthRegex;
 import resort_management.services.interfaces.CustomerService;
 
 import java.util.LinkedList;
@@ -11,6 +12,7 @@ import java.util.Scanner;
 public class CustomerServiceImpl implements CustomerService {
     private static final Scanner sc = new Scanner(System.in);
     private static List<Customer> customers = new LinkedList<>();
+    private static DayOfBirthRegex dayOfBirthRegex = new DayOfBirthRegex();
     private static final String FILE_PATH = "D:\\C2401G1_HoVanKyTai\\module_02\\src\\resort_management\\data\\customer.csv";
     String[] typeCustomer = {"Diamond", "Platinium", "Gold", "Silver", "Member"};
 
@@ -32,8 +34,8 @@ public class CustomerServiceImpl implements CustomerService {
         String code = sc.nextLine();
         System.out.println("Input name: ");
         String name = sc.nextLine();
-        System.out.println("Input day of birth: ");
-        String dayOfBirth = sc.nextLine();
+        System.out.println("Input day of birth (Format: dd/mm/yyyy and the age must be in 18 - 100 range)"); // Sử dụng Regex Expression
+        String dayOfBirth = dayOfBirthRegex.legalDayOfBirth();
         System.out.println("Input sex: ");
         String sex = sc.nextLine();
         System.out.println("Input email: ");
@@ -105,8 +107,8 @@ public class CustomerServiceImpl implements CustomerService {
                                 break;
 
                             case 2:
-                                System.out.println("Input new day of birth: ");
-                                String newDob = sc.nextLine();
+                                System.out.println("Input new day of birth (Format: dd/mm/yyyy and the age must be in 18 - 100 range)"); // Sử dụng Regex Expression
+                                String newDob = dayOfBirthRegex.legalDayOfBirth();
                                 customers.get(index).setDayOfBirth(newDob);
                                 break;
 
@@ -183,23 +185,27 @@ public class CustomerServiceImpl implements CustomerService {
                 switch (choiceType) {
                     case 0:
                         type = typeCustomer[0];
+                        isTrueType = true;
                         break;
                     case 1:
                         type = typeCustomer[1];
+                        isTrueType = true;
                         break;
                     case 2:
                         type = typeCustomer[2];
+                        isTrueType = true;
                         break;
                     case 3:
                         type = typeCustomer[3];
+                        isTrueType = true;
                         break;
                     case 4:
                         type = typeCustomer[4];
+                        isTrueType = true;
                         break;
                     default:
                         System.err.println("Input type false. Please retry.");
                 }
-                isTrueType = true;
             } catch (NumberFormatException e) {
                 System.err.println(e.getMessage());
             }

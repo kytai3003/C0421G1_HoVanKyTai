@@ -40,7 +40,7 @@ public class ContractServiceImpl implements ContractService<Contract> {
         if (fromBookingToContract.peek() != null) {
             newContract.setBookingCode(fromBookingToContract.peek().getBookingCode());
             newContract.setCustomerCode(fromBookingToContract.peek().getCustomerCode());
-            fromBookingToContract.poll();
+            fromBookingToContract.poll(); // Sau khi đã làm hợp đồng xong thì remove khỏi hàng đợi làm contract
         } else {
             System.out.println("No booking available. System out.");
             return;
@@ -54,8 +54,6 @@ public class ContractServiceImpl implements ContractService<Contract> {
         System.out.println("New contract created:" + newContract.toString());
         contracts.offer(newContract);
         contractReadAndWrite.writeFile(FILE_PATH_CONTRACT, contracts);
-        fromBookingToContract = (Queue<Booking>) new LegalBookingRAW().readFile(FILE_PATH_LEGALBOOKING); // Sau khi đã làm hợp đồng xong thì remove khỏi hàng đợi làm contract
-        fromBookingToContract.remove();
         new LegalBookingRAW().writeFile(FILE_PATH_LEGALBOOKING, fromBookingToContract);
     }
 

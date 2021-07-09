@@ -2,6 +2,7 @@ package resort_management.services;
 
 import resort_management.common.EmployeeReadAndWriteFile;
 import resort_management.models.Employee;
+import resort_management.regex.DayOfBirthRegex;
 import resort_management.services.interfaces.EmployeeService;
 
 import java.util.ArrayList;
@@ -11,8 +12,9 @@ import java.util.Scanner;
 public class EmployeeServiceImpl implements EmployeeService {
     private static final String FILE_PATH = "D:\\C2401G1_HoVanKyTai\\module_02\\src\\resort_management\\data\\employee.csv";
     static Scanner sc = new Scanner(System.in);
-    public static List<Employee> employees = new ArrayList<>();
+    private static List<Employee> employees = new ArrayList<>();
     static EmployeeReadAndWriteFile readAndWriteFile = new EmployeeReadAndWriteFile();
+    private static DayOfBirthRegex dayOfBirthRegex = new DayOfBirthRegex();
     String[] qualificationArr = {"University", "College", "Intermediate", "Postgraduate"};
     String[] positionArr = {"Receptionist", "Waiter", "Specialist", "Supervisor", "Manager", "Director"};
 
@@ -30,8 +32,8 @@ public class EmployeeServiceImpl implements EmployeeService {
         String code = sc.nextLine();
         System.out.println("Input name: ");
         String name = sc.nextLine();
-        System.out.println("Input day of birth: ");
-        String dayOfBirth = sc.nextLine();
+        System.out.println("Input day of birth (Format: dd/mm/yyyy and the age must be in 18 - 100 range)"); // Sử dụng Regex Expression
+        String dayOfBirth = dayOfBirthRegex.legalDayOfBirth();
         System.out.println("Input sex: ");
         String sex = sc.nextLine();
         System.out.println("Input email: ");
@@ -113,8 +115,8 @@ public class EmployeeServiceImpl implements EmployeeService {
                                     break;
 
                                 case 2:
-                                    System.out.println("Input new day of birth: ");
-                                    String newDob = sc.nextLine();
+                                    System.out.println("Input new day of birth (Format: dd/mm/yyyy and the age must be in 18 - 100 range)"); // Sử dụng Regex Expression
+                                    String newDob = dayOfBirthRegex.legalDayOfBirth();
                                     employees.get(index).setDayOfBirth(newDob);
                                     break;
 

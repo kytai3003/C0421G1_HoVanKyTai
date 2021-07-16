@@ -19,6 +19,7 @@ public class Employee extends Person{
         this.qualification = qualification;
     }
 
+
     public Employee() {
     }
 

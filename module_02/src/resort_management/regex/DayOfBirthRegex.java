@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 public class DayOfBirthRegex {
     private static final Scanner sc = new Scanner(System.in);
     public String legalDayOfBirth() {
-        String legalRegex = "^\\d{1,2}[/]\\d{1,2}[/]\\d{4}$";
+        String legalRegex = "^\\d{2}[/]\\d{2}[/]\\d{4}$";
         boolean check = false;
         String stringDob = "";
         int day = 0;

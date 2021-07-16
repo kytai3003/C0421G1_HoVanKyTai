@@ -1,6 +1,6 @@
 package student_management;
 
-public class Person {
+public class Person implements Comparable<Person>{
     protected int id;
     protected String name;
     protected int age;
@@ -60,5 +60,20 @@ public class Person {
                 ", age=" + age +
                 ", address='" + address + '\'' +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Person o) {
+        if (getAge() > o.getAge()) {
+            return 1;
+        } else if (getAge() < o.getAge()) {
+            return -1;
+        } else if (getId() > o.getId()) {
+            return 1;
+        } else if (getId() < o.getId()) {
+            return -1;
+        } else {
+            return 1;
+        }
     }
 }

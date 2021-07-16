@@ -3,6 +3,7 @@ package resort_management.services;
 import resort_management.common.CustomerReadAndWriteFile;
 import resort_management.models.Customer;
 import resort_management.regex.DayOfBirthRegex;
+import resort_management.regex.FacilityInformationRegex;
 import resort_management.services.interfaces.CustomerService;
 
 import java.util.LinkedList;
@@ -12,6 +13,7 @@ import java.util.Scanner;
 public class CustomerServiceImpl implements CustomerService {
     private static final Scanner sc = new Scanner(System.in);
     private static List<Customer> customers = new LinkedList<>();
+    private static FacilityInformationRegex fir = new FacilityInformationRegex();
     private static DayOfBirthRegex dayOfBirthRegex = new DayOfBirthRegex();
     private static final String FILE_PATH = "D:\\C2401G1_HoVanKyTai\\module_02\\src\\resort_management\\data\\customer.csv";
     String[] typeCustomer = {"Diamond", "Platinium", "Gold", "Silver", "Member"};
@@ -31,15 +33,15 @@ public class CustomerServiceImpl implements CustomerService {
     public void addNew() {
         customers = new CustomerReadAndWriteFile().readFile(FILE_PATH);
         System.out.println("Input code: ");
-        String code = sc.nextLine();
+        String code = fir.legalServiceBasicInfo();
         System.out.println("Input name: ");
-        String name = sc.nextLine();
+        String name = fir.legalServiceBasicInfo();
         System.out.println("Input day of birth (Format: dd/mm/yyyy and the age must be in 18 - 100 range)"); // Sử dụng Regular Expression
         String dayOfBirth = dayOfBirthRegex.legalDayOfBirth();
         System.out.println("Input sex: ");
-        String sex = sc.nextLine();
+        String sex = fir.legalServiceBasicInfo();
         System.out.println("Input email: ");
-        String email = sc.nextLine();
+        String email = fir.legalServiceBasicInfo();
         System.out.println("Input ID number: ");
         boolean isLegalNumber = false;
         int idNumber = 0;

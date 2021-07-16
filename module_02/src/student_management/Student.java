@@ -1,6 +1,6 @@
 package student_management;
 
-public class Student extends Person{
+public class Student extends Person {
     private String _class;
 
     public Student(int id, String name, int age, String address, String _class) {

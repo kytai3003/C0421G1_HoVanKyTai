@@ -69,13 +69,29 @@ public class FacilityInformationRegex {
         while (!check) {
             stringType = sc.nextLine();
             check = Pattern.matches(legalType, stringType);
-            if (check) {
+            if (check && stringType.trim().length() > 0) {
+                System.out.println("Success.");
+            } else {
+                System.err.println("Input false. Retry.");
+                check = false;
+            }
+        }
+        return stringType;
+    }
+
+    public String legalNumberField() {
+        boolean check = false;
+        String stringNumber = "";
+        while (!check) {
+            stringNumber = sc.nextLine();
+            if (stringNumber.length() > 0) {
+                check = true;
                 System.out.println("Success.");
             } else {
                 System.err.println("Input false. Retry.");
             }
         }
-        return stringType;
+        return stringNumber;
     }
 
     public String legalLivingAndPoolArea() {

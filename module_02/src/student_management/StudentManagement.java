@@ -1,18 +1,17 @@
 package student_management;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class StudentManagement {
     public static Scanner scanner =  new Scanner(System.in);
-    public static Person[] people;
+    public static ArrayList<Person> people = new ArrayList<>();
     static {
-        people = new Person[50];
-        people[0] = new Student(1, "Trung", 33, "Đà Nẵng", "C04");
-        people[1] = new Student(2, "Nhật", 23, "Quảng Nam", "C04");
-        people[2] = new Student(3, "Tài", 24, "Quảng Ngãi", "C04");
-        people[3] = new Student(4, "Minh", 25, "Vinh", "C04");
-        people[4] = new Teacher(5, "Tiến", 26, "Quảng Bình", "Master");
-        people[5] = new Teacher(6, "Hải", 29, "Hà Nội", "Beginner");
+        people.add(new Student(7, "Trung", 33, "DN", "C04"));
+        people.add(new Student(1, "Nhật", 23, "Quảng Nam", "C04"));
+        people.add(new Student(3, "Tài", 27, "Quảng Ngãi", "C04"));
+        people.add(new Student(7, "Trung", 33, "Vinh", "C04"));
+        people.add(new Teacher(5, "Tiến", 26, "Quảng Bình", "Master"));
+        people.add(new Teacher(6, "Hải", 29, "Hà Nội", "Beginner"));
     }
     public static void main(String[] args) {
         System.out.println("-------------------Chương trình quản lý sinh viên------------------");
@@ -32,35 +31,36 @@ public class StudentManagement {
 
             switch (choice) {
                 case 1:
+                    Collections.sort(people);
                     displayListStudent(people);
                     break;
 
                 case 2:
-                    displayListTeacher(people);
+//                    displayListTeacher(people);
                     break;
 
                 case 3:
-                    deleteStudent(people);
+//                    deleteStudent(people);
                     break;
 
                 case 4:
-                    deleteTeacher(people);
+//                    deleteTeacher(people);
                     break;
 
                 case 5:
-                    creatNewStudent(people);
+//                    creatNewStudent(people);
                     break;
 
                 case 6:
-                    creatNewTeacher(people);
+//                    creatNewTeacher(people);
                     break;
 
                 case 7:
-                    editStudent(people);
+//                    editStudent(people);
                     break;
 
                 case 8:
-                    editTeacher(people);
+//                    editTeacher(people);
                     break;
 
                 case 9:
@@ -73,7 +73,8 @@ public class StudentManagement {
         }
     }
 
-    public static void displayListStudent (Person[] people) {
+    public static void displayListStudent (List<Person> list) {
+
         for (Person person : people) {
             if (person != null && person instanceof Student) {
                 System.out.println(person);

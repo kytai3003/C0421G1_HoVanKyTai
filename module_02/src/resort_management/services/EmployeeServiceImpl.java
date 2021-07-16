@@ -3,6 +3,7 @@ package resort_management.services;
 import resort_management.common.EmployeeReadAndWriteFile;
 import resort_management.models.Employee;
 import resort_management.regex.DayOfBirthRegex;
+import resort_management.regex.FacilityInformationRegex;
 import resort_management.services.interfaces.EmployeeService;
 
 import java.util.ArrayList;
@@ -11,10 +12,11 @@ import java.util.Scanner;
 
 public class EmployeeServiceImpl implements EmployeeService {
     private static final String FILE_PATH = "D:\\C2401G1_HoVanKyTai\\module_02\\src\\resort_management\\data\\employee.csv";
-    static Scanner sc = new Scanner(System.in);
+    private static final Scanner sc = new Scanner(System.in);
     private static List<Employee> employees = new ArrayList<>();
-    static EmployeeReadAndWriteFile readAndWriteFile = new EmployeeReadAndWriteFile();
+    private static EmployeeReadAndWriteFile readAndWriteFile = new EmployeeReadAndWriteFile();
     private static DayOfBirthRegex dayOfBirthRegex = new DayOfBirthRegex();
+    private static FacilityInformationRegex fir = new FacilityInformationRegex();
     String[] qualificationArr = {"University", "College", "Intermediate", "Postgraduate"};
     String[] positionArr = {"Receptionist", "Waiter", "Specialist", "Supervisor", "Manager", "Director"};
 
@@ -29,15 +31,31 @@ public class EmployeeServiceImpl implements EmployeeService {
     public void addNew() {
         employees = readAndWriteFile.readFile(FILE_PATH);
         System.out.println("Input code: ");
-        String code = sc.nextLine();
+        String code = "";
+        boolean legalCode = false;
+        while (!legalCode) {
+            code = sc.nextLine();
+            for (Employee e: employees) {
+                if (code.equals(e.getCode()) || code.length() == 0) {
+                    System.err.println("Duplicate code or blank input. Retry.");
+                    legalCode = false;
+                    break;
+                } else {
+                    legalCode = true;
+                }
+            }
+            if (legalCode) {
+                System.out.println("Success.");
+            }
+        }
         System.out.println("Input name: ");
-        String name = sc.nextLine();
+        String name = fir.legalServiceBasicInfo();
         System.out.println("Input day of birth (Format: dd/mm/yyyy and the age must be in 18 - 100 range)"); // Sử dụng Regular Expression
         String dayOfBirth = dayOfBirthRegex.legalDayOfBirth();
         System.out.println("Input sex: ");
-        String sex = sc.nextLine();
+        String sex = fir.legalServiceBasicInfo();
         System.out.println("Input email: ");
-        String email = sc.nextLine();
+        String email = fir.legalServiceBasicInfo();
         System.out.println("Input ID number: ");
         int idNumber = 0;
         boolean isLegalID = false;
@@ -50,7 +68,7 @@ public class EmployeeServiceImpl implements EmployeeService {
             }
         }
         System.out.println("Input phone number: ");
-        String phone = sc.nextLine();
+        String phone = fir.legalNumberField();
         String position = inputPosition();
         System.out.println("Input salary: ");
         double salary = 0;
@@ -110,26 +128,30 @@ public class EmployeeServiceImpl implements EmployeeService {
                             switch (empChoice) {
                                 case 1:
                                     System.out.println("Input new name: ");
-                                    String newName = sc.nextLine();
+                                    String newName = fir.legalServiceBasicInfo();
                                     employees.get(index).setName(newName);
+                                    isLegalEdit = true;
                                     break;
 
                                 case 2:
                                     System.out.println("Input new day of birth (Format: dd/mm/yyyy and the age must be in 18 - 100 range)"); // Sử dụng Sử dụng Regular Expression
                                     String newDob = dayOfBirthRegex.legalDayOfBirth();
                                     employees.get(index).setDayOfBirth(newDob);
+                                    isLegalEdit = true;
                                     break;
 
                                 case 3:
                                     System.out.println("Input new sex: ");
-                                    String newSex = sc.nextLine();
+                                    String newSex = fir.legalServiceBasicInfo();
                                     employees.get(index).setSex(newSex);
+                                    isLegalEdit = true;
                                     break;
 
                                 case 4:
                                     System.out.println("Input new email: ");
-                                    String newEmail = sc.nextLine();
+                                    String newEmail = fir.legalServiceBasicInfo();
                                     employees.get(index).setEmail(newEmail);
+                                    isLegalEdit = true;
                                     break;
 
                                 case 5:
@@ -145,23 +167,26 @@ public class EmployeeServiceImpl implements EmployeeService {
                                             System.err.println("Input number only. Retry: ");
                                         }
                                     }
+                                    isLegalEdit = true;
                                     break;
 
                                 case 6:
                                     System.out.println("Input phone number: ");
-                                    String newPhone = sc.nextLine();
+                                    String newPhone = fir.legalNumberField();
                                     employees.get(index).setPhoneNumber(newPhone);
+                                    isLegalEdit = true;
                                     break;
 
                                 case 7:
                                     String newPos = inputPosition();
                                     employees.get(index).setPosition(newPos);
+                                    isLegalEdit = true;
                                     break;
 
                                 case 8:
                                     System.out.println("Input new salary: ");
                                     boolean isLegalSalary = false;
-                                    double newSalary = 0;
+                                    double newSalary;
                                     while (!isLegalSalary) {
                                         try {
                                             newSalary = Integer.parseInt(sc.nextLine());
@@ -172,11 +197,13 @@ public class EmployeeServiceImpl implements EmployeeService {
                                             System.err.println("Input number only. Retry: ");
                                         }
                                     }
+                                    isLegalEdit = true;
                                     break;
 
                                 case 9:
                                     String qualification = inputQualification();
                                     employees.get(index).setQualification(qualification);
+                                    isLegalEdit = true;
                                     break;
 
                                 case 0:
@@ -185,7 +212,6 @@ public class EmployeeServiceImpl implements EmployeeService {
                                 default:
                                     System.err.println("False input. Please retry.");
                             }
-                            isLegalEdit = true;
                         } catch (Exception e) {
                             System.err.println("Input number only. Retry.");
                         }

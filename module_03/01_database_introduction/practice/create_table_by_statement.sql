@@ -1,5 +1,5 @@
 create database student_management;
-create table student_management.studen(
+create table student_management.student(
 id INT not null,
 `name` varchar(45) null,
 age int null,

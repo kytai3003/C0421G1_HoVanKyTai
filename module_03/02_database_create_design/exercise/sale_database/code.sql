@@ -10,7 +10,7 @@ create table `order`(
 order_id int primary key not null auto_increment,
 customer_id int,
 order_date datetime not null,
-order_total_price int not null,
+order_total_price int,
 foreign key (customer_id) references customer(customer_id)
 );
 

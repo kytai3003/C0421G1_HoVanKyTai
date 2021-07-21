@@ -44,12 +44,11 @@ value (2,3,3);
 -- Hiển thị các thông tin  gồm oID, oDate, oPrice của tất cả các hóa đơn trong bảng Order
 select * from `order` o inner join order_detail od on o.order_id = od.order_id;
 
--- Hiển thị danh sách các khách hàng đã mua hàng,
-select distinct c.customer_name from customer c inner join `order` o on o.customer_id = c.customer_id;
---  và danh sách sản phẩm được mua bởi các khách
-select p.product_name, o.order_date, od.order_quantity
+-- Hiển thị danh sách các khách hàng đã mua hàng, và danh sách sản phẩm được mua bởi các khách
+select p.product_name, o.order_date, od.order_quantity, c.customer_name
 from product p inner join order_detail od on p.product_id = od.product_id 
-inner join `order` o on o.order_id = od.order_id;
+inner join `order` o on o.order_id = od.order_id
+inner join customer c on o.customer_id = c.customer_id;
 
 -- Hiển thị tên những khách hàng không mua bất kỳ một sản phẩm nào
 select * from customer c where not exists (select * from `order` o where o.customer_id = c.customer_id);
@@ -59,6 +58,7 @@ select * from customer c where not exists (select * from `order` o where o.custo
 -- Giá bán của từng loại được tính = odQTY*pPrice)
 select o.order_id, o.order_date, od.order_quantity * p.product_price as 'Tổng tiền'
 from `order` o inner join order_detail od on o.order_id = od.order_id
-inner join product p on od.product_id = p.product_id;
+inner join product p on od.product_id = p.product_id
+order by order_date asc;
 
 

@@ -9,6 +9,7 @@ select s.SubId, s.SubName, s.Credit, max(m.mark) as 'Điểm thi lớn nhất'
 from `subject` s inner join Mark m on m.SubId = s.SubId;
 
 -- Hiển thị các thông tin sinh viên và điểm trung bình của mỗi sinh viên, xếp hạng theo thứ tự điểm giảm dần
-select s.StudentId, s.StudentName, s.Address, s.Phone, m.Mark / m.Examtimes as 'DTB' 
+select s.StudentId, s.StudentName, s.Address, s.Phone, m.mark, avg(m.mark) as 'DTB'
 from student s inner join Mark m on m.StudentId = s.StudentId
+group by s.StudentId
 order by DTB desc;

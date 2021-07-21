@@ -42,7 +42,8 @@ insert into order_detail (order_id, product_id, order_quantity)
 value (2,3,3);
 
 -- Hiển thị các thông tin  gồm oID, oDate, oPrice của tất cả các hóa đơn trong bảng Order
-select * from `order` o inner join order_detail od on o.order_id = od.order_id;
+select * 
+from `order` o inner join order_detail od on o.order_id = od.order_id;
 
 -- Hiển thị danh sách các khách hàng đã mua hàng, và danh sách sản phẩm được mua bởi các khách
 select p.product_name, o.order_date, od.order_quantity, c.customer_name
@@ -51,7 +52,9 @@ inner join `order` o on o.order_id = od.order_id
 inner join customer c on o.customer_id = c.customer_id;
 
 -- Hiển thị tên những khách hàng không mua bất kỳ một sản phẩm nào
-select * from customer c where not exists (select * from `order` o where o.customer_id = c.customer_id);
+select * 
+from customer c 
+where not exists (select * from `order` o where o.customer_id = c.customer_id);
 
 -- Hiển thị mã hóa đơn, ngày bán và giá tiền của từng hóa đơn 
 -- (giá một hóa đơn được tính bằng tổng giá bán của từng loại mặt hàng xuất hiện trong hóa đơn. 

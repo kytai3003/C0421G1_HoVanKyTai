@@ -105,7 +105,7 @@ from khach_hang k inner join hop_dong h on k.id_khach_hang = h.id_khach_hang
 inner join dich_vu d on h.id_dich_vu = d.id_dich_vu
 inner join nhan_vien n on h.id_nhan_vien = n.id_nhan_vien
 inner join hop_dong_chi_tiet hd on h.id_hop_dong = hd.id_hop_dong
-where h.ngay_lam_hop_dong between '2019-01-10' and '2019-12-31'
+where h.ngay_lam_hop_dong between '2019-10-01' and '2019-12-31'
 and not exists (
 		select *
         from hop_dong h

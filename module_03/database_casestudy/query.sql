@@ -81,7 +81,7 @@ order by thang asc;
 -- Kết quả hiển thị bao gồm IDHopDong, NgayLamHopDong, NgayKetthuc, TienDatCoc, SoLuongDichVuDiKem 
 -- (được tính dựa trên việc count các IDHopDongChiTiet).
 select h.id_hop_dong, h.ngay_lam_hop_dong, h.ngay_ket_thuc, h.tien_dat_coc,
-count(hd.so_luong) as 'so luong dich vu di kem'
+sum(hd.so_luong) as 'so luong dich vu di kem'
 from hop_dong h inner join hop_dong_chi_tiet hd on h.id_hop_dong = hd.id_hop_dong
 group by h.id_hop_dong;
 
@@ -100,7 +100,7 @@ and k.dia_chi like '%Vinh' or '%Quảng Ngãi';
 -- của tất cả các dịch vụ đã từng được khách hàng đặt vào 3 tháng cuối năm 2019 
 -- nhưng chưa từng được khách hàng đặt vào 6 tháng đầu năm 2019.
 select h.id_hop_dong, n.ho_ten, k.ho_ten, k.so_dien_thoai, d.ten_dich_vu, h.tien_dat_coc,
-sum(hd.id_hop_dong_chi_tiet) as 'so luong dich vu di kem'
+count(hd.id_hop_dong_chi_tiet) as 'so luong dich vu di kem'
 from khach_hang k inner join hop_dong h on k.id_khach_hang = h.id_khach_hang
 inner join dich_vu d on h.id_dich_vu = d.id_dich_vu
 inner join nhan_vien n on h.id_nhan_vien = n.id_nhan_vien
@@ -110,7 +110,7 @@ and not exists (
 		select *
         from hop_dong h
         where h.id_dich_vu = d.id_dich_vu
-        and h.ngay_lam_hop_dong between '2019-01-01' and '2019-05-31'
+        and h.ngay_lam_hop_dong between '2019-01-01' and '2019-06-30'
         )
 group by d.id_dich_vu;
 
@@ -167,7 +167,7 @@ set SQL_SAFE_UPDATES = 1;
 update khach_hang 
 set id_loai_khach = 1 
 where id_khach_hang = 2 and exists(
-select *, count(d.chi_phi_thue) as 'tong_tien'
+select *, sum(d.chi_phi_thue) as 'tong_tien'
 from khach_hang k inner join hop_dong h on h.id_khach_hang = k.id_khach_hang
 inner join dich_vu d on d.id_dich_vu = h.id_dich_vu
 where year(h.ngay_lam_hop_dong) = 2019
@@ -210,3 +210,5 @@ from nhan_vien n
 union all
 select k.id_khach_hang, k.ho_ten, k.email, k.so_dien_thoai, k.ngay_sinh, k.dia_chi 
 from khach_hang k
+
+

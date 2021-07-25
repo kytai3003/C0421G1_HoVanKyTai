@@ -116,7 +116,7 @@ group by d.id_dich_vu;
 
 -- 13.	Hiển thị thông tin các Dịch vụ đi kèm được sử dụng nhiều nhất bởi các Khách hàng đã đặt phòng. 
 -- (Lưu ý là có thể có nhiều dịch vụ có số lần sử dụng nhiều như nhau).
-select dv.id_dich_vu_di_kem, dv.ten_dich_vu_di_kem, dv.gia, dv.don_vi,
+select dv.id_dich_vu_di_kem, dv.ten_dich_vu_di_kem, dv.gia, dv.don_vi, 
 count(dv.id_dich_vu_di_kem) as 'so_lan'
 from dich_vu_di_kem dv 
 inner join hop_dong_chi_tiet hd on dv.id_dich_vu_di_kem = hd.id_dich_vu_di_kem
@@ -166,7 +166,7 @@ set SQL_SAFE_UPDATES = 1;
 --  trong năm 2019 là lớn hơn 10.000.000 VNĐ.
 update khach_hang 
 set id_loai_khach = 1 
-where id_khach_hang = 2 and exists(
+where id_loai_khach = 2 and exists(
 select *, sum(d.chi_phi_thue) as 'tong_tien'
 from khach_hang k inner join hop_dong h on h.id_khach_hang = k.id_khach_hang
 inner join dich_vu d on d.id_dich_vu = h.id_dich_vu
@@ -205,10 +205,54 @@ having so_lan > 10
 
 -- 20.	Hiển thị thông tin của tất cả các Nhân viên và Khách hàng có trong hệ thống, 
 -- thông tin hiển thị bao gồm ID (IDNhanVien, IDKhachHang), HoTen, Email, SoDienThoai, NgaySinh, DiaChi.
-select n.id_nhan_vien as 'id' , n.ho_ten, n.email, n.so_dien_thoai, n.ngay_sinh, n.dia_chi 
+ select n.id_nhan_vien as 'id' , n.ho_ten, n.email, n.so_dien_thoai, n.ngay_sinh, n.dia_chi 
 from nhan_vien n
 union all
 select k.id_khach_hang, k.ho_ten, k.email, k.so_dien_thoai, k.ngay_sinh, k.dia_chi 
-from khach_hang k
+from khach_hang k;
+
+-- 21.	Tạo khung nhìn có tên là V_NHANVIEN để lấy được thông tin của tất cả các nhân viên có địa chỉ là “Hải Châu” 
+-- và đã từng lập hợp đồng cho 1 hoặc nhiều Khách hàng bất kỳ với ngày lập hợp đồng là “12/12/2019”
+
+create view v_nhan_vien as
+select n.id_nhan_vien, n.ho_ten, n.ngay_sinh, n.so_cmnd, n.so_dien_thoai, n.dia_chi, n.email
+from nhan_vien n inner join hop_dong h on n.id_nhan_vien = h.id_nhan_vien
+where h.ngay_lam_hop_dong = '2019-12-12'
+group by id_nhan_vien
+having dia_chi like 'hải châu%';
+
+-- 22.	Thông qua khung nhìn V_NHANVIEN thực hiện cập nhật địa chỉ thành “Liên Chiểu” đối với tất cả các Nhân viên 
+-- 	được nhìn thấy bởi khung nhìn này.
+update nhan_vien
+set dia_chi = 'Liên Chiểu, Đà Nẵng'
+where id_nhan_vien in (
+select id_nhan_vien from v_nhan_vien
+);
+
+-- 23.	Tạo Store procedure Sp_1 Dùng để xóa thông tin của một Khách hàng nào đó với Id Khách hàng được
+--  truyền vào như là 1 tham số của Sp_1
+drop procedure if exists sp_1;
+DELIMITER //
+create procedure sp_1 (in id_khach int)
+begin
+	delete 
+    from khach_hang
+    where id_khach_hang = id_khach;
+end
+// DELIMITER ;
+
+-- 24.	Tạo Store procedure Sp_2 Dùng để thêm mới vào bảng HopDong với yêu cầu Sp_2 phải thực hiện kiểm tra 
+-- tính hợp lệ của dữ liệu bổ sung, với nguyên tắc không được trùng khóa chính và đảm bảo toàn vẹn tham chiếu 
+-- đến các bảng liên quan.
+drop procedure if exists sp_2;
+DELIMITER //
+create procedure sp_2 (in ngay_bd date, in ngay_kt date, in tien int, id_nv int, id_kh int, id_dv int)
+begin
+	insert into hop_dong (ngay_lam_hop_dong, ngay_ket_thuc, tien_dat_coc, id_nhan_vien, id_khach_hang, id_dich_vu)
+    values (ngay_bd, ngay_kt, tien, id_nv, id_kh, id_dv);
+end
+// DELIMITER ;
 
 
+-- 25.	Tạo triggers có tên Tr_1 Xóa bản ghi trong bảng HopDong thì hiển thị tổng số lượng bản ghi còn lại 
+-- có trong bảng HopDong ra giao diện console của database

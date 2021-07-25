@@ -143,6 +143,7 @@ count(h.id_nhan_vien) as 'so_lan_lap_hd'
 from nhan_vien n inner join hop_dong h on h.id_nhan_vien = n.id_nhan_vien
 inner join trinh_do t on t.id_trinh_do = n.id_trinh_do
 inner join bo_phan b on b.id_bo_phan = n.id_bo_phan
+where year(h.ngay_lam_hop_dong) between 2018 and 2019
 group by h.id_nhan_vien
 having so_lan_lap_hd between 0 and 3;
 
@@ -158,6 +159,7 @@ where not exists (
 select * 
 from hop_dong  
 where hop_dong.id_nhan_vien = nhan_vien.id_nhan_vien
+and year(hop_dong.ngay_lam_hop_dong) between 2017 and 2019
 );
 set SQL_SAFE_UPDATES = 1;
 
@@ -213,7 +215,6 @@ from khach_hang k;
 
 -- 21.	Tạo khung nhìn có tên là V_NHANVIEN để lấy được thông tin của tất cả các nhân viên có địa chỉ là “Hải Châu” 
 -- và đã từng lập hợp đồng cho 1 hoặc nhiều Khách hàng bất kỳ với ngày lập hợp đồng là “12/12/2019”
-
 create view v_nhan_vien as
 select n.id_nhan_vien, n.ho_ten, n.ngay_sinh, n.so_cmnd, n.so_dien_thoai, n.dia_chi, n.email
 from nhan_vien n inner join hop_dong h on n.id_nhan_vien = h.id_nhan_vien

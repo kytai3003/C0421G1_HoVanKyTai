@@ -84,7 +84,8 @@ id_dich_vu int,
 foreign key (id_nhan_vien) references nhan_vien(id_nhan_vien),
 foreign key (id_khach_hang) references khach_hang(id_khach_hang),
 foreign key (id_dich_vu) references dich_vu(id_dich_vu));
-
+alter table hop_dong
+add constraint fk_hd_dv foreign key (id_dich_vu) references dich_vu(id_dich_vu) on delete cascade;
 create table hop_dong_chi_tiet(
 id_hop_dong_chi_tiet int not null auto_increment primary key,
 so_luong int,
@@ -92,3 +93,5 @@ id_hop_dong int,
 id_dich_vu_di_kem int,
 foreign key (id_hop_dong) references hop_dong(id_hop_dong),
 foreign key (id_dich_vu_di_kem) references dich_vu_di_kem(id_dich_vu_di_kem));
+alter table hop_dong_chi_tiet
+add constraint fk_hd_hd_ct foreign key (id_hop_dong) references hop_dong(id_hop_dong) on delete cascade; 

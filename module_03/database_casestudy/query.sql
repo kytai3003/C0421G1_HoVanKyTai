@@ -251,9 +251,53 @@ create procedure sp_2 (in ngay_bd date, in ngay_kt date, in tien int, id_nv int,
 begin
 	insert into hop_dong (ngay_lam_hop_dong, ngay_ket_thuc, tien_dat_coc, id_nhan_vien, id_khach_hang, id_dich_vu)
     values (ngay_bd, ngay_kt, tien, id_nv, id_kh, id_dv);
+    if new.account_james_account is null then
+		set new.account_james_account = new.email;
+    end if;
 end
 // DELIMITER ;
 
 
 -- 25.	Tạo triggers có tên Tr_1 Xóa bản ghi trong bảng HopDong thì hiển thị tổng số lượng bản ghi còn lại 
 -- có trong bảng HopDong ra giao diện console của database
+set @result = 0;
+delimiter //
+create trigger tr_1	
+after delete
+on hop_dong for each row
+begin
+	set @result =  concat('so hop dong con lai',(select count(id_hop_dong)
+				from hop_dong));
+	SIGNAL SQLSTATE '02000' SET MESSAGE_TEXT = @result;
+end;
+// delimiter ;
+delete 
+from hop_dong 
+where ngay_lam_hop_dong = '2019-10-10';
+
+-- 26.	Tạo triggers có tên Tr_2 Khi cập nhật Ngày kết thúc hợp đồng, cần kiểm tra xem thời gian cập nhật 
+-- có phù hợp hay không, với quy tắc sau: Ngày kết thúc hợp đồng phải lớn hơn ngày làm hợp đồng ít nhất là 2 ngày.
+--  Nếu dữ liệu hợp lệ thì cho phép cập nhật, nếu dữ liệu không hợp lệ thì in ra thông báo 
+--  “Ngày kết thúc hợp đồng phải lớn hơn ngày làm hợp đồng ít nhất là 2 ngày” trên console của database
+
+-- 27.	Tạo user function thực hiện yêu cầu sau:
+-- a.	Tạo user function func_1: Đếm các dịch vụ đã được sử dụng với Tổng tiền là > 2.000.000 VNĐ.
+-- b.	Tạo user function Func_2: Tính khoảng thời gian dài nhất tính từ lúc bắt đầu làm hợp đồng đến 
+-- lúc kết thúc hợp đồng mà Khách hàng đã thực hiện thuê dịch vụ 
+-- (lưu ý chỉ xét các khoảng thời gian dựa vào từng lần làm hợp đồng thuê dịch vụ,
+--  không xét trên toàn bộ các lần làm hợp đồng). Mã của Khách hàng được truyền vào như là 1 tham số của function này.
+
+delimiter //
+create function func_1 ()
+returns int
+deterministic
+begin
+	declare result int;
+    select sum(d.chi_phi_thue) as 'tong_tien'
+	from khach_hang k inner join hop_dong h on h.id_khach_hang = k.id_khach_hang
+	inner join dich_vu d on d.id_dich_vu = h.id_dich_vu
+    where tong_tien > 2000000;
+    set result = count(hop_dong.id_hop_dong);
+	return result;
+end;
+// delimiter ;

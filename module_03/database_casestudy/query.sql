@@ -249,36 +249,54 @@ drop procedure if exists sp_2;
 DELIMITER //
 create procedure sp_2 (in ngay_bd date, in ngay_kt date, in tien int, id_nv int, id_kh int, id_dv int)
 begin
+if id_nv in (select id_nhan_vien from nhan_vien) and
+ id_kh in (select id_khach_hang from khach_hang) and
+ id_dv in (select id_dich_vu from dich_vu) then
 	insert into hop_dong (ngay_lam_hop_dong, ngay_ket_thuc, tien_dat_coc, id_nhan_vien, id_khach_hang, id_dich_vu)
     values (ngay_bd, ngay_kt, tien, id_nv, id_kh, id_dv);
-    if new.account_james_account is null then
-		set new.account_james_account = new.email;
+else select 'du lieu ko hop le';
     end if;
 end
 // DELIMITER ;
-
+call sp_2('2019-12-12', '2019-12-14', 5000000, 3, 2, 3);
 
 -- 25.	Tạo triggers có tên Tr_1 Xóa bản ghi trong bảng HopDong thì hiển thị tổng số lượng bản ghi còn lại 
 -- có trong bảng HopDong ra giao diện console của database
-set @result = 0;
-delimiter //
-create trigger tr_1	
-after delete
-on hop_dong for each row
-begin
-	set @result =  concat('so hop dong con lai',(select count(id_hop_dong)
+drop trigger if exists tr_1;
+ delimiter //
+ create trigger tr_1
+ after delete
+ on hop_dong for each row
+ begin
+ declare result varchar(150);
+set result =  concat('so hd con lai', (select count(id_hop_dong)
 				from hop_dong));
-	SIGNAL SQLSTATE '02000' SET MESSAGE_TEXT = @result;
-end;
-// delimiter ;
+	SIGNAL SQLSTATE '02000' SET MESSAGE_TEXT = result;
+ end //
+ delimiter;
 delete 
 from hop_dong 
-where ngay_lam_hop_dong = '2019-10-10';
+where id_hop_dong = 1;
 
 -- 26.	Tạo triggers có tên Tr_2 Khi cập nhật Ngày kết thúc hợp đồng, cần kiểm tra xem thời gian cập nhật 
 -- có phù hợp hay không, với quy tắc sau: Ngày kết thúc hợp đồng phải lớn hơn ngày làm hợp đồng ít nhất là 2 ngày.
 --  Nếu dữ liệu hợp lệ thì cho phép cập nhật, nếu dữ liệu không hợp lệ thì in ra thông báo 
 --  “Ngày kết thúc hợp đồng phải lớn hơn ngày làm hợp đồng ít nhất là 2 ngày” trên console của database
+drop trigger if exists tr_2;
+delimiter //
+create trigger tr_2
+before update
+on hop_dong for each row
+begin
+declare thong_bao varchar(150);
+set thong_bao = 'Ngày kết thúc hợp đồng phải lớn hơn ngày làm hợp đồng ít nhất là 2 ngày';
+	if (datediff(new.ngay_ket_thuc, old.ngay_lam_hop_dong) < 2) then
+		SIGNAL SQLSTATE '02000' SET MESSAGE_TEXT = thong_bao;
+	end if;
+end // delimiter;
+update hop_dong
+set ngay_ket_thuc = '2019-05-11'
+where id_hop_dong = 3;
 
 -- 27.	Tạo user function thực hiện yêu cầu sau:
 -- a.	Tạo user function func_1: Đếm các dịch vụ đã được sử dụng với Tổng tiền là > 2.000.000 VNĐ.
@@ -286,18 +304,52 @@ where ngay_lam_hop_dong = '2019-10-10';
 -- lúc kết thúc hợp đồng mà Khách hàng đã thực hiện thuê dịch vụ 
 -- (lưu ý chỉ xét các khoảng thời gian dựa vào từng lần làm hợp đồng thuê dịch vụ,
 --  không xét trên toàn bộ các lần làm hợp đồng). Mã của Khách hàng được truyền vào như là 1 tham số của function này.
-
+drop function if exists func_1;
 delimiter //
 create function func_1 ()
 returns int
 deterministic
 begin
 	declare result int;
-    select sum(d.chi_phi_thue) as 'tong_tien'
-	from khach_hang k inner join hop_dong h on h.id_khach_hang = k.id_khach_hang
-	inner join dich_vu d on d.id_dich_vu = h.id_dich_vu
-    where tong_tien > 2000000;
-    set result = count(hop_dong.id_hop_dong);
+    set result = (select count(dv.ten_dich_vu)
+	from dich_vu dv inner join hop_dong h on h.id_dich_vu = dv.id_dich_vu
+    having sum(dv.chi_phi_thue) > 2000000);
 	return result;
 end;
 // delimiter ;
+select func_1();
+
+drop function if exists func_2;
+delimiter //
+create function func_2 (id_khach int)
+returns int
+deterministic
+begin
+	declare result int;
+    set result = (select max(datediff(ngay_ket_thuc, ngay_lam_hop_dong)) 
+	from hop_dong h
+	where id_khach_hang = id_khach);
+	return result;
+end;
+// delimiter ;
+select func_2(3);
+
+-- 28.	Tạo Store procedure Sp_3 để tìm các dịch vụ được thuê bởi khách hàng với loại dịch vụ là “Room” 
+-- từ đầu năm 2015 đến hết năm 2019 để xóa thông tin của các dịch vụ đó (tức là xóa các bảng ghi trong bảng DichVu)
+--  và xóa những HopDong sử dụng dịch vụ liên quan (tức là phải xóa những bản ghi trong bảng HopDong) 
+--  và những bản liên quan khác.
+drop procedure if exists sp_3;
+delimiter //
+create procedure sp_3()
+begin
+delete 
+from dich_vu 
+where id_dich_vu in (
+select d.id_dich_vu from hop_dong h inner join dich_vu d on d.id_dich_vu = h.id_dich_vu
+inner join loai_dich_vu l on d.id_loai_dich_vu = l.id_loai_dich_vu
+where year(h.ngay_lam_hop_dong) between 2015 and 2019
+and l.id_loai_dich_vu = 3);
+end;
+// delimiter ;
+call sp_3();
+

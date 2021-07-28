@@ -10,7 +10,7 @@ create table `order`(
 order_id int primary key not null auto_increment,
 customer_id int,
 order_date datetime not null,
-order_total_price int,
+order_total_price int not null,
 foreign key (customer_id) references customer(customer_id)
 );
 
@@ -28,3 +28,4 @@ primary key (product_id, order_id),
 foreign key (product_id) references product(product_id),
 foreign key (order_id) references `order`(order_id)
 );
+select * from order_detail;

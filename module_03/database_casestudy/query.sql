@@ -122,8 +122,8 @@ from dich_vu_di_kem dv
 inner join hop_dong_chi_tiet hd on dv.id_dich_vu_di_kem = hd.id_dich_vu_di_kem
 inner join hop_dong h on h.id_hop_dong = hd.id_hop_dong
 group by dv.ten_dich_vu_di_kem
-having so_lan >= max(so_lan)
-order by so_lan desc;
+order by so_lan desc
+limit 1;
 
 -- 14.	Hiển thị thông tin tất cả các Dịch vụ đi kèm chỉ mới được sử dụng một lần duy nhất.
 --  Thông tin hiển thị bao gồm IDHopDong, TenLoaiDichVu, TenDichVuDiKem, SoLanSuDung.
@@ -157,9 +157,8 @@ delete
 from nhan_vien
 where not exists (
 select * 
-from hop_dong  
-where hop_dong.id_nhan_vien = nhan_vien.id_nhan_vien
-and year(hop_dong.ngay_lam_hop_dong) between 2017 and 2019
+from hop_dong h inner join nhan_vien n on h.id_nhan_vien = n.id_nhan_vien 
+and year(h.ngay_lam_hop_dong) between 2017 and 2019
 );
 set SQL_SAFE_UPDATES = 1;
 
@@ -195,7 +194,7 @@ set SQL_SAFE_UPDATES = 1;
 -- 19.	Cập nhật giá cho các Dịch vụ đi kèm được sử dụng trên 10 lần trong năm 2019 lên gấp đôi.
 update dich_vu_di_kem
 set gia = gia*2
-where exists (
+where id_dich_vu_di_kem in (
 select *,
 count(hd.id_dich_vu_di_kem) as 'so_lan'
 from hop_dong_chi_tiet hd inner join dich_vu_di_kem dv on dv.id_dich_vu_di_kem = hd.id_dich_vu_di_kem

@@ -1,0 +1,95 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 1.5rem;
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.color-grey{
+    background-color: lightgrey;
+}
+
+@media only screen and (max-width: 768px) {
+    [class*="col-"] {
+        width: 100%;
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    :root {
+        scroll-behavior: smooth;
+    }
+}
+
+@media (min-width: 1200px) {
+    h1, .h1 {
+        font-size: 2.5rem;
+    }
+}
+
+h2, .h2 {
+    font-size: calc(1.325rem + 0.9vw);
+}
+@media (min-width: 1200px) {
+    h2, .h2 {
+        font-size: 2rem;
+    }
+}
+
+h3, .h3 {
+    font-size: calc(1.3rem + 0.6vw);
+}
+@media (min-width: 1200px) {
+    h3, .h3 {
+        font-size: 1.75rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    legend {
+        font-size: 1.5rem;
+    }
+}
+
+h4, .h4 {
+    font-size: calc(1.275rem + 0.3vw);
+}
+@media (min-width: 1200px) {
+    h4, .h4 {
+        font-size: 1.5rem;
+    }
+}
+
+.video-title {
+    margin: 0px;
+}
+
+.video-title:hover{
+    margin-left: 5px;
+    transition: 0.1s;
+    color: dodgerblue;
+}

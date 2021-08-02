@@ -5,8 +5,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "CaculatorServlet", urlPatterns = "/display-discount")
-public class CaculatorServlet extends HttpServlet {
+@WebServlet(name = "CalculatorServlet", urlPatterns = "/display-discount")
+public class CalculatorServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String descript = request.getParameter("description");
         int price = 0;

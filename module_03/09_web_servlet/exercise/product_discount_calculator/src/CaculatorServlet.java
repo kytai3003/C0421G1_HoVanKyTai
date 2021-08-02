@@ -9,8 +9,14 @@ import java.io.IOException;
 public class CaculatorServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String descript = request.getParameter("description");
-        int price = Integer.parseInt(request.getParameter("price"));
-        int discountPer = Integer.parseInt(request.getParameter("discount"));
+        int price = 0;
+        int discountPer = 0;
+        try {
+            price = Integer.parseInt(request.getParameter("price"));
+            discountPer = Integer.parseInt(request.getParameter("discount"));
+        } catch (NumberFormatException e) {
+            System.err.println(e.getMessage());
+        }
         double discountResult = price * discountPer * 0.01;
         double priceAfterDiscount = price - discountResult;
 

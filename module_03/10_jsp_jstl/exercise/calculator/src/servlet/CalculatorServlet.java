@@ -1,3 +1,7 @@
+package servlet;
+
+import bean.Calculator;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -5,27 +9,24 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "CalculatorServlet", urlPatterns = "/display-discount")
+@WebServlet(name = "CalculatorServlet", urlPatterns = "/calculate")
 public class CalculatorServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String descript = request.getParameter("description");
-        int price = 0;
-        int discountPer = 0;
+        float firstOperand = 0.0f;
+        float secondOperand = 0.0f;
         try {
-            price = Integer.parseInt(request.getParameter("price"));
-            discountPer = Integer.parseInt(request.getParameter("discount"));
+            firstOperand = Integer.parseInt(request.getParameter("first-operand"));
+            secondOperand = Integer.parseInt(request.getParameter("second-operand"));
         } catch (NumberFormatException e) {
-            System.err.println(e.getMessage());
+            System.out.println(e.getMessage());
         }
-        double discountResult = price * discountPer * 0.01;
-        double priceAfterDiscount = price - discountResult;
 
-        request.setAttribute("desServlet", descript);
-        request.setAttribute("discountServlet", discountResult);
-        request.setAttribute("priceServlet", priceAfterDiscount);
+        char operator = request.getParameter("operator").charAt(0);
+        float result = Calculator.calculate(firstOperand, secondOperand, operator);
+
+        request.setAttribute("resultServlet", result);
         request.getRequestDispatcher("result.jsp").forward(request, response);
     }
-
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 

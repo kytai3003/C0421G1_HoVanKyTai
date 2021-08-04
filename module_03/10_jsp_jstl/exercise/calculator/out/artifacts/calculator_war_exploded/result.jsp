@@ -11,6 +11,7 @@
     <title>Title</title>
 </head>
 <body>
-<h3>Result: <%=request.getAttribute("resultServlet")%></h3>
+<h3>Result:<%=request.getAttribute("first-operand")%> <%=request.getAttribute("operator")%>
+    <%=request.getAttribute("second-operand")%> = <%=request.getAttribute("resultServlet")%></h3>
 </body>
 </html>

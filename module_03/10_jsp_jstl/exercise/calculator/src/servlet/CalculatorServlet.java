@@ -25,6 +25,9 @@ public class CalculatorServlet extends HttpServlet {
         float result = Calculator.calculate(firstOperand, secondOperand, operator);
 
         request.setAttribute("resultServlet", result);
+        request.setAttribute("first-operand", firstOperand);
+        request.setAttribute("second-operand", secondOperand);
+        request.setAttribute("operator", operator);
         request.getRequestDispatcher("result.jsp").forward(request, response);
     }
 

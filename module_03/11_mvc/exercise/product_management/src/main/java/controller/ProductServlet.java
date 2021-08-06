@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 @WebServlet(name = "ProductServlet", urlPatterns = {"/products", ""})
@@ -33,6 +34,8 @@ public class ProductServlet extends HttpServlet {
             case "delete":
                 deleteProduct(request, response);
                 break;
+            case "find":
+                findByName(request, response);
             default:
                 break;
         }
@@ -55,6 +58,9 @@ public class ProductServlet extends HttpServlet {
                 break;
             case "view":
                 viewProduct(request, response);
+                break;
+            case "find":
+                showFindForm(request, response);
                 break;
             default:
                 listProduct(request, response);
@@ -209,5 +215,32 @@ public class ProductServlet extends HttpServlet {
         }
     }
 
+    private void findByName(HttpServletRequest request, HttpServletResponse response) {
+        String name = request.getParameter("name");
+        System.out.println(name);
+        List<Product> productList = new ArrayList<>();
+        productList = this.iProductService.findByName(name);
+        RequestDispatcher dispatcher = null;
+        if (productList.isEmpty()) {
+            request.setAttribute("listProduct", productList);
+            dispatcher = request.getRequestDispatcher("product/find.jsp");
+            request.setAttribute("msg", "No result!");
+        } else {
+            request.setAttribute("listProduct", productList);
+            dispatcher = request.getRequestDispatcher("product/find.jsp");
+            request.setAttribute("msg", productList.size() + " record(s)");
+        }
+        try {
+            dispatcher.forward(request, response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
+    private void showFindForm(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        RequestDispatcher dispatcher = request.getRequestDispatcher("product/find.jsp");
+        dispatcher.forward(request, response);
+    }
 }

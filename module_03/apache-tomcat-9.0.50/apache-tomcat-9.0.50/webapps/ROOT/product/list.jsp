@@ -27,6 +27,12 @@
 <p>
     <a href="/products?action=create">Create new product</a>
 </p>
+<div>
+    <form method="post" action="/products?action=find">
+        <input type="text" name="name" placeholder="Input product name">
+        <input type="submit" value="Search by name">
+    </form>
+</div>
 <table border="1">
     <tr>
         <th>Id</th>

@@ -71,7 +71,7 @@
             <a class="nav-link" href="#" style="font-size: 30px; margin-left: 80px">Home</a>
           </li>
           <li class="nav-item hover-item">
-            <a class="nav-link " href="" style="font-size: 30px; padding-left: 30px">Employee</a>
+            <a class="nav-link " href="/furama?action=list-employee" style="font-size: 30px; padding-left: 30px">Employee</a>
           </li>
           <li class="nav-item hover-item" >
             <a class="nav-link " href="/furama?action=list-customer" style="font-size: 30px; padding-left: 30px">Customer</a>

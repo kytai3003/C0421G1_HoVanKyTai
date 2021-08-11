@@ -129,9 +129,13 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td>Type ID:(*)</td>
+                                <td>Type ID:</td>
                                 <td>
-                                    <input type="number" name="type">
+                                    <select name="type" style="width: 182px">
+                                        <c:forEach var="customerType" items="${typeList}">
+                                            <option value='${customerType.customerTypeId}' >${customerType.customerTypeName}</option>
+                                        </c:forEach>
+                                    </select>
                                 </td>
                             </tr>
                             <tr>
@@ -147,9 +151,13 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td>Gender(**):</td>
+                                <td>Gender:</td>
                                 <td>
-                                    <input type="number" name="gender">
+                                    <select name="gender" style="width: 182px">
+                                        <option selected>Choose one</option>
+                                        <option value="0">Male</option>
+                                        <option value="1">Female</option>
+                                    </select>
                                 </td>
                             </tr>
                             <tr>
@@ -185,8 +193,6 @@
                         </table>
                     </form>
                     </center>
-                    <p style="text-align: center; font-style: italic"> (*) 1 - Diamond ; 2 - Platinum ; 3 - Gold ; 4 - Silver ; 5 - Member </p>
-                    <p style="text-align: center; font-style: italic"> (**) 0 - Male ; 1 - Female </p>
                 </div>
             </div>
         </div>

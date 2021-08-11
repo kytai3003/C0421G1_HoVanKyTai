@@ -12,10 +12,10 @@ import java.util.List;
 public class CustomerRepositoryImpl implements ICustomerRepository {
     private static final String INSERT_CUSTOMER_SQL = "INSERT INTO customer" + "  (customer_code, customer_type_id, customer_name, customer_birthday, customer_gender, customer_id_card, customer_phone, customer_email, customer_address) VALUES " +
             " (?, ?, ?, ?, ?, ?, ?, ?, ?);";
-    private static final String SELECT_CUSTOMER_BY_ID = "select * from users where id =?";
+    private static final String SELECT_CUSTOMER_BY_ID = "select * from customer where customer_id =?";
     private static final String SELECT_ALL_CUSTOMER = "select * from customer";
-    private static final String DELETE_CUSTOMER_SQL = "delete from customer where id = ?";
-    private static final String UPDATE_CUSTOMER_SQL = "update customer set customer_code = ?, customer_type_id = ?,customer_name = ?, customer_birthday = ?, customer_gender = ?, customer_id_card = ?, customer_phone = ?, customer_email = ?, customer_address = ? where id = ?;";
+    private static final String DELETE_CUSTOMER_SQL = "delete from customer where customer_id = ?";
+    private static final String UPDATE_CUSTOMER_SQL = "update customer set customer_code = ?, customer_type_id = ?,customer_name = ?, customer_birthday = ?, customer_gender = ?, customer_id_card = ?, customer_phone = ?, customer_email = ?, customer_address = ? where customer_id = ?;";
 
     BaseRepository baseRepository = new BaseRepository();
 

@@ -117,11 +117,20 @@
                         <h2>
                             <a href="/furama?action=create-customer">Add New Customer</a>
                             <caption><h2>List of Customer</h2></caption>
+                            <p>
+                            <c:if test='${requestScope["msg"] != null}'>
+                                <span class="message" style="color: red; font-style: italic; font-size: 20px">${requestScope["msg"]}</span>
+                            </c:if>
+                            </p>
                         </h2>
                     </center>
                     <div align="center">
+                    <c:if test="${empty listCustomer}">
+                    <h3 style="color: red">Customer List Empty!</h3>
+                    </c:if>
+                    <c:if test="${not empty listCustomer}">
                         <table border="1" cellpadding="5" style="margin-bottom: 30px">
-                            <tr>
+                            <tr style="text-align: center">
                                 <th>ID</th>
                                 <th>Code</th>
                                 <th>Type</th>
@@ -161,12 +170,13 @@
                                     <td><c:out value="${customer.customerEmail}"/></td>
                                     <td><c:out value="${customer.customerAddress}"/></td>
                                     <td>
-                                        <a href="/furama?action=edit-customer&id=${customer.customerId}">Edit</a>
-                                        <a href="/furama?action=delete-customer&id=${customer.customerId}">Delete</a>
+                                        <button style="background-color: rgba(182,201,170,0.82); width: 70px" type="button" class="btn"><a href="/furama?action=edit-customer&id=${customer.customerId}">Edit</a></button>
+                                        <button style="background-color: rgba(188,49,55,0.92)" onclick="onDelete(${customer.customerId})" type="button" class="btn" data-toggle="modal" data-target="#modelId">Delete</button>
                                     </td>
                                 </tr>
                             </c:forEach>
                         </table>
+                    </c:if>
                 </div>
             </div>
         </div>
@@ -183,5 +193,41 @@
     </div>
 </div>
 </div>
+
+<!-- Modal -->
+<div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Confirm delete</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form>
+                <input type="hidden" name="action" value="delete-customer">
+                <input type="hidden" name="id" value="" id="idCustomerDelete">
+                <div class="modal-body">
+                    Are you sure deleting this customer?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Confirm</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<script src="/jquery/jquery-3.5.1.min.js"></script>
+<script src="/jquery/popper.min.js"></script>
+<script src="/js/bootstrap.js"></script>
+
+<script>
+    function onDelete(id) {
+        document.getElementById("idCustomerDelete").value = id;
+    }
+</script>
 </body>
 </html>

@@ -231,6 +231,7 @@ public class UserServlet extends HttpServlet {
 
     // ****Bài tập 1****
     //Gọi Stored Procedures từ JDBC sử dụng CallableStatement cho chức năng hiển thị danh sách users
+    //Gọi Stored Procedures từ JDBC sử dụng CallableStatement cho chức năng hiển thị danh sách users
     private void listUserCallable(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<User> listUser = iUserService.selectAllUseCallable();
         request.setAttribute("listUser", listUser);

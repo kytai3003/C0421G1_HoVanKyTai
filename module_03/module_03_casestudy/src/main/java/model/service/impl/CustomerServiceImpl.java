@@ -36,4 +36,9 @@ public class CustomerServiceImpl implements ICustomerService {
     public boolean updateCustomer(Customer customer) throws SQLException {
         return this.iCustomerRepository.updateCustomer(customer);
     }
+
+    @Override
+    public List<Customer> searchByName(String name) {
+        return this.iCustomerRepository.searchByName(name);
+    }
 }

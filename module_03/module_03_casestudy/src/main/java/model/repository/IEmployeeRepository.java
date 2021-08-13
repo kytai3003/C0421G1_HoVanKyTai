@@ -1,4 +1,5 @@
 package model.repository;
+import model.bean.Customer;
 import model.bean.Employee;
 
 import java.sql.SQLException;
@@ -14,4 +15,6 @@ public interface IEmployeeRepository {
     boolean deleteEmployee(int id) throws SQLException;
 
     boolean updateEmployee(Employee employee) throws SQLException;
+
+    List<Employee> searchByName(String name);
 }

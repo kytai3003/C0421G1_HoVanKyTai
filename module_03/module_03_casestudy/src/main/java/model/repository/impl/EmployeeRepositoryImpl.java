@@ -13,10 +13,11 @@ import java.util.List;
 public class EmployeeRepositoryImpl implements IEmployeeRepository {
     private static final String INSERT_EMPLOYEE_SQL = "INSERT INTO employee" + "  (employee_name, employee_birthday, employee_id_card, employee_salary, employee_phone, employee_email, employee_address, position_id, education_degree_id, division_id, username) VALUES " +
             " (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
-    private static final String SELECT_EMPLOYEE_BY_ID = "select * from employee where id =?";
+    private static final String SELECT_EMPLOYEE_BY_ID = "select * from employee where employee_id =?";
     private static final String SELECT_ALL_EMPLOYEE = "select * from employee";
-    private static final String DELETE_EMPLOYEE_SQL = "delete from employee where id = ?";
-    private static final String UPDATE_EMPLOYEE_SQL = "update employee set employee_name = ?,employee_birthday = ?, employee_id_card = ?, employee_salary = ?, employee_phone = ?, employee_email = ?, employee_address = ?, position_id = ?, education_degree_id = ?, division_id = ?, username = ? where id = ?;";
+    private static final String DELETE_EMPLOYEE_SQL = "delete from employee where employee_id = ?";
+    private static final String UPDATE_EMPLOYEE_SQL = "update employee set employee_name = ?,employee_birthday = ?, employee_id_card = ?, employee_salary = ?, employee_phone = ?, employee_email = ?, employee_address = ?, position_id = ?, education_degree_id = ?, division_id = ?, username = ? where employee_id = ?;";
+    private static final String SELECT_EMPLOYEE_BY_NAME = "select * from employee where employee_name like concat('%', ? , '%');";
 
     BaseRepository baseRepository = new BaseRepository();
 
@@ -156,5 +157,36 @@ public class EmployeeRepositoryImpl implements IEmployeeRepository {
             throwables.printStackTrace();
         }
         return rowUpdated;
+    }
+
+    @Override
+    public List<Employee> searchByName(String name) {
+        List<Employee> employees = new ArrayList<>();
+        try {
+            PreparedStatement preparedStatement = baseRepository.getConnection().prepareStatement(SELECT_EMPLOYEE_BY_NAME);
+            preparedStatement.setString(1, name);
+
+            System.out.println(preparedStatement);
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next()) {
+                int id = resultSet.getInt("employee_id");
+                String nameSearch = resultSet.getString("employee_name");
+                String dob = resultSet.getString("employee_birthday");
+                String idCard = resultSet.getString("employee_id_card");
+                double salary = resultSet.getDouble("employee_salary");
+                String phone = resultSet.getString("employee_phone");
+                String email = resultSet.getString("employee_email");
+                String address = resultSet.getString("employee_address");
+                int positionId = resultSet.getInt("position_id");
+                int educationId = resultSet.getInt("education_degree_id");
+                int divisionId = resultSet.getInt("division_id");
+                String username = resultSet.getString("username");
+                employees.add(new Employee(id, nameSearch, dob, idCard, salary, phone, email, address, positionId, educationId, divisionId, username));
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return employees;
     }
 }

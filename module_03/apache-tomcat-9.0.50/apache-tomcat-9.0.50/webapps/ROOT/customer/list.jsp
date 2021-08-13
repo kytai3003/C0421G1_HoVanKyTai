@@ -71,20 +71,20 @@
                     <a class="nav-link" href="/" style="font-size: 30px; margin-left: 80px">Home</a>
                 </li>
                 <li class="nav-item hover-item">
-                    <a class="nav-link " href="#" style="font-size: 30px; padding-left: 30px">Employee</a>
+                    <a class="nav-link " href="/furama?action=list-employee" style="font-size: 30px; padding-left: 30px">Employee</a>
                 </li>
                 <li class="nav-item hover-item" >
-                    <a class="nav-link " href="#" style="font-size: 30px; padding-left: 30px">Customer</a>
+                    <a class="nav-link " href="/furama?action=list-customer" style="font-size: 30px; padding-left: 30px">Customer</a>
                 </li>
                 <li class="nav-item hover-item" >
-                    <a class="nav-link " href="#" style="font-size: 30px; padding-left: 30px">Service</a>
+                    <a class="nav-link " href="/furama?action=list-service" style="font-size: 30px; padding-left: 30px">Service</a>
                 </li>
                 <li class="nav-item hover-item" >
-                    <a class="nav-link " href="#" style="font-size: 30px; padding-left: 30px">Contract</a>
+                    <a class="nav-link " href="/furama?action=list-contract" style="font-size: 30px; padding-left: 30px">Contract</a>
                 </li>
             </ul>
-            <form class="d-flex" style="position: relative">
-                <input class="form-control rounded-pill" id="demo-2" type="search" placeholder="Search" aria-label="Search" style="width: 300px; height: 30px; margin-left: 100px; margin-top: 15px">
+            <form class="d-flex" method="post" action="/furama?action=search-customer" style="position: relative">
+                <input class="form-control rounded-pill" name="customerName" id="demo-2" type="search" placeholder="Search customer name" aria-label="Search" style="width: 300px; height: 30px; margin-left: 100px; margin-top: 15px">
             </form>
         </div>
     </div>
@@ -94,21 +94,21 @@
         <div class="col-lg-2" style=" background-color: rgba(121,120,118,0.25)">
             <div class="row">
                 <div class="col-lg-12 my-lg-1 mx-3">
-                    <a href="#" style="text-decoration: none; font-size: 25px">Item one</a>
+                    <a href="/furama?action=meeting-info" style="text-decoration: none; font-size: 25px">MEETINGS</a>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-12 my-lg-1 mx-3">
-                    <a href="#" style="text-decoration: none; font-size: 25px">Item two</a>
+                    <a href="/furama?action=culinary" style="text-decoration: none; font-size: 25px">CULINARY</a>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-12 my-lg-1 mx-3">
-                    <a href="#" style="text-decoration: none; font-size: 25px">Item three</a>
+                    <a href="/furama?action=spa" style="text-decoration: none; font-size: 25px">SPA & FITNESS</a>
                 </div>
             </div>
         </div>
-        <div class="col-lg-10">
+        <div class="col-lg-10" style="background-image: url('http://2.bp.blogspot.com/-wPdpM8-5oVI/UzgtBY0RUFI/AAAAAAAAXPI/h_2cxixYgo0/s1600/background-don-gian-cho-windows+(2).jpg')">
             <div class="row">
                 <div class="col-lg-12">
                     <input type="hidden" name="action" value="list-customer">
@@ -170,8 +170,8 @@
                                     <td><c:out value="${customer.customerEmail}"/></td>
                                     <td><c:out value="${customer.customerAddress}"/></td>
                                     <td>
-                                        <button style="background-color: rgba(182,201,170,0.82); width: 70px" type="button" class="btn"><a href="/furama?action=edit-customer&id=${customer.customerId}">Edit</a></button>
-                                        <button style="background-color: rgba(188,49,55,0.92)" onclick="onDelete(${customer.customerId})" type="button" class="btn" data-toggle="modal" data-target="#modelId">Delete</button>
+                                        <button style="background-color: rgba(182,201,170,0.82); width: 70px" type="button" class="btn rounded-pill"><a href="/furama?action=edit-customer&id=${customer.customerId}">Edit</a></button>
+                                        <button style="background-color: rgba(188,49,55,0.92)" onclick="onDelete(${customer.customerId})" type="button" class="btn rounded-pill" data-toggle="modal" data-target="#modelId">Delete</button>
                                     </td>
                                 </tr>
                             </c:forEach>

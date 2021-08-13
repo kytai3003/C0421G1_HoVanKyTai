@@ -21,6 +21,16 @@ public class Contract {
         this.serviceId = serviceId;
     }
 
+    public Contract(String contractStartDay, String contractEndDay, double contractDeposit, double contractTotal, int employeeId, int customerId, int serviceId) {
+        this.contractStartDay = contractStartDay;
+        this.contractEndDay = contractEndDay;
+        this.contractDeposit = contractDeposit;
+        this.contractTotal = contractTotal;
+        this.employeeId = employeeId;
+        this.customerId = customerId;
+        this.serviceId = serviceId;
+    }
+
     public Contract() {
     }
 

@@ -77,10 +77,10 @@
             <a class="nav-link " href="/furama?action=list-customer" style="font-size: 30px; padding-left: 30px">Customer</a>
           </li>
           <li class="nav-item hover-item" >
-            <a class="nav-link " href="#" style="font-size: 30px; padding-left: 30px">Service</a>
+            <a class="nav-link " href="/furama?action=list-service" style="font-size: 30px; padding-left: 30px">Service</a>
           </li>
           <li class="nav-item hover-item" >
-            <a class="nav-link " href="#" style="font-size: 30px; padding-left: 30px">Contract</a>
+            <a class="nav-link " href="/furama?action=list-contract" style="font-size: 30px; padding-left: 30px">Contract</a>
           </li>
         </ul>
         <form class="d-flex" style="position: relative">
@@ -94,21 +94,21 @@
       <div class="col-lg-2" style=" background-color: rgba(121,120,118,0.25)">
         <div class="row">
           <div class="col-lg-12 my-lg-1 mx-3">
-            <a href="#" style="text-decoration: none; font-size: 25px">Item one</a>
+            <a href="/furama?action=meeting-info" style="text-decoration: none; font-size: 25px">MEETINGS</a>
           </div>
         </div>
         <div class="row">
           <div class="col-lg-12 my-lg-1 mx-3">
-            <a href="#" style="text-decoration: none; font-size: 25px">Item two</a>
+            <a href="/furama?action=culinary" style="text-decoration: none; font-size: 25px">CULINARY</a>
           </div>
         </div>
         <div class="row">
           <div class="col-lg-12 my-lg-1 mx-3">
-            <a href="#" style="text-decoration: none; font-size: 25px">Item three</a>
+            <a href="/furama?action=spa" style="text-decoration: none; font-size: 25px">SPA & FITNESS</a>
           </div>
         </div>
       </div>
-      <div class="col-lg-10">
+      <div class="col-lg-10" style="margin-bottom: 20px">
         <input type="hidden" name="action" value="">
         <div class="row">
           <div class="col-lg-12">
@@ -123,7 +123,16 @@
               and guarantee the Vietnam’s the most prestigious resort -counting royalty, presidents, movie
               stars and international business leaders among its celebrity guests.
             </p>
-            <img src="img/home_picture.jpg" style="width: 100%">
+            <img src="img/home_picture.jpg" style="width: 100%" id="home">
+            <p style="display: flex; flex-direction: column; justify-content: center; color: black; text-indent: 25px">
+              The resort’s culinary experience features a mixture of the authentic and locally inspired Vietnamese, Asian,
+              Italian and other European cuisines plus the best imported steaks. The resort presents guests with varied
+              gastronomic venues – the hip and breezy bar overlooking the beach, the exclusive Lagoon pool surrounded
+              by a tropical garden, the true Italian flare offered at the Don Cipriani’s, the refined Asian touch at
+              Café Indochine or the authentic central Vietnam cuisine at the Danaksara. Furama Resort Danang also
+              impresses and amuses guests with various fun and exciting programs such as excursions, water sports,
+              diving and golf as well as health and beauty services.
+            </p>
           </div>
         </div>
       </div>

@@ -68,7 +68,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item mx-3 hover-item">
-                    <a class="nav-link" href="#" style="font-size: 30px; margin-left: 80px">Home</a>
+                    <a class="nav-link" href="/" style="font-size: 30px; margin-left: 80px">Home</a>
                 </li>
                 <li class="nav-item hover-item">
                     <a class="nav-link " href="/furama?action=list-employee" style="font-size: 30px; padding-left: 30px">Employee</a>
@@ -77,10 +77,10 @@
                     <a class="nav-link " href="/furama?action=list-customer" style="font-size: 30px; padding-left: 30px">Customer</a>
                 </li>
                 <li class="nav-item hover-item" >
-                    <a class="nav-link " href="#" style="font-size: 30px; padding-left: 30px">Service</a>
+                    <a class="nav-link " href="/furama?action=list-service" style="font-size: 30px; padding-left: 30px">Service</a>
                 </li>
                 <li class="nav-item hover-item" >
-                    <a class="nav-link " href="#" style="font-size: 30px; padding-left: 30px">Contract</a>
+                    <a class="nav-link " href="/furama?action=list-contract" style="font-size: 30px; padding-left: 30px">Contract</a>
                 </li>
             </ul>
             <form class="d-flex" style="position: relative">
@@ -94,21 +94,21 @@
         <div class="col-lg-2" style=" background-color: rgba(121,120,118,0.25)">
             <div class="row">
                 <div class="col-lg-12 my-lg-1 mx-3">
-                    <a href="#" style="text-decoration: none; font-size: 25px">Item one</a>
+                    <a href="/furama?action=meeting-info" style="text-decoration: none; font-size: 25px">MEETINGS</a>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-12 my-lg-1 mx-3">
-                    <a href="#" style="text-decoration: none; font-size: 25px">Item two</a>
+                    <a href="/furama?action=culinary" style="text-decoration: none; font-size: 25px">CULINARY</a>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-12 my-lg-1 mx-3">
-                    <a href="#" style="text-decoration: none; font-size: 25px">Item three</a>
+                    <a href="/furama?action=spa" style="text-decoration: none; font-size: 25px">SPA & FITNESS</a>
                 </div>
             </div>
         </div>
-        <div class="col-lg-10">
+        <div class="col-lg-10" style="background-image: url('https://hoaidoan.vn/wp-content/uploads/2021/03/background-dep-2.png')">
             <input type="hidden" name="action" value="">
             <div class="row">
                 <div class="col-lg-12">
@@ -197,7 +197,11 @@
                                 <tr>
                                     <td>Username:</td>
                                     <td>
-                                        <input type="text" name="username">
+                                        <select name="username" style="width: 182px">
+                                            <c:forEach var="username" items="${userList}">
+                                                <option value='${username.username}' >${username.username}</option>
+                                            </c:forEach>
+                                        </select>
                                     </td>
                                 </tr>
                                 <tr>

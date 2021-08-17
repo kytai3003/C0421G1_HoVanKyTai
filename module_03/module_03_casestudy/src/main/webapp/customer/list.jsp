@@ -3,7 +3,8 @@
 <html>
 <head>
     <title>Title</title>
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/bootstrap413/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/datatables/css/dataTables.bootstrap4.min.css">
     <style>
         #name:hover {
             color: #523e02;
@@ -84,7 +85,9 @@
                 </li>
             </ul>
             <form class="d-flex" method="post" action="/furama?action=search-customer" style="position: relative">
-                <input class="form-control rounded-pill" name="customerName" id="demo-2" type="search" placeholder="Search customer name" aria-label="Search" style="width: 300px; height: 30px; margin-left: 100px; margin-top: 15px">
+                <input class="form-control rounded-pill w-75" name="customerName" id="demo-2" type="search" placeholder="Search customer name" aria-label="Search" style="width: 100px; height: 30px; margin-left: 100px; margin-top: 15px">
+                <input class="form-control rounded-pill w-75" name="customerAddress" id="demo-3" type="search" placeholder="Search customer address" aria-label="Search" style="width: 100px; height: 30px; margin-left: 100px; margin-top: 15px">
+                <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
         </div>
     </div>
@@ -129,7 +132,8 @@
                     <h3 style="color: red">Customer List Empty!</h3>
                     </c:if>
                     <c:if test="${not empty listCustomer}">
-                        <table border="1" cellpadding="5" style="margin-bottom: 30px">
+                        <table border="1" cellpadding="5" style="margin-bottom: 30px; width: 100%" id="tableCustomer" class="table table-striped table-bordered">
+                            <thead>
                             <tr style="text-align: center">
                                 <th>ID</th>
                                 <th>Code</th>
@@ -143,6 +147,8 @@
                                 <th>Address</th>
                                 <th colspan="2">Action</th>
                             </tr>
+                            </thead>
+                            <tbody>
                             <c:forEach var="customer" items="${listCustomer}">
                                 <tr>
                                     <td><c:out value="${customer.customerId}"/></td>
@@ -175,6 +181,7 @@
                                     </td>
                                 </tr>
                             </c:forEach>
+                            </tbody>
                         </table>
                     </c:if>
                 </div>
@@ -221,8 +228,10 @@
 
 
 <script src="/jquery/jquery-3.5.1.min.js"></script>
-<script src="/jquery/popper.min.js"></script>
-<script src="/js/bootstrap.js"></script>
+<script src="/datatables/js/jquery.dataTables.min.js"></script>
+<script src="/datatables/js/dataTables.bootstrap4.min.js"></script>
+<%--<script src="/jquery/popper.min.js"></script>--%>
+<%--<script src="/js/bootstrap.js"></script>--%>
 
 <script>
     function onDelete(id, name) {
@@ -230,6 +239,15 @@
         console.log(name)
         document.getElementById("nameCustomerDelete").value = name;
     }
+</script>
+<script>
+    $(document).ready(function () {
+        $('#tableCustomer').dataTable( {
+            "dom": 'lrtip',
+            "lengthChange": false,
+            "pageLength": 4
+        } );
+    } );
 </script>
 </body>
 </html>

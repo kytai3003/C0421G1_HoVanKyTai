@@ -84,7 +84,7 @@
                 </li>
             </ul>
             <form class="d-flex" style="position: relative">
-                <input class="form-control rounded-pill" id="demo-2" type="search" placeholder="Search" aria-label="Search" style="width: 300px; height: 30px; margin-left: 100px; margin-top: 15px">
+                <input class="form-control rounded-pill w-25" id="demo-2" type="search" placeholder="Search" aria-label="Search" style="width: 300px; height: 30px; margin-left: 100px; margin-top: 15px">
             </form>
         </div>
     </div>
@@ -134,11 +134,27 @@
                                     </td>
                                 </tr>
                                 <tr>
+                                    <td></td>
+                                    <td style="color: #a71d2a"  class="rounded-pill">
+                                        <c:if test="${map.get('code') != null}">
+                                            <small>${map.get('code')}</small>
+                                        </c:if>
+                                    </td>
+                                </tr>
+                                <tr>
                                     <th>Customer type:</th>
                                     <td>
                                         <select name="type" style="width: 182px">
                                             <c:forEach var="customerType" items="${typeList}">
-                                                <option value='${customerType.customerTypeId}' >${customerType.customerTypeName}</option>
+<%--                                                <option value='${customerType.customerTypeId}' >${customerType.customerTypeName}</option>--%>
+                                                <c:choose>
+                                                    <c:when test="${customer.customerTypeId==customerType.customerTypeId}">
+                                                        <option selected value='${customerType.customerTypeId}' >${customerType.customerTypeName}</option>
+                                                    </c:when>
+                                                    <c:otherwise>
+                                                        <option value='${customerType.customerTypeId}' >${customerType.customerTypeName}</option>
+                                                    </c:otherwise>
+                                                </c:choose>
                                             </c:forEach>
                                         </select>
                                     </td>
@@ -191,6 +207,14 @@
                                         <input type="text" name="email"
                                                value="<c:out value='${customer.customerEmail}' />"
                                         />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td style="color: #a71d2a" class="rounded-pill">
+                                        <c:if test="${map.get('email') != null}">
+                                            <small>${map.get('email')}</small>
+                                        </c:if>
                                     </td>
                                 </tr>
                                 <tr>

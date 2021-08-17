@@ -1,6 +1,4 @@
 package model.repository.impl;
-
-import model.bean.Customer;
 import model.bean.CustomerType;
 import model.repository.ICustomerTypeRepository;
 

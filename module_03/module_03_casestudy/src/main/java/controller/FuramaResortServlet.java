@@ -367,15 +367,15 @@ public class FuramaResortServlet extends HttpServlet {
         String address = request.getParameter("address");
 
         Customer customer = new Customer(id, code, type, name, dob, gender, card, phone, email, address);
-        iCustomerService.updateCustomer(customer);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("customer/edit.jsp");
-        request.setAttribute("msg", "Edited successfully.");
-        try {
+        Map<String, String> mapMess = iCustomerService.updateCustomer(customer);
+        if (mapMess.isEmpty()) {
+            RequestDispatcher dispatcher = request.getRequestDispatcher("customer/edit.jsp");
+            request.setAttribute("msg", "Edited successfully.");
             dispatcher.forward(request, response);
-        } catch (ServletException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
+        } else {
+            request.setAttribute("map", mapMess);
+            request.setAttribute("editCustomer", customer);
+            showEditCustomerForm(request, response);
         }
     }
 
@@ -486,11 +486,12 @@ public class FuramaResortServlet extends HttpServlet {
         listService(request, response);
     }
 
-    private void searchByCustomerName(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    private void searchByCustomerName(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException {
         String customerName = request.getParameter("customerName");
+        String customerAddress = request.getParameter("customerAddress");
         System.out.println(customerName);
         List<Customer> customerList = new ArrayList<>();
-        customerList.addAll(iCustomerService.searchByName(customerName));
+        customerList.addAll(iCustomerService.searchByName(customerName, customerAddress));
         RequestDispatcher dispatcher = null;
         if (customerList.isEmpty()) {
             request.setAttribute("listCustomer", customerList);

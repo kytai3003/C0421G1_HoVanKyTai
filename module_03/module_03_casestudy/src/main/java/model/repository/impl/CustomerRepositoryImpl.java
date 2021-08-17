@@ -16,7 +16,9 @@ public class CustomerRepositoryImpl implements ICustomerRepository {
     private static final String SELECT_ALL_CUSTOMER = "select * from customer";
     private static final String DELETE_CUSTOMER_SQL = "delete from customer where customer_id = ?";
     private static final String UPDATE_CUSTOMER_SQL = "update customer set customer_code = ?, customer_type_id = ?,customer_name = ?, customer_birthday = ?, customer_gender = ?, customer_id_card = ?, customer_phone = ?, customer_email = ?, customer_address = ? where customer_id = ?;";
-    private static final String SELECT_CUSTOMER_BY_NAME = "select * from customer where customer_name like concat('%', ? , '%');";
+    private static final String SELECT_CUSTOMER_BY_NAME = "select * from customer where customer_name like concat('%', ? , '%') and customer_address = ?;";
+    private static final String SELECT_CUSTOMER_BY_NAME2 = "select * from customer where customer_name like concat('%', ? , '%');";
+    private static final String SELECT_CUSTOMER_BY_NAME3 = "select * from customer where customer_address = ?;";
 
     BaseRepository baseRepository = new BaseRepository();
 
@@ -152,31 +154,36 @@ public class CustomerRepositoryImpl implements ICustomerRepository {
     }
 
     @Override
-    public List<Customer> searchByName(String name) {
+    public List<Customer> searchByName(String name, String address) throws SQLException {
         List<Customer> customers = new ArrayList<>();
-        try {
-            PreparedStatement preparedStatement = baseRepository.getConnection().prepareStatement(SELECT_CUSTOMER_BY_NAME);
+        PreparedStatement preparedStatement;
+        if (name.equals("")) {
+            preparedStatement = baseRepository.getConnection().prepareStatement(SELECT_CUSTOMER_BY_NAME3);
+            preparedStatement.setString(1, address);
+        } else if (address.equals("")) {
+            preparedStatement = baseRepository.getConnection().prepareStatement(SELECT_CUSTOMER_BY_NAME2);
             preparedStatement.setString(1, name);
-
-            System.out.println(preparedStatement);
-            ResultSet resultSet = preparedStatement.executeQuery();
-
-            while (resultSet.next()) {
-                int id = resultSet.getInt("customer_id");
-                String code = resultSet.getString("customer_code");
-                int typeId = resultSet.getInt("customer_type_id");
-                String nameSearch = resultSet.getString("customer_name");
-                String dob = resultSet.getString("customer_birthday");
-                int gender = resultSet.getInt("customer_gender");
-                String card = resultSet.getString("customer_id_card");
-                String phone = resultSet.getString("customer_phone");
-                String email = resultSet.getString("customer_email");
-                String address = resultSet.getString("customer_address");
-                customers.add(new Customer(id, code, typeId, nameSearch, dob, gender, card, phone, email, address));
-            }
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
+        } else {
+            preparedStatement = baseRepository.getConnection().prepareStatement(SELECT_CUSTOMER_BY_NAME);
+            preparedStatement.setString(1, name);
+            preparedStatement.setString(2, address);
         }
-        return customers;
-    }
-}
+                System.out.println(preparedStatement);
+                ResultSet resultSet = preparedStatement.executeQuery();
+                while (resultSet.next()) {
+                    int id = resultSet.getInt("customer_id");
+                    String code = resultSet.getString("customer_code");
+                    int typeId = resultSet.getInt("customer_type_id");
+                    String nameSearch = resultSet.getString("customer_name");
+                    String dob = resultSet.getString("customer_birthday");
+                    int gender = resultSet.getInt("customer_gender");
+                    String card = resultSet.getString("customer_id_card");
+                    String phone = resultSet.getString("customer_phone");
+                    String email = resultSet.getString("customer_email");
+                    String addresss = resultSet.getString("customer_address");
+                    customers.add(new Customer(id, code, typeId, nameSearch, dob, gender, card, phone, email, addresss));
+                }
+            return customers;
+            }
+
+        }

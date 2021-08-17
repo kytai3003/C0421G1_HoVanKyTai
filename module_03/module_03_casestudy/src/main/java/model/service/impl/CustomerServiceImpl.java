@@ -45,12 +45,21 @@ public class CustomerServiceImpl implements ICustomerService {
     }
 
     @Override
-    public boolean updateCustomer(Customer customer) throws SQLException {
-        return this.iCustomerRepository.updateCustomer(customer);
+    public Map<String, String> updateCustomer(Customer customer) throws SQLException {
+        Map<String, String> mapMessage = new HashMap<>();
+
+        if (Validate.customerCode(customer.getCustomerCode()) != null
+                || Validate.validateEmail(customer.getCustomerEmail()) != null) {
+            mapMessage.put("code", Validate.customerCode(customer.getCustomerCode()));
+            mapMessage.put("email", Validate.validateEmail(customer.getCustomerEmail()));
+        } else {
+            this.iCustomerRepository.updateCustomer(customer);
+        }
+        return mapMessage;
     }
 
     @Override
-    public List<Customer> searchByName(String name) {
-        return this.iCustomerRepository.searchByName(name);
+    public List<Customer> searchByName(String name, String address) throws SQLException {
+        return this.iCustomerRepository.searchByName(name, address);
     }
 }

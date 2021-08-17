@@ -16,5 +16,5 @@ public interface ICustomerRepository {
 
     boolean updateCustomer(Customer customer) throws SQLException;
 
-    List<Customer> searchByName(String name);
+    List<Customer> searchByName(String name, String address) throws SQLException;
 }

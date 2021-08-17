@@ -4,9 +4,10 @@ import model.bean.Customer;
 
 import java.sql.SQLException;
 import java.util.List;
+import java.util.Map;
 
 public interface ICustomerService {
-    void addNewCustomer(Customer customer) throws SQLException;
+    Map<String, String> addNewCustomer(Customer customer) throws SQLException;
 
     Customer selectCustomer(int id);
 

@@ -174,7 +174,7 @@
                                         <td><c:out value="${service.numberOfFloor}"/></td>
                                         <td>
                                             <button style="background-color: rgba(182,201,170,0.82); width: 70px" type="button" class="btn rounded-pill"><a href="/furama?action=edit-service&id=${service.serviceId}">Edit</a></button>
-                                            <button style="background-color: rgba(188,49,55,0.92)" onclick="onDelete(${service.serviceId})" type="button" class="btn rounded-pill" data-toggle="modal" data-target="#modelId">Delete</button>
+                                            <button style="background-color: rgba(188,49,55,0.92)" onclick="onDelete('${service.serviceId}', '${service.serviceName}')" type="button" class="btn rounded-pill" data-toggle="modal" data-target="#modelId">Delete</button>
                                         </td>
                                     </tr>
                                 </c:forEach>
@@ -211,7 +211,7 @@
                 <input type="hidden" name="action" value="delete-service">
                 <input type="hidden" name="id" value="" id="idServiceDelete">
                 <div class="modal-body">
-                    Are you sure deleting this service?
+                    Are you sure deleting this service? <input style="border: none; outline: none; font-weight: bold" id="nameServiceDelete" readonly>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
@@ -228,8 +228,10 @@
 <script src="/js/bootstrap.js"></script>
 
 <script>
-    function onDelete(id) {
+    function onDelete(id, name) {
         document.getElementById("idServiceDelete").value = id;
+        console.log(name)
+        document.getElementById("nameServiceDelete").value = name;
     }
 </script>
 </body>

@@ -91,7 +91,7 @@
 </nav>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-lg-2" style=" background-color: rgba(121,120,118,0.25)">
+        <div class="col-lg-2" style=" background-color: rgba(121,120,118,0.25); height: 400px">
             <div class="row">
                 <div class="col-lg-12 my-lg-1 mx-3">
                     <a href="/furama?action=meeting-info" style="text-decoration: none; font-size: 25px">MEETINGS</a>

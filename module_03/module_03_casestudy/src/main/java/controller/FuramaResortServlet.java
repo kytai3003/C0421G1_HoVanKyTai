@@ -1,5 +1,6 @@
 package controller;
 
+import model.service.common.Validate;
 import model.bean.*;
 import model.service.*;
 import model.service.impl.*;
@@ -14,6 +15,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 @WebServlet(name = "FuramaResortServlet", urlPatterns = "/furama")
 public class FuramaResortServlet extends HttpServlet {
@@ -32,6 +34,8 @@ public class FuramaResortServlet extends HttpServlet {
     IRentTypeService iRentTypeService = new RentTypeServiceImpl();
 
     IContractService iContractService = new ContractServiceImpl();
+    IAttachServiceService iAttachServiceService = new AttachServiceServiceImpl();
+//    IContractDetailService iContractDetailService = new ContractDetailServiceImpl();
 
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -277,16 +281,17 @@ public class FuramaResortServlet extends HttpServlet {
         String email = request.getParameter("email");
         String address = request.getParameter("address");
         Customer customer = new Customer(code, type, name, dob, gender, idCard, phone, email, address);
-        this.iCustomerService.addNewCustomer(customer);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("customer/create.jsp");
-        request.setAttribute("msg", "Created successfully.");
-        try {
+        Map<String, String> mapMess = this.iCustomerService.addNewCustomer(customer);
+        if (mapMess.isEmpty()) {
+            RequestDispatcher dispatcher = request.getRequestDispatcher("customer/create.jsp");
+            request.setAttribute("msg", "Created successfully.");
             dispatcher.forward(request, response);
-        } catch (ServletException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
+        } else {
+            request.setAttribute("map", mapMess);
+            request.setAttribute("newCustomer", customer);
+            showCreateCustomerForm(request, response);
         }
+
     }
 
     private void createService(HttpServletRequest request, HttpServletResponse response)

@@ -124,13 +124,21 @@
                         <table align="center">
                             <tr>
                                 <td>Code: </td>
-                                <td>
-                                    <input type="text" name="code">
+                                <td class="rounded-pill">
+                                    <input type="text" name="code" value="${newCustomer.getCustomerCode()}">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td style="color: #a71d2a"  class="rounded-pill">
+                                    <c:if test="${map.get('code') != null}">
+                                        <small>${map.get('code')}</small>
+                                    </c:if>
                                 </td>
                             </tr>
                             <tr>
                                 <td>Type ID:</td>
-                                <td>
+                                <td  class="rounded-pill">
                                     <select name="type" style="width: 182px">
                                         <c:forEach var="customerType" items="${typeList}">
                                             <option value='${customerType.customerTypeId}' >${customerType.customerTypeName}</option>
@@ -140,19 +148,19 @@
                             </tr>
                             <tr>
                                 <td>Name:</td>
-                                <td>
+                                <td  class="rounded-pill">
                                     <input type="text" name="name">
                                 </td>
                             </tr>
                             <tr>
                                 <td>Day of birth:</td>
-                                <td>
+                                <td class="rounded-pill">
                                     <input type="text" name="dob">
                                 </td>
                             </tr>
                             <tr>
                                 <td>Gender:</td>
-                                <td>
+                                <td class="rounded-pill">
                                     <select name="gender" style="width: 182px">
                                         <option selected>Choose one</option>
                                         <option value="0">Male</option>
@@ -162,31 +170,39 @@
                             </tr>
                             <tr>
                                 <td>ID Card:</td>
-                                <td>
+                                <td class="rounded-pill">
                                     <input type="text" name="card">
                                 </td>
                             </tr>
                             <tr>
                                 <td>Phone number:</td>
-                                <td>
+                                <td class="rounded-pill">
                                     <input type="text" name="phone">
                                 </td>
                             </tr>
                             <tr>
                                 <td>Email:</td>
-                                <td>
-                                    <input type="text" name="email">
+                                <td class="rounded-pill">
+                                    <input type="text" name="email" value="${newCustomer.getCustomerEmail()}">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td style="color: #a71d2a" class="rounded-pill">
+                                    <c:if test="${map.get('email') != null}">
+                                        <small>${map.get('email')}</small>
+                                    </c:if>
                                 </td>
                             </tr>
                             <tr>
                                 <td>Address:</td>
-                                <td>
+                                <td class="rounded-pill">
                                     <input type="text" name="address">
                                 </td>
                             </tr>
                             <tr>
                                 <td></td>
-                                <td>
+                                <td class="rounded-pill">
                                     <button class="rounded-pill my-lg-1" type="submit" style="width: 160px; height: 35px">Create</button>
                                 </td>
                             </tr>

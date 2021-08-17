@@ -4,17 +4,29 @@ import model.bean.Customer;
 import model.repository.ICustomerRepository;
 import model.repository.impl.CustomerRepositoryImpl;
 import model.service.ICustomerService;
+import model.service.common.Validate;
 
 import java.sql.SQLException;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class CustomerServiceImpl implements ICustomerService {
 
     ICustomerRepository iCustomerRepository = new CustomerRepositoryImpl();
 
     @Override
-    public void addNewCustomer(Customer customer) throws SQLException {
-        this.iCustomerRepository.addNewCustomer(customer);
+    public Map<String, String> addNewCustomer(Customer customer) throws SQLException {
+        Map<String, String> mapMessage = new HashMap<>();
+
+        if (Validate.customerCode(customer.getCustomerCode()) != null
+        || Validate.validateEmail(customer.getCustomerEmail()) != null) {
+            mapMessage.put("code", Validate.customerCode(customer.getCustomerCode()));
+            mapMessage.put("email", Validate.validateEmail(customer.getCustomerEmail()));
+        } else {
+            this.iCustomerRepository.addNewCustomer(customer);
+        }
+        return mapMessage;
     }
 
     @Override

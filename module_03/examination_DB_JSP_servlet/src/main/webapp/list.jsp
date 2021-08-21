@@ -11,32 +11,54 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12">
+                <form class="d-flex" method="post" action="/product?action=search-product" style="position: relative">
+                    <input class="form-control rounded-pill w-75" name="productName" id="demo-2" type="search" placeholder="Search product name" aria-label="Search" style="width: 100px; height: 30px; margin-left: 100px; margin-top: 15px">
+                    <input class="form-control rounded-pill w-75" name="productPrice" value="0" id="demo-3" type="search" placeholder="Search product price" aria-label="Search" style="width: 100px; height: 30px; margin-left: 100px; margin-top: 15px">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+                <h2>
+                    <a href="/product?action=create-product">Add New Product</a>
+                    <caption><h2>List of Product</h2></caption>
+                    <p>
+                        <c:if test='${requestScope["msg"] != null}'>
+                            <span class="message" style="color: red; font-style: italic; font-size: 20px">${requestScope["msg"]}</span>
+                        </c:if>
+                    </p>
+                </h2>
                 <table id="tableStudent" class="table table-striped table-bordered" style="width:100%">
+                    <caption>Product management</caption>
                     <thead>
                         <tr>
                             <th>Id</th>
                             <th>Name</th>
-                            <th>Address</th>
-                            <th>Date of birth</th>
-                            <th>Year</th>
-                            <th>Class</th>
+                            <th>Price</th>
+                            <th>Amount</th>
+                            <th>Color</th>
+                            <th>Description</th>
+                            <th>Catelogy</th>
+                            <th colspan="2">Action</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <c:forEach var="student" items="${studentList}">
+                        <c:forEach var="product" items="${productList}">
                             <tr>
-                                <td><c:out value="${student.studentId}"></c:out></td>
-                                <td><c:out value="${student.studentName}"></c:out></td>
-                                <td><c:out value="${student.address}"></c:out></td>
-                                <td><c:out value="${student.dayOfBirth}"></c:out></td>
-                                <td><c:out value="${student.year}"></c:out></td>
+                                <td><c:out value="${product.idProduct}"></c:out></td>
+                                <td><c:out value="${product.nameProduct}"></c:out></td>
+                                <td><c:out value="${product.price}"></c:out></td>
+                                <td><c:out value="${product.amount}"></c:out></td>
+                                <td><c:out value="${product.colorProduct}"></c:out></td>
+                                <td><c:out value="${product.description}"></c:out></td>
                                 <td>
                                     <c:choose>
-                                        <c:when test="${student.classId == 1}">C01</c:when>
-                                        <c:when test="${student.classId == 2}">C02</c:when>
-                                        <c:when test="${student.classId == 3}">C03</c:when>
-                                        <c:otherwise>C04</c:otherwise>
+                                        <c:when test="${product.idCatelogy == 1}">Phone</c:when>
+                                        <c:when test="${product.idCatelogy == 2}">Tivi</c:when>
+                                        <c:when test="${product.idCatelogy == 3}">Tủ lạnh</c:when>
+                                        <c:otherwise>Máy giặt</c:otherwise>
                                     </c:choose>
+                                </td>
+                                <td>
+                                    <button style="background-color: rgba(182,201,170,0.82); width: 70px" type="button" class="btn rounded-pill"><a href="/product?action=edit-product&id=${product.idProduct}">Edit</a></button>
+                                    <button style="background-color: rgba(188,49,55,0.92)" onclick="onDelete('${product.idProduct}', '${product.nameProduct}')" type="button" class="btn rounded-pill" data-toggle="modal" data-target="#modelId">Delete</button>
                                 </td>
                             </tr>
                         </c:forEach>
@@ -45,41 +67,32 @@
             </div>
         </div>
     </div>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Dropdown
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Confirm delete</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form>
+                    <input type="hidden" name="action" value="delete-product">
+                    <input type="hidden" name="id" value="" id="idProductDelete">
+                    <div class="modal-body">
+                        Are you sure deleting this product? <input style="border: none; outline: none; font-weight: bold" id="nameProductDelete" readonly>
                     </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Disabled</a>
-                </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Confirm</button>
+                    </div>
+                </form>
+            </div>
         </div>
-    </nav>
+    </div>
 
     <script src="jquery/jquery-3.5.1.min.js"></script>
     <script src="jquery/popper.min.js"></script>
@@ -94,6 +107,13 @@
                 "pageLength": 4
             } );
         } );
+    </script>
+    <script>
+        function onDelete(id, name) {
+            document.getElementById("idProductDelete").value = id;
+            console.log(name)
+            document.getElementById("nameProductDelete").value = name;
+        }
     </script>
 </body>
 </html>

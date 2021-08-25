@@ -24,10 +24,11 @@
   </form>
 
   <h4 style="color: red">
-    <c:if test='${requestScope["mess"] != null}'>
+    <c:if test='${requestScope["result"] == null}'>
       <span>Warning: ${requestScope["mess"]}</span>
     </c:if>
   </h4>
+
   <h4>Result: ${result}</h4>
   </body>
 </html>

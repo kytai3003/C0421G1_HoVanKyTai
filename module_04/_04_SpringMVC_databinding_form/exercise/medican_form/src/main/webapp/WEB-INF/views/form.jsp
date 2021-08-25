@@ -16,7 +16,7 @@
 </div>
 
 <form:form action="/form" method="post" modelAttribute="personalInformation">
-    <table style="margin: 0 auto">
+    <table style="margin: 0 auto; border: 5px">
         <tr>
             <td>Name(*): </td>
             <td>
@@ -99,6 +99,7 @@
             </td>
         </tr>
         <tr>
+            <td></td>
             <td><button type="submit" value="Create">Create</button></td>
         </tr>
     </table>

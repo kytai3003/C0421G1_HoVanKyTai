@@ -1,14 +1,31 @@
 package codegym.model.bean;
 
+
+import javax.persistence.*;
+
+
+@Table
+@Entity
 public class Product {
-    private int productId;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer productId;
+
     private String productName;
     private double productPrice;
     private String description;
     private String productBrand;
 
-    public Product(int productId, String productName, double productPrice, String description, String productBrand) {
+    public Product(Integer productId, String productName, double productPrice, String description, String productBrand) {
         this.productId = productId;
+        this.productName = productName;
+        this.productPrice = productPrice;
+        this.description = description;
+        this.productBrand = productBrand;
+    }
+
+    public Product(String productName, double productPrice, String description, String productBrand) {
         this.productName = productName;
         this.productPrice = productPrice;
         this.description = description;
@@ -18,11 +35,11 @@ public class Product {
     public Product() {
     }
 
-    public int getProductId() {
+    public Integer getProductId() {
         return productId;
     }
 
-    public void setProductId(int productId) {
+    public void setProductId(Integer productId) {
         this.productId = productId;
     }
 

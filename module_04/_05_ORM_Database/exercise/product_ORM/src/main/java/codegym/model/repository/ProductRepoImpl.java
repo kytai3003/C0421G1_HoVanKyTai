@@ -1,75 +1,115 @@
 package codegym.model.repository;
 
 import codegym.model.bean.Product;
+import org.hibernate.HibernateException;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
 import org.springframework.stereotype.Repository;
 
-import java.util.ArrayList;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.PersistenceException;
+import javax.persistence.TypedQuery;
 import java.util.List;
 
 @Repository
 public class ProductRepoImpl implements IProductRepo{
-    private static int autoIncreaseId = 0;
-    private static final List<Product> productList = new ArrayList<>();
+
+    @PersistenceContext
+    private static EntityManager entityManager;
 
     static {
-        productList.add(new Product(++autoIncreaseId, "Shoe", 500, "Best quality", "Adidas"));
-        productList.add(new Product(++autoIncreaseId, "T-shirt", 800, "Standard", "Dolce"));
-        productList.add(new Product(++autoIncreaseId, "NVX", 20000, "Best racing boy", "Yamaha"));
-        productList.add(new Product(++autoIncreaseId, "Cub", 1500, "Second hand", "Honda"));
-        productList.add(new Product(++autoIncreaseId, "Iphone 13", 5000, "Newest model", "Apple"));
+        try {
+            SessionFactory sessionFactory = new Configuration()
+                    .configure("hibernate.conf.xml")
+                    .buildSessionFactory();
+            entityManager = sessionFactory.createEntityManager();
+        } catch (HibernateException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
     public List<Product> findAll() {
-        return productList;
+        TypedQuery<Product> query = entityManager.createQuery("SELECT p FROM Product as p", Product.class);
+
+        return query.getResultList();
     }
 
     @Override
     public void save(Product product) {
-        productList.add(product);
+//        Session session = null;
+//        Transaction transaction = null;
+//        try {
+//            session = sessionFactory.openSession();
+//            transaction = session.beginTransaction();
+//            session.createNativeQuery("Insert into Product values (:p1, :p2, :p3, :p4, :p5)")
+//                    .setParameter("p1", product.getProductId())
+//                    .setParameter("p2", product.getProductName())
+//                    .setParameter("p3", product.getProductPrice())
+//                    .setParameter("p4", product.getDescription())
+//                    .setParameter("p5", product.getProductBrand());
+//
+//            transaction.commit();
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//            if (transaction != null) {
+//                transaction.rollback();
+//            }
+//        } finally {
+//            if (session != null) {
+//                session.close();
+//            }
+//        }
+
+        try {
+            entityManager.getTransaction().begin();
+
+            if (product.getProductId() != null) {
+                entityManager.merge(product);
+            } else {
+                entityManager.persist(product);
+            }
+
+            entityManager.getTransaction().commit();
+
+        } catch (PersistenceException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
     public Product findById(int id) {
-        for (Product p: productList) {
-            if (id == p.getProductId())
-                return p;
-        }
-        return null;
+        String queryStr = "SELECT p FROM Product AS p WHERE p.productId = :id";
+        TypedQuery<Product> query = entityManager.createQuery(queryStr, Product.class);
+        query.setParameter("id", id);
+        return query.getSingleResult();
     }
 
     @Override
     public void update(Product product) {
-        for (Product p: productList) {
-            if (product.getProductId() == p.getProductId()) {
-                p.setProductName(product.getProductName());
-                p.setProductPrice(product.getProductPrice());
-                p.setDescription(product.getDescription());
-                p.setProductBrand(product.getProductBrand());
-                break;
-            }
-        }
+        entityManager.merge(product);
     }
 
     @Override
     public void remove(int id) {
-        for (Product p: productList) {
-            if (id == p.getProductId()) {
-                productList.remove(p);
-                break;
-            }
+
+        try {
+            entityManager.getTransaction().begin();
+
+            entityManager.remove(entityManager.merge(findById(id)));
+
+            entityManager.getTransaction().commit();
+        } catch (PersistenceException e) {
+            e.printStackTrace();
         }
     }
 
     @Override
     public List<Product> searchByName(String name) {
-        List<Product> products = new ArrayList<>();
-
-        for (Product p: productList) {
-            if (name.equals(p.getProductName())) {
-                products.add(p);
-            }
-        }
-        return products;
+        String queryStr = "SELECT p FROM Product AS p WHERE p.productName like :name";
+        TypedQuery<Product> query = entityManager.createQuery(queryStr, Product.class);
+        query.setParameter("name", "%" + name + "%");
+        return query.getResultList();
     }
 }

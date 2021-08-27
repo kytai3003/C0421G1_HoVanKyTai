@@ -33,7 +33,7 @@ public class ProductController {
 
     @RequestMapping(value = "/save", method = RequestMethod.POST)
     public String createProduct(Product product, RedirectAttributes attributes) {
-        product.setProductId(productService.findById(productService.findAll().size()).getProductId() + 1);
+//        product.setProductId(productService.findById(productService.findAll().size()).getProductId() + 1);
         productService.save(product);
         attributes.addFlashAttribute("success", "Product <" + product.getProductName() + "> have been created.");
         return "redirect:/product/list";
@@ -60,8 +60,8 @@ public class ProductController {
 
     @PostMapping("/delete")
     public String delete(Product product, RedirectAttributes redirect) {
+        redirect.addFlashAttribute("success", "Product Id <" + product.getProductId() +  "> have been deleted.");
         productService.remove(product.getProductId());
-        redirect.addFlashAttribute("success", "Product <" + product.getProductName() +  "> have been deleted.");
         return "redirect:/product/list";
     }
 

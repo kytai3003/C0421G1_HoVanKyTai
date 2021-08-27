@@ -18,7 +18,7 @@ import java.util.List;
 public class PersonalInfoController {
 
     @Autowired
-    InfoService infoService;
+    private InfoService infoService;
 
     PersonalInformation personalInformation = new PersonalInformation();
 

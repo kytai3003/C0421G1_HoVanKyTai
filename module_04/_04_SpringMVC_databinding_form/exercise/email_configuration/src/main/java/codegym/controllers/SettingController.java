@@ -19,7 +19,7 @@ public class SettingController {
 
 
     @Autowired
-    ISettingService settingService;
+    private ISettingService settingService;
 
     Setting setting = new Setting("English", 50, true, "OK");
 

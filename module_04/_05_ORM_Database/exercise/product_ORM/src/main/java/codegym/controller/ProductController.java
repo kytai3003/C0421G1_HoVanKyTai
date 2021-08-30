@@ -1,7 +1,6 @@
 package codegym.controller;
 
 import codegym.model.bean.Product;
-import codegym.model.repository.IProductRepo;
 import codegym.model.service.IProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

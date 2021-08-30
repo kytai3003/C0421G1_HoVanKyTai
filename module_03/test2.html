@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            margin: 0;
+            background: #EEE;
+            user-select: none;
+            font-family: sans-serif;
+        }
+
+
+        #slider {
+            position: relative;
+            width: 50%;
+            height: 30vw;
+            margin: 80px auto;
+            font-family: 'Helvetica Neue', sans-serif;
+            perspective: 1400px;
+            transform-style: preserve-3d;
+        }
+
+        input[type=radio] {
+            position: relative;
+            top: 108%;
+            left: 50%;
+            width: 18px;
+            height: 18px;
+            margin: 0 15px 0 0;
+            opacity: 0.4;
+            transform: translateX(-83px);
+            cursor: pointer;
+        }
+
+
+        input[type=radio]:nth-child(5) {
+            margin-right: 0px;
+        }
+
+        input[type=radio]:checked {
+            opacity: 1;
+        }
+
+
+
+
+        #slider label {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            color: white;
+            font-size: 70px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 400ms ease;
+        }
+
+        #slide1 {
+            background: tomato;
+        }
+
+        #slide2 {
+            background: yellowgreen;
+        }
+
+        #slide3 {
+            background: dodgerblue;
+        }
+
+        #slide4 {
+            background: slateblue;
+        }
+
+        #slide5 {
+            background: violet;
+        }
+
+
+        /* Slider Functionality */
+
+        /* Active Slide */
+        #s1:checked ~ #slide1, #s2:checked ~ #slide2, #s3:checked ~ #slide3, #s4:checked ~ #slide4, #s5:checked ~ #slide5 {
+            box-shadow: 0 13px 26px rgba(0,0,0, 0.3), 0 12px 6px rgba(0,0,0, 0.2);
+            transform: translate3d(0%, 0, 0px);
+        }
+
+        /* Next Slide */
+        #s1:checked ~ #slide2, #s2:checked ~ #slide3, #s3:checked ~ #slide4, #s4:checked ~ #slide5, #s5:checked ~ #slide1 {
+            box-shadow: 0 6px 10px rgba(0,0,0, 0.3), 0 2px 2px rgba(0,0,0, 0.2);
+            transform: translate3d(15%, 0, -100px);
+        }
+
+
+        /* Next to Next Slide */
+        #s1:checked ~ #slide3, #s2:checked ~ #slide4, #s3:checked ~ #slide5, #s4:checked ~ #slide1, #s5:checked ~ #slide2 {
+            box-shadow: 0 1px 4px rgba(0,0,0, 0.4);
+            transform: translate3d(30%, 0, -250px);
+        }
+
+        /* Previous to Previous Slide */
+        #s1:checked ~ #slide4, #s2:checked ~ #slide5, #s3:checked ~ #slide1, #s4:checked ~ #slide2, #s5:checked ~ #slide3 {
+            box-shadow: 0 1px 4px rgba(0,0,0, 0.4);
+            transform: translate3d(-30%, 0, -250px);
+        }
+
+        /* Previous Slide */
+        #s1:checked ~ #slide5, #s2:checked ~ #slide1, #s3:checked ~ #slide2, #s4:checked ~ #slide3, #s5:checked ~ #slide4 {
+            box-shadow: 0 6px 10px rgba(0,0,0, 0.3), 0 2px 2px rgba(0,0,0, 0.2);
+            transform: translate3d(-15%, 0, -100px);
+        }
+
+
+
+
+
+        /* YouTube Link */
+        .youtube-link {
+            position: absolute;
+            bottom: 50px;
+            width: 150px;
+            left: 50%;
+            margin-left: -75px;
+            padding: 5px;
+            font-weight: 700;
+            color: coral;
+            background: navy;
+            text-align: center;
+            border-radius: 0.2em;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+            </ul>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="row">
+                <div class="col-lg-12 my-lg-5">
+                    <div class="card">
+                        <img src="logo.png" class="card-img-top" alt="..." style="clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%)">
+
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="row">
+                <div class="col-lg-12">
+                    <section id="slider">
+                        <input type="radio" name="slider" id="s1" checked>
+                        <input type="radio" name="slider" id="s2">
+                        <input type="radio" name="slider" id="s3">
+                        <input type="radio" name="slider" id="s4">
+                        <input type="radio" name="slider" id="s5">
+
+                        <label for="s1" id="slide1"><a href="https://zingnews.vn" style="text-decoration: none">a</a></label>
+                        <label for="s2" id="slide2">2</label>
+                        <label for="s3" id="slide3">3</label>
+                        <label for="s4" id="slide4">4</label>
+                        <label for="s5" id="slide5">5</label>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 my-5">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="spinner-border m-5 text-primary" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

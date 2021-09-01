@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>List</title>
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<a href="/catelogy/create">Create new catelogy</a><br>
+<a href="/blog/list">Move to blog list</a>
+<th:block th:if="${message}">
+    <p th:text="${message}"></p>
+</th:block>
+<h1>Catelogy list</h1>
+<table border="1" style="margin: 0 auto">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    <th:block th:each="cate : ${catelogyList}">
+        <tr>
+            <td th:text="${cate.catelogyId}"></td>
+            <td th:text="${cate.catelogyName}"></td>
+            <td><a th:href="@{/catelogy/edit/__${cate.catelogyId}__ }">Edit</a></td>
+            <td><a th:href="@{/catelogy/delete/__${cate.catelogyId}__ }">Delete</a></td>
+        </tr>
+    </th:block>
+</table>
+</body>
+</html>

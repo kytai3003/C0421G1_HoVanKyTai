@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Read</title>
+</head>
+<body>
+<p>
+    <a href="/blog/list">Back to blog list</a>
+</p>
+<h2>Title: <span th:text="${blog.blogTitle}"></span> </h2>
+<h5>Author: <span th:text="${blog.blogAuthor}"></span> </h5>
+<textarea style="border: none; height: 200px; width: 500%" readonly th:text="${blog.blogContent}"></textarea>
+</body>
+</html>

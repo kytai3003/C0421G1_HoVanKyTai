@@ -2,71 +2,187 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>List</title>
+    <title>Title</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
     <style>
-        body {
-            text-align: center;
+        #name:hover {
+            color: #523e02;
         }
+        input {
+            outline: none;
+        }
+        input[type=search] {
+            -webkit-appearance: textfield;
+            -webkit-box-sizing: content-box;
+            font-family: inherit;
+            font-size: 100%;
+        }
+        input::-webkit-search-decoration,
+        input::-webkit-search-cancel-button {
+            display: none;
+        }
+
+        input[type=search] {
+            background: #ededed url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
+            border: solid 1px #ccc;
+            padding: 9px 10px 9px 32px;
+            width: 55px;
+
+            -webkit-border-radius: 10em;
+            -moz-border-radius: 10em;
+            border-radius: 10em;
+
+            -webkit-transition: all .5s;
+            -moz-transition: all .5s;
+            transition: all .5s;
+        }
+        input[type=search]:focus {
+            width: 130px;
+            background-color: #fff;
+            border-color: #66CC75;
+
+            -webkit-box-shadow: 0 0 5px rgba(109,207,246,.5);
+            -moz-box-shadow: 0 0 5px rgba(109,207,246,.5);
+            box-shadow: 0 0 5px rgba(109,207,246,.5);
+        }
+
+
+        input:-moz-placeholder {
+            color: #999;
+        }
+        input::-webkit-input-placeholder {
+            color: #999;
+        }
+
+
+
     </style>
 </head>
 <body>
-<a href="/blog/create">Create new blog</a><br>
-<a href="/catelogy/list">Move to catelogy list</a>
-<th:block th:if="${message}">
-    <p th:text="${message}"></p>
-</th:block>
-<h1>Blog list</h1>
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgba(217,215,210,0.94)">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img width="200px" height="60px" src="logo.png"></a>
+        <span style="float: right; font-size: 25px"><a href="#" id="name" style="text-decoration: none"> Hồ Văn Kỳ Tài - C0421G1 </a></span>
+    </div>
+</nav>
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="margin: 5px">
+    <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item mx-3">
+                    <a class="nav-link" href="#" style="font-size: 30px; margin-left: 80px">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="font-size: 30px; margin-left: 30px">Employee</a>
+                </li>
+                <li class="nav-item" >
+                    <a class="nav-link" href="#" style="font-size: 30px; margin-left: 30px">Customer</a>
+                </li>
+                <li class="nav-item" >
+                    <a class="nav-link" href="#" style="font-size: 30px; margin-left: 30px">Service</a>
+                </li>
+                <li class="nav-item" >
+                    <a class="nav-link" href="#" style="font-size: 30px; margin-left: 30px">Contract</a>
+                </li>
+            </ul>
+            <form class="d-flex">
+                <input class="form-control me-sm-auto rounded-pill mx-auto" id="demo-2" type="search" placeholder="Search" aria-label="Search" style="width: 300px">
+            </form>
+        </div>
+    </div>
+</nav>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-2" style=" background-color: rgba(121,120,118,0.25)">
+            <div class="row">
+                <div class="col-lg-12 my-lg-1 mx-3">
+                    <a href="#" style="text-decoration: none; font-size: 25px">Item one</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 my-lg-1 mx-3">
+                    <a href="#" style="text-decoration: none; font-size: 25px">Item two</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 my-lg-1 mx-3">
+                    <a href="#" style="text-decoration: none; font-size: 25px">Item three</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-10">
+            <div class="row">
+                <div class="col-lg-12">
+                    <a href="/blog/create">Create new blog</a><br>
+                    <a href="/catelogy/list">Move to catelogy list</a>
+                    <th:block th:if="${message}">
+                        <p th:text="${message}"></p>
+                    </th:block>
+                    <h1>Blog list</h1>
 
-<!--Show by catelogy-->
-<h3>Show by catelogy</h3>
-<form th:action="@{/blog/list-by-catelogy}">
-    <label>
-        <select th:name="catelogyId">
-            <option selected th:value="0">Choose catelogy</option>
-            <option th:each="item:${catelogyList}" th:text="${item.catelogyName}" th:value="${item.catelogyId}"></option>
-        </select>
-    </label>
-    <input type="submit" value="Show">
-</form>
+                    <!--Show by catelogy-->
+                    <h3>Show by catelogy</h3>
+                    <form th:action="@{/blog/list-by-catelogy}">
+                        <label>
+                            <select th:name="catelogyId">
+                                <option selected th:value="0">Choose catelogy</option>
+                                <option th:each="item:${catelogyList}" th:text="${item.catelogyName}" th:value="${item.catelogyId}"></option>
+                            </select>
+                        </label>
+                        <input type="submit" value="Show">
+                    </form>
 
-<form th:action="@{/blog/search}" method="post">
-    <input type="text" th:name="title" placeholder="Search title">
-    <input type="submit" value="Search">
-</form>
-<table border="1" style="margin: 0 auto">
-    <tr>
-        <th>Id</th>
-        <th>Title</th>
-        <th>Author</th>
-        <th>Created</th>
-        <th>Catelogy</th>
-        <th>Read</th>
-        <th>Edit</th>
-        <th>Delete</th>
-    </tr>
-    <th:block th:each="blog : ${blogList}">
-        <tr>
-            <td th:text="${blog.blogId}"></td>
-            <td th:text="${blog.blogTitle}"></td>
-            <td th:text="${blog.blogAuthor}"></td>
-            <td th:text="${blog.createdDate}"></td>
-            <td th:text="${blog.catelogy.catelogyName}"></td>
-<!--            <td th:switch="${blog.catelogy.catelogyId}">-->
-<!--                <span th:case="1" th:text="Fiction"></span>-->
-<!--                <span th:case="2" th:text="Science"></span>-->
-<!--                <span th:case="3" th:text="Lifestyle"></span>-->
-<!--                <span th:case="4" th:text="Fashion"></span>-->
-<!--            </td>-->
-            <td><a th:href="@{/blog/read/__${blog.blogId}__ }">Read</a></td>
-            <td><a th:href="@{/blog/edit/__${blog.blogId}__ }">Edit</a></td>
-            <td><a th:href="@{/blog/delete/__${blog.blogId}__ }">Delete</a></td>
-        </tr>
-    </th:block>
-</table>
-<div>
-    <a th:href="@{'/blog/list'(page=${blogList.number - 1})}" th:if="${blogList.hasPrevious()}">Previous</a>
-    <span th:text="${blogList.number + 1}"></span>/<span th:text="${blogList.totalPages}"></span>
-    <a th:href="@{'/blog/list'(page=${blogList.number + 1})}" th:if="${blogList.hasNext()}">Next</a>
+                    <form th:action="@{/blog/search}" method="post">
+                        <input type="text" th:name="title" placeholder="Search title">
+                        <input type="submit" value="Search">
+                    </form>
+                    <table border="1" style="margin: 0 auto">
+                        <tr>
+                            <th>Id</th>
+                            <th>Title</th>
+                            <th>Author</th>
+                            <th>Created</th>
+                            <th>Catelogy</th>
+                            <th>Read</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </tr>
+                        <th:block th:each="blog : ${blogList}">
+                            <tr>
+                                <td th:text="${blog.blogId}"></td>
+                                <td th:text="${blog.blogTitle}"></td>
+                                <td th:text="${blog.blogAuthor}"></td>
+                                <td th:text="${blog.createdDate}"></td>
+                                <td th:text="${blog.catelogy.catelogyName}"></td>
+                                <!--            <td th:switch="${blog.catelogy.catelogyId}">-->
+                                <!--                <span th:case="1" th:text="Fiction"></span>-->
+                                <!--                <span th:case="2" th:text="Science"></span>-->
+                                <!--                <span th:case="3" th:text="Lifestyle"></span>-->
+                                <!--                <span th:case="4" th:text="Fashion"></span>-->
+                                <!--            </td>-->
+                                <td><a th:href="@{/blog/read/__${blog.blogId}__ }">Read</a></td>
+                                <td><a th:href="@{/blog/edit/__${blog.blogId}__ }">Edit</a></td>
+                                <td><a th:href="@{/blog/delete/__${blog.blogId}__ }">Delete</a></td>
+                            </tr>
+                        </th:block>
+                    </table>
+                    <div>
+                        <a th:href="@{'/blog/list'(page=${blogList.number - 1})}" th:if="${blogList.hasPrevious()}">Previous</a>
+                        <span th:text="${blogList.number + 1}"></span>/<span th:text="${blogList.totalPages}"></span>
+                        <a th:href="@{'/blog/list'(page=${blogList.number + 1})}" th:if="${blogList.hasNext()}">Next</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row bg-info text-center">
+        <div class="col-lg-12">
+            <p style=" display: flex; flex-direction: column; justify-content: center; text-align: center;
+               width: 100%">Footer</p>
+        </div>
+    </div>
 </div>
 </body>
 </html>

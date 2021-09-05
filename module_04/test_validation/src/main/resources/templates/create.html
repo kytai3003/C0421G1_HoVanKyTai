@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>New student</title>
+
+</head>
+<body>
+<h1>Create new student</h1>
+<p>
+    <a href="/list">Student list</a>
+</p>
+<th:block th:if="${message}">
+    <p th:text="${message}"></p>
+</th:block>
+<form th:action="@{/create-new}" th:object="${studentDto}" method="post">
+    <table border="1">
+        <tr>
+            <td>Name:</td>
+            <td><input type="text" th:field="*{studentName}"/></td>
+            <td th:if="${#fields.hasErrors('studentName')}" th:errors="*{studentName}">a</td>
+        </tr>
+        <tr>
+            <td>Day of birth:</td>
+            <td><input type="text" th:field="*{studentDob}"></td>
+            <td th:if="${#fields.hasErrors('studentDob')}" th:errors="*{studentDob}">b</td>
+        </tr>
+        <tr>
+            <td>Teacher:</td>
+            <td>
+                <select th:field="*{teacher}">
+                    <option th:each="item:${teacherList}" th:text="${item.teacherName}" th:value="${item.teacherId}"></option>
+                </select>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Bus:</td>
+            <td>
+                <input type="checkbox" th:each="item:${busList}" th:text="${item.busDriver}" th:field="*{buses}" th:value="${item.busId}">
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Account:</td>
+            <td>
+                <input type="text" th:field="*{account.accountName}">
+            </td>
+            <td th:if="${#fields.hasErrors('account.accountName')}" th:errors="*{account.accountName}"></td>
+        </tr>
+        <tr>
+            <td colspan="3" style="text-align: center"><input type="submit" value="Create"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

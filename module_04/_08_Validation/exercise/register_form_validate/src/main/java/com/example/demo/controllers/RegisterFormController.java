@@ -29,7 +29,7 @@ public class RegisterFormController {
 
     @PostMapping("/create")
     public String checkValidation(@Valid @ModelAttribute RegisterFormDTO registerFormDTO, BindingResult bindingResult, Model model) {
-//        new RegisterFormDTO().validate(registerFormDTO, bindingResult);
+        new RegisterFormDTO().validate(registerFormDTO, bindingResult);
         if (bindingResult.hasErrors()) {
 //            model.addAttribute("RegisterFormDTO", registerFormDTO);
             return "create";

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>List</title>
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<th:block th:if="${message}">
+    <h2 th:text="${message}" style="color: red"></h2>
+</th:block>
+<h1>Rent a book</h1>
+<form th:object="${book}" th:action="@{/rent}" method="post">
+    <h4> Book title: </h4>
+    <input type="text" th:field="*{title}" readonly style="border: none; color: blue; font-size: 25px; text-align: center"> <br><br>
+    <input th:type="hidden" name="id" th:field="*{id}">
+    <input th:type="hidden" name="amount" th:field="*{amount}">
+    Your code is: <input type="text" name="code" th:value="${code}" style="border: none; color: blue; font-size: 25px"><br>
+    <input type="submit" value="Rent">
+</form>
+</body>
+</html>

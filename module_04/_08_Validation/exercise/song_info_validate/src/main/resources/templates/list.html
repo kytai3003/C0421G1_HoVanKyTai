@@ -8,6 +8,7 @@
             text-align: center;
         }
     </style>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
 </head>
 <body>
 <a href="/create">Create new song</a><br>
@@ -15,7 +16,10 @@
     <p th:text="${message}"></p>
 </th:block>
 <h1>Song list</h1>
-<table border="1" style="margin: 0 auto">
+<div class="container-fluid bg-light">
+    <div class="row">
+        <div class="col-lg-12">
+<table border="1" style="margin: 0 auto" class="border-primary">
     <tr>
         <th>Id</th>
         <th>Name</th>
@@ -33,5 +37,8 @@
         </tr>
     </th:block>
 </table>
+        </div>
+    </div>
+</div>
 </body>
 </html>

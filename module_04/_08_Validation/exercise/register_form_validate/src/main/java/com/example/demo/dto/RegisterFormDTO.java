@@ -1,6 +1,9 @@
 package com.example.demo.dto;
 
 import com.example.demo.model.entity.RegisterForm;
+import com.example.demo.model.service.IRegisterFormService;
+import com.example.demo.model.service.RegisterFormServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
@@ -9,9 +12,14 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.*;
+import java.util.ArrayList;
+import java.util.List;
 
 
-public class RegisterFormDTO {
+public class RegisterFormDTO implements Validator{
+
+    @Autowired
+    private IRegisterFormService iRegisterFormService;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -97,4 +105,21 @@ public class RegisterFormDTO {
         this.email = email;
     }
 
+    @Override
+    public boolean supports(Class<?> clazz) {
+        return false;
+    }
+
+    @Override
+    public void validate(Object target, Errors errors) {
+        RegisterFormDTO registerFormDTO = (RegisterFormDTO) target;
+        List<RegisterForm> registerFormList = iRegisterFormService.findAll();
+
+        for (RegisterForm list: registerFormList) {
+            if (registerFormDTO.getEmail().equals(list.getEmail())) {
+                errors.rejectValue("email", "email.duplicate", "Duplicate email. Try another.");
+                break;
+            }
+        }
+    }
 }

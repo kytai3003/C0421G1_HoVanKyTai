@@ -14,17 +14,17 @@
     <table>
         <tr>
             <td>Song name:</td>
-            <td><input type="text" th:field="*{name}" th:value="${songInfoDtoEdit.name}"></td>
+            <td><input type="text" th:field="*{name}"></td>
             <td class="err" th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name Error</td>
         </tr>
         <tr>
             <td>Artist:</td>
-            <td><input type="text" th:field="*{artist}" th:value="${songInfoDtoEdit.artist}"></td>
+            <td><input type="text" th:field="*{artist}"></td>
             <td class="err" th:if="${#fields.hasErrors('artist')}" th:errors="*{artist}"></td>
         </tr>
         <tr>
             <td>Kind:</td>
-            <td><input type="text" th:field="*{kind}" th:value="${songInfoDtoEdit.kind}"></td>
+            <td><input type="text" th:field="*{kind}"></td>
             <td class="err" th:if="${#fields.hasErrors('kind')}" th:errors="*{kind}">Name Error</td>
         </tr>
         <tr>

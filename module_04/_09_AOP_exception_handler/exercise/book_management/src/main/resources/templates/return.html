@@ -1,0 +1,22 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Return</title>
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<h1>Book return</h1>
+<form th:object="${book}" th:action="@{/return}" method="post">
+    <h4> Book title: </h4>
+    <input type="text" th:field="*{title}" readonly style="border: none; color: blue; font-size: 25px; text-align: center"> <br><br>
+    <input th:type="hidden" name="id" th:field="*{id}">
+    <input th:type="hidden" name="id" th:field="*{amount}">
+    <input type="number" placeholder="Input code" name="code">
+    <input type="submit" value="return">
+</form>
+</body>
+</html>

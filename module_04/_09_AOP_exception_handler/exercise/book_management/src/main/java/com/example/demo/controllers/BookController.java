@@ -1,5 +1,7 @@
 package com.example.demo.controllers;
 
+import com.example.demo.exception.OutOfNumberException;
+import com.example.demo.exception.WrongCodeException;
 import com.example.demo.model.entity.Book;
 import com.example.demo.model.entity.RentCode;
 import com.example.demo.model.service.IBookService;
@@ -41,7 +43,7 @@ public class BookController {
     }
 
     @PostMapping("/rent")
-    public String bookRenting(@ModelAttribute("book") Book book, @RequestParam("code") int code, RedirectAttributes attributes) {
+    public String bookRenting(@ModelAttribute("book") Book book, @RequestParam("code") int code, RedirectAttributes attributes) throws OutOfNumberException {
         RentCode codeRent = new RentCode();
 
         if (book.getAmount() > 0) {
@@ -54,7 +56,7 @@ public class BookController {
             this.iCodeService.save(codeRent);
             attributes.addFlashAttribute("message", "Success. Your code is: " + codeRent.getRentCode());
         } else {
-            attributes.addFlashAttribute("message", "Fail. No book " + book.getTitle() + " remaining.");
+            throw new OutOfNumberException();
         }
         return "redirect:/list";
     }
@@ -66,7 +68,7 @@ public class BookController {
     }
 
     @PostMapping("/return")
-    public String bookReturning(@RequestParam("code") int code, @ModelAttribute("book") Book book, RedirectAttributes attributes) {
+    public String bookReturning(@RequestParam("code") int code, @ModelAttribute("book") Book book, RedirectAttributes attributes) throws WrongCodeException {
         boolean isTrueCode = false;
         RentCode rentCode = null;
         List<RentCode> setCode = this.iCodeService.findAll();
@@ -88,7 +90,17 @@ public class BookController {
             return "redirect:/list";
         } else {
 //            attributes.addFlashAttribute("message", "Wrong code");
-            return "wrong-code";
+            throw new WrongCodeException();
         }
+    }
+
+    @ExceptionHandler(WrongCodeException.class)
+    public ModelAndView wrongCodeScreen() {
+        return new ModelAndView("wrong-code");
+    }
+
+    @ExceptionHandler(OutOfNumberException.class)
+    public ModelAndView outOfNumbScreen() {
+        return new ModelAndView("out-of-number");
     }
 }

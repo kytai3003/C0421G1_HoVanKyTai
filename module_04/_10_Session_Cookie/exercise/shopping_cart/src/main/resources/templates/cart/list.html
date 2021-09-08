@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Shop</title>
+    <style>
+        .wrap
+        {
+            margin: 0 auto;
+            width:1000px;
+            height:300px;
+            display: table;
+
+        }
+        .content {
+            display: table-cell;
+            vertical-align: middle;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+<body>
+<div>
+<div th:if="${cart.productMap.isEmpty()}" style="color: red; text-align: center; font-style: italic">
+    <h2>Your cart is empty.</h2>
+    <a th:href="@{/shop}" style="text-decoration: none; font-size: 35px">Shop now!</a>
+</div>
+<div th:unless="${cart.productMap.isEmpty()}">
+    <th:block th:if="${message}">
+        <h5 th:text="${message}" style="color: blue; text-align: center; font-style: italic"></h5>
+    </th:block>
+    <p style="font-weight: bold; font-size: 35px; text-align: center">Your cart contains <span th:text="${cart.productMap.size()}"></span> item(s), <span th:text="'total amount is: ' + ${cart.countTotalPayment()}"></span> </p>
+    <p style="font-size: 35px; text-align: center"><a th:href="@{/shop}">Shop more!</a></p>
+    <table class="wrap table" style="text-align: center">
+    <thead>
+    <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Image</th>
+        <th scope="col">Description</th>
+        <th scope="col">Price</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Amount</th>
+        <th scope="col">You don't like it?</th>
+    </tr>
+    </thead>
+    <tbody>
+    <th:block th:each="product:${cart.productMap}">
+        <tr>
+            <td class="content" th:text="${product.key.name}"></td>
+            <td>
+                <img th:src="${product.key.image}"  style="width: 250px; height: 250px; margin: 15px">
+            </td>
+            <td class="content" th:text="${product.key.description}"></td>
+            <td class="content" th:text="${product.key.price}"></td>
+            <td class="content">
+                <a th:href="@{/shop/add/__${product.getKey().id}__(action='reduce')}" th:text="${'-'}" style="text-decoration: none; font-weight: bold"></a>
+                <span th:text="${product.value}"></span>
+                <a th:href="@{/shop/add/__${product.getKey().id}__(action='increase')}" th:text="${'+'}" style="text-decoration: none; font-weight: bold"></a>
+            </td>
+            <td class="content" th:text="${product.key.price * product.value}"></td>
+            <td style="font-weight: bold" class="content">
+                <a th:href="@{/shop/remove/__${product.key.id}__}" style="text-decoration: none">Remove this product</a>
+            </td>
+        </tr>
+    </th:block>
+    </tbody>
+</table>
+</div>
+</div>
+</body>
+<script src="/jquery/jquery-3.5.1.min.js"></script>
+</html>

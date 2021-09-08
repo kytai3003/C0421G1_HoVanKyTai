@@ -35,7 +35,7 @@ public class LogAspect {
         System.err.println("Finishing method at: " + LocalDate.now() + " Return: " + value);
         return value;
     }
-
+    
     @Before("allMethodPointcut()")
     public void countTheVisitor() {
         System.err.println("+1 visitor. Total: " + ++count);

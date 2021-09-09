@@ -2,12 +2,28 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Student list</title>
-    <style>
-        body {
-            text-align: center;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="description" content="Mobile Application HTML5 Template">
+
+    <meta name="copyright" content="MACode ID, https://www.macodeid.com/">
+
+    <title>Mobster - One page app template</title>
+
+    <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="assets/css/maicons.css">
+
+    <link rel="stylesheet" href="assets/vendor/animate/animate.css">
+
+    <link rel="stylesheet" href="assets/vendor/owl-carousel/css/owl.carousel.min.css">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+
+    <link rel="stylesheet" href="assets/css/mobster.css">
+
 </head>
 <body>
 <a href="/create">Create new student</a><br>
@@ -15,7 +31,7 @@
     <p th:text="${message}"></p>
 </th:block>
 <h1>Student list</h1>
-<table border="1" style="margin: 0 auto">
+<table border="1" style="margin: 0 auto" class="wow fadeInUp">
     <tr>
         <th>Id</th>
         <th>Name</th>

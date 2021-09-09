@@ -37,7 +37,7 @@
         <tr>
             <td th:text="${product.name}" class="content"></td>
             <td class="content">
-                <img th:src="${product.image}">
+                <img th:src="'/' + ${product.image}">
             </td>
             <td th:text="${product.description}" class="content"></td>
             <td th:text="${product.price}" class="content"></td>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Blog List</title>
+    <meta http-equiv="Content-Type" content="width=device-width; charset=UTF-8; shrink-to-fit=no; initial-scale=1" name="viewport">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<h1>Blog List</h1>
+<div class="input-group input-group-lg" style="width: 30%; margin: 0 auto">
+    <input type="text" class="form-control" placeholder="Search by categogy" id="searchInput">
+</div>
+<br>
+<table class="table">
+    <thead class="table-light">
+    <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Content</th>
+        <th>Author</th>
+        <th>Created date</th>
+        <th>Categogy</th>
+    </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+<button type="button" class="btn-success">Load more</button>
+<!--<script src="jquery/jquery-3.5.1.min.js"></script>-->
+<script src="jquery/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+
+        // Hien thi co gioi han
+        $.ajax({
+            url: "http://localhost:8080/blog/api",
+            type : "GET",
+            dataType: "json",
+            success: function (data) {
+                let tr = [];
+                for (let i = 0; i < 5; i++) {
+                    tr.push('<tr>');
+                    tr.push('<td>' + data[i].blogId + '</td>');
+                    tr.push('<td>' + data[i].blogTitle + '</td>');
+                    tr.push('<td>' + data[i].blogContent + '</td>');
+                    tr.push('<td>' + data[i].blogAuthor + '</td>');
+                    tr.push('<td>' + data[i].createdDate + '</td>');
+                    tr.push('<td>' + data[i].categogy.categogyName + '</td>');
+                    tr.push('</tr>');
+                }
+                $('.table').append($(tr.join('')));
+            }
+        })
+
+        // Hien thi them
+        $(".btn-success").click(function () {
+            $.ajax({
+                url: "http://localhost:8080/blog/api",
+                type : "GET",
+                dataType: "json",
+                success: function (data) {
+                    let tr = [];
+                    for (let i = 5; i < data.length; i++) {
+                        tr.push('<tr>');
+                        tr.push('<td>' + data[i].blogId + '</td>');
+                        tr.push('<td>' + data[i].blogTitle + '</td>');
+                        tr.push('<td>' + data[i].blogContent + '</td>');
+                        tr.push('<td>' + data[i].blogAuthor + '</td>');
+                        tr.push('<td>' + data[i].createdDate + '</td>');
+                        tr.push('<td>' + data[i].categogy.categogyName + '</td>');
+                        tr.push('</tr>');
+                    }
+                    $('.table').append($(tr.join('')));
+                    $('.btn-success').hide();
+                }
+            })
+        })
+
+        // Tim kiem theo title
+        $("#searchInput").keyup(function () {
+            let value = $(this).val();
+            $(".table").empty();
+
+            $.ajax({
+                url: "http://localhost:8080/blog/api/search?searchInput=" + value,
+                type: "GET",
+                dataType: "json",
+                success: function (data) {
+                    let tr = [];
+                    for (let i = 0; i < data.length; i++) {
+                        tr.push('<tr>');
+                        tr.push('<td>' + data[i].blogId + '</td>');
+                        tr.push('<td>' + data[i].blogTitle + '</td>');
+                        tr.push('<td>' + data[i].blogContent + '</td>');
+                        tr.push('<td>' + data[i].blogAuthor + '</td>');
+                        tr.push('<td>' + data[i].createdDate + '</td>');
+                        tr.push('<td>' + data[i].categogy.categogyName + '</td>');
+                        tr.push('</tr>');
+                    }
+                    $('.table').append($(tr.join('')));
+                }
+            })
+        })
+    })
+</script>
+</body>
+</html>

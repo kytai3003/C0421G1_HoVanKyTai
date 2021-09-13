@@ -88,11 +88,13 @@
                     document.getElementById('smartphoneList').innerHTML = content;
                 }
             });
+            event.preventDefault();
         }
 
         function getSmartphone(smartphone) {
             return `<tr><td >${smartphone.producer}</td><td >${smartphone.model}</td><td >${smartphone.price}</td>` +
-                `<td><a class="deleteSmartphone" href="${smartphone.id}">Delete</a></td></tr>`;
+                `<td><a class="deleteSmartphone" href="${smartphone.id}">Delete</a></td>
+                <td><a class="deleteSmartphone" href="${smartphone.id}">Edit</a></td></tr>`;
         }
 
         $(document).ready(function () {
@@ -156,13 +158,12 @@
             <td><a class="deleteSmartphone" th:href="${smartphone.getId()}">Delete</a></td>
             <td>
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                        th:id="${smartphone.id}" th:attr="onclick=|onDelete('${smartphone.id}', '${smartphone.producer}', '${smartphone.model}', '${smartphone.price}')|"> Edit
+                        th:id="${smartphone.id}" th:attr="onclick=|onUpdate('${smartphone.id}', '${smartphone.producer}', '${smartphone.model}', '${smartphone.price}')|"> Edit
                 </button>
             </td>
         </tr>
     </th:block>
 </table>
-
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -173,7 +174,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <input type="hidden" name="id" value="" id="idSmartphone" readonly>
+                <input type="hidden" name="id" value="" id="idSmartphone">
                 <div class="form-group">
                     <input type="text" class="form-control" id="smartphoneProducer">
                 </div><br>
@@ -192,7 +193,7 @@
     </div>
 </div>
 <script>
-    function onDelete(id, producer, model, price) {
+    function onUpdate(id, producer, model, price) {
         document.getElementById("idSmartphone").value = id;
         document.getElementById("smartphoneModel").value = model;
         document.getElementById("smartphoneProducer").value = producer;

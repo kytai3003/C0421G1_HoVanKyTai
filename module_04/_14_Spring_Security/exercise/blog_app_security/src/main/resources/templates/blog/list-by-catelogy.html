@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>List</title>
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div sec:authorize="hasAuthority('admin')">
+    <a href="/blog/create">Create new blog</a>
+</div><br>
+<a href="/catelogy/list">Move to catelogy list</a><br>
+<a href="/blog/list">Blog list</a>
+<th:block th:if="${message}">
+    <p th:text="${message}"></p>
+</th:block>
+<h1>Blog list</h1>
+
+<table border="1" style="margin: 0 auto">
+    <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Created</th>
+        <th>Catelogy</th>
+        <th>Read</th>
+    </tr>
+    <th:block th:each="blog : ${blogList}">
+        <tr>
+            <td th:text="${blog.blogId}"></td>
+            <td th:text="${blog.blogTitle}"></td>
+            <td th:text="${blog.blogAuthor}"></td>
+            <td th:text="${blog.createdDate}"></td>
+            <td th:text="${blog.catelogy.catelogyName}"></td>
+            <td><a th:href="@{/blog/read/__${blog.blogId}__ }">Read</a></td>
+        </tr>
+    </th:block>
+</table>
+</body>
+</html>

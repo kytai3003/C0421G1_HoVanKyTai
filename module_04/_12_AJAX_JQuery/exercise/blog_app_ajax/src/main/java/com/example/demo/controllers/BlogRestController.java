@@ -20,13 +20,21 @@ public class BlogRestController {
     @Autowired
     private IBlogService iBlogService;
 
+//    @GetMapping
+//    public ResponseEntity<List<Blog>> getBlogList() {
+//        List<Blog> blogList = this.iBlogService.findAll();
+//        if (blogList.isEmpty()) {
+//            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+//        }
+//        return new ResponseEntity<>(blogList, HttpStatus.OK);
+//    }
+
     @GetMapping
-    public ResponseEntity<List<Blog>> getBlogList() {
+    public ModelAndView getBlogList2() {
         List<Blog> blogList = this.iBlogService.findAll();
-        if (blogList.isEmpty()) {
-            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-        }
-        return new ResponseEntity<>(blogList, HttpStatus.OK);
+        ModelAndView modelAndView = new ModelAndView("blog/list");
+        modelAndView.addObject("blogList", blogList);
+        return modelAndView;
     }
 
     @GetMapping("/search")

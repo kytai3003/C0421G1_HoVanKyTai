@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/tooplate-main.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <title>Title</title>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Exo:100);
+        html, body {
+            color: black;
+            font: 700 19px/1.9 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
+            text-align: center;
+            background-image: url("https://ben.com.vn/tin-tuc/wp-content/uploads/2020/09/hinh-nen-powerpoint-mau-trang-1.jpg");
+        }
+        h1 {
+            font-weight: bold;
+        }
+
+        th {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        td {
+            font-size: 15px;
+        }
+
+        input {
+            font-weight: bold;
+        }
+        .err {
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+<div>
+    <button type="button" class="btn btn-secondary rounded-pill" style="float: left; margin-top: 10px; margin-left: 10px; width: 250px  ">
+        <a href="/customer/list" style="text-decoration: none; color: white"><< Back to customer list</a>
+    </button>
+</div><br><br>
+<th:block th:if="${message}">
+    <p th:text="${message}" style="color: #0056b3"></p>
+</th:block>
+<div class="container">
+<form th:action="@{/customer/save}" th:object="${customerDto}" method="post">
+    <h1>CREATE NEW CUSTOMER</h1>
+    <table class="table table-bordered" style="margin: 0 auto">
+        <thead>
+            <tr>
+                <td>
+                <label class="form-label">CODE</label>
+                </td>
+                <td>
+                <input type="text" class="form-control" th:field="*{customerCode}" placeholder="KH-XXXX">
+                 </td>
+                <td th:if="${#fields.hasErrors('customerCode')}" th:errors="*{customerCode}" class="err"></td>
+            </tr>
+            <tr>
+                <td>
+                    <label class="form-label">NAME</label>
+                </td>
+                <td>
+                    <input type="text" class="form-control" th:field="*{customerName}">
+                </td>
+                <td th:if="${#fields.hasErrors('customerName')}" th:errors="*{customerName}" class="err"></td>
+            </tr>
+            <tr>
+                <td>
+                    <label class="form-label">DAY OF BIRTH</label>
+                </td>
+                <td>
+                    <input type="text" class="form-control" th:field="*{customerDayOfBirth}" placeholder="DD-MM-YYYY">
+                </td>
+                <td th:if="${#fields.hasErrors('customerDayOfBirth')}" th:errors="*{customerDayOfBirth}" class="err"></td>
+            </tr>
+            <tr>
+                <td>
+                    <label class="form-label">GENDER</label>
+                </td>
+                <td>
+                    <span style="margin-right: 100px; padding-right: 60px"><input type="radio"  th:field="*{customerGender}" value="0"> Female</span>
+                    <span style="margin-right: 100px; padding-right: 60px"><input type="radio"  th:field="*{customerGender}" value="1"> Male</span>
+                    <span><input type="radio"  th:field="*{customerGender}" value="2"/> Other</span>
+                </td>
+                <td th:if="${#fields.hasErrors('customerGender')}" th:errors="*{customerGender}" class="err"></td>
+            </tr>
+            <tr>
+                <td>
+                    <label class="form-label">ID CARD NUMBER</label>
+                </td>
+                <td>
+                    <input type="number" class="form-control" th:field="*{customerIdCard}" placeholder="9 or 12 number chain">
+                </td>
+                <td th:if="${#fields.hasErrors('customerIdCard')}" th:errors="*{customerIdCard}" class="err"></td>
+            </tr>
+            <tr>
+                <td>
+                    <label class="form-label">PHONE NUMBER</label>
+                </td>
+                <td>
+                    <input type="number" class="form-control" th:field="*{customerPhone}"
+                    placeholder="090XXXXXXX / 091XXXXXXX / (84)+90XXXXXXX / (84)+91XXXXXXX">
+                </td>
+                <td th:if="${#fields.hasErrors('customerPhone')}" th:errors="*{customerPhone}" class="err"></td>
+            </tr>
+            <tr>
+                <td>
+                    <label class="form-label">EMAIL</label>
+                </td>
+                <td>
+                    <input type="text" class="form-control" th:field="*{customerEmail}" placeholder="example@gmail.com">
+                </td>
+                <td th:if="${#fields.hasErrors('customerEmail')}" th:errors="*{customerEmail}" class="err"></td>
+            </tr>
+            <tr>
+                <td>
+                    <label class="form-label">ADDRESS</label>
+                </td>
+                <td>
+                    <input type="text" class="form-control" th:field="*{customerAddress}">
+                </td>
+                <td th:if="${#fields.hasErrors('customerAddress')}" th:errors="*{customerAddress}" class="err"></td>
+            </tr>
+            <tr>
+                <td>
+                    <label class="form-label">TYPE</label>
+                </td>
+                <td>
+                    <select th:field="*{customerType.customerTypeId}" style="width: 300px; height: 40px">
+                        <option th:each="type:${customerTypeList}" th:text="${type.customerTypeName}" th:value="${type.customerTypeId}"></option>
+                    </select>
+                </td>
+            </tr>
+        </thead>
+    </table><br>
+    <button type="submit" class="btn btn-primary" style="width: 150px">CREATE</button>
+</form>
+</div>
+</body>
+</html>

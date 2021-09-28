@@ -121,7 +121,9 @@
         <th>SERVICE TYPE</th>
         <th>RENT TYPE</th>
         <th>CONTRACT</th>
-        <th>ACTION</th>
+        <div sec:authorize="hasAnyRole('DIRECTOR', 'MANAGER')">
+            <th>ACTION</th>
+        </div>
     </tr>
     </thead>
     <tbody>
@@ -138,12 +140,14 @@
         <td th:text="${service.serviceType.serviceTypeName}"></td>
         <td th:text="${service.rentType.rentTypeName}"></td>
         <td th:text="${service.contract.size()}"></td>
+        <div sec:authorize="hasAnyRole('DIRECTOR', 'MANAGER')">
         <td>
             <button type="button" class="btn btn-outline-danger" style="font-weight: bold" data-bs-toggle="modal"
                     data-bs-target="#exampleModal" th:attr="onclick=|onDelete('${service.serviceId}', '${service.serviceCode}')|">
                 Delete
             </button>
         </td>
+        </div>
     </tr>
     </tbody>
 </table>

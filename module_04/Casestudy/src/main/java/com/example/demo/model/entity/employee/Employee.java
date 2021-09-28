@@ -20,22 +20,22 @@ public class Employee {
     private String employeeEmail;
     private String employeeAddress;
 
-    @ManyToOne(targetEntity = Position.class, cascade = CascadeType.ALL)
+    @ManyToOne(targetEntity = Position.class)
     @JoinColumn(name = "position_id", referencedColumnName = "positionId")
     private Position position;
 
-    @ManyToOne(targetEntity = EducationDegree.class, cascade = CascadeType.ALL)
+    @ManyToOne(targetEntity = EducationDegree.class)
     @JoinColumn(name = "education_degree_id", referencedColumnName = "educationDegreeId")
     private EducationDegree educationDegree;
 
-    @ManyToOne(targetEntity = Division.class, cascade = CascadeType.ALL)
+    @ManyToOne(targetEntity = Division.class)
     @JoinColumn(name = "division_id", referencedColumnName = "divisionId")
     private Division division;
 
     @OneToMany(mappedBy = "employee", cascade = CascadeType.ALL)
     private List<Contract> contracts;
 
-    @ManyToOne(targetEntity = User.class, cascade = CascadeType.ALL)
+    @ManyToOne(targetEntity = User.class)
     @JoinColumn(name = "username", referencedColumnName = "username")
     private User user;
 

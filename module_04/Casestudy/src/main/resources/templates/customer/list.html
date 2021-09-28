@@ -102,7 +102,7 @@
 </th:block>
 <h1>CUSTOMER MANAGEMENT</h1>
 <div class="container">
-    <form th:action="@{/customer/search}" method="post">
+    <form th:action="@{/customer/search}" method="get">
     <div class="searchInputWrapper">
         <input class="searchInput" type="text" placeholder='Search customer name' name="customerName" />
         <button class="btn btn-dark rounded-pill" type="submit" style="margin-left: 20px;
@@ -130,8 +130,10 @@
         <th>ADDRESS</th>
         <th>TYPE</th>
         <th>CONTRACT</th>
-        <th colspan="2">ACTION
-        </th>
+        <th>UPDATE</th>
+        <div sec:authorize="hasAnyRole('DIRECTOR', 'MANAGER')">
+        <th>DELETE</th>
+        </div>
     </tr>
     </thead>
     <tbody>
@@ -156,12 +158,14 @@
                 <a th:href="@{/customer/edit/__${customer.customerId}__}" style="text-decoration: none; color: blue">Update</a>
             </button>
         </td>
+        <div sec:authorize="hasAnyRole('DIRECTOR', 'MANAGER')">
         <td>
             <button type="button" class="btn btn-outline-danger" style="font-weight: bold" data-bs-toggle="modal"
                     data-bs-target="#exampleModal" th:attr="onclick=|onDelete('${customer.customerId}', '${customer.customerName}')|">
                 Delete
             </button>
         </td>
+        </div>
     </tr>
     </tbody>
 </table>

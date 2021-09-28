@@ -18,19 +18,19 @@ public class Contract {
     private double deposit;
     private double totalMoney;
 
-    @ManyToOne(targetEntity = Employee.class, cascade = CascadeType.ALL)
+    @ManyToOne(targetEntity = Employee.class)
     @JoinColumn(name = "employee_id", referencedColumnName = "employeeId")
     private Employee employee;
 
-    @ManyToOne(targetEntity = Customer.class, cascade = CascadeType.ALL)
+    @ManyToOne(targetEntity = Customer.class)
     @JoinColumn(name = "customer_id", referencedColumnName = "customerId")
     private Customer customer;
 
-    @ManyToOne(targetEntity = Service.class, cascade = CascadeType.ALL)
+    @ManyToOne(targetEntity = Service.class)
     @JoinColumn(name = "service_id", referencedColumnName = "serviceId")
     private Service service;
 
-    @OneToMany(mappedBy = "contract", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "contract")
     private List<ContractDetail> contractDetails;
 
     public Contract(String startDate, String endDate, double deposit, double totalMoney, Employee employee, Customer customer, Service service, List<ContractDetail> contractDetails) {
@@ -117,5 +117,10 @@ public class Contract {
 
     public void setContractDetails(List<ContractDetail> contractDetails) {
         this.contractDetails = contractDetails;
+    }
+
+    @Override
+    public String toString() {
+        return "" + contractDetails.toString();
     }
 }

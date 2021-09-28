@@ -34,12 +34,12 @@ public class CustomerDto{
     private String customerDayOfBirth;
     @NotNull(message = "Please choose one.")
     private Integer customerGender;
-    @Pattern(regexp = "^\\d{9}|\\d{12}$", message = "Invalid ID Card Format")
+    @Pattern(regexp = "^\\d{9}|\\d{12}$", message = "Invalid ID Card Format.")
     private String customerIdCard;
-    @Pattern(regexp = "^090\\d{7}|\\(84\\)\\+90\\d{7}|091\\d{7}|\\(84\\)\\+91\\d{7}$",message = "Invalid phone number format")
+    @Pattern(regexp = "^090\\d{7}|\\(84\\)\\+90\\d{7}|091\\d{7}|\\(84\\)\\+91\\d{7}$",message = "Invalid phone number format.")
     private String customerPhone;
     @NotBlank(message = "Please fill in.")
-    @Email(message = "Invalid email format")
+    @Email(message = "Invalid email format.")
     private String customerEmail;
     @NotBlank(message = "Please fill in.")
     private String customerAddress;

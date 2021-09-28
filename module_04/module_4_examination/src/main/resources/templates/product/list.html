@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/tooplate-main.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <title>Title</title>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Exo:100);
+        html, body {
+            color: black;
+            font: 700 18px/1.9 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
+            text-align: center;
+            background-image: url("https://scr.vn/wp-content/uploads/2020/07/Background-powerpoint-màu-sắc-đẹp-1536x1152.jpeg");
+        }
+        h1 {
+            font-weight: bold;
+        }
+
+        th {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        td {
+            font-size: 15px;
+        }
+
+        tr:hover {
+            background-color: lightgrey;
+        }
+
+        .container {
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .heading {
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .searchInputWrapper {
+            position: relative;
+        }
+
+        .searchInput {
+            width: 15rem;
+            height: 2rem;
+            padding: 0 1rem;
+            border-radius: 2rem;
+            border: none;
+            transition: transform 0.1s ease-in-out;
+        }
+
+        ::placeholder {
+            color: #a1a1a1;
+        }
+
+        /* hide the placeholder text on focus */
+        :focus::placeholder {
+            text-indent: -999px
+        }
+
+        .searchInput:focus {
+            outline: none;
+            transform: scale(1.1);
+            transition: all 0.1s ease-in-out;
+        }
+
+        .searchInputIcon {
+            position: absolute;
+            right: 0.8rem;
+            top: 0.5rem;
+            color: #a1a1a1;
+            transition: all 0.1s ease-in-out;
+        }
+
+        .container:focus-within > .searchInputWrapper > .searchInputIcon {
+            right: 0.2rem;
+        }
+    </style>
+</head>
+<body>
+
+<br><br>
+<th:block th:if="${message}">
+    <p th:text="${message}" style="color: #0056b3"></p>
+</th:block>
+<h1>PRODUCT MANAGEMENT</h1>
+<div class="container">
+    <form th:action="@{/product/list}" method="get">
+        <div class="searchInputWrapper">
+            <input class="searchInput" type="date" placeholder='Date from' name="dateFrom" />
+            <input class="searchInput" type="date" placeholder='Date to' name="dateTo"/>
+            <button class="btn btn-dark rounded-pill" type="submit" style="margin-left: 20px;
+                margin-bottom: 5px; height: 35px">Search
+            </button>
+        </div>
+    </form>
+</div>
+<div th:if="${!productList.isEmpty()}">
+    <div style="position: relative">
+        <a th:href="@{'/employee/list'(page=${productList.number - 1}, dateFrom=${dateFrom}, dateTo=${dateTo})}" th:if="${productList.hasPrevious()}" style="text-decoration: none">Previous</a>
+        <span th:text="${productList.number + 1}"></span>/<span th:text="${productList.totalPages}"></span>
+        <a th:href="@{'/employee/list'(page=${productList.number + 1}, dateFrom=${dateFrom}, dateTo=${dateTo})}" th:if="${productList.hasNext()}" style="text-decoration: none">Next</a>
+    </div>
+    <table class="table-bordered table" style="margin: 0 auto; border: 1px; width: 100%">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>CODE</th>
+            <th>NAME</th>
+            <th>PRICE</th>
+            <th>TYPE</th>
+            <th>DATE</th>
+            <th>AMOUNT</th>
+            <th>TOTAL</th>
+            <th>ACTION</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="p: ${productList}">
+            <td th:text="${p.productId}"></td>
+            <td th:text="${p.orderProduct.orderId}"></td>
+            <td th:text="${p.productName}"></td>
+            <td th:text="${p.productPrice}"></td>
+            <td th:text="${p.orderProduct.orderDate}"></td>
+            <td th:text="${p.typeProduct.typeProductName}"></td>
+            <td th:text="${p.orderProduct.amount}"></td>
+            <td th:text="${p.productPrice * p.orderProduct.amount}"></td>
+            <td>
+                <button type="button" class="btn btn-outline-primary" style="font-weight: bold">
+                    <a th:href="@{/product/edit/__${p.productId}__}" style="text-decoration: none; color: blue">Update</a>
+                </button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">DELETING EMPLOYEE</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form th:action="@{/employee/delete}" method="post">
+                <div class="modal-body">
+                    <input type="hidden" id="employeeDeleteId" name="id">
+                    <p> Confirm? </p>
+                    <input type="text" id="employeeDeleteName" readonly style="border: none; font-size: 30px; font-weight: bold;text-align: center">
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Confirm</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+<script>
+    function onDelete(id, name) {
+        document.getElementById("employeeDeleteId").value = id;
+        console.log(id);
+        console.log(name);
+        document.getElementById("employeeDeleteName").value = name;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/tooplate-main.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <title>Title</title>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Exo:100);
+        html, body {
+            color: black;
+            font: 700 18px/1.9 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
+            text-align: center;
+            background-image: url("https://file.vfo.vn/hinh/2018/03/hinh-anh-hinh-nen-powerpoint-don-gian-dep-nhat-chuyen-nghiep-1.jpg");
+        }
+        h1 {
+            font-weight: bold;
+        }
+
+        th {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        td {
+            font-size: 15px;
+        }
+
+
+        .container {
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .heading {
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .searchInputWrapper {
+            position: relative;
+        }
+
+        .searchInput {
+            width: 20rem;
+            height: 2rem;
+            padding: 0 1rem;
+            border-radius: 2rem;
+            border: none;
+            transition: transform 0.1s ease-in-out;
+        }
+
+        ::placeholder {
+            color: #a1a1a1;
+        }
+
+        /* hide the placeholder text on focus */
+        :focus::placeholder {
+            text-indent: -999px
+        }
+
+        .searchInput:focus {
+            outline: none;
+            transform: scale(1.1);
+            transition: all 0.1s ease-in-out;
+        }
+
+        .searchInputIcon {
+            position: absolute;
+            right: 0.8rem;
+            top: 0.5rem;
+            color: #a1a1a1;
+            transition: all 0.1s ease-in-out;
+        }
+
+        .container:focus-within > .searchInputWrapper > .searchInputIcon {
+            right: 0.2rem;
+        }
+
+        .err {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <button type="button" class="btn btn-secondary rounded-pill" style="float: left; margin-top: 10px; margin-left: 10px; width: 250px ">
+        <a href="/contract/contract-detail/list" style="text-decoration: none; color: white"> << Back to contract detail </a>
+    </button>
+</div>
+<br><br><br><br><br><br>
+<th:block th:if="${message}">
+    <p th:text="${message}" style="color: #0056b3"></p>
+</th:block>
+<div class="container">
+    <form th:action="@{/contract/contract-detail/save}" th:object="${contractDetailDto}" method="post">
+        <h1>CREATE NEW CONTRACT DETAIL</h1>
+        <table class="table table-bordered" style="margin: 0 auto">
+            <thead>
+            <tr>
+                <td>
+                    <label class="form-label">QUANTITY</label>
+                </td>
+                <td>
+                    <input type="number" class="form-control" th:field="*{quantity}" placeholder="KH-XXXX" style="width: 300px; margin: 0 auto">
+                </td>
+                <td th:if="${#fields.hasErrors('quantity')}" th:errors="*{quantity}" class="err"></td>
+            </tr>
+            <tr>
+                <td>
+                    <label class="form-label">ATTACHED SERVICE</label>
+                </td>
+                <td>
+                    <select th:field="*{attachService.attachServiceId}" style="width: 300px; height: 40px">
+                        <option th:each="att:${attachServiceList}" th:text="${att.attachServiceName}" th:value="${att.attachServiceId}"></option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label class="form-label">CONTRACT ID</label>
+                </td>
+                <td>
+                    <select th:field="*{contract.contractId}" style="width: 300px; height: 40px">
+                        <option th:each="cont:${contractList}" th:text="${cont.contractId}" th:value="${cont.contractId}"></option>
+                    </select>
+                </td>
+            </tr>
+            </thead>
+        </table><br>
+        <button type="submit" class="btn btn-primary" style="width: 150px">CREATE</button>
+    </form>
+</div>
+</body>
+</html>

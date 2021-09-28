@@ -23,5 +23,5 @@ public interface IEmployeeService {
 
     List<Employee> findAllByEmployeeNameContaining(String name);
 
-    List<Employee> findAllByEmployeeNameContainingAndPosition_PositionId(String name, Integer id);
+    Page<Employee> findAllByEmployeeNameContainingAndPosition_PositionName(Pageable pageable, String name, String positionName);
 }

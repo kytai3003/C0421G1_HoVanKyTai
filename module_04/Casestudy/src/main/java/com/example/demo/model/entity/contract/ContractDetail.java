@@ -10,11 +10,11 @@ public class ContractDetail {
     private Integer contractDetailId;
     private int quantity;
 
-    @ManyToOne(targetEntity = AttachService.class, cascade = CascadeType.ALL)
+    @ManyToOne(targetEntity = AttachService.class)
     @JoinColumn(name = "attach_service_id", referencedColumnName = "attachServiceId")
     private AttachService attachService;
 
-    @ManyToOne(targetEntity = Contract.class, cascade = CascadeType.ALL)
+    @ManyToOne(targetEntity = Contract.class)
     @JoinColumn(name = "contract_id", referencedColumnName = "contractId")
     private Contract contract;
 
@@ -57,5 +57,13 @@ public class ContractDetail {
 
     public void setContract(Contract contract) {
         this.contract = contract;
+    }
+
+    @Override
+    public String toString() {
+        return "Quantity:" + quantity +
+                ", attachService:" + attachService.toString() +
+                ", contract:" + contract +
+                '}';
     }
 }

@@ -12,11 +12,12 @@ public class User {
     @Id
     private String username;
     private String password;
+    private boolean isEnabled;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<Employee> employees;
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "user_role", joinColumns = @JoinColumn(name = "username"), inverseJoinColumns = @JoinColumn(name = "role_id"))
     private Set<Role> roles;
 
@@ -60,5 +61,13 @@ public class User {
 
     public void setRoles(Set<Role> roles) {
         this.roles = roles;
+    }
+
+    public boolean isEnabled() {
+        return isEnabled;
+    }
+
+    public void setEnabled(boolean enabled) {
+        isEnabled = enabled;
     }
 }

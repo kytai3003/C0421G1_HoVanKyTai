@@ -101,7 +101,7 @@ public class CustomerController {
         return "redirect:/customer/list";
     }
 
-    @RequestMapping("/search")
+    @RequestMapping(value = "/search", method = RequestMethod.GET)
     public ModelAndView searchTitle(@RequestParam("customerName") String customerName) {
         List<Customer> customerList = iCustomerService.findByCustomerNameIsContaining(customerName);
         ModelAndView modelAndView = new ModelAndView("customer/search");

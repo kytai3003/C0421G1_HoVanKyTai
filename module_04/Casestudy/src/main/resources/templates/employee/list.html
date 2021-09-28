@@ -102,30 +102,30 @@
 </th:block>
 <h1>EMPLOYEE MANAGEMENT</h1>
 <div class="container">
-    <form th:action="@{/employee/search}" method="post">
+    <form th:action="@{/employee/list}" method="get">
         <div class="searchInputWrapper">
-            <input class="searchInput" type="text" placeholder='Employee name' name="employeeName" />
-            <select name="position" style="margin-left: 20px">
-                <option value="0">All position</option>
-                <option value="1">Receptionist</option>
-                <option value="2">Server</option>
-                <option value="3">Specialist</option>
-                <option value="4">Supervisor</option>
-                <option value="5">Manager</option>
-                <option value="6">Executive Director</option>
+            <input class="searchInput" type="text" placeholder='Employee name' name="employeeName" th:value="${employeeName}"/>
+            <select name="positionName" style="margin-left: 20px">
+                <option selected value="">All position</option>
+                <th:block th:each="p : ${positionList}">
+                    <option th:value="${p.positionName}" th:text="${p.positionName}"
+                            th:selected=" ${p.getPositionName()} == ${position}" >
+                    </option>
+                </th:block>
             </select>
             <button class="btn btn-dark rounded-pill" type="submit" style="margin-left: 20px;
                 margin-bottom: 5px; height: 35px">Search
             </button>
         </div>
     </form>
-</div><br>
-<div style="position: relative">
-    <a th:href="@{'/employee/list'(page=${employeeList.number - 1})}" th:if="${employeeList.hasPrevious()}" style="text-decoration: none">Previous</a>
-    <span th:text="${employeeList.number + 1}"></span>/<span th:text="${employeeList.totalPages}"></span>
-    <a th:href="@{'/employee/list'(page=${employeeList.number + 1})}" th:if="${employeeList.hasNext()}" style="text-decoration: none">Next</a>
 </div>
-<table class="table-bordered table" style="margin: 0 auto; border: 1px">
+<div th:if="${!employeeList.isEmpty()}">
+<div style="position: relative">
+    <a th:href="@{'/employee/list'(page=${employeeList.number - 1}, employeeName=${employeeName}, positionName=${positionName})}" th:if="${employeeList.hasPrevious()}" style="text-decoration: none">Previous</a>
+    <span th:text="${employeeList.number + 1}"></span>/<span th:text="${employeeList.totalPages}"></span>
+    <a th:href="@{'/employee/list'(page=${employeeList.number + 1}, employeeName=${employeeName}, positionName=${positionName})}" th:if="${employeeList.hasNext()}" style="text-decoration: none">Next</a>
+</div>
+<table class="table-bordered table" style="margin: 0 auto; border: 1px; width: 100%">
     <thead>
     <tr>
         <th>NAME</th>
@@ -140,8 +140,10 @@
         <th>DIVISION</th>
         <th>CONTRACT</th>
         <th>USERNAME</th>
-        <th colspan="2">ACTION
-        </th>
+        <th>UPDATE</th>
+        <div sec:authorize="hasAnyRole('DIRECTOR', 'MANAGER')">
+        <th>DELETE</th>
+        </div>
     </tr>
     </thead>
     <tbody>
@@ -160,19 +162,21 @@
         <td th:text="${employee.user.username}"></td>
         <td>
             <button type="button" class="btn btn-outline-primary" style="font-weight: bold">
-                <a th:href="@{/customer/edit/__${employee.employeeId}__}" style="text-decoration: none; color: blue">Update</a>
+                <a th:href="@{/employee/edit/__${employee.employeeId}__}" style="text-decoration: none; color: blue">Update</a>
             </button>
         </td>
+        <div sec:authorize="hasAnyRole('DIRECTOR', 'MANAGER')">
         <td>
             <button type="button" class="btn btn-outline-danger" style="font-weight: bold" data-bs-toggle="modal"
                     data-bs-target="#exampleModal" th:attr="onclick=|onDelete('${employee.employeeId}', '${employee.employeeName}')|">
                 Delete
             </button>
         </td>
+        </div>
     </tr>
     </tbody>
 </table>
-
+</div>
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">

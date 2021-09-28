@@ -47,8 +47,8 @@
     <p th:text="${message}" style="color: #0056b3"></p>
 </th:block>
 <div class="container">
+    <h1>EDITING CUSTOMER ID: <span th:text="${customerDto.customerId}"></span> </h1>
     <form th:action="@{/customer/edit}" th:object="${customerDto}" method="post">
-        <h1>EDITING CUSTOMER</h1>
         <table class="table table-bordered" style="margin: 0 auto">
             <input type="hidden" th:field="*{customerId}">
             <thead>

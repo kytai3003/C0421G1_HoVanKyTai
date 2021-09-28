@@ -53,7 +53,7 @@ public class EmployeeServiceImpl implements IEmployeeService{
     }
 
     @Override
-    public List<Employee> findAllByEmployeeNameContainingAndPosition_PositionId(String name, Integer id) {
-        return this.iEmployeeRepository.findAllByEmployeeNameContainingAndPosition_PositionId(name, id);
+    public Page<Employee> findAllByEmployeeNameContainingAndPosition_PositionName(Pageable pageable, String name, String positionName) {
+        return this.iEmployeeRepository.findAllByEmployeeNameContainingAndPosition_PositionName(pageable,"%" + name + "%","%" +positionName+ "%");
     }
 }

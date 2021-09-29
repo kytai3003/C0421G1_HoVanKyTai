@@ -12,4 +12,4 @@ for (var i = 1; i < 15; i++) {
         sum += fibonaccySum(i);
     }
 }
-console.log("Tổng của 13 số fibonaccy đầu tiên là: " + sum);
+console.log("Tổng của 14 số fibonaccy đầu tiên là: " + sum);

@@ -1,0 +1,31 @@
+
+<table class="table" style="margin: 0 auto; text-align: center; width: 50%">
+  <thead>
+  <p>angular-calculator-app works!</p>
+  </thead>
+  <tbody class="table-primary">
+  <tr>
+    <td>First number:</td>
+    <td><input #first type="number" [value]="firstNumber" (change)="onchangeFirstNum(first.value)"></td>
+  </tr>
+  <tr>
+    <td>Operator: </td>
+    <td>
+      <select #operator [value]="operator" (change)="onchangeOperator(operator.value)">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+      </select>
+    </td>
+  </tr>
+  <tr>
+    <td>Second number: </td>
+    <td><input #second type="number" [value]="secondNumber" (change)="onchangeSecondNum(second.value)"></td>
+  </tr>
+<tr>
+  <td><button (click)="calculate()">Calculate</button></td>
+  <td>Result: {{result}} </td>
+</tr>
+  </tbody>
+</table>

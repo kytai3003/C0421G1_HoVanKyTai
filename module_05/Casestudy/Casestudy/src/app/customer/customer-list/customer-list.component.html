@@ -1,0 +1,57 @@
+<div class="container-fluid">
+<h1>CUSTOMER MANAGEMENT</h1>
+<!--<div class="container">-->
+<!--  <form>-->
+<!--    <div class="searchInputWrapper">-->
+<!--      <input class="searchInput" type="text" placeholder='Search customer name' name="customerName" />-->
+<!--      <button class="btn btn-dark rounded-pill" type="submit" style="margin-left: 20px;-->
+<!--                margin-bottom: 5px; height: 35px">Search-->
+<!--      </button>-->
+<!--    </div>-->
+<!--  </form>-->
+<!--</div><br>-->
+<!--<div style="position: relative">-->
+<!--  <a th:href="@{'/customer/list'(page=${customerList.number - 1})}" th:if="${customerList.hasPrevious()}" style="text-decoration: none">Previous</a>-->
+<!--  <span th:text="${customerList.number + 1}"></span>/<span th:text="${customerList.totalPages}"></span>-->
+<!--  <a th:href="@{'/customer/list'(page=${customerList.number + 1})}" th:if="${customerList.hasNext()}" style="text-decoration: none">Next</a>-->
+<!--</div>-->
+<table class="table-bordered table" style="margin: 0 auto; border: 1px">
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>CODE</th>
+    <th>NAME</th>
+    <th>BIRTH</th>
+    <th>GENDER</th>
+    <th>ID CARD</th>
+    <th>PHONE</th>
+    <th>EMAIL</th>
+    <th>ADDRESS</th>
+    <th>TYPE</th>
+    <th>CONTRACT</th>
+    <th colspan="2"></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>
+      <span>Female</span>
+      <span>Male</span>
+      <span>Other</span>
+    </td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  </tbody>
+</table>
+</div>

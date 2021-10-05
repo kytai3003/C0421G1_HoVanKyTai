@@ -1,0 +1,50 @@
+<div class="container-fluid">
+<form [formGroup]="registerForm" (ngSubmit)="createAccount()">
+  <h2>Register</h2>
+  <div class="mb-3">
+    <label class="form-label">Email address</label>
+    <input type="text" class="form-control" formControlName="email" placeholder="example123@gmail.com">
+    <p *ngIf="registerForm.controls.email.hasError('required') && registerForm.controls.email.dirty">Blank or invalid format.</p>
+    <p *ngIf="registerForm.controls.email.hasError('email') && registerForm.controls.email.dirty">Invalid email format.</p>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Password</label>
+    <input type="password" class="form-control" formControlName="password1">
+    <p *ngIf="registerForm.controls.password1.hasError('required') && registerForm.controls.password1.dirty">Please input.</p>
+    <p *ngIf="registerForm.controls.password1.hasError('minlength') && registerForm.controls.password1.dirty">Min character is 6.</p>
+    <label class="form-label">Retype</label>
+    <input type="password" class="form-control" formControlName="password2">
+    <p *ngIf="registerForm.controls.password2.hasError('required') && registerForm.controls.password2.dirty">Please input.</p>
+    <p *ngIf="registerForm.controls.password2.hasError('minlength') && registerForm.controls.password2.dirty">Min character is 6.</p>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Country</label>
+    <select>
+      <option formControlName="country" value="Vietnam">Vietnam</option>
+      <option formControlName="country" value="Cambodia">Cambodia</option>
+      <option formControlName="country" value="Laos">Laos</option>
+    </select>
+    <p *ngIf="registerForm.controls.country.hasError('required') && registerForm.controls.country.dirty">Select one.</p>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Age</label>
+    <input type="number" class="form-control" formControlName="age">
+    <p *ngIf="registerForm.controls.age.hasError('required') && registerForm.controls.age.dirty">Please input.</p>
+    <p *ngIf="registerForm.controls.age.hasError('min') && registerForm.controls.age.dirty">Must be greater than 18.</p>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Gender</label>
+    <input type="radio" formControlName="gender" value="Male" checked>Male
+    <input type="radio" formControlName="gender" value="Female">Female
+    <input type="radio" formControlName="gender" value="Other">Other
+    <p *ngIf="registerForm.controls.gender.hasError('required') && registerForm.controls.gender.dirty">Please check.</p>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Phone</label>
+    <input type="text" class="form-control" formControlName="phone">
+    <p *ngIf="registerForm.controls.phone.hasError('required') && registerForm.controls.phone.dirty">Please input.</p>
+    <p *ngIf="registerForm.controls.phone.hasError('pattern') && registerForm.controls.phone.dirty">Invalid phone format</p>
+  </div>
+  <button type="submit" class="btn btn-primary" [disabled]="registerForm.invalid">Submit</button>
+</form>
+</div>

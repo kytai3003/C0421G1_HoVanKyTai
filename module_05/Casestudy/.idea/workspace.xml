@@ -2,22 +2,41 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ab41111-b684-4840-9481-f8c1faa232b5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../module_04/Casestudy/src/main/resources/templates/employee/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_04/Casestudy/src/main/resources/templates/employee/create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module_04/Casestudy/src/main/resources/templates/contract/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_04/Casestudy/src/main/resources/templates/contract/list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../module_04/_01_SpringMVC_overview/practise/customer_management/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_04/_01_SpringMVC_overview/practise/customer_management/customer-management" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../module_04/_02_SpringMVC_controller/practice/customer_management/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_04/_02_SpringMVC_controller/practice/customer_management/customer-management" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../module_04/_05_ORM_Database/practise/customer_management/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_04/_05_ORM_Database/practise/customer_management/customer-management" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../module_04/_09_AOP_exception_handler/practise/customer_management/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_04/_09_AOP_exception_handler/practise/customer_management/customer-management" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Casestudy/src/app/app.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/Casestudy/src/app/app.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Casestudy/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Casestudy/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Casestudy/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Casestudy/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Casestudy/src/app/customer/customer-list/customer-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Casestudy/src/app/customer/customer-list/customer-list.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Casestudy/src/app/customer/customer-list/customer-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Casestudy/src/app/customer/customer-list/customer-list.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Casestudy/src/assets/css/maicons.css" beforeDir="false" afterPath="$PROJECT_DIR$/Casestudy/src/assets/css/maicons.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Casestudy/src/assets/css/mobster.css" beforeDir="false" afterPath="$PROJECT_DIR$/Casestudy/src/assets/css/mobster.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Casestudy/src/assets/vendor/animate/animate.css" beforeDir="false" afterPath="$PROJECT_DIR$/Casestudy/src/assets/vendor/animate/animate.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Casestudy/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Casestudy/src/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="ProjectId" id="1yyoRzO4K8R7D6nIEGIEYx3GaJv" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -27,7 +46,8 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Casestudy/src/assets" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="D:\C0421G1_HoVanKyTai\module_05\Casestudy\Casestudy\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
@@ -46,10 +66,29 @@
       <option name="presentableId" value="Default" />
       <updated>1633233184167</updated>
       <workItem from="1633233185620" duration="15950000" />
+      <workItem from="1633284287042" duration="680000" />
+      <workItem from="1633310972543" duration="1487000" />
+      <workItem from="1633334371283" duration="13118000" />
+      <workItem from="1633396746844" duration="140000" />
+      <workItem from="1633396912394" duration="1607000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="462" y="106" key="FileChooserDialogImpl" timestamp="1633403741651">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="462" y="106" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1633403741651" />
+    <state x="184" y="7" key="SettingsEditor" timestamp="1633402805330">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="184" y="7" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1633402805330" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1633335936969">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1633335936969" />
   </component>
 </project>

@@ -1,0 +1,18 @@
+<div class="container-fluid">
+<form [formGroup]="signInForm" (ngSubmit)="submitForm()">
+  <h2>Sign in</h2>
+  <div class="mb-3">
+    <label class="form-label">Email address</label>
+    <input type="text" class="form-control" formControlName="email" placeholder="example123@gmail.com">
+    <p *ngIf="signInForm.controls.email.hasError('required') && signInForm.controls.email.dirty">Blank or invalid format.</p>
+    <p *ngIf="signInForm.controls.email.hasError('email') && signInForm.controls.email.dirty">Invalid email format.</p>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Password</label>
+    <input type="password" class="form-control" formControlName="password">
+    <p *ngIf="signInForm.controls.password.hasError('required') && signInForm.controls.password.dirty">Please input.</p>
+    <p *ngIf="signInForm.controls.password.hasError('minlength') && signInForm.controls.password.dirty">Min character is 6.
+  </div>
+  <button type="submit" class="btn btn-primary" [disabled]="signInForm.invalid">Sign in</button>
+</form>
+</div>

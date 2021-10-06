@@ -1,0 +1,4 @@
+<h1>Word List</h1>
+<ul *ngFor="let w of wordList">
+  <li [routerLink]="['/', w.word]">{{w.word}}</li>
+</ul>

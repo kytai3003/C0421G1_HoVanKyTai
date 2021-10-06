@@ -18,10 +18,12 @@
   <link rel="stylesheet" href="assets/css/mobster.css">
 </head>
 <body>
-<div class="page-section fg-white">
+<!--<app-root></app-root>-->
+
+<div class="page-section fg-white container">
   <div class="container">
     <div>
-    <h1 class="text-center">administrator</h1>
+    <h1 class="text-center">hi,<span style="font-weight: bold"> administrator</span></h1>
     <p id="currentTime" style="font-size: 20px"></p><br>
     </div>
     <div class="row justify-content-center mt-4">
@@ -29,7 +31,7 @@
         <div class="card card-body border-0 bg-transparent text-center wow fadeInLeft">
           <div class="mb-3">
             <a href="/customer/list"><img src="assets/img/icons/testimony.svg" alt="" width="120" height="120"></a><br><br>
-            <p style="font-size: 30px; text-decoration: none"><a href="/customer/list">customer</a></p>
+            <p style="font-size: 30px; text-decoration: none"><a href="/customer/list" style="color: red">customer</a></p>
           </div>
         </div>
       </div>
@@ -37,7 +39,7 @@
         <div class="card card-body border-0 bg-transparent text-center wow fadeInLeft">
           <div class="mb-3">
             <a href="/employee/list"><img src="assets/img/icons/promotion.svg" alt="" width="120" height="120"></a><br><br>
-            <p style="font-size: 30px"><a href="/employee/list">employee</a></p>
+            <p style="font-size: 30px"><a href="/employee/list" style="color: #4dcfff">employee</a></p>
           </div>
         </div>
       </div>
@@ -45,7 +47,7 @@
         <div class="card card-body border-0 bg-transparent text-center wow fadeInRight">
           <div class="mb-3">
             <a href="/service/list"><img src="assets/img/icons/support.svg" alt="" width="120" height="120"></a><br><br>
-            <p style="font-size: 30px"><a href="/service/list">service</a></p>
+            <p style="font-size: 30px"><a href="/service/list" style="color: #9a1de0">service</a></p>
           </div>
         </div>
       </div>
@@ -53,7 +55,7 @@
         <div class="card card-body border-0 bg-transparent text-center wow fadeInRight">
           <div class="mb-3">
             <a href="/contract/list"><img src="assets/img/icons/coins.svg" alt="" width="120" height="120"></a><br><br>
-            <p style="font-size: 30px"><a href="/contract/list">contract</a></p>
+            <p style="font-size: 30px"><a href="/contract/list" style="color: darkorange">contract</a></p>
           </div>
         </div>
       </div>
@@ -61,18 +63,17 @@
   </div>
   <br>
 
-<app-root></app-root>
 
-
-<footer class="text-center text-lg-start">
-    <div class="d-flex justify-content-center py-3">
-      <div class="text-center text-black-50 p-3  wow fadeInUp delay-1s" style="background-color: rgba(0, 0, 0, 0.0);">
-        <a href="#" class="p-1"><i class="mai-logo-facebook-f"></i></a>
-       <a href="#" class="p-1"><i class="mai-logo-twitter"></i></a>
-       <a href="#" class="p-1"><i class="mai-logo-google"></i></a>
-       <a href="#" class="p-1"><i class="mai-logo-github"></i></a>
-       <a href="#" class="p-1"><i class="mai-logo-instagram"></i></a><br>
-       <span>
+<footer class="text-center text-lg-start  wow fadeInUp">
+    <div class="d-flex justify-content-center py-2">
+      <div class="text-center text-black-50 p-1" style="background-color: rgba(0, 0, 0, 0.0);">
+        <a href="#" class="p-1"><i class="mai-logo-facebook-f" style="font-size: 25px; margin: 5px"></i></a>
+       <a href="#" class="p-1"><i class="mai-logo-twitter" style="font-size: 25px; margin: 5px"></i></a>
+       <a href="#" class="p-1"><i class="mai-logo-google" style="font-size: 25px; margin: 5px"></i></a>
+       <a href="#" class="p-1"><i class="mai-logo-github" style="font-size: 25px; margin: 5px"></i></a>
+       <a href="#" class="p-1"><i class="mai-logo-instagram" style="font-size: 25px; margin: 5px"></i></a>
+       <a href="#" class="p-1"><i class="mai-logo-discord" style="font-size: 25px; margin: 5px"></i></a><br>
+       <span style="padding-bottom: 5px">
        © Copyright: C0421G1
        </span>
      </div>
@@ -82,6 +83,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 
   <script src="assets/js/jquery-3.5.1.min.js"></script>
+
+  <script src="https://kit.fontawesome.com/4e3af22988.js" crossorigin="anonymous"></script>
 
   <script src="assets/js/bootstrap.bundle.min.js"></script>
 

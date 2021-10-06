@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid wow fadeInDown" style="margin-top: 50px">
 <h1>CUSTOMER MANAGEMENT</h1>
 <!--<div class="container">-->
 <!--  <form>-->
@@ -15,7 +15,7 @@
 <!--  <span th:text="${customerList.number + 1}"></span>/<span th:text="${customerList.totalPages}"></span>-->
 <!--  <a th:href="@{'/customer/list'(page=${customerList.number + 1})}" th:if="${customerList.hasNext()}" style="text-decoration: none">Next</a>-->
 <!--</div>-->
-<table class="table-bordered table table-striped" style="margin: 0 auto">
+<table class="table table-hover table-bordered" style="margin: 0 auto; border: solid black 2px">
   <thead>
   <tr>
     <th>ID</th>
@@ -27,7 +27,6 @@
     <th>EMAIL</th>
     <th>ADDRESS</th>
     <th>TYPE</th>
-    <th>CONTRACT</th>
     <th colspan="3">ACTION</th>
   </tr>
   </thead>
@@ -41,10 +40,9 @@
     <td>{{c.customerPhone}}</td>
     <td>{{c.customerEmail}}</td>
     <td>{{c.customerAddress}}</td>
-    <td>{{c.customerTypeId}}</td>
-    <td></td>
+    <td>{{c.customerType.typeName}}</td>
     <td>
-      <button class="btn btn-primary rounded-pill">Detail</button>
+      <app-customer-detail [customerChild]="customerFather" (click)="showDetail(c)"></app-customer-detail>
     </td>
     <td>
       <button class="btn btn-success rounded-pill">Edit</button>
@@ -56,3 +54,5 @@
   </tbody>
 </table>
 </div>
+
+

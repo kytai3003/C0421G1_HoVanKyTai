@@ -21,25 +21,14 @@
   <component name="ChangeListManager">
     <list default="true" id="ce9c8f28-a9f2-4011-89a0-d696222ad2a7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module_02/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module_02/Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module_02/resort_management/data/employee.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module_02/resort_management/data/employee.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module_02/resort_management/models/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module_02/resort_management/models/Employee.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module_02/resort_management/regex/DayOfBirthRegex.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module_02/resort_management/regex/DayOfBirthRegex.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module_02/resort_management/regex/FacilityInformationRegex.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module_02/resort_management/regex/FacilityInformationRegex.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module_02/resort_management/services/CustomerServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module_02/resort_management/services/CustomerServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module_02/resort_management/services/EmployeeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module_02/resort_management/services/EmployeeServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module_02/student_management/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module_02/student_management/Person.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module_02/student_management/StudentManagement.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/module_02/student_management/StudentManagement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resort_management/data/employee.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/resort_management/data/employee.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resort_management/models/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resort_management/models/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resort_management/regex/DayOfBirthRegex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resort_management/regex/DayOfBirthRegex.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resort_management/regex/FacilityInformationRegex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resort_management/regex/FacilityInformationRegex.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resort_management/services/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resort_management/services/CustomerServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resort_management/services/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/resort_management/services/EmployeeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/student_management/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/student_management/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/student_management/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/student_management/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/student_management/StudentManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/student_management/StudentManagement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Test2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module_04/_01_SpringMVC_overview/practise/customer_management/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../module_04/_01_SpringMVC_overview/practise/customer_management/customer-management" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module_04/_02_SpringMVC_controller/practice/customer_management/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../module_04/_02_SpringMVC_controller/practice/customer_management/customer-management" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module_04/_05_ORM_Database/practise/customer_management/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../module_04/_05_ORM_Database/practise/customer_management/customer-management" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module_04/_09_AOP_exception_handler/practise/customer_management/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../module_04/_09_AOP_exception_handler/practise/customer_management/customer-management" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module_05/Casestudy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../module_05/Casestudy/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module_05/Casestudy/Casestudy/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_05/Casestudy/Casestudy/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module_05/Casestudy/Casestudy/src/models/Customer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../module_05/Casestudy/Casestudy/src/models/Customer.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +63,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/_08_Java_cleancode_refactoring/practise/variable_constance" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
@@ -94,7 +83,7 @@
       <recent name="D:\C2401G1_HoVanKyTai\module_02\src\_08_Java_cleancode_refactoring\practise\variable_constance" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main (2)">
+  <component name="RunManager" selected="Application.Test2">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="module_02" />
@@ -115,15 +104,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MainClass" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="student_management.Main" />
       <module name="module_02" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="student_management.Main" />
+    <configuration name="MainClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MainClass" />
       <module name="module_02" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -145,8 +134,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main (2)" />
         <item itemvalue="Application.Test2" />
+        <item itemvalue="Application.Main (2)" />
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.MainClass" />
         <item itemvalue="Application.Test" />
@@ -214,6 +203,7 @@
       <workItem from="1626110331206" duration="4019000" />
       <workItem from="1626160032835" duration="9698000" />
       <workItem from="1626225988411" duration="17152000" />
+      <workItem from="1633427413399" duration="815000" />
     </task>
     <servers />
   </component>
@@ -233,14 +223,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="309" y="42" key="#Inspections" timestamp="1623040923469">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="309" y="42" key="#Inspections/0.0.1366.728@0.0.1366.728" timestamp="1623040923469" />
-    <state x="275" y="0" width="816" height="728" key="#Intentions" timestamp="1623924319698">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="275" y="0" width="816" height="728" key="#Intentions/0.0.1366.728@0.0.1366.728" timestamp="1623924319698" />
     <state x="433" y="165" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1625629152580">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -249,10 +231,6 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="884" y="50" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1626234403927" />
-    <state x="466" y="258" width="433" height="218" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1624636879995">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="466" y="258" width="433" height="218" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728@0.0.1366.728" timestamp="1624636879995" />
     <state x="209" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1625498763655">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -261,22 +239,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1625214701402" />
-    <state width="1323" height="468" key="GridCell.Tab.0.bottom" timestamp="1626253135977">
+    <state width="1321" height="359" key="GridCell.Tab.0.bottom" timestamp="1633428229114">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="468" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1626253135977" />
-    <state width="1323" height="468" key="GridCell.Tab.0.center" timestamp="1626253135977">
+    <state width="1321" height="359" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1633428229114" />
+    <state width="1321" height="359" key="GridCell.Tab.0.center" timestamp="1633428229113">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="468" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1626253135977" />
-    <state width="1323" height="468" key="GridCell.Tab.0.left" timestamp="1626253135976">
+    <state width="1321" height="359" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1633428229113" />
+    <state width="1321" height="359" key="GridCell.Tab.0.left" timestamp="1633428229113">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="468" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1626253135976" />
-    <state width="1323" height="468" key="GridCell.Tab.0.right" timestamp="1626253135977">
+    <state width="1321" height="359" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1633428229113" />
+    <state width="1321" height="359" key="GridCell.Tab.0.right" timestamp="1633428229114">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="468" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1626253135977" />
+    <state width="1321" height="359" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1633428229114" />
     <state width="1323" height="468" key="GridCell.Tab.1.bottom" timestamp="1626253135977">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -297,10 +275,6 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="8" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1624893086320" />
-    <state x="387" y="255" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1623638203629">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="387" y="255" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1366.728@0.0.1366.728" timestamp="1623638203629" />
     <state x="492" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1626236786474">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -317,10 +291,6 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="389" y="121" key="refactoring.ChangeSignatureDialog/0.0.1366.728@0.0.1366.728" timestamp="1625561685109" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1623334322950">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1623334322950" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1626239875559">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

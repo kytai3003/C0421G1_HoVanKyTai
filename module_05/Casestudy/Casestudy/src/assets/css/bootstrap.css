@@ -1830,7 +1830,7 @@ pre code {
 }
 
 .table-bordered {
-  border: 1px solid #dee2e6;
+  border: 2px solid black;
 }
 
 .table-bordered th,
@@ -6276,6 +6276,7 @@ a.close.disabled {
 .modal-title {
   margin-bottom: 0;
   line-height: 1.5;
+  text-align: center;
 }
 
 .modal-body {
@@ -7466,6 +7467,7 @@ button.bg-dark:focus {
 .justify-content-center {
   justify-content: center !important;
 }
+
 
 .justify-content-between {
   justify-content: space-between !important;

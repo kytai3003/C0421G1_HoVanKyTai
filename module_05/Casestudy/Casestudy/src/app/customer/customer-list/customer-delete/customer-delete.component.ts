@@ -1,6 +1,7 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Inject, Input, OnInit} from '@angular/core';
 import {Customer} from "../../../../models/customer/Customer";
 import {CustomerServiceService} from "../../../service/customer-service.service";
+import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
 
 @Component({
   selector: 'app-customer-delete',
@@ -9,17 +10,23 @@ import {CustomerServiceService} from "../../../service/customer-service.service"
 })
 export class CustomerDeleteComponent implements OnInit {
 
-  customerDelete: Customer;
-  id: number = this.customerDelete.id;
-  name: string = this.customerDelete.customerName;
+  id: number;
+  name: string;
 
-  constructor(private customerService: CustomerServiceService) { }
+  constructor(private customerService: CustomerServiceService,
+              private dialogRef: MatDialogRef<CustomerDeleteComponent>,
+              @Inject(MAT_DIALOG_DATA) public data: any) { }
 
   ngOnInit(): void {
-    console.log(this.customerDelete);
-  }
+    this.name = this.data.name.customerName;
+    this.id = this.data.name.id;
+    console.log(this.name, this.id);
+  };
+
 
   deleteCustomer() {
-    this.customerService.deleteCustomer(this.id);
+    this.customerService.deleteCustomer(this.id).subscribe(dataDialog => {
+      this.dialogRef.close();
+    });
   }
 }

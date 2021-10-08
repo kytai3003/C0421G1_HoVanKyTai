@@ -2,45 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ab41111-b684-4840-9481-f8c1faa232b5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../module_02/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_02/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../module_04/_01_SpringMVC_overview/practise/customer_management/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_04/_01_SpringMVC_overview/practise/customer_management/customer-management" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../module_04/_02_SpringMVC_controller/practice/customer_management/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_04/_02_SpringMVC_controller/practice/customer_management/customer-management" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../module_04/_05_ORM_Database/practise/customer_management/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_04/_05_ORM_Database/practise/customer_management/customer-management" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../module_04/_09_AOP_exception_handler/practise/customer_management/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_04/_09_AOP_exception_handler/practise/customer_management/customer-management" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Casestudy/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/Casestudy/angular.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Casestudy/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Casestudy/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Casestudy/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Casestudy/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Casestudy/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Casestudy/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Casestudy/src/app/app.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/Casestudy/src/app/app.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Casestudy/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Casestudy/src/app/app.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Casestudy/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Casestudy/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Casestudy/src/app/customer/customer-create/customer-create.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/Casestudy/src/app/customer/customer-create/customer-create.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Casestudy/src/app/customer/customer-create/customer-create.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Casestudy/src/app/customer/customer-create/customer-create.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Casestudy/src/app/customer/customer-create/customer-create.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Casestudy/src/app/customer/customer-create/customer-create.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Casestudy/src/app/customer/customer-edit/customer-edit.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/Casestudy/src/app/customer/customer-edit/customer-edit.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Casestudy/src/app/customer/customer-edit/customer-edit.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Casestudy/src/app/customer/customer-edit/customer-edit.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Casestudy/src/app/customer/customer-edit/customer-edit.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Casestudy/src/app/customer/customer-edit/customer-edit.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Casestudy/src/app/customer/customer-list/customer-detail/customer-detail.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Casestudy/src/app/customer/customer-list/customer-detail/customer-detail.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Casestudy/src/app/customer/customer-list/customer-list.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/Casestudy/src/app/customer/customer-list/customer-list.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Casestudy/src/app/customer/customer-list/customer-delete/customer-delete.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Casestudy/src/app/customer/customer-list/customer-delete/customer-delete.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Casestudy/src/app/customer/customer-list/customer-delete/customer-delete.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Casestudy/src/app/customer/customer-list/customer-delete/customer-delete.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Casestudy/src/app/customer/customer-list/customer-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Casestudy/src/app/customer/customer-list/customer-list.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Casestudy/src/app/customer/customer-list/customer-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Casestudy/src/app/customer/customer-list/customer-list.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Casestudy/src/app/service/service-create/service-create.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Casestudy/src/app/service/service-create/service-create.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Casestudy/src/app/service/service-create/service-create.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Casestudy/src/app/service/service-create/service-create.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Casestudy/src/app/service/service-edit/service-edit.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Casestudy/src/app/service/service-edit/service-edit.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Casestudy/src/app/service/service-edit/service-edit.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Casestudy/src/app/service/service-edit/service-edit.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Casestudy/src/app/service/service-list/service-list.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Casestudy/src/app/service/service-list/service-list.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Casestudy/src/app/service/service-list/service-list.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Casestudy/src/app/service/service-list/service-list.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Casestudy/src/app/json_server/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/Casestudy/src/app/json_server/db.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Casestudy/src/app/service/customer-service.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Casestudy/src/app/service/customer-service.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Casestudy/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Casestudy/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Casestudy/src/models/customer/Customer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Casestudy/src/models/customer/Customer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_06_form/practise/app_todo/angular-name-card/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../_06_form/practise/app_todo/angular-name-card/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Casestudy/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/Casestudy/src/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_06_form/practise/app_todo/angular-name-card/src/app/todo.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../_06_form/practise/app_todo/angular-name-card/src/app/todo.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_06_form/practise/app_todo/angular-name-card/src/app/todo/todo.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../_06_form/practise/app_todo/angular-name-card/src/app/todo/todo.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../_06_form/practise/app_todo/angular-name-card/src/app/todo/todo.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../_06_form/practise/app_todo/angular-name-card/src/app/todo/todo.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_06_form/practise/app_todo/angular-name-card/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../_06_form/practise/app_todo/angular-name-card/src/environments/environment.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,8 +52,9 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../_09_connect_backend/exercise_practise/wfda-angular-product-management" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="D:\C0421G1_HoVanKyTai\module_05\Casestudy\Casestudy\node_modules\typescript\lib" />
   </component>
@@ -110,7 +92,8 @@
       <workItem from="1633569480997" duration="202000" />
       <workItem from="1633595477668" duration="20034000" />
       <workItem from="1633627358209" duration="453000" />
-      <workItem from="1633662682109" duration="11898000" />
+      <workItem from="1633662682109" duration="20756000" />
+      <workItem from="1633701134021" duration="227000" />
     </task>
     <servers />
   </component>
@@ -118,17 +101,17 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="462" y="106" key="FileChooserDialogImpl" timestamp="1633569680546">
+    <state x="462" y="106" key="FileChooserDialogImpl" timestamp="1633701388114">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="462" y="106" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1633569680546" />
+    <state x="462" y="106" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1633701388114" />
     <state x="184" y="7" key="SettingsEditor" timestamp="1633402805330">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="7" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1633402805330" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1633335936969">
+    <state x="339" y="162" key="run.anything.popup" timestamp="1633686733138">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1633335936969" />
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1633686733138" />
   </component>
 </project>

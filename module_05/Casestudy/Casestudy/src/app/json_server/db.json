@@ -9,8 +9,8 @@
       "customerEmail": "abc@gmail.com",
       "customerAddress": "Da Nang",
       "customerType": {
-        "id": 2,
-        "typeName": "Platinum"
+        "id": 4,
+        "typeName": "Silver"
       },
       "id": 1
     },

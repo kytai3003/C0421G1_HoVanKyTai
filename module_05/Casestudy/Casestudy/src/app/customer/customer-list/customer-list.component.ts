@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import {Customer} from "../../../models/customer/Customer";
-import {CustomerType} from "../../../models/customer/CustomerType";
 import {FormControl, FormGroup} from "@angular/forms";
 import {ActivatedRoute, Router} from "@angular/router";
 import {CustomerServiceService} from "../../service/customer-service.service";
+import {MatDialog} from "@angular/material/dialog";
+import {CustomerDeleteComponent} from "./customer-delete/customer-delete.component";
 
 @Component({
   selector: 'app-customer-list',
@@ -30,7 +31,7 @@ export class CustomerListComponent implements OnInit {
 
   customerFather: Customer;
 
-  constructor(private router: Router, private customerService: CustomerServiceService) {
+  constructor(private router: Router, private customerService: CustomerServiceService, private dialog: MatDialog) {
     this.customerService.findAll().subscribe(next => {
       this.customerList = next;
       console.log(this.customerFather);
@@ -47,6 +48,17 @@ export class CustomerListComponent implements OnInit {
 
   openModal(id: number) {
     console.log(id);
-    this.customerService.findById(id);
+    this.customerService.findById(id).subscribe(dataDialog => {
+      console.log(dataDialog);
+      const dialogRef = this.dialog.open(CustomerDeleteComponent, {
+        width: '500px',
+        data: {name: dataDialog},
+        disableClose: true
+      });
+      dialogRef.afterClosed().subscribe(result => {
+        console.log('The dialog was closed');
+        this.ngOnInit();
+      });
+    });
   }
 }

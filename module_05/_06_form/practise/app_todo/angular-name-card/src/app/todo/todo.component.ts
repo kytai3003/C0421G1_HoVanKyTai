@@ -18,13 +18,21 @@ export class TodoComponent implements OnInit {
   constructor(private todoService: TodoService) { }
 
   ngOnInit(): void {
-    this.todoService.getAll().subscribe(next => {
+    this.todoService.getTodos().subscribe(next => {
       this.todos = next;
     })
   }
 
   toggleTodo(i: number) {
     this.todos[i].complete = !this.todos[i].complete;
+    const todo = this.todos[i];
+    const todoData = {
+      ...todo,
+      completed: !todo.complete
+    };
+    this.todoService.updateTodo(todoData).subscribe(next => {
+      this.todos[i].complete = next.complete;
+    });
   }
 
   change() {
@@ -38,5 +46,23 @@ export class TodoComponent implements OnInit {
       this.todos.push(todo);
       this.content.reset();
     }
+  }
+
+  addTodo() {
+    const todo: Partial<Todo> = {
+      title: this.content.value,
+      completed: false,
+    };
+    this.todoService.createTodo(todo).subscribe(next => {
+      this.todos.unshift(next);
+      this.content.setValue('');
+    });
+  }
+
+  deleteTodo(i) {
+    const todo = this.todos[i];
+    this.todoService.deleteTodo(todo.id).subscribe(() => {
+      this.todos = this.todos.filter(t => t.id !== todo.id);
+    });
   }
 }

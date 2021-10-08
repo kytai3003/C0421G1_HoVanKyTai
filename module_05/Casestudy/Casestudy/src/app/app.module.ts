@@ -9,15 +9,16 @@ import { EmployeeEditComponent } from './employee/employee-edit/employee-edit.co
 import { CustomerListComponent } from './customer/customer-list/customer-list.component';
 import { CustomerEditComponent } from './customer/customer-edit/customer-edit.component';
 import { CustomerCreateComponent } from './customer/customer-create/customer-create.component';
-import { ServiceListComponent } from './service/service-list/service-list.component';
-import { ServiceCreateComponent } from './service/service-create/service-create.component';
-import { ServiceEditComponent } from './service/service-edit/service-edit.component';
 import { ContractListComponent } from './contract/contract-list/contract-list.component';
 import { ContractCreateComponent } from './contract/contract-create/contract-create.component';
 import { ContractEditComponent } from './contract/contract-edit/contract-edit.component';
 import { ContractDetailCreateComponent } from './contract/contract-detail-create/contract-detail-create.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import { CustomerDetailComponent } from './customer/customer-list/customer-detail/customer-detail.component';
+import { HomeComponent } from './home/home.component';
+import {NgxPaginationModule} from "ngx-pagination";
+import {HttpClientModule} from "@angular/common/http";
+import { CustomerDeleteComponent } from './customer/customer-list/customer-delete/customer-delete.component';
 
 @NgModule({
   declarations: [
@@ -28,19 +29,20 @@ import { CustomerDetailComponent } from './customer/customer-list/customer-detai
     CustomerListComponent,
     CustomerEditComponent,
     CustomerCreateComponent,
-    ServiceListComponent,
-    ServiceCreateComponent,
-    ServiceEditComponent,
     ContractListComponent,
     ContractCreateComponent,
     ContractEditComponent,
     ContractDetailCreateComponent,
-    CustomerDetailComponent
+    CustomerDetailComponent,
+    HomeComponent,
+    CustomerDeleteComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxPaginationModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,19 @@
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary rounded-pill" data-toggle="modal" data-target="#modelId" style="font-weight: bold">
+  Delete
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-static text-center" *ngIf="customerDelete" style="margin: 0 auto"><br>
+        Confirm? {{name}}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" style="font-weight: bold">Close</button>
+        <button type="button" class="btn btn-danger"  style="font-weight: bold" (click)="deleteCustomer()">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>

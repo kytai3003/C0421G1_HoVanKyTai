@@ -1,20 +1,11 @@
-<div class="container-fluid wow fadeInDown" style="margin-top: 50px">
-<h1>CUSTOMER MANAGEMENT</h1>
-<!--<div class="container">-->
-<!--  <form>-->
-<!--    <div class="searchInputWrapper">-->
-<!--      <input class="searchInput" type="text" placeholder='Search customer name' name="customerName" />-->
-<!--      <button class="btn btn-dark rounded-pill" type="submit" style="margin-left: 20px;-->
-<!--                margin-bottom: 5px; height: 35px">Search-->
-<!--      </button>-->
-<!--    </div>-->
-<!--  </form>-->
-<!--</div><br>-->
-<!--<div style="position: relative">-->
-<!--  <a th:href="@{'/customer/list'(page=${customerList.number - 1})}" th:if="${customerList.hasPrevious()}" style="text-decoration: none">Previous</a>-->
-<!--  <span th:text="${customerList.number + 1}"></span>/<span th:text="${customerList.totalPages}"></span>-->
-<!--  <a th:href="@{'/customer/list'(page=${customerList.number + 1})}" th:if="${customerList.hasNext()}" style="text-decoration: none">Next</a>-->
-<!--</div>-->
+<div style="margin: 10px">
+<button class="btn btn-dark rounded-pill wow fadeInLeft" [routerLink]="['/']" style="float: left" routerLinkActive="active"><< Back to home</button>
+<button class="btn btn-dark rounded-pill wow fadeInRight" [routerLink]="['/customer-create']" style="float: right">Create new >></button>
+</div><br><br>
+
+<div class="container-fluid wow fadeInDown">
+  <h1>CUSTOMER MANAGEMENT</h1>
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
 <table class="table table-hover table-bordered" style="margin: 0 auto; border: solid black 2px">
   <thead>
   <tr>
@@ -31,8 +22,8 @@
   </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let c of customerList">
-    <td>{{c.customerId}}</td>
+  <tr *ngFor="let c of customerList | paginate: {itemsPerPage: 5, currentPage: p}">
+    <td>{{c.id}}</td>
     <td>{{c.customerCode}}</td>
     <td>{{c.customerName}}</td>
     <td>{{c.customerDob}}</td>
@@ -45,10 +36,11 @@
       <app-customer-detail [customerChild]="customerFather" (click)="showDetail(c)"></app-customer-detail>
     </td>
     <td>
-      <button class="btn btn-success rounded-pill">Edit</button>
+      <button class="btn btn-success rounded-pill" [routerLink]="['/customer-edit/', c.id]">Edit</button>
     </td>
     <td>
-      <button class="btn btn-danger rounded-pill">Delete</button>
+      <button class="btn btn-danger rounded-pill" (click)="openModal(c.id)" data-toggle="modal"
+              data-target="#exampleModal">Delete</button>
     </td>
   </tr>
   </tbody>

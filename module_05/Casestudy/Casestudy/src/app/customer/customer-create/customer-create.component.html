@@ -1,95 +1,122 @@
-<div class="container-fluid">
-  <form>
+<div style="margin: 10px">
+  <button class="btn btn-dark rounded-pill wow fadeInLeft" [routerLink]="['/customer']" style="float: left" routerLinkActive="active"><< Back to list</button>
+</div><br><br>
+
+<div class="container wow fadeInDown" style="margin-bottom: 40px">
+  <form [formGroup]="customerForm" (ngSubmit)="createCustomer()">
     <h1>CREATE NEW CUSTOMER</h1>
-    <table class="table table-bordered" style="margin: 0 auto">
+    <table class="table table-bordered table-hover" style="margin: 0 auto; border: solid black 2px">
       <thead>
       <tr>
         <td>
           <label class="form-label">CODE</label>
         </td>
         <td>
-          <input type="text" class="form-control" placeholder="KH-XXXX">
+          <input type="text" class="form-control" placeholder="KH-XXXX" style="width: 400px" formControlName="customerCode" >
         </td>
-        <td></td>
+        <td>
+          <div *ngFor="let valid of validationMessage.customerCode">
+            <span class="err" *ngIf="customerForm.get('customerCode').hasError(valid.type) && customerForm.get('customerCode').dirty">{{valid.message}}</span>
+          </div>
+        </td>
       </tr>
       <tr>
         <td>
           <label class="form-label">NAME</label>
         </td>
         <td>
-          <input type="text" class="form-control">
+          <input type="text" class="form-control" style="width: 400px" formControlName="customerName">
         </td>
-        <td></td>
+        <td>
+          <div *ngFor="let valid of validationMessage.customerName">
+            <span  class="err" *ngIf="customerForm.get('customerName').hasError(valid.type) && customerForm.get('customerName').dirty">{{valid.message}}</span>
+          </div>
+        </td>
       </tr>
       <tr>
         <td>
           <label class="form-label">DAY OF BIRTH</label>
         </td>
         <td>
-          <input type="text" class="form-control" placeholder="DD-MM-YYYY">
-        </td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>
-          <label class="form-label">GENDER</label>
+          <input type="text" class="form-control" placeholder="DD-MM-YYYY" style="width: 400px" formControlName="customerDob">
         </td>
         <td>
-          <span style="margin-right: 100px; padding-right: 60px"><input type="radio" value="0"> Female</span>
-          <span style="margin-right: 100px; padding-right: 60px"><input type="radio" value="1"> Male</span>
-          <span><input type="radio" value="2"/> Other</span>
+          <div *ngFor="let valid of validationMessage.customerDob">
+            <span  class="err" *ngIf="customerForm.get('customerDob').hasError(valid.type) && customerForm.get('customerDob').dirty">{{valid.message}}</span>
+          </div>
         </td>
-        <td></td>
       </tr>
       <tr>
         <td>
           <label class="form-label">ID CARD NUMBER</label>
         </td>
         <td>
-          <input type="number" class="form-control" placeholder="9 or 12 number chain">
+          <input type="number" class="form-control" placeholder="9 or 12 number chain" style="width: 400px" formControlName="customerIdCard">
         </td>
-        <td></td>
+        <td>
+          <div *ngFor="let valid of validationMessage.customerIdCard">
+            <span class="err" *ngIf="customerForm.get('customerIdCard').hasError(valid.type) && customerForm.get('customerIdCard').dirty">{{valid.message}}</span>
+          </div>
+        </td>
       </tr>
       <tr>
         <td>
           <label class="form-label">PHONE NUMBER</label>
         </td>
         <td>
-          <input type="number" class="form-control"
-                 placeholder="090XXXXXXX / 091XXXXXXX / (84)+90XXXXXXX / (84)+91XXXXXXX">
+          <input type="text" class="form-control"
+                 placeholder="090XXXXXXX / 091XXXXXXX" style="width: 400px" formControlName="customerPhone">
         </td>
-        <td></td>
+        <td>
+          <div *ngFor="let valid of validationMessage.customerPhone">
+            <span class="err" *ngIf="customerForm.get('customerPhone').hasError(valid.type) && customerForm.get('customerPhone').dirty">{{valid.message}}</span>
+          </div>
+        </td>
       </tr>
       <tr>
         <td>
           <label class="form-label">EMAIL</label>
         </td>
         <td>
-          <input type="text" class="form-control" placeholder="example@gmail.com">
+          <input type="text" class="form-control" placeholder="example@gmail.com" style="width: 400px" formControlName="customerEmail">
         </td>
-        <td></td>
+        <td>
+          <div *ngFor="let valid of validationMessage.customerEmail">
+            <span class="err" *ngIf="customerForm.get('customerEmail').hasError(valid.type) && customerForm.get('customerEmail').dirty">{{valid.message}}</span>
+          </div>
+        </td>
       </tr>
       <tr>
         <td>
           <label class="form-label">ADDRESS</label>
         </td>
         <td>
-          <input type="text" class="form-control">
+          <input type="text" class="form-control" style="width: 400px" formControlName="customerAddress">
         </td>
-        <td></td>
+        <td>
+          <div *ngFor="let valid of validationMessage.customerAddress">
+            <span class="err" *ngIf="customerForm.get('customerAddress').hasError(valid.type) && customerForm.get('customerAddress').dirty">{{valid.message}}</span>
+          </div>
+        </td>
       </tr>
       <tr>
         <td>
           <label class="form-label">TYPE</label>
         </td>
         <td>
-          <select style="width: 300px; height: 40px">
-            <option></option>
+          <select style="width: 400px; height: 40px" formControlName="customerType">
+            <option *ngFor="let type of customerType" [ngValue]="type">{{type.typeName}}</option>
           </select>
+        </td>
+        <td>
+          <div *ngFor="let valid of validationMessage.customerType">
+            <span class="err" *ngIf="customerForm.get('customerType').hasError(valid.type) && customerForm.get('customerType').dirty">{{valid.message}}</span>
+          </div>
         </td>
       </tr>
       </thead>
     </table><br>
-    <button type="submit" class="btn btn-primary" style="width: 150px">CREATE</button>
+    <button type="submit" class="btn btn-primary" style="width: 150px" [disabled]="customerForm.invalid">CREATE</button>
   </form>
 </div>
+

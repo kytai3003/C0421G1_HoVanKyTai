@@ -2,26 +2,45 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ab41111-b684-4840-9481-f8c1faa232b5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Casestudy/src/models/customer/Customer.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../module_02/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_02/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module_02/out/production/module_02/META-INF/module_02.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module_02/out/production/module_02/Test2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_02/out/production/module_02/Test2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module_02/src/Test2.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_02/src/Test2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../module_04/_01_SpringMVC_overview/practise/customer_management/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_04/_01_SpringMVC_overview/practise/customer_management/customer-management" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../module_04/_02_SpringMVC_controller/practice/customer_management/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_04/_02_SpringMVC_controller/practice/customer_management/customer-management" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../module_04/_05_ORM_Database/practise/customer_management/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_04/_05_ORM_Database/practise/customer_management/customer-management" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../module_04/_09_AOP_exception_handler/practise/customer_management/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_04/_09_AOP_exception_handler/practise/customer_management/customer-management" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Casestudy.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Casestudy.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Casestudy/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Casestudy/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Casestudy/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Casestudy/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Casestudy/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Casestudy/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Casestudy/src/app/app.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/Casestudy/src/app/app.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Casestudy/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Casestudy/src/app/app.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Casestudy/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Casestudy/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Casestudy/src/app/customer/customer-create/customer-create.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/Casestudy/src/app/customer/customer-create/customer-create.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Casestudy/src/app/customer/customer-create/customer-create.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Casestudy/src/app/customer/customer-create/customer-create.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Casestudy/src/app/customer/customer-create/customer-create.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Casestudy/src/app/customer/customer-create/customer-create.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Casestudy/src/app/customer/customer-edit/customer-edit.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/Casestudy/src/app/customer/customer-edit/customer-edit.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Casestudy/src/app/customer/customer-edit/customer-edit.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Casestudy/src/app/customer/customer-edit/customer-edit.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Casestudy/src/app/customer/customer-edit/customer-edit.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Casestudy/src/app/customer/customer-edit/customer-edit.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Casestudy/src/app/customer/customer-list/customer-detail/customer-detail.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Casestudy/src/app/customer/customer-list/customer-detail/customer-detail.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Casestudy/src/app/customer/customer-list/customer-list.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/Casestudy/src/app/customer/customer-list/customer-list.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Casestudy/src/app/customer/customer-list/customer-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Casestudy/src/app/customer/customer-list/customer-list.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Casestudy/src/app/customer/customer-list/customer-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Casestudy/src/app/customer/customer-list/customer-list.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Casestudy/src/assets/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/Casestudy/src/assets/css/bootstrap.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Casestudy/src/assets/vendor/animate/animate.css" beforeDir="false" afterPath="$PROJECT_DIR$/Casestudy/src/assets/vendor/animate/animate.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Casestudy/src/app/service/service-create/service-create.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Casestudy/src/app/service/service-create/service-create.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Casestudy/src/app/service/service-create/service-create.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Casestudy/src/app/service/service-create/service-create.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Casestudy/src/app/service/service-edit/service-edit.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Casestudy/src/app/service/service-edit/service-edit.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Casestudy/src/app/service/service-edit/service-edit.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Casestudy/src/app/service/service-edit/service-edit.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Casestudy/src/app/service/service-list/service-list.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Casestudy/src/app/service/service-list/service-list.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Casestudy/src/app/service/service-list/service-list.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Casestudy/src/app/service/service-list/service-list.component.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Casestudy/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Casestudy/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Casestudy/src/models/Customer.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Casestudy/src/models/customer/Customer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Casestudy/src/models/customer/Customer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_06_form/practise/app_todo/angular-name-card/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../_06_form/practise/app_todo/angular-name-card/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_06_form/practise/app_todo/angular-name-card/src/app/todo/todo.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../_06_form/practise/app_todo/angular-name-card/src/app/todo/todo.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_06_form/practise/app_todo/angular-name-card/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../_06_form/practise/app_todo/angular-name-card/src/environments/environment.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,13 +77,14 @@
     <property name="ts.external.directory.path" value="D:\C0421G1_HoVanKyTai\module_05\Casestudy\Casestudy\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\C0421G1_HoVanKyTai\module_05\Casestudy\Casestudy\src\assets" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\C0421G1_HoVanKyTai\module_05\Casestudy\Casestudy\src\app\json_server" />
       <recent name="D:\C0421G1_HoVanKyTai\module_05\Casestudy\Casestudy\src\models\service" />
       <recent name="D:\C0421G1_HoVanKyTai\module_05\Casestudy\Casestudy\src\models\employee" />
       <recent name="D:\C0421G1_HoVanKyTai\module_05\Casestudy\Casestudy\src\models\customer" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\C0421G1_HoVanKyTai\module_05\Casestudy\Casestudy\src\assets" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -85,6 +105,12 @@
       <workItem from="1633396912394" duration="1607000" />
       <workItem from="1633420367795" duration="17895000" />
       <workItem from="1633503787975" duration="87000" />
+      <workItem from="1633524902457" duration="3922000" />
+      <workItem from="1633529180995" duration="10943000" />
+      <workItem from="1633569480997" duration="202000" />
+      <workItem from="1633595477668" duration="20034000" />
+      <workItem from="1633627358209" duration="453000" />
+      <workItem from="1633662682109" duration="11898000" />
     </task>
     <servers />
   </component>
@@ -92,10 +118,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="462" y="106" key="FileChooserDialogImpl" timestamp="1633503868483">
+    <state x="462" y="106" key="FileChooserDialogImpl" timestamp="1633569680546">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="462" y="106" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1633503868483" />
+    <state x="462" y="106" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1633569680546" />
     <state x="184" y="7" key="SettingsEditor" timestamp="1633402805330">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

@@ -20,7 +20,7 @@ import {NgxPaginationModule} from "ngx-pagination";
 import {HttpClientModule} from "@angular/common/http";
 import { CustomerDeleteComponent } from './customer/customer-list/customer-delete/customer-delete.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatDialog, MatDialogModule} from "@angular/material/dialog";
+import {MatDialogModule} from "@angular/material/dialog";
 
 @NgModule({
   declarations: [

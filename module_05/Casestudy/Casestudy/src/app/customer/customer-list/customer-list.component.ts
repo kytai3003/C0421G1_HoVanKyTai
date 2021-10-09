@@ -1,10 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Customer} from "../../../models/customer/Customer";
 import {FormControl, FormGroup} from "@angular/forms";
 import {ActivatedRoute, Router} from "@angular/router";
 import {CustomerServiceService} from "../../service/customer-service.service";
-import {MatDialog} from "@angular/material/dialog";
-import {CustomerDeleteComponent} from "./customer-delete/customer-delete.component";
+import {HttpClient} from "@angular/common/http";
+import {MatSnackBar} from "@angular/material/snack-bar";
 
 @Component({
   selector: 'app-customer-list',
@@ -13,9 +13,9 @@ import {CustomerDeleteComponent} from "./customer-delete/customer-delete.compone
 })
 export class CustomerListComponent implements OnInit {
 
-   p: number = 1;
+  p: number = 1;
 
-   customerList: Customer[];
+  customerList: Customer[];
 
   form = new FormGroup({
     id: new FormControl(''),
@@ -30,35 +30,45 @@ export class CustomerListComponent implements OnInit {
   });
 
   customerFather: Customer;
+  searchValue: string;
 
-  constructor(private router: Router, private customerService: CustomerServiceService, private dialog: MatDialog) {
-    this.customerService.findAll().subscribe(next => {
-      this.customerList = next;
-      console.log(this.customerFather);
-    })
+  constructor(private router: Router,
+              private customerService: CustomerServiceService,
+              private activatedRoute: ActivatedRoute,
+              private httpClient: HttpClient,
+              private snackBar: MatSnackBar) {
+    // this.customerService.findAll().subscribe(next => {
+    //   this.customerList = next;
+    //   console.log(this.customerFather);
+    // })
   }
 
   ngOnInit(): void {
+    this.httpClient.get('http://localhost:3000/customer').subscribe((result: Customer[]) => {
+      this.customerList = result;
+      console.log(this.customerList);
+    })
   }
-
 
   showDetail(customer: Customer) {
     this.customerFather = customer;
   }
 
-  openModal(id: number) {
-    console.log(id);
-    this.customerService.findById(id).subscribe(dataDialog => {
-      console.log(dataDialog);
-      const dialogRef = this.dialog.open(CustomerDeleteComponent, {
-        width: '500px',
-        data: {name: dataDialog},
-        disableClose: true
-      });
-      dialogRef.afterClosed().subscribe(result => {
-        console.log('The dialog was closed');
-        this.ngOnInit();
-      });
-    });
+  Search() {
+    if (this.searchValue == "") {
+      this.ngOnInit();
+    } else {
+      this.customerList = this.customerList.filter(res => {
+        return res.customerName.toLocaleLowerCase().includes(this.searchValue.toLocaleLowerCase()) ||
+          res.customerCode.toLocaleLowerCase().match(this.searchValue.toLocaleLowerCase());
+      })
+    }
+  }
+
+  key: string = 'customerCode';
+  reverse: boolean = false;
+  sort(key) {
+    this.key = key;
+    this.reverse = !this.reverse;
   }
 }

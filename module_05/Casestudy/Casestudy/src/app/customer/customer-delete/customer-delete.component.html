@@ -1,0 +1,26 @@
+<div style="margin: 10px">
+  <button class="btn btn-dark rounded-pill wow fadeInLeft" [routerLink]="['/customer']" style="float: left" routerLinkActive="active"><< Back to list</button>
+</div><br><br><br><br>
+<div class="container wow fadeIn wrap">
+  <h2>Confirm?</h2>
+<table class="table table-hover table-bordered" style="margin: 0 auto; border: solid black 3px">
+  <thead>
+  <tr>
+    <td>ID</td>
+    <td><h4>{{customerDelete.id}}</h4></td>
+  </tr>
+  <tr>
+    <td>CODE</td>
+    <td><h4>{{customerDelete.customerCode}}</h4></td>
+  </tr>
+  <tr>
+    <td>NAME</td>
+    <td><h4>{{customerDelete.customerName}}</h4></td>
+  </tr>
+  <tr>
+    <td colspan="2"><button type="submit" class="btn btn-danger" (click)="deleteCustomer(id)">Delete</button>
+    </td>
+  </tr>
+  </thead>
+</table>
+</div>

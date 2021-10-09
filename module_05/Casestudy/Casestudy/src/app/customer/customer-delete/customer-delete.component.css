@@ -1,0 +1,21 @@
+td, tr {
+  vertical-align: middle;
+}
+
+* {margin: 0 auto; font-weight: bold}
+
+table {
+  width: 500px;
+  vertical-align: middle;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.wrap
+{
+  margin: 0 auto;
+  width:550px;
+  height:450px;
+  position: relative;
+}

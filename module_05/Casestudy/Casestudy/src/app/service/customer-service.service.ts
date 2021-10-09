@@ -28,6 +28,6 @@ export class CustomerServiceService {
   }
 
   deleteCustomer(id: number): Observable<any> {
-    return this.httpClient.delete(`${this.api_url_customer}/${id}`);
+    return this.httpClient.delete(this.api_url_customer+ "/" + id);
   }
 }

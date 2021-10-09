@@ -13,14 +13,17 @@ import { ContractListComponent } from './contract/contract-list/contract-list.co
 import { ContractCreateComponent } from './contract/contract-create/contract-create.component';
 import { ContractEditComponent } from './contract/contract-edit/contract-edit.component';
 import { ContractDetailCreateComponent } from './contract/contract-detail-create/contract-detail-create.component';
-import {ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { CustomerDetailComponent } from './customer/customer-list/customer-detail/customer-detail.component';
 import { HomeComponent } from './home/home.component';
 import {NgxPaginationModule} from "ngx-pagination";
 import {HttpClientModule} from "@angular/common/http";
-import { CustomerDeleteComponent } from './customer/customer-list/customer-delete/customer-delete.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatDialogModule} from "@angular/material/dialog";
+import {CustomerDeleteComponent} from "./customer/customer-delete/customer-delete.component";
+import {Ng2SearchPipeModule} from "ng2-search-filter";
+import {Ng2OrderModule} from "ng2-order-pipe";
+import {SimpleNotificationsModule} from "angular2-notifications";
 
 @NgModule({
   declarations: [
@@ -37,7 +40,7 @@ import {MatDialogModule} from "@angular/material/dialog";
     ContractDetailCreateComponent,
     CustomerDetailComponent,
     HomeComponent,
-    CustomerDeleteComponent
+    CustomerDeleteComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,7 +49,11 @@ import {MatDialogModule} from "@angular/material/dialog";
     ReactiveFormsModule,
     NgxPaginationModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule,
+    Ng2SearchPipeModule,
+    Ng2OrderModule,
+    SimpleNotificationsModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

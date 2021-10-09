@@ -5,6 +5,7 @@ import {CustomerServiceService} from "../../service/customer-service.service";
 import {Customer} from "../../../models/customer/Customer";
 import {CustomerTypeServiceService} from "../../service/customer-type-service.service";
 import {CustomerType} from "../../../models/customer/CustomerType";
+import {NotificationsService} from "angular2-notifications";
 
 @Component({
   selector: 'app-customer-create',
@@ -19,7 +20,8 @@ export class CustomerCreateComponent implements OnInit {
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute,
               private customerService: CustomerServiceService,
-              private customerTypeList: CustomerTypeServiceService) {
+              private customerTypeList: CustomerTypeServiceService,
+              private service: NotificationsService) {
     this.customerForm = new FormGroup({
       customerCode: new FormControl("", Validators.compose([Validators.required, Validators.pattern('^KH-\\d{4}$')])),
       customerDob: new FormControl("", Validators.required),

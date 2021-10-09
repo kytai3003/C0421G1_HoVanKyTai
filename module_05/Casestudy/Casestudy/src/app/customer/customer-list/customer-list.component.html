@@ -5,13 +5,16 @@
 
 <div class="container-fluid wow fadeInDown">
   <h1>CUSTOMER MANAGEMENT</h1>
+  <div class="input">
+    <input type="text" [(ngModel)]="searchValue" name="customerName" (ngModelChange)="Search()" style="width: 350px; height: 35px; align-items: center; text-align: center" placeholder="Search by name or code">
+  </div><br><br>
   <pagination-controls (pageChange)="p = $event"></pagination-controls>
 <table class="table table-hover table-bordered" style="margin: 0 auto; border: solid black 2px">
   <thead>
   <tr>
     <th>ID</th>
-    <th>CODE</th>
-    <th>NAME</th>
+    <th (click)="sort('customerCode')">CODE<sub style="color: red; font-size: 12px">sort</sub></th>
+    <th (click)="sort('customerName')">NAME<sub style="color: red; font-size: 12px">sort</sub></th>
     <th>BIRTH</th>
     <th>ID CARD</th>
     <th>PHONE</th>
@@ -22,7 +25,7 @@
   </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let c of customerList | paginate: {itemsPerPage: 5, currentPage: p}">
+  <tr *ngFor="let c of customerList | paginate: {itemsPerPage:4,currentPage:p} | orderBy: key : reverse">
     <td>{{c.id}}</td>
     <td>{{c.customerCode}}</td>
     <td>{{c.customerName}}</td>
@@ -39,11 +42,10 @@
       <button class="btn btn-success rounded-pill" [routerLink]="['/customer-edit/', c.id]">Edit</button>
     </td>
     <td>
-      <button class="btn btn-danger rounded-pill" (click)="openModal(c.id)">Delete</button>
+      <button class="btn btn-danger rounded-pill" [routerLink]="['/customer-delete', c.id]">Delete</button>
     </td>
   </tr>
   </tbody>
 </table>
 </div>
-
-
+<simple-notifications></simple-notifications>

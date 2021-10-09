@@ -12,7 +12,7 @@
           <label class="form-label">ID</label>
         </td>
         <td>
-          <input type="text" class="form-control" style="width: 400px" formControlName="id" >
+          <input type="text" class="form-control" style="width: 400px" formControlName="id" readonly>
         </td>
         <td></td>
       </tr>
@@ -21,7 +21,7 @@
           <label class="form-label">CODE</label>
         </td>
         <td>
-          <input type="text" class="form-control" style="width: 400px" formControlName="customerCode">
+          <input type="text" class="form-control" style="width: 400px" formControlName="customerCode" readonly>
         </td>
         <td>
           <div *ngFor="let valid of validationMessageEdit.customerCode">

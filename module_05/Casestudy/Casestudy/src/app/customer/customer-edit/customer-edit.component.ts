@@ -33,8 +33,8 @@ export class CustomerEditComponent implements OnInit {
   getCustomer(id: number) {
     return this.customerService.findById(id).subscribe(customer => {
       this.customerEditForm = new FormGroup({
-        id: new FormControl({value: customer.id, disabled: true}),
-        customerCode: new FormControl(customer.customerCode, Validators.compose([Validators.required, Validators.pattern('^KH-\\d{4}$')])),
+        id: new FormControl(customer.id),
+        customerCode: new FormControl(customer.customerCode),
         customerDob: new FormControl(customer.customerDob, Validators.compose([Validators.required, Validators.pattern('^(0?[1-9]|[12][0-9]|3[01])[\\/\\-](0?[1-9]|1[012])[\\/\\-]\\d{4}$')])),
         customerName: new FormControl(customer.customerName, Validators.required),
         customerIdCard: new FormControl(customer.customerIdCard, Validators.compose([Validators.required, Validators.pattern('^\\d{9}|\\d{12}$')])),

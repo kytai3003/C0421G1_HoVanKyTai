@@ -1,93 +1,10 @@
 {
   "customer": [
     {
-      "customerCode": "KH-0001",
-      "customerDob": "20-12-1992",
-      "customerName": "Nguyễn Văn F",
-      "customerIdCard": "123456789",
-      "customerPhone": "0909090909",
-      "customerEmail": "abc@gmail.com",
-      "customerAddress": "Da Nang",
-      "customerType": {
-        "id": 4,
-        "typeName": "Silver"
-      },
-      "id": 1
-    },
-    {
-      "customerCode": "KH-0002",
-      "customerDob": "20-12-1992",
-      "customerName": "Nguyen Van G",
-      "customerIdCard": "123456789",
-      "customerPhone": "0909090909",
-      "customerEmail": "abc@gmail.com",
-      "customerAddress": "Da Nang",
-      "customerType": {
-        "id": 2,
-        "typeName": "Platinum"
-      },
-      "id": 2
-    },
-    {
-      "customerCode": "KH-0003",
-      "customerDob": "30-03-1999",
-      "customerName": "Hung",
-      "customerIdCard": 123123123,
-      "customerPhone": "0909090909",
-      "customerEmail": "hung@gmail.com",
-      "customerAddress": "ĐN",
-      "customerType": {
-        "id": 1,
-        "typeName": "Diamond"
-      },
-      "id": 3
-    },
-    {
-      "customerCode": "KH-0004",
-      "customerDob": "20-12-1992",
-      "customerName": "Nguyen Van E",
-      "customerIdCard": "123456789",
-      "customerPhone": "0909090909",
-      "customerEmail": "abc@gmail.com",
-      "customerAddress": "Da Nang",
-      "customerType": {
-        "id": 1,
-        "typeName": "Diamond"
-      },
-      "id": 4
-    },
-    {
-      "customerCode": "KH-1234",
-      "customerDob": "30-03-1993",
-      "customerName": "Tai",
-      "customerIdCard": 123123123,
-      "customerPhone": 909090909,
-      "customerEmail": "tai@gmail.com",
-      "customerAddress": "Đà Nẵng",
-      "customerType": {
-        "id": 1,
-        "typeName": "Diamond"
-      },
-      "id": 5
-    },
-    {
-      "customerCode": "KH-0006",
-      "customerDob": "12-12-1992",
-      "customerName": "Hai",
-      "customerIdCard": 123123141,
-      "customerPhone": 921212121,
-      "customerEmail": "hai@gmail.com",
-      "customerAddress": "Hà Nội ",
-      "customerType": {
-        "id": 4,
-        "typeName": "Silver"
-      },
-      "id": 6
-    },
-    {
+      "id": 7,
       "customerCode": "KH-0007",
-      "customerDob": "12-11-1991",
-      "customerName": "Dũng",
+      "customerDob": "12-11-1997",
+      "customerName": "An",
       "customerIdCard": 123123123,
       "customerPhone": "0909090909",
       "customerEmail": "dung@gmail.com",
@@ -95,26 +12,11 @@
       "customerType": {
         "id": 1,
         "typeName": "Diamond"
-      },
-      "id": 7
+      }
     },
     {
       "customerCode": "KH-1231",
-      "customerDob": "30-03-1999",
-      "customerName": "Lan",
-      "customerIdCard": 123123123,
-      "customerPhone": "0914123123",
-      "customerEmail": "lan@gmail.com",
-      "customerAddress": "Hà Nội",
-      "customerType": {
-        "id": 5,
-        "typeName": "Member"
-      },
-      "id": 8
-    },
-    {
-      "customerCode": "KH-1231",
-      "customerDob": "29-09-1999",
+      "customerDob": "29-09-1992",
       "customerName": "Tai",
       "customerIdCard": 123123123,
       "customerPhone": "0909090909",
@@ -127,18 +29,102 @@
       "id": 9
     },
     {
-      "customerCode": "KH-7777",
-      "customerDob": "29-09-1999",
-      "customerName": "haha",
+      "customerCode": "KH-1212",
+      "customerDob": "30-03-1992",
+      "customerName": "quyen",
       "customerIdCard": 123123123,
       "customerPhone": "0909090909",
       "customerEmail": "tai@gmail.com",
+      "customerAddress": "TP.HCM",
+      "customerType": {
+        "id": 4,
+        "typeName": "Silver"
+      },
+      "id": 11
+    },
+    {
+      "customerCode": "KH-9999",
+      "customerDob": "19-12-1999",
+      "customerName": "momo",
+      "customerIdCard": 123123123,
+      "customerPhone": "0909090909",
+      "customerEmail": "mo@gmail.com",
+      "customerAddress": "Đà Nẵng",
+      "customerType": {
+        "id": 3,
+        "typeName": "Gold"
+      },
+      "id": 12
+    },
+    {
+      "customerCode": "KH-0909",
+      "customerDob": "12-12-1992",
+      "customerName": "Châu Tinh Trì",
+      "customerIdCard": 124919294,
+      "customerPhone": "0909090909",
+      "customerEmail": "tai@gmail.com",
+      "customerAddress": "Đà Nẵng",
+      "customerType": {
+        "id": 3,
+        "typeName": "Gold"
+      },
+      "id": 13
+    },
+    {
+      "customerCode": "KH-1299",
+      "customerDob": "12-12-1992",
+      "customerName": "Dung",
+      "customerIdCard": 919191919,
+      "customerPhone": "0909090909",
+      "customerEmail": "tai@gmail.com",
+      "customerAddress": "Đà Nẵng",
+      "customerType": {
+        "id": 3,
+        "typeName": "Gold"
+      },
+      "id": 14
+    },
+    {
+      "customerCode": "KH-8878",
+      "customerDob": "30-03-1111",
+      "customerName": "HAHa",
+      "customerIdCard": 123123123,
+      "customerPhone": "0909090909",
+      "customerEmail": "minh@gmail.com",
+      "customerAddress": "Hà Nội",
+      "customerType": {
+        "id": 2,
+        "typeName": "Platinum"
+      },
+      "id": 15
+    },
+    {
+      "customerCode": "KH-5464",
+      "customerDob": "30-03-1993",
+      "customerName": "Bình",
+      "customerIdCard": 123123123,
+      "customerPhone": "0909090909",
+      "customerEmail": "minh@gmail.com",
       "customerAddress": "Đà Nẵng",
       "customerType": {
         "id": 2,
         "typeName": "Platinum"
       },
-      "id": 10
+      "id": 16
+    },
+    {
+      "customerCode": "KH-7777",
+      "customerDob": "30-03-1999",
+      "customerName": "Võ",
+      "customerIdCard": 123123123,
+      "customerPhone": "0909090909",
+      "customerEmail": "vo@gmail.com",
+      "customerAddress": "Đà Nẵng",
+      "customerType": {
+        "id": 1,
+        "typeName": "Diamond"
+      },
+      "id": 17
     }
   ],
   "customerType": [

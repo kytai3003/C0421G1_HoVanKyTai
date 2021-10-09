@@ -3,7 +3,7 @@
 </div><br><br>
 
 <div class="container wow fadeInDown" style="margin-bottom: 40px">
-  <form [formGroup]="customerForm" (ngSubmit)="createCustomer()">
+  <form [formGroup]="customerForm" (ngSubmit)="createCustomer('Created!')">
     <h1>CREATE NEW CUSTOMER</h1>
     <table class="table table-bordered table-hover" style="margin: 0 auto; border: solid black 2px">
       <thead>
@@ -119,4 +119,5 @@
     <button type="submit" class="btn btn-primary" style="width: 150px" [disabled]="customerForm.invalid">CREATE</button>
   </form>
 </div>
+<simple-notifications></simple-notifications>
 

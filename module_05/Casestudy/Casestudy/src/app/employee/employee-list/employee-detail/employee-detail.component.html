@@ -1,0 +1,70 @@
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary rounded-pill" data-toggle="modal" data-target="#modelId" style="font-weight: bold">
+  Detail
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-static text-center" *ngIf="employeeDetail" style="margin: 0 auto"><br>
+        <table class="table table-responsive">
+          <thead class="thead-inverse">
+          <tr>
+            <td class="fw-semibold">Id</td>
+            <td class="font-italic">{{employeeDetail.id}}</td>
+          </tr>
+          <tr>
+            <td>Code</td>
+            <td class="font-italic">{{employeeDetail.employeeCode}}</td>
+          </tr>
+          <tr>
+            <td>Name</td>
+            <td class="font-italic">{{employeeDetail.employeeName}}</td>
+          </tr>
+          <tr>
+            <td>Day of birth</td>
+            <td class="font-italic">{{employeeDetail.employeeDob}}</td>
+          </tr>
+          <tr>
+            <td>Id card</td>
+            <td class="font-italic">{{employeeDetail.employeeIdCard}}</td>
+          </tr>
+          <tr>
+            <td>Salary</td>
+            <td class="font-italic">{{employeeDetail.employeeSalary}}</td>
+          </tr>
+          <tr>
+            <td>Phone</td>
+            <td class="font-italic">{{employeeDetail.employeePhone}}</td>
+          </tr>
+          <tr>
+            <td>Email</td>
+            <td class="font-italic">{{employeeDetail.employeeEmail}}</td>
+          </tr>
+          <tr>
+            <td>Address</td>
+            <td class="font-italic">{{employeeDetail.employeeAddress}}</td>
+          </tr>
+          <tr>
+            <td>Division</td>
+            <td class="font-italic">{{employeeDetail.employeeDivision.divisionName}}</td>
+          </tr>
+          <tr>
+            <td>Education</td>
+            <td class="font-italic">{{employeeDetail.employeeEducation.educationName}}</td>
+          </tr>
+          <tr>
+            <td>Position</td>
+            <td class="font-italic">{{employeeDetail.employeePosition.positionName}}</td>
+          </tr>
+          </thead>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" style="font-weight: bold">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+

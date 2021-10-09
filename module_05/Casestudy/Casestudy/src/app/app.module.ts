@@ -23,7 +23,15 @@ import {MatDialogModule} from "@angular/material/dialog";
 import {CustomerDeleteComponent} from "./customer/customer-delete/customer-delete.component";
 import {Ng2SearchPipeModule} from "ng2-search-filter";
 import {Ng2OrderModule} from "ng2-order-pipe";
-import {SimpleNotificationsModule} from "angular2-notifications";
+import {MatSnackBarModule} from "@angular/material/snack-bar";
+import { EmployeeDetailComponent } from './employee/employee-list/employee-detail/employee-detail.component';
+import { EmployeeDeleteComponent } from './employee/employee-delete/employee-delete.component';
+import { ServiceListComponent } from './service-furama/service-list/service-list.component';
+import { ServiceCreateComponent } from './service-furama/service-create/service-create.component';
+import { ServiceEditComponent } from './service-furama/service-edit/service-edit.component';
+import { ServiceDeleteComponent } from './service-furama/service-delete/service-delete.component';
+import { ServiceDetailComponent } from './service-furama/service-list/service-detail/service-detail.component';
+
 
 @NgModule({
   declarations: [
@@ -41,6 +49,13 @@ import {SimpleNotificationsModule} from "angular2-notifications";
     CustomerDetailComponent,
     HomeComponent,
     CustomerDeleteComponent,
+    EmployeeDetailComponent,
+    EmployeeDeleteComponent,
+    ServiceListComponent,
+    ServiceCreateComponent,
+    ServiceEditComponent,
+    ServiceDeleteComponent,
+    ServiceDetailComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,7 +68,7 @@ import {SimpleNotificationsModule} from "angular2-notifications";
     FormsModule,
     Ng2SearchPipeModule,
     Ng2OrderModule,
-    SimpleNotificationsModule.forRoot()
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

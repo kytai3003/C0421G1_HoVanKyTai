@@ -1,90 +1,115 @@
-<div class="container-fluid">
-  <form>
+<div style="margin: 10px">
+  <button class="btn btn-dark rounded-pill wow fadeInLeft" [routerLink]="['/employee']" style="float: left" routerLinkActive="active"><< Back to list</button>
+</div><br><br>
+
+<div class="container wow fadeInDown" style="margin-bottom: 40px">
+  <form [formGroup]="employeeForm" (ngSubmit)="createEmployee()">
     <h1>CREATE NEW EMPLOYEE</h1>
-    <table class="table table-bordered" style="margin: 0 auto">
+    <table class="table table-bordered table-hover" style="margin: 0 auto; border: solid black 2px">
       <thead>
+      <tr>
+        <td>
+          <label class="form-label">CODE</label>
+        </td>
+        <td>
+          <input type="text" class="form-control" placeholder="NV-XXXX" style="width: 400px" formControlName="employeeCode" >
+        </td>
+        <td>
+          <div *ngFor="let valid of validationMessage.employeeCode">
+            <span class="err" *ngIf="employeeForm.get('employeeCode').hasError(valid.type) && employeeForm.get('employeeCode').dirty">{{valid.message}}</span>
+          </div>
+        </td>
+      </tr>
       <tr>
         <td>
           <label class="form-label">NAME</label>
         </td>
         <td>
-          <input type="text" class="form-control">
+          <input type="text" class="form-control" style="width: 400px" formControlName="employeeName">
         </td>
-        <td></td>
+        <td>
+          <div *ngFor="let valid of validationMessage.employeeName">
+            <span  class="err" *ngIf="employeeForm.get('employeeName').hasError(valid.type) && employeeForm.get('employeeName').dirty">{{valid.message}}</span>
+          </div>
+        </td>
       </tr>
       <tr>
         <td>
           <label class="form-label">DAY OF BIRTH</label>
         </td>
         <td>
-          <input type="text" class="form-control" placeholder="DD-MM-YYYY">
+          <input type="text" class="form-control" placeholder="DD-MM-YYYY" style="width: 400px" formControlName="employeeDob">
         </td>
-        <td></td>
+        <td>
+          <div *ngFor="let valid of validationMessage.employeeDob">
+            <span  class="err" *ngIf="employeeForm.get('employeeDob').hasError(valid.type) && employeeForm.get('employeeDob').dirty">{{valid.message}}</span>
+          </div>
+        </td>
       </tr>
       <tr>
         <td>
           <label class="form-label">ID CARD NUMBER</label>
         </td>
         <td>
-          <input type="number" class="form-control" placeholder="9 or 12 number chain">
+          <input type="number" class="form-control" placeholder="9 or 12 number chain" style="width: 400px" formControlName="employeeIdCard">
         </td>
-        <td></td>
+        <td>
+          <div *ngFor="let valid of validationMessage.employeeIdCard">
+            <span class="err" *ngIf="employeeForm.get('employeeIdCard').hasError(valid.type) && employeeForm.get('employeeIdCard').dirty">{{valid.message}}</span>
+          </div>
+        </td>
       </tr>
       <tr>
         <td>
           <label class="form-label">SALARY</label>
         </td>
         <td>
-          <input type="number" class="form-control">
+          <input type="number" class="form-control" style="width: 400px" formControlName="employeeSalary">
         </td>
-        <td></td>
+        <td>
+          <div *ngFor="let valid of validationMessage.employeeSalary">
+            <span class="err" *ngIf="employeeForm.get('employeeSalary').hasError(valid.type) && employeeForm.get('employeeSalary').dirty">{{valid.message}}</span>
+          </div>
+        </td>
       </tr>
       <tr>
         <td>
           <label class="form-label">PHONE NUMBER</label>
         </td>
         <td>
-          <input type="number" class="form-control"
-                 placeholder="090XXXXXXX / 091XXXXXXX / (84)+90XXXXXXX / (84)+91XXXXXXX">
+          <input type="text" class="form-control"
+                 placeholder="090XXXXXXX / 091XXXXXXX" style="width: 400px" formControlName="employeePhone">
         </td>
-        <td></td>
+        <td>
+          <div *ngFor="let valid of validationMessage.employeePhone">
+            <span class="err" *ngIf="employeeForm.get('employeePhone').hasError(valid.type) && employeeForm.get('employeePhone').dirty">{{valid.message}}</span>
+          </div>
+        </td>
       </tr>
       <tr>
         <td>
           <label class="form-label">EMAIL</label>
         </td>
         <td>
-          <input type="text" class="form-control" placeholder="example@gmail.com">
+          <input type="text" class="form-control" placeholder="example@gmail.com" style="width: 400px" formControlName="employeeEmail">
         </td>
-        <td></td>
+        <td>
+          <div *ngFor="let valid of validationMessage.employeeEmail">
+            <span class="err" *ngIf="employeeForm.get('employeeEmail').hasError(valid.type) && employeeForm.get('employeeEmail').dirty">{{valid.message}}</span>
+          </div>
+        </td>
       </tr>
       <tr>
         <td>
           <label class="form-label">ADDRESS</label>
         </td>
         <td>
-          <input type="text" class="form-control">
-        </td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>
-          <label class="form-label">POSITION</label>
+          <input type="text" class="form-control" style="width: 400px" formControlName="employeeAddress">
         </td>
         <td>
-          <select>
-            <option></option>
-          </select>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <label class="form-label">EDUCATION DEGREE</label>
-        </td>
-        <td>
-          <select>
-            <option></option>
-          </select>
+          <div *ngFor="let valid of validationMessage.employeeAddress">
+            <span class="err" *ngIf="employeeForm.get('employeeAddress').hasError(valid.type) && employeeForm.get('employeeAddress').dirty">{{valid.message}}</span>
+          </div>
         </td>
       </tr>
       <tr>
@@ -92,13 +117,48 @@
           <label class="form-label">DIVISION</label>
         </td>
         <td>
-          <select>
-            <option></option>
+          <select style="width: 400px; height: 40px" formControlName="employeeDivision">
+            <option *ngFor="let type of divisionList" [ngValue]="type" [selected]="type.divisionName">{{type.divisionName}}</option>
           </select>
+        </td>
+        <td>
+          <div *ngFor="let valid of validationMessage.employeeDivision">
+            <span class="err" *ngIf="employeeForm.get('employeeDivision').hasError(valid.type) && employeeForm.get('employeeDivision').dirty">{{valid.message}}</span>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label class="form-label">POSITION</label>
+        </td>
+        <td>
+          <select style="width: 400px; height: 40px" formControlName="employeePosition">
+            <option *ngFor="let type of positionList" [ngValue]="type" [selected]="type.positionName">{{type.positionName}}</option>
+          </select>
+        </td>
+        <td>
+          <div *ngFor="let valid of validationMessage.employeePosition">
+            <span class="err" *ngIf="employeeForm.get('employeePosition').hasError(valid.type) && employeeForm.get('employeePosition').dirty">{{valid.message}}</span>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label class="form-label">EDUCATION</label>
+        </td>
+        <td>
+          <select style="width: 400px; height: 40px" formControlName="employeeEducation">
+            <option *ngFor="let type of educationList" [ngValue]="type" [selected]="type.educationName">{{type.educationName}}</option>
+          </select>
+        </td>
+        <td>
+          <div *ngFor="let valid of validationMessage.employeeEducation">
+            <span class="err" *ngIf="employeeForm.get('employeeEducation').hasError(valid.type) && employeeForm.get('employeeEducation').dirty">{{valid.message}}</span>
+          </div>
         </td>
       </tr>
       </thead>
     </table><br>
-    <button type="submit" class="btn btn-primary" style="width: 150px">CREATE</button>
+    <button type="submit" class="btn btn-primary" style="width: 150px" [disabled]="employeeForm.invalid">CREATE</button>
   </form>
 </div>

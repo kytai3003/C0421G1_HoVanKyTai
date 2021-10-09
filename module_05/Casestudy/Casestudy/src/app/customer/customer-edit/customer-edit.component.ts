@@ -5,6 +5,7 @@ import {CustomerServiceService} from "../../service/customer-service.service";
 import {ActivatedRoute, ParamMap, Router} from "@angular/router";
 import {CustomerType} from "../../../models/customer/CustomerType";
 import {CustomerTypeServiceService} from "../../service/customer-type-service.service";
+import {MatSnackBar} from "@angular/material/snack-bar";
 
 @Component({
   selector: 'app-customer-edit',
@@ -19,7 +20,8 @@ export class CustomerEditComponent implements OnInit {
   public customerEdit: Customer;
 
   constructor(private customerService: CustomerServiceService, private activatedRoute: ActivatedRoute,
-              private customerType: CustomerTypeServiceService, private router: Router) {
+              private customerType: CustomerTypeServiceService, private router: Router,
+              private matSnackBar: MatSnackBar) {
     this.activatedRoute.paramMap.subscribe((paramMap: ParamMap) => {
       this.id = +paramMap.get('id');
       this.getCustomer(this.id);
@@ -55,26 +57,26 @@ export class CustomerEditComponent implements OnInit {
       {type: 'pattern', message: '<= Wrong format.'},
     ],
     customerDob: [
-      {type: 'required', message: '<- Please input.'},
-      {type: 'pattern', message: '<- Wrong format.'}
+      {type: 'required', message: '<= Please input.'},
+      {type: 'pattern', message: '<= Wrong format.'}
     ],
     customerName: [
-      {type: 'required', message: '<- Please input.'},
+      {type: 'required', message: '<= Please input.'},
     ],
     customerIdCard: [
-      {type: 'required', message: '<- Please input.'},
-      {type: 'pattern', message: '<- Wrong format.'},
+      {type: 'required', message: '<= Please input.'},
+      {type: 'pattern', message: '<= Wrong format.'},
     ],
     customerPhone: [
-      {type: 'required', message: '<- Please input.'},
-      {type: 'pattern', message: '<- Wrong format.'},
+      {type: 'required', message: '<= Please input.'},
+      {type: 'pattern', message: '<= Wrong format.'},
     ],
     customerEmail: [
-      {type: 'required', message: '<- Please input.'},
-      {type: 'email', message: '<- Wrong format.'},
+      {type: 'required', message: '<= Please input.'},
+      {type: 'email', message: '<= Wrong format.'},
     ],
     customerAddress: [
-      {type: 'required', message: '<- Please input.'},
+      {type: 'required', message: '<= Please input.'},
     ],
     customerType: [
       {type: 'required', message: '<= Please input.'},
@@ -90,8 +92,13 @@ export class CustomerEditComponent implements OnInit {
   updateCustomer(id: number) {
     const customer = this.customerEditForm.value;
     this.customerService.updateCustomer(id, customer).subscribe(() => {
-      this.router.navigateByUrl("/customer");
-    })
+      this.matSnackBar.open("Customer code: " + this.customerEdit.customerCode + " edited.", "", {
+        duration: 3000,
+        verticalPosition: 'top',
+        panelClass: 'green-snackbar'
+      } )
+    });
+    this.router.navigateByUrl("/customer");
   }
 
   compareFn(c1: any, c2: any): boolean {

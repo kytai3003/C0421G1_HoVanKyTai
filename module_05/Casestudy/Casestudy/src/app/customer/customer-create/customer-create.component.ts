@@ -5,7 +5,7 @@ import {CustomerServiceService} from "../../service/customer-service.service";
 import {Customer} from "../../../models/customer/Customer";
 import {CustomerTypeServiceService} from "../../service/customer-type-service.service";
 import {CustomerType} from "../../../models/customer/CustomerType";
-import {NotificationsService} from "angular2-notifications";
+import {MatSnackBar} from "@angular/material/snack-bar";
 
 @Component({
   selector: 'app-customer-create',
@@ -21,10 +21,10 @@ export class CustomerCreateComponent implements OnInit {
   constructor(private router: Router, private activatedRoute: ActivatedRoute,
               private customerService: CustomerServiceService,
               private customerTypeList: CustomerTypeServiceService,
-              private service: NotificationsService) {
+              private snackBar: MatSnackBar) {
     this.customerForm = new FormGroup({
       customerCode: new FormControl("", Validators.compose([Validators.required, Validators.pattern('^KH-\\d{4}$')])),
-      customerDob: new FormControl("", Validators.required),
+      customerDob: new FormControl("", Validators.compose([Validators.required, Validators.pattern('^(0?[1-9]|[12][0-9]|3[01])[\\/\\-](0?[1-9]|1[012])[\\/\\-]\\d{4}$')])),
       customerName: new FormControl("", Validators.required),
       customerIdCard: new FormControl("", Validators.compose([Validators.required, Validators.pattern('^\\d{9}|\\d{12}$')])),
       customerPhone: new FormControl("", Validators.compose([Validators.required, Validators.pattern('^090\\d{7}|\\(84\\)\\+90\\d{7}|091\\d{7}|\\(84\\)\\+91\\d{7}$')])),
@@ -41,25 +41,26 @@ export class CustomerCreateComponent implements OnInit {
       {type: 'pattern', message: '<= Wrong format.'},
     ],
     customerDob: [
-      {type: 'required', message: '<- Please input.'},
+      {type: 'required', message: '<= Please input.'},
+      {type: 'pattern', message: '<= Wrong format.'},
     ],
     customerName: [
-      {type: 'required', message: '<- Please input.'},
+      {type: 'required', message: '<= Please input.'},
     ],
     customerIdCard: [
-      {type: 'required', message: '<- Please input.'},
-      {type: 'pattern', message: '<- Wrong format.'},
+      {type: 'required', message: '<= Please input.'},
+      {type: 'pattern', message: '<= Wrong format.'},
     ],
     customerPhone: [
-      {type: 'required', message: '<- Please input.'},
-      {type: 'pattern', message: '<- Wrong format.'},
+      {type: 'required', message: '<= Please input.'},
+      {type: 'pattern', message: '<= Wrong format.'},
     ],
     customerEmail: [
-      {type: 'required', message: '<- Please input.'},
-      {type: 'email', message: '<- Wrong format.'},
+      {type: 'required', message: '<= Please input.'},
+      {type: 'email', message: '<= Wrong format.'},
     ],
     customerAddress: [
-      {type: 'required', message: '<- Please input.'},
+      {type: 'required', message: '<= Please input.'},
     ],
     customerType: [
       {type: 'required', message: '<= Please input.'},
@@ -81,8 +82,13 @@ export class CustomerCreateComponent implements OnInit {
   createCustomer() {
     if (this.customerForm.valid) {
       this.customerService.createCustomer(this.customerForm.value).subscribe(next => {
+        this.snackBar.open("New customer created.", "Close", {
+          duration: 3000,
+          verticalPosition: 'top',
+          panelClass: 'blue-snackbar'
+        } )
+      });
         this.router.navigateByUrl("/customer");
-      })
     }
   }
 }

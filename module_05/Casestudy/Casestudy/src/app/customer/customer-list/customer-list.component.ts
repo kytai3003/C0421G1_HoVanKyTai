@@ -4,7 +4,6 @@ import {FormControl, FormGroup} from "@angular/forms";
 import {ActivatedRoute, Router} from "@angular/router";
 import {CustomerServiceService} from "../../service/customer-service.service";
 import {HttpClient} from "@angular/common/http";
-import {MatSnackBar} from "@angular/material/snack-bar";
 
 @Component({
   selector: 'app-customer-list',
@@ -32,11 +31,9 @@ export class CustomerListComponent implements OnInit {
   customerFather: Customer;
   searchValue: string;
 
-  constructor(private router: Router,
-              private customerService: CustomerServiceService,
+  constructor(private customerService: CustomerServiceService,
               private activatedRoute: ActivatedRoute,
-              private httpClient: HttpClient,
-              private snackBar: MatSnackBar) {
+              private httpClient: HttpClient) {
     // this.customerService.findAll().subscribe(next => {
     //   this.customerList = next;
     //   console.log(this.customerFather);

@@ -2,8 +2,8 @@
   <div class="container">
     <div>
       <h1 class="text-center">hi,<span style="font-weight: bold"> administrator</span></h1>
-      <p id="currentTime"></p>
-    </div><br><br>
+      <p style="font-size: 20px">{{today | date:'fullDate'}} {{today | date:'h:mm:ss a'}}</p>
+    </div><br>
     <div class="row justify-content-center mt-4">
       <div class="col-md-6 col-lg-3">
         <div class="card card-body border-0 bg-transparent text-center wow fadeInLeft">
@@ -16,16 +16,16 @@
       <div class="col-md-6 col-lg-3">
         <div class="card card-body border-0 bg-transparent text-center wow fadeInLeft">
           <div class="mb-3">
-            <a href="/employee/list"><img src="assets/img/icons/promotion.svg" alt="" width="120" height="120"></a><br><br>
-            <p style="font-size: 30px"><a href="/employee/list" style="color: #4dcfff">employee</a></p>
+            <a [routerLink]="['/employee']"><img src="assets/img/icons/promotion.svg" alt="" width="120" height="120"></a><br><br>
+            <p style="font-size: 30px"><a [routerLink]="['/employee']" style="color: #4dcfff">employee</a></p>
           </div>
         </div>
       </div>
       <div class="col-md-6 col-lg-3">
         <div class="card card-body border-0 bg-transparent text-center wow fadeInRight">
           <div class="mb-3">
-            <a href="/service/list"><img src="assets/img/icons/support.svg" alt="" width="120" height="120"></a><br><br>
-            <p style="font-size: 30px"><a href="/service/list" style="color: #9a1de0">service</a></p>
+            <a [routerLink]="['/service']"><img src="assets/img/icons/support.svg" alt="" width="120" height="120"></a><br><br>
+            <p style="font-size: 30px"><a [routerLink]="['/service']" style="color: #9a1de0">service</a></p>
           </div>
         </div>
       </div>
@@ -39,7 +39,6 @@
       </div>
     </div>
   </div>
-  <br>
   <br>
 
 

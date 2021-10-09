@@ -1,5 +1,9 @@
+import {Position} from "./Position";
+import {Division} from "./Division";
+import {Education} from "./Education";
+
 export interface Employee {
-  employeeId: number;
+  id: number;
   employeeCode?: string;
   employeeName?: string;
   employeeDob?: string;
@@ -8,9 +12,9 @@ export interface Employee {
   employeePhone?: string;
   employeeEmail?: string;
   employeeAddress?: string;
-  employeePositionId?: number;
-  employeeDivisionId?: number;
-  employeeEduCertId?: number;
+  employeePosition?: Position;
+  employeeDivision?: Division;
+  employeeEducation?: Education;
 }
 
 

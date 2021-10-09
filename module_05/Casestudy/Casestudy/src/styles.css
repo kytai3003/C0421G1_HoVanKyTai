@@ -93,3 +93,16 @@ h5 {
 h1 {
   font-size: 65px;
 }
+.red-snackbar {
+  background: #e01e3d;
+}
+
+.green-snackbar {
+  background: #95e09b;
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+
+.blue-snackbar {
+  background: #648be0;
+}

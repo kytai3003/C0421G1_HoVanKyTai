@@ -1,5 +1,13 @@
+import {ServiceType} from "./service-type";
+
 export interface Service {
-  serviceId: number;
+  id: number;
   serviceCode?: string;
   serviceName?: string;
+  serviceArea?: number;
+  serviceFloor?: number;
+  serviceCapacity?: number;
+  serviceCost?: number;
+  serviceStatus?: string;
+  serviceType?: ServiceType;
 }

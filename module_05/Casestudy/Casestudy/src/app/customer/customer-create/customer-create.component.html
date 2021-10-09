@@ -3,7 +3,7 @@
 </div><br><br>
 
 <div class="container wow fadeInDown" style="margin-bottom: 40px">
-  <form [formGroup]="customerForm" (ngSubmit)="createCustomer('Created!')">
+  <form [formGroup]="customerForm" (ngSubmit)="createCustomer()">
     <h1>CREATE NEW CUSTOMER</h1>
     <table class="table table-bordered table-hover" style="margin: 0 auto; border: solid black 2px">
       <thead>
@@ -105,7 +105,7 @@
         </td>
         <td>
           <select style="width: 400px; height: 40px" formControlName="customerType">
-            <option *ngFor="let type of customerType" [ngValue]="type">{{type.typeName}}</option>
+            <option *ngFor="let type of customerType" [ngValue]="type" [selected]="type.typeName">{{type.typeName}}</option>
           </select>
         </td>
         <td>
@@ -119,5 +119,3 @@
     <button type="submit" class="btn btn-primary" style="width: 150px" [disabled]="customerForm.invalid">CREATE</button>
   </form>
 </div>
-<simple-notifications></simple-notifications>
-

@@ -25,7 +25,7 @@
   </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let c of customerList | paginate: {itemsPerPage:4,currentPage:p} | orderBy: key : reverse">
+  <tr *ngFor="let c of customerList | paginate: {itemsPerPage:3,currentPage:p} | orderBy: key : reverse">
     <td>{{c.id}}</td>
     <td>{{c.customerCode}}</td>
     <td>{{c.customerName}}</td>
@@ -48,4 +48,3 @@
   </tbody>
 </table>
 </div>
-<simple-notifications></simple-notifications>

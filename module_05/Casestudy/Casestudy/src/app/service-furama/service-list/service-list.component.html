@@ -1,0 +1,50 @@
+<div style="margin: 10px">
+  <button class="btn btn-dark rounded-pill wow fadeInLeft" [routerLink]="['/']" style="float: left" routerLinkActive="active"><< Back to home</button>
+  <button class="btn btn-dark rounded-pill wow fadeInRight" [routerLink]="['/service-create']" style="float: right">Create new >></button>
+</div><br><br>
+
+<div class="container-fluid wow fadeInDown">
+  <h1>SERVICE MANAGEMENT</h1>
+  <div class="input">
+    <input type="text" [(ngModel)]="searchValue" name="serviceName" (ngModelChange)="Search()" style="width: 350px; height: 35px; align-items: center; text-align: center" placeholder="Search by name or code">
+  </div><br><br>
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  <table class="table table-hover table-bordered" style="margin: 0 auto; border: solid black 2px">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th (click)="sort('serviceCode')">CODE<sub style="color: red; font-size: 12px">sort</sub></th>
+      <th (click)="sort('serviceName')">NAME<sub style="color: red; font-size: 12px">sort</sub></th>
+      <th>AREA</th>
+      <th>FLOOR</th>
+      <th>CAPACITY</th>
+      <th>COST</th>
+      <th>STATUS</th>
+      <th>TYPE</th>
+      <th colspan="3">ACTION</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let c of serviceList | paginate: {itemsPerPage:3,currentPage:p} | orderBy: key : reverse">
+      <td>{{c.id}}</td>
+      <td>{{c.serviceCode}}</td>
+      <td>{{c.serviceName}}</td>
+      <td>{{c.serviceArea}}</td>
+      <td>{{c.serviceFloor}}</td>
+      <td>{{c.serviceCapacity}}</td>
+      <td>{{c.serviceCost}}</td>
+      <td>{{c.serviceStatus}}</td>
+      <td>{{c.serviceType.serviceTypeName}}</td>
+      <td>
+        <app-service-detail [serviceChild]="serviceFather" (click)="showDetail(c)"></app-service-detail>
+      </td>
+      <td>
+        <button class="btn btn-success rounded-pill" [routerLink]="['/service-edit/', c.id]">Edit</button>
+      </td>
+      <td>
+        <button class="btn btn-danger rounded-pill" [routerLink]="['/service-delete', c.id]">Delete</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

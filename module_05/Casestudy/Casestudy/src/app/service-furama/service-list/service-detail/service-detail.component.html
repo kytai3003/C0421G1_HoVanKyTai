@@ -1,0 +1,54 @@
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary rounded-pill" data-toggle="modal" data-target="#modelId" style="font-weight: bold">
+  Detail
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-static text-center" *ngIf="serviceDetail" style="margin: 0 auto"><br>
+        <table class="table table-responsive">
+          <thead class="thead-inverse">
+          <tr>
+            <td class="fw-semibold">Id</td>
+            <td class="font-italic">{{serviceDetail.id}}</td>
+          </tr>
+          <tr>
+            <td>Code</td>
+            <td class="font-italic">{{serviceDetail.serviceCode}}</td>
+          </tr>
+          <tr>
+            <td>Name</td>
+            <td class="font-italic">{{serviceDetail.serviceName}}</td>
+          </tr>
+          <tr>
+            <td>Area</td>
+            <td class="font-italic">{{serviceDetail.serviceFloor}}</td>
+          </tr>
+          <tr>
+            <td>Capacity</td>
+            <td class="font-italic">{{serviceDetail.serviceCapacity}}</td>
+          </tr>
+          <tr>
+            <td>Cost</td>
+            <td class="font-italic">{{serviceDetail.serviceCost}}</td>
+          </tr>
+          <tr>
+            <td>Status</td>
+            <td class="font-italic">{{serviceDetail.serviceStatus}}</td>
+          </tr>
+          <tr>
+            <td>Type</td>
+            <td class="font-italic">{{serviceDetail.serviceType.serviceTypeName}}</td>
+          </tr>
+          </thead>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" style="font-weight: bold">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+

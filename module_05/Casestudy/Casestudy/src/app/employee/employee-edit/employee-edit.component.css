@@ -1,3 +1,14 @@
-div {
-  background-image: url("https://scr.vn/wp-content/uploads/2020/07/Background-powerpoint-màu-sắc-đẹp-1536x1152.jpeg");
+
+td, tr {
+  vertical-align: middle;
+}
+
+* {margin: 0 auto}
+
+input {
+  font-weight: bold;
+}
+
+.err {
+  color: red;
 }

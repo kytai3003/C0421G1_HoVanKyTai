@@ -1,1 +1,130 @@
-<p>service-edit works!</p>
+<div style="margin: 10px">
+  <button class="btn btn-dark rounded-pill wow fadeInLeft" [routerLink]="['/service']" style="float: left" routerLinkActive="active"><< Back to list</button>
+</div><br><br>
+
+<div class="container wow fadeInDown" style="margin-bottom: 40px" >
+  <form [formGroup]="serviceEditForm" (ngSubmit)="updateService(this.id)" *ngIf="this.serviceEditForm">
+    <h1>EDITING SERVICE</h1>
+    <table class="table table-bordered table-hover" style="margin: 0 auto; border: solid black 2px">
+      <thead>
+      <tr>
+        <td>
+          <label class="form-label">ID</label>
+        </td>
+        <td>
+          <input type="text" class="form-control" style="width: 400px" formControlName="id" readonly>
+        </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>
+          <label class="form-label">CODE</label>
+        </td>
+        <td>
+          <input type="text" class="form-control" style="width: 400px" formControlName="serviceCode" readonly>
+        </td>
+        <td>
+          <div *ngFor="let valid of validationMessageEdit.serviceCode">
+            <span class="err" *ngIf="serviceEditForm.get('serviceCode').hasError(valid.type) && serviceEditForm.get('serviceCode').dirty">{{valid.message}}</span>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label class="form-label">NAME</label>
+        </td>
+        <td>
+          <input type="text" class="form-control" style="width: 400px" formControlName="serviceName">
+        </td>
+        <td>
+          <div *ngFor="let valid of validationMessageEdit.serviceName">
+            <span  class="err" *ngIf="serviceEditForm.get('serviceName').hasError(valid.type) && serviceEditForm.get('serviceName').dirty">{{valid.message}}</span>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label class="form-label">AREA</label>
+        </td>
+        <td>
+          <input type="number" class="form-control" style="width: 400px" formControlName="serviceArea">
+        </td>
+        <td>
+          <div *ngFor="let valid of validationMessageEdit.serviceArea">
+            <span  class="err" *ngIf="serviceEditForm.get('serviceArea').hasError(valid.type) && serviceEditForm.get('serviceArea').dirty">{{valid.message}}</span>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label class="form-label">NUMBER OF FLOOR</label>
+        </td>
+        <td>
+          <input type="number" class="form-control" style="width: 400px" formControlName="serviceFloor">
+        </td>
+        <td>
+          <div *ngFor="let valid of validationMessageEdit.serviceFloor">
+            <span  class="err" *ngIf="serviceEditForm.get('serviceFloor').hasError(valid.type) && serviceEditForm.get('serviceFloor').dirty">{{valid.message}}</span>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label class="form-label">CAPACITY</label>
+        </td>
+        <td>
+          <input type="number" class="form-control" style="width: 400px" formControlName="serviceCapacity">
+        </td>
+        <td>
+          <div *ngFor="let valid of validationMessageEdit.serviceCapacity">
+            <span  class="err" *ngIf="serviceEditForm.get('serviceCapacity').hasError(valid.type) && serviceEditForm.get('serviceCapacity').dirty">{{valid.message}}</span>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label class="form-label">COST</label>
+        </td>
+        <td>
+          <input type="number" class="form-control" style="width: 400px" formControlName="serviceCost">
+        </td>
+        <td>
+          <div *ngFor="let valid of validationMessageEdit.serviceCost">
+            <span  class="err" *ngIf="serviceEditForm.get('serviceCost').hasError(valid.type) && serviceEditForm.get('serviceCost').dirty">{{valid.message}}</span>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label class="form-label">ADDRESS</label>
+        </td>
+        <td>
+          <input type="text" class="form-control" style="width: 400px" formControlName="serviceStatus">
+        </td>
+        <td>
+          <div *ngFor="let valid of validationMessageEdit.serviceStatus">
+            <span class="err" *ngIf="serviceEditForm.get('serviceStatus').hasError(valid.type) && serviceEditForm.get('serviceStatus').dirty">{{valid.message}}</span>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label class="form-label">TYPE</label>
+        </td>
+        <td>
+          <select style="width: 400px; height: 40px" formControlName="serviceType" [compareWith]="compareFn">
+            <option *ngFor="let type of serviceTypeList" [ngValue]="type">{{type.serviceTypeName}}</option>
+          </select>
+        </td>
+        <td>
+          <div *ngFor="let valid of validationMessageEdit.serviceType">
+            <span class="err" *ngIf="serviceEditForm.get('serviceType').hasError(valid.type) && serviceEditForm.get('serviceType').dirty">{{valid.message}}</span>
+          </div>
+        </td>
+      </tr>
+      </thead>
+    </table><br>
+    <button type="submit" class="btn btn-primary" style="width: 150px" [disabled]="serviceEditForm.invalid">UPDATE</button>
+  </form>
+</div>
+

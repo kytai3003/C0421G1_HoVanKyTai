@@ -1,24 +1,10 @@
 {
   "customer": [
     {
-      "id": 11,
-      "customerCode": "KH-1212",
-      "customerDob": "30-03-1992",
-      "customerName": "quyen",
-      "customerIdCard": 123123123,
-      "customerPhone": "0909090905",
-      "customerEmail": "tai@gmail.com",
-      "customerAddress": "TP.HCM",
-      "customerType": {
-        "id": 4,
-        "typeName": "Silver"
-      }
-    },
-    {
       "id": 12,
       "customerCode": "KH-1111",
-      "customerDob": "11-12-1993",
-      "customerName": "mmmm",
+      "customerDob": "2021-10-21",
+      "customerName": "Lana",
       "customerIdCard": 123123121,
       "customerPhone": "0909090909",
       "customerEmail": "mm@gmail.com",
@@ -29,36 +15,9 @@
       }
     },
     {
-      "id": 13,
-      "customerCode": "KH-1999",
-      "customerDob": "01-01-1999",
-      "customerName": "kiki",
-      "customerIdCard": 123123123,
-      "customerPhone": "0909090909",
-      "customerEmail": "minh@gmail.com",
-      "customerAddress": "Đà Nẵng",
-      "customerType": {
-        "id": 4,
-        "typeName": "Silver"
-      }
-    },
-    {
-      "id": 14,
-      "customerCode": "KH-1234",
-      "customerDob": "11-11-1111",
-      "customerName": "nam",
-      "customerIdCard": 123123131,
-      "customerPhone": "0909090909",
-      "customerEmail": "amd@gmail.com",
-      "customerAddress": "Đà Nẵng",
-      "customerType": {
-        "id": 1,
-        "typeName": "Diamond"
-      }
-    },
-    {
+      "id": 15,
       "customerCode": "KH-7777",
-      "customerDob": "12-12-1992",
+      "customerDob": "1985-07-26",
       "customerName": "DUng",
       "customerIdCard": 123123123,
       "customerPhone": "0909090909",
@@ -67,8 +26,77 @@
       "customerType": {
         "id": 4,
         "typeName": "Silver"
+      }
+    },
+    {
+      "id": 16,
+      "customerCode": "KH-1234",
+      "customerDob": "1999-03-30",
+      "customerName": "Hally",
+      "customerIdCard": 123123123,
+      "customerPhone": "0909090909",
+      "customerEmail": "tai@gmail.com",
+      "customerAddress": "ĐN",
+      "customerType": {
+        "id": 1,
+        "typeName": "Diamond"
+      }
+    },
+    {
+      "id": 17,
+      "customerCode": "KH-1234",
+      "customerDob": "1999-03-30",
+      "customerName": "Tai",
+      "customerIdCard": 123123123,
+      "customerPhone": "0909090909",
+      "customerEmail": "tai@gmail.com",
+      "customerAddress": "ĐN",
+      "customerType": {
+        "id": 2,
+        "typeName": "Platinum"
+      }
+    },
+    {
+      "id": 18,
+      "customerCode": "KH-1212",
+      "customerDob": "2000-12-12",
+      "customerName": "Nam",
+      "customerIdCard": 123123123,
+      "customerPhone": "0909090909",
+      "customerEmail": "nam@gmail.com",
+      "customerAddress": "ĐN",
+      "customerType": {
+        "id": 3,
+        "typeName": "Gold"
+      }
+    },
+    {
+      "customerCode": "KH-8888",
+      "customerDob": "2018-02-20",
+      "customerName": "Janna",
+      "customerIdCard": 123123123,
+      "customerPhone": "0909090909",
+      "customerEmail": "janna@gmail.com",
+      "customerAddress": "ĐN",
+      "customerType": {
+        "id": 3,
+        "typeName": "Gold"
       },
-      "id": 15
+      "id": 19
+    },
+    {
+      "customerCode": "KH-1237",
+      "customerDob": "2021-10-09",
+      "customerName": "janna",
+      "customerIdCard": 123123123,
+      "customerPhone": "0909090909",
+      "customerEmail": "tai@gmail.com",
+      "customerAddress": "ĐN",
+      "customerType": {
+        "id": 2,
+        "typeName": "Platinum"
+      },
+      "id": 20
     }
   ],
   "customerType": [
@@ -157,32 +185,10 @@
   ],
   "employee": [
     {
-      "id": 1,
-      "employeeCode": "NV-0001",
-      "employeeDob": "11-11-1991",
-      "employeeName": "Sen",
-      "employeeIdCard": "123123123",
-      "employeeSalary": 5000000,
-      "employeePhone": "0909090909",
-      "employeeEmail": "abc@gmail.com",
-      "employeeAddress": "Đà Nẵng",
-      "employeePosition": {
-        "id": 1,
-        "positionName": "Receptionist"
-      },
-      "employeeDivision": {
-        "id": 2,
-        "divisionName": "Office"
-      },
-      "employeeEducation": {
-        "id": 2,
-        "educationName": "University"
-      }
-    },
-    {
+      "id": 2,
       "employeeCode": "NV-1234",
-      "employeeDob": "12-12-1993",
-      "employeeName": "Khai",
+      "employeeDob": "1992-02-20",
+      "employeeName": "Khaii",
       "employeeIdCard": 123123123,
       "employeeSalary": 15000000,
       "employeePhone": "0909090909",
@@ -199,13 +205,12 @@
       "employeeEducation": {
         "id": 2,
         "educationName": "College"
-      },
-      "id": 2
+      }
     },
     {
       "id": 3,
       "employeeCode": "NV-4444",
-      "employeeDob": "12-12-1991",
+      "employeeDob": "1977-07-13",
       "employeeName": "Lan",
       "employeeIdCard": 123123123,
       "employeeSalary": 5000000,
@@ -226,8 +231,9 @@
       }
     },
     {
+      "id": 5,
       "employeeCode": "NV-8888",
-      "employeeDob": "30-03-1883",
+      "employeeDob": "1995-05-30",
       "employeeName": "Mia",
       "employeeIdCard": 123123123,
       "employeeSalary": 5000000,
@@ -245,12 +251,12 @@
       "employeeEducation": {
         "id": 2,
         "educationName": "College"
-      },
-      "id": 5
+      }
     },
     {
+      "id": 6,
       "employeeCode": "NV-1234",
-      "employeeDob": "12-12-1992",
+      "employeeDob": "1966-12-12",
       "employeeName": "Ung",
       "employeeIdCard": 123123123,
       "employeeSalary": 7000000,
@@ -268,37 +274,114 @@
       "employeeEducation": {
         "id": 2,
         "educationName": "College"
-      },
-      "id": 6
+      }
     }
   ],
   "serviceType": [
-    {"id": 1,
+    {
+      "id": 1,
       "serviceTypeName": "Annual"
     },
-    {"id": 2,
+    {
+      "id": 2,
       "serviceTypeName": "Monthly"
     },
-    {"id": 3,
+    {
+      "id": 3,
       "serviceTypeName": "Daily"
     },
-    {"id": 4,
+    {
+      "id": 4,
       "serviceTypeName": "Hourly"
     }
   ],
   "service": [
     {
-      "id": 1,
-      "serviceCode": "DV-0001",
-      "serviceName": "Villa01",
-      "serviceArea": 100,
-      "serviceFloor": 3,
+      "id": 15,
+      "serviceCode": "DV-8765",
+      "serviceName": "Villa66",
+      "serviceArea": 150,
+      "serviceFloor": 6,
       "serviceCapacity": 10,
-      "serviceCost": 50000000,
+      "serviceCost": 10000000,
       "serviceStatus": "Best",
       "serviceType": {
-        "id": 3,
-        "serviceTypeName": "Daily"
+        "id": 1,
+        "serviceTypeName": "Annual"
+      }
+    },
+    {
+      "id": 16,
+      "serviceCode": "DV-7654",
+      "serviceName": "Villa77",
+      "serviceArea": 150,
+      "serviceFloor": 5,
+      "serviceCapacity": 10,
+      "serviceCost": 5000000,
+      "serviceStatus": "Best",
+      "serviceType": {
+        "id": 1,
+        "serviceTypeName": "Annual"
+      }
+    }
+  ],
+  "contract": [
+    {
+      "id": 1,
+      "dateStart": "12-12-2021",
+      "dateEnd": "15-12-2021",
+      "deposit": 10000000,
+      "totalAmount": 25000000,
+      "employee": {
+        "id": 2,
+        "employeeCode": "NV-1234",
+        "employeeDob": "12-12-1993",
+        "employeeName": "Khaii",
+        "employeeIdCard": 123123123,
+        "employeeSalary": 15000000,
+        "employeePhone": "0909090909",
+        "employeeEmail": "khai@gmail.com",
+        "employeeAddress": "Đà Nẵng",
+        "employeePosition": {
+          "id": 1,
+          "positionName": "Receptionist"
+        },
+        "employeeDivision": {
+          "id": 2,
+          "divisionName": "Office"
+        },
+        "employeeEducation": {
+          "id": 2,
+          "educationName": "College"
+        }
+      },
+      "customer": {
+        "customerCode": "KH-7777",
+        "customerDob": "12-12-1992",
+        "customerName": "DUng",
+        "customerIdCard": 123123123,
+        "customerPhone": "0909090909",
+        "customerEmail": "dung@gmail.com",
+        "customerAddress": "ĐN",
+        "customerType": {
+          "id": 4,
+          "typeName": "Silver"
+        },
+        "id": 15
+      },
+      "service": {
+        "id": 1,
+        "serviceCode": "DV-0001",
+        "serviceName": "Villa01",
+        "serviceArea": 155,
+        "serviceFloor": 4,
+        "serviceCapacity": 10,
+        "serviceCost": 50000000,
+        "serviceStatus": "Best",
+        "serviceType": {
+          "id": 3,
+          "serviceTypeName": "Daily"
+        }
       }
     }
   ]

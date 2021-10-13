@@ -37,7 +37,7 @@ export class CustomerEditComponent implements OnInit {
       this.customerEditForm = new FormGroup({
         id: new FormControl(customer.id),
         customerCode: new FormControl(customer.customerCode),
-        customerDob: new FormControl(customer.customerDob, Validators.compose([Validators.required, Validators.pattern('^(0?[1-9]|[12][0-9]|3[01])[\\/\\-](0?[1-9]|1[012])[\\/\\-]\\d{4}$')])),
+        customerDob: new FormControl(customer.customerDob, Validators.compose([Validators.required])),
         customerName: new FormControl(customer.customerName, Validators.required),
         customerIdCard: new FormControl(customer.customerIdCard, Validators.compose([Validators.required, Validators.pattern('^\\d{9}|\\d{12}$')])),
         customerPhone: new FormControl(customer.customerPhone, Validators.compose([Validators.required, Validators.pattern('^090\\d{7}|\\(84\\)\\+90\\d{7}|091\\d{7}|\\(84\\)\\+91\\d{7}$')])),
@@ -58,7 +58,6 @@ export class CustomerEditComponent implements OnInit {
     ],
     customerDob: [
       {type: 'required', message: '<= Please input.'},
-      {type: 'pattern', message: '<= Wrong format.'}
     ],
     customerName: [
       {type: 'required', message: '<= Please input.'},

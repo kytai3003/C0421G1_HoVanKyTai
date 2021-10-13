@@ -12,7 +12,6 @@ import { CustomerCreateComponent } from './customer/customer-create/customer-cre
 import { ContractListComponent } from './contract/contract-list/contract-list.component';
 import { ContractCreateComponent } from './contract/contract-create/contract-create.component';
 import { ContractEditComponent } from './contract/contract-edit/contract-edit.component';
-import { ContractDetailCreateComponent } from './contract/contract-detail-create/contract-detail-create.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { CustomerDetailComponent } from './customer/customer-list/customer-detail/customer-detail.component';
 import { HomeComponent } from './home/home.component';
@@ -31,6 +30,10 @@ import { ServiceCreateComponent } from './service-furama/service-create/service-
 import { ServiceEditComponent } from './service-furama/service-edit/service-edit.component';
 import { ServiceDeleteComponent } from './service-furama/service-delete/service-delete.component';
 import { ServiceDetailComponent } from './service-furama/service-list/service-detail/service-detail.component';
+import { ContractDetailComponent } from './contract/contract-list/contract-detail/contract-detail.component';
+import {MatDatepicker, MatDatepickerModule} from "@angular/material/datepicker";
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatInputModule} from "@angular/material/input";
 
 
 @NgModule({
@@ -45,7 +48,6 @@ import { ServiceDetailComponent } from './service-furama/service-list/service-de
     ContractListComponent,
     ContractCreateComponent,
     ContractEditComponent,
-    ContractDetailCreateComponent,
     CustomerDetailComponent,
     HomeComponent,
     CustomerDeleteComponent,
@@ -56,6 +58,7 @@ import { ServiceDetailComponent } from './service-furama/service-list/service-de
     ServiceEditComponent,
     ServiceDeleteComponent,
     ServiceDetailComponent,
+    ContractDetailComponent,
   ],
   imports: [
     BrowserModule,
@@ -68,7 +71,12 @@ import { ServiceDetailComponent } from './service-furama/service-list/service-de
     FormsModule,
     Ng2SearchPipeModule,
     Ng2OrderModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatDatepickerModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatDatepickerModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

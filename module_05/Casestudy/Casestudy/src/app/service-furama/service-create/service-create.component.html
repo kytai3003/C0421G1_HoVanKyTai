@@ -1,1 +1,120 @@
-<p>service-create works!</p>
+<div style="margin: 10px">
+  <button class="btn btn-dark rounded-pill wow fadeInLeft" [routerLink]="['/service']" style="float: left" routerLinkActive="active"><< Back to list</button>
+</div><br><br>
+
+<div class="container wow fadeInDown" style="margin-bottom: 40px">
+  <form [formGroup]="serviceForm" (ngSubmit)="createService()">
+    <h1>CREATE NEW SERVICE</h1>
+    <table class="table table-bordered table-hover" style="margin: 0 auto; border: solid black 2px">
+      <thead>
+      <tr>
+        <td>
+          <label class="form-label">CODE</label>
+        </td>
+        <td>
+          <input type="text" class="form-control" placeholder="DV-XXXX" style="width: 400px" formControlName="serviceCode" >
+        </td>
+        <td>
+          <div *ngFor="let valid of validationMessage.serviceCode">
+            <span class="err" *ngIf="serviceForm.get('serviceCode').hasError(valid.type) && serviceForm.get('serviceCode').dirty">{{valid.message}}</span>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label class="form-label">NAME</label>
+        </td>
+        <td>
+          <input type="text" class="form-control" style="width: 400px" formControlName="serviceName">
+        </td>
+        <td>
+          <div *ngFor="let valid of validationMessage.serviceName">
+            <span  class="err" *ngIf="serviceForm.get('serviceName').hasError(valid.type) && serviceForm.get('serviceName').dirty">{{valid.message}}</span>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label class="form-label">AREA</label>
+        </td>
+        <td>
+          <input type="number" class="form-control" style="width: 400px" formControlName="serviceArea">
+        </td>
+        <td>
+          <div *ngFor="let valid of validationMessage.serviceArea">
+            <span  class="err" *ngIf="serviceForm.get('serviceArea').hasError(valid.type) && serviceForm.get('serviceArea').dirty">{{valid.message}}</span>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label class="form-label">NUMBER OF FLOOR</label>
+        </td>
+        <td>
+          <input type="number" class="form-control" style="width: 400px" formControlName="serviceFloor">
+        </td>
+        <td>
+          <div *ngFor="let valid of validationMessage.serviceFloor">
+            <span  class="err" *ngIf="serviceForm.get('serviceFloor').hasError(valid.type) && serviceForm.get('serviceFloor').dirty">{{valid.message}}</span>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label class="form-label">CAPACITY</label>
+        </td>
+        <td>
+          <input type="number" class="form-control" style="width: 400px" formControlName="serviceCapacity">
+        </td>
+        <td>
+          <div *ngFor="let valid of validationMessage.serviceCapacity">
+            <span  class="err" *ngIf="serviceForm.get('serviceCapacity').hasError(valid.type) && serviceForm.get('serviceCapacity').dirty">{{valid.message}}</span>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label class="form-label">COST</label>
+        </td>
+        <td>
+          <input type="number" class="form-control" style="width: 400px" formControlName="serviceCost">
+        </td>
+        <td>
+          <div *ngFor="let valid of validationMessage.serviceCost">
+            <span  class="err" *ngIf="serviceForm.get('serviceCost').hasError(valid.type) && serviceForm.get('serviceCost').dirty">{{valid.message}}</span>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label class="form-label">STATUS</label>
+        </td>
+        <td>
+          <input type="text" class="form-control" style="width: 400px" formControlName="serviceStatus">
+        </td>
+        <td>
+          <div *ngFor="let valid of validationMessage.serviceStatus">
+            <span class="err" *ngIf="serviceForm.get('serviceStatus').hasError(valid.type) && serviceForm.get('serviceStatus').dirty">{{valid.message}}</span>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label class="form-label">TYPE</label>
+        </td>
+        <td>
+          <select style="width: 400px; height: 40px" formControlName="serviceType">
+            <option *ngFor="let type of serviceTypeList" [ngValue]="type" [selected]="type.serviceTypeName">{{type.serviceTypeName}}</option>
+          </select>
+        </td>
+        <td>
+          <div *ngFor="let valid of validationMessage.serviceType">
+            <span class="err" *ngIf="serviceForm.get('serviceType').hasError(valid.type) && serviceForm.get('serviceType').dirty">{{valid.message}}</span>
+          </div>
+        </td>
+      </tr>
+      </thead>
+    </table><br>
+    <button type="submit" class="btn btn-primary" style="width: 150px" [disabled]="serviceForm.invalid">CREATE</button>
+  </form>
+</div>

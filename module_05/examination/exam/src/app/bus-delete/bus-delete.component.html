@@ -1,0 +1,25 @@
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-danger rounded-pill" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  Delete
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="staticBackdropLabel">Confirm?</h3>
+      </div>
+      <div class="modal-body" *ngIf="busDelete">
+        <h5>Code:<span style="font-weight: bold; color: red"> {{busDelete.busCode}}</span></h5>
+        <h5>Name:<span style="font-weight: bold; color: red"> {{busDelete.busName}}</span></h5>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="margin: 20px">Close</button>
+        <button type="button" class="btn btn-danger" (click)="deleteService()" data-bs-dismiss="modal">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
+

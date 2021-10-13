@@ -34,7 +34,7 @@ export class EmployeeCreateComponent implements OnInit {
               private educationService: EducationService) {
     this.employeeForm = new FormGroup({
       employeeCode: new FormControl("", Validators.compose([Validators.required, Validators.pattern('^NV-\\d{4}$')])),
-      employeeDob: new FormControl("", Validators.compose([Validators.required, Validators.pattern('^(0?[1-9]|[12][0-9]|3[01])[\\/\\-](0?[1-9]|1[012])[\\/\\-]\\d{4}$')])),
+      employeeDob: new FormControl("", Validators.compose([Validators.required])),
       employeeName: new FormControl("", Validators.required),
       employeeIdCard: new FormControl("", Validators.compose([Validators.required, Validators.pattern('^\\d{9}|\\d{12}$')])),
       employeeSalary: new FormControl("", Validators.compose([Validators.required, Validators.min(0)])),
@@ -58,7 +58,6 @@ export class EmployeeCreateComponent implements OnInit {
     ],
     employeeDob: [
       {type: 'required', message: '<= Please input.'},
-      {type: 'pattern', message: '<= Wrong format.'},
     ],
     employeeName: [
       {type: 'required', message: '<= Please input.'},

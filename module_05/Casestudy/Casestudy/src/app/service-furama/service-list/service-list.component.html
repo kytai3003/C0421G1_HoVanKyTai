@@ -42,7 +42,8 @@
         <button class="btn btn-success rounded-pill" [routerLink]="['/service-edit/', c.id]">Edit</button>
       </td>
       <td>
-        <button class="btn btn-danger rounded-pill" [routerLink]="['/service-delete', c.id]">Delete</button>
+<!--        <button class="btn btn-danger rounded-pill" [routerLink]="['/service-delete', c.id]">Delete</button>-->
+        <app-service-delete [serviceChild2]="serviceFather" (click)="showDetail2(c)"></app-service-delete>
       </td>
     </tr>
     </tbody>

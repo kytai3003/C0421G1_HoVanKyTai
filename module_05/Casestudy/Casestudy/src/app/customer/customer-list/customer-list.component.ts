@@ -56,6 +56,7 @@ export class CustomerListComponent implements OnInit {
       this.ngOnInit();
     } else {
       this.customerList = this.customerList.filter(res => {
+        this.p = 1;
         return res.customerName.toLocaleLowerCase().includes(this.searchValue.toLocaleLowerCase()) ||
           res.customerCode.toLocaleLowerCase().match(this.searchValue.toLocaleLowerCase());
       })

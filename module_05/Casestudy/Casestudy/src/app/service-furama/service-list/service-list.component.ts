@@ -40,6 +40,10 @@ export class ServiceListComponent implements OnInit {
     this.serviceFather = service;
   }
 
+  showDetail2(service: Service) {
+    this.serviceFather = service;
+  }
+
   Search() {
     if (this.searchValue == "") {
       this.ngOnInit();

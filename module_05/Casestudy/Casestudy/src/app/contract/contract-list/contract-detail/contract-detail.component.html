@@ -1,0 +1,54 @@
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary rounded-pill" data-toggle="modal" data-target="#modelId" style="font-weight: bold">
+  Detail
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-static text-center" style="margin: 0 auto" *ngIf="contractDetail"><br>
+        <table class="table table-responsive">
+          <thead class="thead-inverse">
+          <tr>
+            <td class="fw-semibold">Id</td>
+            <td class="font-italic">{{contractDetail.id}}</td>
+          </tr>
+          <tr>
+            <td>Start date</td>
+            <td class="font-italic">{{contractDetail.dateStart}}</td>
+          </tr>
+          <tr>
+            <td>End date</td>
+            <td class="font-italic">{{contractDetail.dateEnd}}</td>
+          </tr>
+          <tr>
+            <td>Deposit</td>
+            <td class="font-italic">{{contractDetail.deposit}}</td>
+          </tr>
+          <tr>
+            <td>Total amount</td>
+            <td class="font-italic">{{contractDetail.totalAmount}}</td>
+          </tr>
+          <tr>
+            <td>Employee</td>
+            <td class="font-italic">{{contractDetail.employee.employeeCode}}</td>
+          </tr>
+          <tr>
+            <td>Customer</td>
+            <td class="font-italic">{{contractDetail.customer.customerCode}}</td>
+          </tr>
+          <tr>
+            <td>Service</td>
+            <td class="font-italic">{{contractDetail.service.serviceCode}}</td>
+          </tr>
+          </thead>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" style="font-weight: bold">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+

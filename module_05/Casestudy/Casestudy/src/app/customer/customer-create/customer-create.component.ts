@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
-import {FormGroup, FormControl, Validators} from "@angular/forms";
+import {FormGroup, FormControl, Validators, AbstractControl} from "@angular/forms";
 import {CustomerServiceService} from "../../service/customer-service.service";
 import {Customer} from "../../../models/customer/Customer";
 import {CustomerTypeServiceService} from "../../service/customer-type-service.service";
 import {CustomerType} from "../../../models/customer/CustomerType";
 import {MatSnackBar} from "@angular/material/snack-bar";
+import {HttpClient} from "@angular/common/http";
+import {Service} from "../../../models/service/Service";
 
 @Component({
   selector: 'app-customer-create',
@@ -17,14 +19,18 @@ export class CustomerCreateComponent implements OnInit {
   customer: Customer;
   customerForm: FormGroup;
   customerType: CustomerType[];
+  customerList: Customer[] | undefined;
+  customerCodeList: string[];
+
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute,
               private customerService: CustomerServiceService,
               private customerTypeList: CustomerTypeServiceService,
-              private snackBar: MatSnackBar) {
+              private snackBar: MatSnackBar,
+              private httpClient: HttpClient) {
     this.customerForm = new FormGroup({
       customerCode: new FormControl("", Validators.compose([Validators.required, Validators.pattern('^KH-\\d{4}$')])),
-      customerDob: new FormControl("", Validators.compose([Validators.required, Validators.pattern('^(0?[1-9]|[12][0-9]|3[01])[\\/\\-](0?[1-9]|1[012])[\\/\\-]\\d{4}$')])),
+      customerDob: new FormControl("", Validators.compose([Validators.required])),
       customerName: new FormControl("", Validators.required),
       customerIdCard: new FormControl("", Validators.compose([Validators.required, Validators.pattern('^\\d{9}|\\d{12}$')])),
       customerPhone: new FormControl("", Validators.compose([Validators.required, Validators.pattern('^090\\d{7}|\\(84\\)\\+90\\d{7}|091\\d{7}|\\(84\\)\\+91\\d{7}$')])),
@@ -43,6 +49,7 @@ export class CustomerCreateComponent implements OnInit {
     customerDob: [
       {type: 'required', message: '<= Please input.'},
       {type: 'pattern', message: '<= Wrong format.'},
+      {type: 'errorCode', message: '<= Duplicate code.'},
     ],
     customerName: [
       {type: 'required', message: '<= Please input.'},
@@ -70,13 +77,33 @@ export class CustomerCreateComponent implements OnInit {
 
   ngOnInit(): void {
     this.getType();
+    // this.httpClient.get('http://localhost:3000/customer').subscribe((result: Customer[]) => {
+    //   this.customerList = result;
+    //   console.log(this.customerList);
+    //   for (let i =0; i < this.customerList.length; i++) {
+    //     // this.customerCodeList.unshift(this.customerList[i].customerCode);
+    //     console.log(this.customerList[i].customerCode);
+    //     this.customerCodeList[0] = this.customerList[i].customerCode;
+    //     console.log(this.customerCodeList)
+    //   }
+    // })
   }
 
   getType() {
     this.customerTypeList.findAll().subscribe(data => {
       this.customerType = data;
-    })
-  }
+    });
+  };
+
+  // checkDuplicate(abstractControl: AbstractControl): any {
+  //   const inputCode = abstractControl.value;
+  //   for (let i = 0; i < this.customerList.length; i++) {
+  //     if (this.customerList[i].customerCode == inputCode) {
+  //       return {errorCode: true};
+  //     }
+  //   }
+  //   return null;
+  // }
 
 
   createCustomer() {

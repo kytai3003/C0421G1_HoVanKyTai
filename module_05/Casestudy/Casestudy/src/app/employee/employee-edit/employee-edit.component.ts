@@ -60,7 +60,7 @@ export class EmployeeEditComponent implements OnInit {
       this.employeeEditForm = new FormGroup({
         id: new FormControl(employee.id),
         employeeCode: new FormControl(employee.employeeCode),
-        employeeDob: new FormControl(employee.employeeDob, Validators.compose([Validators.required, Validators.pattern('^(0?[1-9]|[12][0-9]|3[01])[\\/\\-](0?[1-9]|1[012])[\\/\\-]\\d{4}$')])),
+        employeeDob: new FormControl(employee.employeeDob, Validators.compose([Validators.required])),
         employeeName: new FormControl(employee.employeeName, Validators.required),
         employeeIdCard: new FormControl(employee.employeeIdCard, Validators.compose([Validators.required, Validators.pattern('^\\d{9}|\\d{12}$')])),
         employeeSalary: new FormControl(employee.employeeSalary, Validators.compose([Validators.required, Validators.min(0)])),
@@ -84,7 +84,6 @@ export class EmployeeEditComponent implements OnInit {
     ],
     employeeDob: [
       {type: 'required', message: '<= Please input.'},
-      {type: 'pattern', message: '<= Wrong format.'},
     ],
     employeeName: [
       {type: 'required', message: '<= Please input.'},

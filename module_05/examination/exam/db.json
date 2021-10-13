@@ -1,0 +1,76 @@
+{
+  "destination": [
+    {
+      "id": 1,
+      "name": "Quảng Nam"
+    },
+    {
+      "id": 2,
+      "name": "Quảng Trị"
+    },
+    {
+      "id": 3,
+      "name": "Huế"
+    },
+    {
+      "id": 4,
+      "name": "Đà Nẵng"
+    }
+  ],
+  "bus": [
+    {
+      "id": 1,
+      "busCode": 1234,
+      "busType": "Giường đứng",
+      "busName": "Mai Linh 2",
+      "destinationFrom": {
+        "id": 1,
+        "name": "Quảng Nam"
+      },
+      "destinationTo": {
+        "id": 3,
+        "name": "Huế"
+      },
+      "busPhone": "0909123456",
+      "busEmail": "mailinh@gmail.com",
+      "hourFrom": "17:22",
+      "hourTo": "20:00"
+    },
+    {
+      "id": 2,
+      "busCode": 1236,
+      "busType": "Giường đứng",
+      "busName": "Mai Linh 3",
+      "destinationFrom": {
+        "id": 1,
+        "name": "Quảng Nam"
+      },
+      "destinationTo": {
+        "id": 3,
+        "name": "Huế"
+      },
+      "busPhone": "0909123456",
+      "busEmail": "mailinh@gmail.com",
+      "hourFrom": "17:20",
+      "hourTo": "21:00"
+    },
+    {
+      "id": 4,
+      "busCode": 1238,
+      "busType": "Giường nằm",
+      "busName": "Mai Linh 10",
+      "destinationFrom": {
+        "id": 1,
+        "name": "Quảng Nam"
+      },
+      "destinationTo": {
+        "id": 3,
+        "name": "Huế"
+      },
+      "busPhone": "0973123123",
+      "busEmail": "mailinh@gmail.com",
+      "hourFrom": "01:20",
+      "hourTo": "19:00"
+    }
+  ]
+}

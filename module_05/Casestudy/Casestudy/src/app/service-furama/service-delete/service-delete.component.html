@@ -1,1 +1,50 @@
-<p>service-delete works!</p>
+<!--<div style="margin: 10px">-->
+<!--  <button class="btn btn-dark rounded-pill wow fadeInLeft" [routerLink]="['/service']" style="float: left" routerLinkActive="active"><< Back to list</button>-->
+<!--</div><br><br><br><br>-->
+<!--<div class="container wow fadeIn wrap">-->
+<!--  <h2>Confirm?</h2>-->
+<!--  <table class="table table-hover table-bordered" style="margin: 0 auto; border: solid black 3px">-->
+<!--    <thead>-->
+<!--    <tr>-->
+<!--      <td>ID</td>-->
+<!--      <td><h4>{{serviceDelete.id}}</h4></td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--      <td>CODE</td>-->
+<!--      <td><h4>{{serviceDelete.serviceCode}}</h4></td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--      <td>NAME</td>-->
+<!--      <td><h4>{{serviceDelete.serviceName}}</h4></td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--      <td colspan="2"><button type="submit" class="btn btn-danger" (click)="deleteService(id)">Delete</button>-->
+<!--      </td>-->
+<!--    </tr>-->
+<!--    </thead>-->
+<!--  </table>-->
+<!--</div>-->
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-danger rounded-pill" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  Delete
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="staticBackdropLabel">Confirm?</h3>
+      </div>
+      <div class="modal-body" *ngIf="serviceDelete">
+<!--        <p>Id: {{this.serviceDelete.id}}<p>-->
+        <h5>Name:<span style="font-weight: bold; color: red"> {{serviceDelete.serviceName}}</span></h5>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="margin: 20px">Close</button>
+        <button type="button" class="btn btn-danger" (click)="deleteService()" data-bs-dismiss="modal">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
+

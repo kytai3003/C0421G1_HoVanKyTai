@@ -1,52 +1,82 @@
-<div class="container-fluid">
-  <form>
-    <h1>CREATE NEW CONTRACT</h1>
-    <table class="table table-bordered" style="margin: 0 auto">
+<div style="margin: 10px">
+  <button class="btn btn-dark rounded-pill wow fadeInLeft" [routerLink]="['/contract']" style="float: left" routerLinkActive="active"><< Back to list</button>
+</div><br><br>
+
+<div class="container wow fadeInDown" style="margin-bottom: 40px">
+  <form [formGroup]="contractForm" (ngSubmit)="createContract()">
+    <h1>CREATE NEW EMPLOYEE</h1>
+    <table class="table table-bordered table-hover" style="margin: 0 auto; border: solid black 2px">
       <thead>
       <tr>
         <td>
           <label class="form-label">START DATE</label>
         </td>
         <td>
-          <input type="text" class="form-control" placeholder="DD-MM-YYYY">
+          <input type="text" class="form-control" style="width: 400px" formControlName="dateStart" >
         </td>
-        <td></td>
+        <td>
+          <div *ngFor="let valid of validationMessage.dateStart">
+            <span class="err" *ngIf="contractForm.get('dateStart').hasError(valid.type) && contractForm.get('dateStart').dirty">{{valid.message}}</span>
+          </div>
+        </td>
       </tr>
       <tr>
         <td>
           <label class="form-label">END DATE</label>
         </td>
         <td>
-          <input type="text" class="form-control" placeholder="DD-MM-YYYY">
+          <input type="text" class="form-control" style="width: 400px" formControlName="dateEnd">
         </td>
-        <td></td>
+        <td>
+<!--          <div *ngFor="let valid of validationMessage.dateEnd">-->
+<!--            <span  class="err" *ngIf="contractForm.get('dateEnd').hasError(valid.type) && contractForm.get('dateEnd').dirty">{{valid.message}}</span>-->
+<!--          </div>-->
+          <mat-form-field>
+            <input matInput [matDatepicker]="myDate" [min]="min">
+            <mat-datepicker-toggle [for]="myDate" matSuffix></mat-datepicker-toggle>
+            <mat-datepicker #myDate></mat-datepicker>
+          </mat-form-field>
+        </td>
       </tr>
       <tr>
         <td>
           <label class="form-label">DEPOSIT</label>
         </td>
         <td>
-          <input type="text" class="form-control">
+          <input type="number" class="form-control" style="width: 400px" formControlName="deposit">
         </td>
-        <td></td>
+        <td>
+          <div *ngFor="let valid of validationMessage.deposit">
+            <span  class="err" *ngIf="contractForm.get('deposit').hasError(valid.type) && contractForm.get('deposit').dirty">{{valid.message}}</span>
+          </div>
+        </td>
       </tr>
       <tr>
         <td>
           <label class="form-label">TOTAL AMOUNT</label>
         </td>
         <td>
-          <input type="number" class="form-control">
+          <input type="number" class="form-control" style="width: 400px" formControlName="totalAmount">
         </td>
-        <td></td>
+        <td>
+          <div *ngFor="let valid of validationMessage.totalAmount">
+            <span class="err" *ngIf="contractForm.get('totalAmount').hasError(valid.type) && contractForm.get('totalAmount').dirty">{{valid.message}}</span>
+          </div>
+        </td>
       </tr>
       <tr>
         <td>
           <label class="form-label">EMPLOYEE</label>
         </td>
         <td>
-          <select style="width: 300px; height: 40px">
-            <option></option>
+          <select style="width: 400px; height: 40px" formControlName="employee">
+            <option *ngFor="let type of employeeList" [ngValue]="type">{{type.employeeName}}</option>
           </select>
+        </td>
+        <td>
+          <div *ngFor="let valid of validationMessage.employee">
+            <span class="err" *ngIf="contractForm.get('employee').hasError(valid.type) && contractForm.get('employee').dirty">{{valid.message}}</span>
+          </div>
         </td>
       </tr>
       <tr>
@@ -54,9 +84,14 @@
           <label class="form-label">CUSTOMER</label>
         </td>
         <td>
-          <select style="width: 300px; height: 40px">
-            <option></option>
+          <select style="width: 400px; height: 40px" formControlName="customer">
+            <option *ngFor="let type of customerList" [ngValue]="type">{{type.customerName}}</option>
           </select>
+        </td>
+        <td>
+          <div *ngFor="let valid of validationMessage.customer">
+            <span class="err" *ngIf="contractForm.get('customer').hasError(valid.type) && contractForm.get('customer').dirty">{{valid.message}}</span>
+          </div>
         </td>
       </tr>
       <tr>
@@ -64,13 +99,18 @@
           <label class="form-label">SERVICE</label>
         </td>
         <td>
-          <select style="width: 300px; height: 40px">
-            <option></option>
+          <select style="width: 400px; height: 40px" formControlName="service">
+            <option *ngFor="let type of serviceList" [ngValue]="type">{{type.serviceName}}</option>
           </select>
+        </td>
+        <td>
+          <div *ngFor="let valid of validationMessage.service">
+            <span class="err" *ngIf="contractForm.get('service').hasError(valid.type) && contractForm.get('service').dirty">{{valid.message}}</span>
+          </div>
         </td>
       </tr>
       </thead>
     </table><br>
-    <button type="submit" class="btn btn-primary" style="width: 150px">CREATE</button>
+    <button type="submit" class="btn btn-primary" style="width: 150px" [disabled]="contractForm.invalid">CREATE</button>
   </form>
 </div>

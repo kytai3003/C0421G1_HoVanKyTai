@@ -1,3 +1,14 @@
-div {
-  background-image: url("https://images.hdqwalls.com/download/white-cube-pattern-4k-bu-1920x1080.jpg");
+td, tr {
+  vertical-align: middle;
 }
+
+* {margin: 0 auto}
+
+input {
+  font-weight: bold;
+}
+
+.err {
+  color: red;
+}
+

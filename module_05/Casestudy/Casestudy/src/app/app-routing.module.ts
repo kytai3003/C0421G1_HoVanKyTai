@@ -13,6 +13,9 @@ import {ServiceListComponent} from "./service-furama/service-list/service-list.c
 import {ServiceCreateComponent} from "./service-furama/service-create/service-create.component";
 import {ServiceEditComponent} from "./service-furama/service-edit/service-edit.component";
 import {ServiceDeleteComponent} from "./service-furama/service-delete/service-delete.component";
+import {ContractListComponent} from "./contract/contract-list/contract-list.component";
+import {ContractCreateComponent} from "./contract/contract-create/contract-create.component";
+import {ContractEditComponent} from "./contract/contract-edit/contract-edit.component";
 
 
 const routes: Routes = [
@@ -20,15 +23,19 @@ const routes: Routes = [
   {path: "customer", component: CustomerListComponent},
   {path: "employee", component: EmployeeListComponent},
   {path: "service", component: ServiceListComponent},
+  {path: "contract", component: ContractListComponent},
   {path: "customer-create", component: CustomerCreateComponent},
   {path: "employee-create", component: EmployeeCreateComponent},
   {path: "service-create", component: ServiceCreateComponent},
+  {path: "contract-create", component: ContractCreateComponent},
   {path: "customer-edit/:id", component: CustomerEditComponent},
   {path: "employee-edit/:id", component: EmployeeEditComponent},
   {path: "service-edit/:id", component: ServiceEditComponent},
+  {path: "contract-edit/:id", component: ContractEditComponent},
   {path: "customer-delete/:id", component: CustomerDeleteComponent},
   {path: "employee-delete/:id", component: EmployeeDeleteComponent},
   {path: "service-delete/:id", component: ServiceDeleteComponent},
+  {path: "contract-delete/:id", component: ServiceDeleteComponent},
 ];
 
 @NgModule({

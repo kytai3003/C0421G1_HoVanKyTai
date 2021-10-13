@@ -1,0 +1,129 @@
+<div style="margin: 10px">
+  <button class="btn btn-dark rounded-pill wow fadeInLeft" [routerLink]="['/bus']" style="float: left" routerLinkActive="active"><< Back to list</button>
+</div><br><br>
+
+<div class="container wow fadeInDown" style="margin-bottom: 40px" >
+  <form [formGroup]="busEditForm" (ngSubmit)="updateBus(this.id)" *ngIf="this.busEditForm">
+    <h1>EDITING BUS</h1>
+    <table class="table table-bordered table-hover" style="margin: 0 auto; border: solid black 2px">
+      <thead>
+      <tr>
+        <td>
+          <label class="form-label">ID</label>
+        </td>
+        <td>
+          <input type="text" class="form-control" style="width: 400px" formControlName="id" readonly>
+        </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>
+          <label class="form-label">CODE</label>
+        </td>
+        <td>
+          <input type="text" class="form-control" style="width: 400px" formControlName="busCode" readonly>
+        </td>
+        <td>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label class="form-label">NAME</label>
+        </td>
+        <td>
+          <input type="text" class="form-control" style="width: 400px" formControlName="busName">
+        </td>
+        <td>
+          <div *ngFor="let valid of validationMessageEdit.busName">
+            <span  class="err" *ngIf="busEditForm.get('busName').hasError(valid.type) && busEditForm.get('busName').dirty">{{valid.message}}</span>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label class="form-label">FROM</label>
+        </td>
+        <td>
+          <select style="width: 400px; height: 40px" formControlName="destinationFrom" [compareWith]="compareFn">
+            <option *ngFor="let type of destinationList" [ngValue]="type">{{type.name}}</option>
+          </select>
+        </td>
+        <td>
+          <div *ngFor="let valid of validationMessageEdit.destinationFrom">
+            <span class="err" *ngIf="busEditForm.get('destinationFrom').hasError(valid.type) && busEditForm.get('destinationFrom').dirty">{{valid.message}}</span>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label class="form-label">TO</label>
+        </td>
+        <td>
+          <select style="width: 400px; height: 40px" formControlName="destinationTo" [compareWith]="compareFn">
+            <option *ngFor="let type of destinationList" [ngValue]="type">{{type.name}}</option>
+          </select>
+        </td>
+        <td>
+          <div *ngFor="let valid of validationMessageEdit.destinationTo">
+            <span class="err" *ngIf="busEditForm.get('destinationTo').hasError(valid.type) && busEditForm.get('destinationTo').dirty">{{valid.message}}</span>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label class="form-label">PHONE NUMBER</label>
+        </td>
+        <td>
+          <input type="text" class="form-control" style="width: 400px" formControlName="busPhone">
+        </td>
+        <td>
+          <div *ngFor="let valid of validationMessageEdit.busPhone">
+            <span  class="err" *ngIf="busEditForm.get('busPhone').hasError(valid.type) && busEditForm.get('busPhone').dirty">{{valid.message}}</span>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label class="form-label">EMAIL</label>
+        </td>
+        <td>
+          <input type="email" class="form-control" style="width: 400px" formControlName="busEmail">
+        </td>
+        <td>
+          <div *ngFor="let valid of validationMessageEdit.busEmail">
+            <span  class="err" *ngIf="busEditForm.get('busEmail').hasError(valid.type) && busEditForm.get('busEmail').dirty">{{valid.message}}</span>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label class="form-label">TIME START</label>
+        </td>
+        <td>
+          <input type="text" class="form-control" style="width: 400px" formControlName="hourFrom">
+        </td>
+        <td>
+          <div *ngFor="let valid of validationMessageEdit.hourFrom">
+            <span class="err" *ngIf="busEditForm.get('hourFrom').hasError(valid.type) && busEditForm.get('hourFrom').dirty">{{valid.message}}</span>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label class="form-label">TIME ARRIVE</label>
+        </td>
+        <td>
+          <input type="text" class="form-control" style="width: 400px" formControlName="hourTo">
+        </td>
+        <td>
+          <div *ngFor="let valid of validationMessageEdit.hourTo">
+            <span class="err" *ngIf="busEditForm.get('hourTo').hasError(valid.type) && busEditForm.get('hourTo').dirty">{{valid.message}}</span>
+          </div>
+        </td>
+      </tr>
+      </thead>
+    </table><br>
+    <button type="submit" class="btn btn-primary" style="width: 150px" [disabled]="busEditForm.invalid">UPDATE</button>
+  </form>
+</div>
+

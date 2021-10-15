@@ -21,14 +21,13 @@
   <component name="ChangeListManager">
     <list default="true" id="ce9c8f28-a9f2-4011-89a0-d696222ad2a7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../module_04/_01_SpringMVC_overview/practise/customer_management/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../module_04/_01_SpringMVC_overview/practise/customer_management/customer-management" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../module_04/_02_SpringMVC_controller/practice/customer_management/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../module_04/_02_SpringMVC_controller/practice/customer_management/customer-management" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../module_04/_05_ORM_Database/practise/customer_management/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../module_04/_05_ORM_Database/practise/customer_management/customer-management" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../module_04/_09_AOP_exception_handler/practise/customer_management/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../module_04/_09_AOP_exception_handler/practise/customer_management/customer-management" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../module_05/Casestudy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../module_05/Casestudy/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../module_05/Casestudy/Casestudy/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module_05/Casestudy/Casestudy/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../module_05/Casestudy/Casestudy/src/models/Customer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../module_05/Casestudy/Casestudy/src/models/Customer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module_05/examination/exam/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/../module_05/examination/exam/db.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module_05/examination/exam/src/app/bus-edit/bus-edit.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../module_05/examination/exam/src/app/bus-edit/bus-edit.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,6 +204,7 @@
       <workItem from="1626225988411" duration="17152000" />
       <workItem from="1633427413399" duration="815000" />
       <workItem from="1633616937682" duration="21000" />
+      <workItem from="1634180872092" duration="1024000" />
     </task>
     <servers />
   </component>
@@ -232,14 +232,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="884" y="50" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1626234403927" />
-    <state x="209" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1625498763655">
+    <state x="461" y="104" key="FileChooserDialogImpl" timestamp="1634182536715">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="209" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1625498763655" />
-    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1625214701402">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1625214701402" />
+    <state x="461" y="104" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1634182536715" />
     <state width="1321" height="359" key="GridCell.Tab.0.bottom" timestamp="1633428229114">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -272,22 +268,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="468" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1626253135977" />
-    <state x="184" y="8" key="SettingsEditor" timestamp="1624893086320">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="184" y="8" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1624893086320" />
     <state x="492" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1626236786474">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="492" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1626236786474" />
-    <state x="263" y="18" key="editAsTableFormatDialogDimension" timestamp="1625539679939">
+    <state x="64" y="0" key="new project wizard" timestamp="1634182538230">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="263" y="18" key="editAsTableFormatDialogDimension/0.0.1366.728@0.0.1366.728" timestamp="1625539679939" />
-    <state x="413" y="124" key="extract.method.dialog" timestamp="1625217885688">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="413" y="124" key="extract.method.dialog/0.0.1366.728@0.0.1366.728" timestamp="1625217885688" />
+    <state x="64" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1634182538230" />
     <state x="389" y="121" key="refactoring.ChangeSignatureDialog" timestamp="1625561685109">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

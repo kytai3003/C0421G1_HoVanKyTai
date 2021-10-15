@@ -8,7 +8,7 @@ import {Destination} from "../model/Destination";
 })
 export class DestinationService {
 
-  private api_url_destination = "http://localhost:3000/destination";
+  private api_url_destination = "http://localhost:8080/destination/api";
 
   constructor(private httpClient: HttpClient) {
   }

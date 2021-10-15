@@ -1,0 +1,14 @@
+
+td, tr {
+  vertical-align: middle;
+}
+
+* {margin: 0 auto}
+
+input {
+  font-weight: bold;
+}
+
+.err {
+  color: red;
+}

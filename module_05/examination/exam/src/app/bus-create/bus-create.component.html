@@ -1,0 +1,135 @@
+<div style="margin: 10px">
+  <button class="btn btn-dark rounded-pill wow fadeInLeft" [routerLink]="['/bus']" style="float: left" routerLinkActive="active"><< Back to list</button>
+</div><br><br>
+
+<div class="container wow fadeInDown" style="margin-bottom: 40px">
+  <form [formGroup]="busCreateForm" (ngSubmit)="createBus()">
+    <h1>CREATE NEW BUS</h1>
+    <table class="table table-bordered table-hover" style="margin: 0 auto; border: solid black 2px">
+      <thead>
+      <tr>
+        <td>
+          <label class="form-label">CODE</label>
+        </td>
+        <td>
+          <input type="text" class="form-control" style="width: 400px" formControlName="busCode" >
+        </td>
+        <td>
+          <div *ngFor="let valid of validationMessage.busCode">
+            <span class="err" *ngIf="busCreateForm.get('busCode').hasError(valid.type) && busCreateForm.get('busCode').dirty">{{valid.message}}</span>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label class="form-label">TYPE</label>
+        </td>
+        <td>
+          <input type="text" class="form-control" style="width: 400px" formControlName="busType" >
+        </td>
+        <td>
+          <div *ngFor="let valid of validationMessage.busType">
+            <span class="err" *ngIf="busCreateForm.get('busType').hasError(valid.type) && busCreateForm.get('busType').dirty">{{valid.message}}</span>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label class="form-label">NAME</label>
+        </td>
+        <td>
+          <input type="text" class="form-control" style="width: 400px" formControlName="busName">
+        </td>
+        <td>
+          <div *ngFor="let valid of validationMessage.busName">
+            <span  class="err" *ngIf="busCreateForm.get('busName').hasError(valid.type) && busCreateForm.get('busName').dirty">{{valid.message}}</span>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label class="form-label">FROM</label>
+        </td>
+        <td>
+          <select style="width: 400px; height: 40px" formControlName="destinationFrom">
+            <option *ngFor="let type of destinationList" [ngValue]="type">{{type.name}}</option>
+          </select>
+        </td>
+        <td>
+          <div *ngFor="let valid of validationMessage.destinationFrom">
+            <span class="err" *ngIf="busCreateForm.get('destinationFrom').hasError(valid.type) && busCreateForm.get('destinationFrom').dirty">{{valid.message}}</span>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label class="form-label">TO</label>
+        </td>
+        <td>
+          <select style="width: 400px; height: 40px" formControlName="destinationTo">
+            <option *ngFor="let type of destinationList" [ngValue]="type">{{type.name}}</option>
+          </select>
+        </td>
+        <td>
+          <div *ngFor="let valid of validationMessage.destinationTo">
+            <span class="err" *ngIf="busCreateForm.get('destinationTo').hasError(valid.type) && busCreateForm.get('destinationTo').dirty">{{valid.message}}</span>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label class="form-label">PHONE NUMBER</label>
+        </td>
+        <td>
+          <input type="text" class="form-control" style="width: 400px" formControlName="busPhone">
+        </td>
+        <td>
+          <div *ngFor="let valid of validationMessage.busPhone">
+            <span  class="err" *ngIf="busCreateForm.get('busPhone').hasError(valid.type) && busCreateForm.get('busPhone').dirty">{{valid.message}}</span>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label class="form-label">EMAIL</label>
+        </td>
+        <td>
+          <input type="email" class="form-control" style="width: 400px" formControlName="busEmail">
+        </td>
+        <td>
+          <div *ngFor="let valid of validationMessage.busEmail">
+            <span  class="err" *ngIf="busCreateForm.get('busEmail').hasError(valid.type) && busCreateForm.get('busEmail').dirty">{{valid.message}}</span>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label class="form-label">TIME START</label>
+        </td>
+        <td>
+          <input type="text" class="form-control" style="width: 400px" formControlName="hourFrom">
+        </td>
+        <td>
+          <div *ngFor="let valid of validationMessage.hourFrom">
+            <span class="err" *ngIf="busCreateForm.get('hourFrom').hasError(valid.type) && busCreateForm.get('hourFrom').dirty">{{valid.message}}</span>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label class="form-label">TIME ARRIVE</label>
+        </td>
+        <td>
+          <input type="text" class="form-control" style="width: 400px" formControlName="hourTo">
+        </td>
+        <td>
+          <div *ngFor="let valid of validationMessage.hourTo">
+            <span class="err" *ngIf="busCreateForm.get('hourTo').hasError(valid.type) && busCreateForm.get('hourTo').dirty">{{valid.message}}</span>
+          </div>
+        </td>
+      </tr>
+      </thead>
+    </table><br>
+    <button type="submit" class="btn btn-primary" style="width: 150px" [disabled]="busCreateForm.invalid">CREATE</button>
+  </form>
+</div>

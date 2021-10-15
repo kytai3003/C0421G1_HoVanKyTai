@@ -28,7 +28,7 @@ export class BusListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.httpClient.get('http://localhost:3000/bus').subscribe((result: Bus[]) => {
+    this.httpClient.get('http://localhost:8080/bus/api').subscribe((result: Bus[]) => {
       this.busList = result;
       console.log(this.busList);
     })
@@ -39,10 +39,10 @@ export class BusListComponent implements OnInit {
   }
 
 
-  key: string = 'customerCode';
-  reverse: boolean = false;
-  sort(key) {
-    this.key = key;
-    this.reverse = !this.reverse;
-  }
+  // key: string = 'customerCode';
+  // reverse: boolean = false;
+  // sort(key) {
+  //   this.key = key;
+  //   this.reverse = !this.reverse;
+  // }
 }

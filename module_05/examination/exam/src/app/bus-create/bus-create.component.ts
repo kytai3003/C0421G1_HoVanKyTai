@@ -1,56 +1,45 @@
 import { Component, OnInit } from '@angular/core';
 import {Destination} from "../model/Destination";
 import {AbstractControl, FormControl, FormGroup, Validators} from "@angular/forms";
-import {ActivatedRoute, ParamMap, Router} from "@angular/router";
 import {Bus} from "../model/Bus";
+import {ActivatedRoute, ParamMap, Router} from "@angular/router";
 import {BusService} from "../service/bus.service";
 import {DestinationService} from "../service/destination.service";
 import {MatSnackBar} from "@angular/material/snack-bar";
 
 @Component({
-  selector: 'app-bus-edit',
-  templateUrl: './bus-edit.component.html',
-  styleUrls: ['./bus-edit.component.css']
+  selector: 'app-bus-create',
+  templateUrl: './bus-create.component.html',
+  styleUrls: ['./bus-create.component.css']
 })
-export class BusEditComponent implements OnInit {
+export class BusCreateComponent implements OnInit {
 
   id: number;
   destinationList: Destination[];
-  busEditForm: FormGroup;
-  busEdit: Bus;
+  busCreateForm: FormGroup;
+  busCreate: Bus;
 
   constructor(private router: Router, private busService: BusService,
               private activatedRoute: ActivatedRoute,
               private destinationService: DestinationService,
               private matSnackBar: MatSnackBar) {
-    this.activatedRoute.paramMap.subscribe((paramMap: ParamMap) => {
-      this.id = +paramMap.get('id');
-      this.getBus(this.id);
-    })
-  };
+    this.busCreateForm = new FormGroup({
+      busCode: new FormControl("", Validators.required),
+      busType: new FormControl("", Validators.required),
+      busName: new FormControl("", Validators.compose([Validators.required])),
+      destinationFrom: new FormControl("", Validators.compose([Validators.required])),
+      destinationTo: new FormControl("", Validators.compose([Validators.required])),
+      busPhone: new FormControl("", Validators.compose([Validators.required, Validators.pattern('^090\\d{7}|093\\d{7}|097\\d{7}$')])),
+      busEmail: new FormControl("", Validators.compose([Validators.required,Validators.email])),
+      hourFrom: new FormControl("", Validators.compose([Validators.required, this.checkDate])),
+      hourTo: new FormControl("", Validators.compose([Validators.required, this.checkDate])),
+    });
+    }
+
 
   ngOnInit(): void {
     this.getType();
   }
-
-  getBus(id: number) {
-    return this.busService.findById(id).subscribe(bus => {
-      this.busEditForm = new FormGroup({
-        id: new FormControl(bus.id),
-        busCode: new FormControl(bus.busCode),
-        busType: new FormControl(bus.busType, Validators.required),
-        busName: new FormControl(bus.busName, Validators.compose([Validators.required])),
-        destinationFrom: new FormControl(bus.destinationFrom, Validators.compose([Validators.required])),
-        destinationTo: new FormControl(bus.destinationTo, Validators.compose([Validators.required])),
-        busPhone: new FormControl(bus.busPhone, Validators.compose([Validators.required, Validators.pattern('^090\\d{7}|093\\d{7}|097\\d{7}$')])),
-        busEmail: new FormControl(bus.busEmail, Validators.compose([Validators.required,Validators.email])),
-        hourFrom: new FormControl(bus.hourFrom, Validators.compose([Validators.required, this.checkDate])),
-        hourTo: new FormControl(bus.hourTo, Validators.compose([Validators.required, this.checkDate])),
-      });
-      this.busEditForm.patchValue(bus);
-      console.log(bus);
-    })
-  };
 
   checkDate(abstractControl: AbstractControl): any {
     const hour = abstractControl.value;
@@ -59,10 +48,18 @@ export class BusEditComponent implements OnInit {
     console.log(hour);
 
     return hour >= legalHour2 && hour <= legalHour1  ? null : {checkDate: true};
+    // if (hour != "11:00 PM" || hour != "12:00 PM" || hour != "00:00 AM" || hour != "01:00 AM" || hour != "02:00 AM" || hour != "03:00 AM"|| hour != "04:00 AM") {
+    //   return {checkDate: true};
+    // } else {
+    //   return null
+    // }
   };
 
 
-  validationMessageEdit = {
+  validationMessage = {
+    busCode: [
+      {type: 'required', message: '<= Please input.'},
+    ],
     busType: [
       {type: 'required', message: '<= Please input.'},
     ],
@@ -99,20 +96,16 @@ export class BusEditComponent implements OnInit {
     });
   }
 
-  updateBus(id: number) {
-    const bus = this.busEditForm.value;
-    this.busService.updateBus(id, bus).subscribe(() => {
-      this.matSnackBar.open("Bus code: " + this.busEdit.busCode + " edited.", "", {
-        duration: 3000,
-        verticalPosition: 'bottom',
-        horizontalPosition: 'right',
-        panelClass: 'green-snackbar'
-      } );
+  createBus() {
+    if (this.busCreateForm.valid) {
+      this.busService.createBus(this.busCreateForm.value).subscribe(next => {
+        this.matSnackBar.open("New bus created.", null, {
+          duration: 2000,
+          verticalPosition: 'top',
+          panelClass: 'blue-snackbar'
+        } )
+      });
       this.router.navigateByUrl("/bus");
-    });
-  }
-
-  compareFn(c1: any, c2: any): boolean {
-    return c1 && c2 ? c1.id === c2.id : c1 === c2;
+    }
   }
 }

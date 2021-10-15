@@ -14,13 +14,15 @@ import {MatSnackBarModule} from "@angular/material/snack-bar";
 import { BusListComponent } from './bus-list/bus-list.component';
 import { BusEditComponent } from './bus-edit/bus-edit.component';
 import { BusDeleteComponent } from './bus-delete/bus-delete.component';
+import { BusCreateComponent } from './bus-create/bus-create.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BusListComponent,
     BusEditComponent,
-    BusDeleteComponent
+    BusDeleteComponent,
+    BusCreateComponent
   ],
   imports: [
     BrowserModule,

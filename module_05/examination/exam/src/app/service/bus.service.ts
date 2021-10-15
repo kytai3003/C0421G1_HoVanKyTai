@@ -8,7 +8,7 @@ import {Bus} from "../model/Bus";
 })
 export class BusService {
 
-  private api_url_bus = "http://localhost:3000/bus";
+  private api_url_bus = "http://localhost:8080/bus/api";
 
   constructor(private httpClient: HttpClient) { }
 
@@ -16,15 +16,19 @@ export class BusService {
     return this.httpClient.get<Bus[]>(this.api_url_bus);
   }
 
-  findById(id: number) : Observable<Bus> {
-    return this.httpClient.get<Bus>(this.api_url_bus + "?id=" + id);
+  createBus(bus: Bus):Observable<Bus> {
+    return this.httpClient.post<Bus>(this.api_url_bus + "/create/", JSON.stringify(bus));
   }
 
-  updateBus(id: number, service: Bus): Observable<Bus> {
-    return this.httpClient.put<Bus>(this.api_url_bus + "/" + id, service);
+  findById(id: number) : Observable<Bus> {
+    return this.httpClient.get<Bus>(this.api_url_bus + "/detail/" + id);
+  }
+
+  updateBus(id: number, bus: Bus): Observable<Bus> {
+    return this.httpClient.put<Bus>(this.api_url_bus + "/edit/" + id, JSON.stringify(bus));
   }
 
   deleteBus(id: number): Observable<any> {
-    return this.httpClient.delete(this.api_url_bus+ "/" + id);
+    return this.httpClient.delete(this.api_url_bus+ "/delete/" + id);
   }
 }

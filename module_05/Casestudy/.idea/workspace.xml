@@ -2,13 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ab41111-b684-4840-9481-f8c1faa232b5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../module_02/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_02/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module_02/out/production/module_02/_02_Java_loop/exercise/PrimeNumberSmallerThan100.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_02/out/production/module_02/_02_Java_loop/exercise/PrimeNumberSmallerThan100.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module_02/src/_02_Java_loop/exercise/PrimeNumberSmallerThan100.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_02/src/_02_Java_loop/exercise/PrimeNumberSmallerThan100.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../module_04/_01_SpringMVC_overview/practise/customer_management/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_04/_01_SpringMVC_overview/practise/customer_management/customer-management" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../module_04/_02_SpringMVC_controller/practice/customer_management/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_04/_02_SpringMVC_controller/practice/customer_management/customer-management" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../module_04/_05_ORM_Database/practise/customer_management/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_04/_05_ORM_Database/practise/customer_management/customer-management" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../module_04/_09_AOP_exception_handler/practise/customer_management/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_04/_09_AOP_exception_handler/practise/customer_management/customer-management" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Casestudy.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Casestudy.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../examination/exam/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/../examination/exam/db.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../examination/exam/src/app/bus-edit/bus-edit.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../examination/exam/src/app/bus-edit/bus-edit.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,14 +34,15 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/SBWORK/uhc-csweb" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -56,6 +59,29 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\C0421G1_HoVanKyTai\module_05\Casestudy\Casestudy\src\assets" />
     </key>
+  </component>
+  <component name="RunManager" selected="npm.Angular CLI Server">
+    <configuration name="E2E Tests (Casestudy)" type="JavaScriptTestRunnerProtractor">
+      <config-file value="$PROJECT_DIR$/Casestudy/e2e/protractor.conf.js" />
+      <node-interpreter value="project" />
+      <protractor-options value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular Application" type="JavascriptDebugType" uri="http://localhost:4200">
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular CLI Server" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/Casestudy/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -92,28 +118,28 @@
       <workItem from="1634001443511" duration="12740000" />
       <workItem from="1634087542004" duration="35000" />
       <workItem from="1634091635799" duration="5358000" />
+      <workItem from="1648527289122" duration="252000" />
+      <workItem from="1649255411164" duration="90000" />
+      <workItem from="1652413294785" duration="76000" />
+      <workItem from="1652945008682" duration="611000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1633714939587">
+    <state x="381" y="32" key="#Angular_CLI_Server" timestamp="1649255487125">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1633714939587" />
-    <state x="462" y="106" key="FileChooserDialogImpl" timestamp="1634087573987">
+    <state x="381" y="32" key="#Angular_CLI_Server/0.0.1366.728@0.0.1366.728" timestamp="1649255487125" />
+    <state x="462" y="117" key="FileChooserDialogImpl" timestamp="1652945679163">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="462" y="106" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1634087573987" />
-    <state x="184" y="7" key="SettingsEditor" timestamp="1633402805330">
+    <state x="462" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1652945679163" />
+    <state x="64" y="0" key="new project wizard" timestamp="1652413365788">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="184" y="7" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1633402805330" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1633686733138">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1633686733138" />
+    <state x="64" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1652413365788" />
   </component>
 </project>

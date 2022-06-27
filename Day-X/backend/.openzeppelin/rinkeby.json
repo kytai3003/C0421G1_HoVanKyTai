@@ -1,0 +1,3488 @@
+{
+  "manifestVersion": "3.2",
+  "admin": {
+    "address": "0x43b77a8dB1260D109D3eDC912F595Ef920B491Ec",
+    "txHash": "0x5ae914003efff7b3277a0396dee6a10b0f05c3d9fd9ec9186cf19909597648b7"
+  },
+  "proxies": [
+    {
+      "address": "0x688F3F0531387812EDBf78872B11b01f9b839471",
+      "txHash": "0xa15b38bcdb42ee15122085225a0f3e8e6fd474efbbaf76b874ceb2f3bf88ddb9",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x604E9f9569fd320e70a590EEd0F0371323151B64",
+      "txHash": "0xd669b89a04c6a424b7123b77920894b02d0acd778482899a5cfcbf8c312de2c1",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x8B3ad1B945A00D90b78Bd89d714F82A3f4b3CacA",
+      "txHash": "0xf77a1a922a9708bdc33fb8138e04e1e25e1f2277cfed1dc75113fce301828772",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x3ad743B22c1f00Ce2b24Cc74D4270FF26a01da48",
+      "txHash": "0xe485c8b5ad3ffd7f7792da426753533b6a6be7802d3fe2cd24d61e0da3bc4b23",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xF6fc262C11c71Aca7D74720B0eD2b8E1f57158B9",
+      "txHash": "0xa122769da8bb033874fb8c684322adc63b09b1b5db436b24a877962deb07ccc0",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x51DF4bfE4E582dbd24B1c04ea5AbA1440d9C8D10",
+      "txHash": "0xcbf6025583ecbebaafaa3ca8ef90bd0ec1f3d2e5371ad362cc7c8f36eec286f6",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x187539773441907f1807Ea5f501eBB5112a065B3",
+      "txHash": "0xe59701646a15f6e8b7b9ae59d85183b4464977cd322f303252057bd320d2794f",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x422dC355907eA9E2e7233968a169773d5D3C6b70",
+      "txHash": "0x32dcbd18276e9061b6f7597bd886c098a910be65f963ea18bca4be404eb11859",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x1c6b29E4Ef56B10DC433f1d3B5A1BB7165e36cda",
+      "txHash": "0xb75233a23afc30ed8e3d187768edfec575ca94b83ea75f109a7bd30cd0c4c327",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x448FBaCb8FD6a29622BC6d2cc1bcBDaBc7DEb3Bc",
+      "txHash": "0x7698a8694fde28409d7fc7eb2670ceb1044798a2aaf1bc72d2e231d6ec3f53d8",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xe2ef8D04dfbCfbbf398791F975409Ddf1C787D85",
+      "txHash": "0xa777d288456862b80603971f21a541a4f5944dd19855bbf5a8cac38794bb1ee6",
+      "kind": "transparent"
+    }
+  ],
+  "impls": {
+    "09e85281db75ded331d436fe7f1fa9abee9cdfbc850eb054f23d73a10a79fcc9": {
+      "address": "0x364AAfdA954e2FcdD292beaD6e1Fa25602b83F21",
+      "txHash": "0x8f82977e4e12282c1c7936d23edd1a5d5b452c3d8b2c38a83c41cb286358739c",
+      "layout": {
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:21"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:26"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\utils\\ContextUpgradeable.sol:30"
+          },
+          {
+            "label": "_owner",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_address",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:21"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "52",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:77"
+          },
+          {
+            "label": "_balances",
+            "offset": 0,
+            "slot": "101",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "ERC20Upgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC20\\ERC20Upgradeable.sol:36"
+          },
+          {
+            "label": "_allowances",
+            "offset": 0,
+            "slot": "102",
+            "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+            "contract": "ERC20Upgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC20\\ERC20Upgradeable.sol:38"
+          },
+          {
+            "label": "_totalSupply",
+            "offset": 0,
+            "slot": "103",
+            "type": "t_uint256",
+            "contract": "ERC20Upgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC20\\ERC20Upgradeable.sol:40"
+          },
+          {
+            "label": "_name",
+            "offset": 0,
+            "slot": "104",
+            "type": "t_string_storage",
+            "contract": "ERC20Upgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC20\\ERC20Upgradeable.sol:42"
+          },
+          {
+            "label": "_symbol",
+            "offset": 0,
+            "slot": "105",
+            "type": "t_string_storage",
+            "contract": "ERC20Upgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC20\\ERC20Upgradeable.sol:43"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "106",
+            "type": "t_array(t_uint256)45_storage",
+            "contract": "ERC20Upgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC20\\ERC20Upgradeable.sol:361"
+          },
+          {
+            "label": "vrfCoordinator",
+            "offset": 0,
+            "slot": "151",
+            "type": "t_address",
+            "contract": "VRFConsumerBaseV2",
+            "src": "@chainlink\\contracts\\src\\v0.8\\VRFConsumerBaseV2.sol:99"
+          },
+          {
+            "label": "randomWords",
+            "offset": 0,
+            "slot": "152",
+            "type": "t_array(t_uint256)dyn_storage",
+            "contract": "Lottery",
+            "src": "contracts\\Lottery.sol:29"
+          },
+          {
+            "label": "requestId",
+            "offset": 0,
+            "slot": "153",
+            "type": "t_uint256",
+            "contract": "Lottery",
+            "src": "contracts\\Lottery.sol:30"
+          },
+          {
+            "label": "keyHash",
+            "offset": 0,
+            "slot": "154",
+            "type": "t_bytes32",
+            "contract": "Lottery",
+            "src": "contracts\\Lottery.sol:31"
+          },
+          {
+            "label": "randomResult",
+            "offset": 0,
+            "slot": "155",
+            "type": "t_uint256",
+            "contract": "Lottery",
+            "src": "contracts\\Lottery.sol:32"
+          },
+          {
+            "label": "players",
+            "offset": 0,
+            "slot": "156",
+            "type": "t_array(t_address_payable)dyn_storage",
+            "contract": "Lottery",
+            "src": "contracts\\Lottery.sol:39"
+          },
+          {
+            "label": "winner",
+            "offset": 0,
+            "slot": "157",
+            "type": "t_address_payable",
+            "contract": "Lottery",
+            "src": "contracts\\Lottery.sol:40"
+          },
+          {
+            "label": "lotteryID",
+            "offset": 0,
+            "slot": "158",
+            "type": "t_uint256",
+            "contract": "Lottery",
+            "src": "contracts\\Lottery.sol:41"
+          },
+          {
+            "label": "costPerTicket",
+            "offset": 0,
+            "slot": "159",
+            "type": "t_uint256",
+            "contract": "Lottery",
+            "src": "contracts\\Lottery.sol:42"
+          },
+          {
+            "label": "startingTimestamp",
+            "offset": 0,
+            "slot": "160",
+            "type": "t_uint256",
+            "contract": "Lottery",
+            "src": "contracts\\Lottery.sol:43"
+          },
+          {
+            "label": "closingTimestamp",
+            "offset": 0,
+            "slot": "161",
+            "type": "t_uint256",
+            "contract": "Lottery",
+            "src": "contracts\\Lottery.sol:44"
+          },
+          {
+            "label": "isWinnerWithdraw",
+            "offset": 0,
+            "slot": "162",
+            "type": "t_bool",
+            "contract": "Lottery",
+            "src": "contracts\\Lottery.sol:45"
+          },
+          {
+            "label": "isRequest",
+            "offset": 1,
+            "slot": "162",
+            "type": "t_bool",
+            "contract": "Lottery",
+            "src": "contracts\\Lottery.sol:46"
+          },
+          {
+            "label": "_randomNumbers",
+            "offset": 0,
+            "slot": "163",
+            "type": "t_array(t_uint256)dyn_storage",
+            "contract": "Lottery",
+            "src": "contracts\\Lottery.sol:47"
+          },
+          {
+            "label": "availableCount",
+            "offset": 0,
+            "slot": "164",
+            "type": "t_uint256",
+            "contract": "Lottery",
+            "src": "contracts\\Lottery.sol:48"
+          },
+          {
+            "label": "count",
+            "offset": 0,
+            "slot": "165",
+            "type": "t_uint256",
+            "contract": "Lottery",
+            "src": "contracts\\Lottery.sol:49"
+          },
+          {
+            "label": "currentLottery",
+            "offset": 0,
+            "slot": "166",
+            "type": "t_struct(LotteryInfo)1127_storage",
+            "contract": "Lottery",
+            "src": "contracts\\Lottery.sol:60"
+          },
+          {
+            "label": "lotteryStatus",
+            "offset": 0,
+            "slot": "172",
+            "type": "t_enum(Status)1135",
+            "contract": "Lottery",
+            "src": "contracts\\Lottery.sol:69"
+          },
+          {
+            "label": "playerTicketNumbers",
+            "offset": 0,
+            "slot": "173",
+            "type": "t_mapping(t_address,t_array(t_uint256)dyn_storage)",
+            "contract": "Lottery",
+            "src": "contracts\\Lottery.sol:81"
+          },
+          {
+            "label": "allLotteries",
+            "offset": 0,
+            "slot": "174",
+            "type": "t_mapping(t_uint256,t_struct(LotteryInfo)1127_storage)",
+            "contract": "Lottery",
+            "src": "contracts\\Lottery.sol:82"
+          },
+          {
+            "label": "choosenNumber",
+            "offset": 0,
+            "slot": "175",
+            "type": "t_mapping(t_uint256,t_address)",
+            "contract": "Lottery",
+            "src": "contracts\\Lottery.sol:83"
+          },
+          {
+            "label": "limitedAmount",
+            "offset": 0,
+            "slot": "176",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "Lottery",
+            "src": "contracts\\Lottery.sol:84"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_address_payable": {
+            "label": "address payable",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_address_payable)dyn_storage": {
+            "label": "address payable[]",
+            "numberOfBytes": "32"
+          },
+          "t_array(t_uint256)45_storage": {
+            "label": "uint256[45]",
+            "numberOfBytes": "1440"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_array(t_uint256)dyn_storage": {
+            "label": "uint256[]",
+            "numberOfBytes": "32"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_bytes32": {
+            "label": "bytes32",
+            "numberOfBytes": "32"
+          },
+          "t_enum(Status)1135": {
+            "label": "enum Lottery.Status",
+            "members": [
+              "NOT_STARTED",
+              "OPEN",
+              "CLOSED",
+              "COMPLETED"
+            ],
+            "numberOfBytes": "1"
+          },
+          "t_mapping(t_address,t_array(t_uint256)dyn_storage)": {
+            "label": "mapping(address => uint256[])",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+            "label": "mapping(address => mapping(address => uint256))",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_address)": {
+            "label": "mapping(uint256 => address)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_struct(LotteryInfo)1127_storage)": {
+            "label": "mapping(uint256 => struct Lottery.LotteryInfo)",
+            "numberOfBytes": "32"
+          },
+          "t_string_storage": {
+            "label": "string",
+            "numberOfBytes": "32"
+          },
+          "t_struct(LotteryInfo)1127_storage": {
+            "label": "struct Lottery.LotteryInfo",
+            "members": [
+              {
+                "label": "_lotteryID",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "_costPerTicket",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "_startingTimestamp",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "_closingTimestamp",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "_winner",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "4"
+              },
+              {
+                "label": "_randomResult",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "5"
+              }
+            ],
+            "numberOfBytes": "192"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          }
+        }
+      }
+    },
+    "91387599a80c0165f6f447d5f2aa3867c5c8d0fa69d09b616064f3960584b115": {
+      "address": "0x91F27246CB755065Ac645e049a123ca8b3147302",
+      "txHash": "0x32bc9b73c52e90221a29b7ea6b5aa7d66606c13e2ddbb6a89e2edb82553ac056",
+      "layout": {
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:21"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:26"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\utils\\ContextUpgradeable.sol:30"
+          },
+          {
+            "label": "_owner",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_address",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:21"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "52",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:77"
+          },
+          {
+            "label": "_balances",
+            "offset": 0,
+            "slot": "101",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "ERC20Upgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC20\\ERC20Upgradeable.sol:36"
+          },
+          {
+            "label": "_allowances",
+            "offset": 0,
+            "slot": "102",
+            "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+            "contract": "ERC20Upgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC20\\ERC20Upgradeable.sol:38"
+          },
+          {
+            "label": "_totalSupply",
+            "offset": 0,
+            "slot": "103",
+            "type": "t_uint256",
+            "contract": "ERC20Upgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC20\\ERC20Upgradeable.sol:40"
+          },
+          {
+            "label": "_name",
+            "offset": 0,
+            "slot": "104",
+            "type": "t_string_storage",
+            "contract": "ERC20Upgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC20\\ERC20Upgradeable.sol:42"
+          },
+          {
+            "label": "_symbol",
+            "offset": 0,
+            "slot": "105",
+            "type": "t_string_storage",
+            "contract": "ERC20Upgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC20\\ERC20Upgradeable.sol:43"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "106",
+            "type": "t_array(t_uint256)45_storage",
+            "contract": "ERC20Upgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC20\\ERC20Upgradeable.sol:361"
+          },
+          {
+            "label": "randomWords",
+            "offset": 0,
+            "slot": "151",
+            "type": "t_array(t_uint256)dyn_storage",
+            "contract": "Lottery",
+            "src": "contracts\\Lottery.sol:29"
+          },
+          {
+            "label": "requestId",
+            "offset": 0,
+            "slot": "152",
+            "type": "t_uint256",
+            "contract": "Lottery",
+            "src": "contracts\\Lottery.sol:30"
+          },
+          {
+            "label": "keyHash",
+            "offset": 0,
+            "slot": "153",
+            "type": "t_bytes32",
+            "contract": "Lottery",
+            "src": "contracts\\Lottery.sol:31"
+          },
+          {
+            "label": "randomResult",
+            "offset": 0,
+            "slot": "154",
+            "type": "t_uint256",
+            "contract": "Lottery",
+            "src": "contracts\\Lottery.sol:32"
+          },
+          {
+            "label": "players",
+            "offset": 0,
+            "slot": "155",
+            "type": "t_array(t_address_payable)dyn_storage",
+            "contract": "Lottery",
+            "src": "contracts\\Lottery.sol:39"
+          },
+          {
+            "label": "winner",
+            "offset": 0,
+            "slot": "156",
+            "type": "t_address_payable",
+            "contract": "Lottery",
+            "src": "contracts\\Lottery.sol:40"
+          },
+          {
+            "label": "lotteryID",
+            "offset": 0,
+            "slot": "157",
+            "type": "t_uint256",
+            "contract": "Lottery",
+            "src": "contracts\\Lottery.sol:41"
+          },
+          {
+            "label": "costPerTicket",
+            "offset": 0,
+            "slot": "158",
+            "type": "t_uint256",
+            "contract": "Lottery",
+            "src": "contracts\\Lottery.sol:42"
+          },
+          {
+            "label": "startingTimestamp",
+            "offset": 0,
+            "slot": "159",
+            "type": "t_uint256",
+            "contract": "Lottery",
+            "src": "contracts\\Lottery.sol:43"
+          },
+          {
+            "label": "closingTimestamp",
+            "offset": 0,
+            "slot": "160",
+            "type": "t_uint256",
+            "contract": "Lottery",
+            "src": "contracts\\Lottery.sol:44"
+          },
+          {
+            "label": "isWinnerWithdraw",
+            "offset": 0,
+            "slot": "161",
+            "type": "t_bool",
+            "contract": "Lottery",
+            "src": "contracts\\Lottery.sol:45"
+          },
+          {
+            "label": "isRequest",
+            "offset": 1,
+            "slot": "161",
+            "type": "t_bool",
+            "contract": "Lottery",
+            "src": "contracts\\Lottery.sol:46"
+          },
+          {
+            "label": "_randomNumbers",
+            "offset": 0,
+            "slot": "162",
+            "type": "t_array(t_uint256)dyn_storage",
+            "contract": "Lottery",
+            "src": "contracts\\Lottery.sol:47"
+          },
+          {
+            "label": "availableCount",
+            "offset": 0,
+            "slot": "163",
+            "type": "t_uint256",
+            "contract": "Lottery",
+            "src": "contracts\\Lottery.sol:48"
+          },
+          {
+            "label": "count",
+            "offset": 0,
+            "slot": "164",
+            "type": "t_uint256",
+            "contract": "Lottery",
+            "src": "contracts\\Lottery.sol:49"
+          },
+          {
+            "label": "currentLottery",
+            "offset": 0,
+            "slot": "165",
+            "type": "t_struct(LotteryInfo)1125_storage",
+            "contract": "Lottery",
+            "src": "contracts\\Lottery.sol:60"
+          },
+          {
+            "label": "lotteryStatus",
+            "offset": 0,
+            "slot": "171",
+            "type": "t_enum(Status)1133",
+            "contract": "Lottery",
+            "src": "contracts\\Lottery.sol:69"
+          },
+          {
+            "label": "playerTicketNumbers",
+            "offset": 0,
+            "slot": "172",
+            "type": "t_mapping(t_address,t_array(t_uint256)dyn_storage)",
+            "contract": "Lottery",
+            "src": "contracts\\Lottery.sol:81"
+          },
+          {
+            "label": "allLotteries",
+            "offset": 0,
+            "slot": "173",
+            "type": "t_mapping(t_uint256,t_struct(LotteryInfo)1125_storage)",
+            "contract": "Lottery",
+            "src": "contracts\\Lottery.sol:82"
+          },
+          {
+            "label": "choosenNumber",
+            "offset": 0,
+            "slot": "174",
+            "type": "t_mapping(t_uint256,t_address)",
+            "contract": "Lottery",
+            "src": "contracts\\Lottery.sol:83"
+          },
+          {
+            "label": "limitedAmount",
+            "offset": 0,
+            "slot": "175",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "Lottery",
+            "src": "contracts\\Lottery.sol:84"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_address_payable": {
+            "label": "address payable",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_address_payable)dyn_storage": {
+            "label": "address payable[]",
+            "numberOfBytes": "32"
+          },
+          "t_array(t_uint256)45_storage": {
+            "label": "uint256[45]",
+            "numberOfBytes": "1440"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_array(t_uint256)dyn_storage": {
+            "label": "uint256[]",
+            "numberOfBytes": "32"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_bytes32": {
+            "label": "bytes32",
+            "numberOfBytes": "32"
+          },
+          "t_enum(Status)1133": {
+            "label": "enum Lottery.Status",
+            "members": [
+              "NOT_STARTED",
+              "OPEN",
+              "CLOSED",
+              "COMPLETED"
+            ],
+            "numberOfBytes": "1"
+          },
+          "t_mapping(t_address,t_array(t_uint256)dyn_storage)": {
+            "label": "mapping(address => uint256[])",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+            "label": "mapping(address => mapping(address => uint256))",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_address)": {
+            "label": "mapping(uint256 => address)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_struct(LotteryInfo)1125_storage)": {
+            "label": "mapping(uint256 => struct Lottery.LotteryInfo)",
+            "numberOfBytes": "32"
+          },
+          "t_string_storage": {
+            "label": "string",
+            "numberOfBytes": "32"
+          },
+          "t_struct(LotteryInfo)1125_storage": {
+            "label": "struct Lottery.LotteryInfo",
+            "members": [
+              {
+                "label": "_lotteryID",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "_costPerTicket",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "_startingTimestamp",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "_closingTimestamp",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "_winner",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "4"
+              },
+              {
+                "label": "_randomResult",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "5"
+              }
+            ],
+            "numberOfBytes": "192"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          }
+        }
+      }
+    },
+    "713d354da48bb8331815d57a715ce8cff546a4e02d638a0257a75b8824bdb458": {
+      "address": "0x9957D2B30D63150C6B2e26861a587aA2C4424BEA",
+      "txHash": "0x49f53075f5bd7c5fcba65e8385b3ddfa2e65d4f63d045bde5a2bdf2d5ffc112f",
+      "layout": {
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:21"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:26"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\utils\\ContextUpgradeable.sol:30"
+          },
+          {
+            "label": "_owner",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_address",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:21"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "52",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:77"
+          },
+          {
+            "label": "_balances",
+            "offset": 0,
+            "slot": "101",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "ERC20Upgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC20\\ERC20Upgradeable.sol:36"
+          },
+          {
+            "label": "_allowances",
+            "offset": 0,
+            "slot": "102",
+            "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+            "contract": "ERC20Upgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC20\\ERC20Upgradeable.sol:38"
+          },
+          {
+            "label": "_totalSupply",
+            "offset": 0,
+            "slot": "103",
+            "type": "t_uint256",
+            "contract": "ERC20Upgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC20\\ERC20Upgradeable.sol:40"
+          },
+          {
+            "label": "_name",
+            "offset": 0,
+            "slot": "104",
+            "type": "t_string_storage",
+            "contract": "ERC20Upgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC20\\ERC20Upgradeable.sol:42"
+          },
+          {
+            "label": "_symbol",
+            "offset": 0,
+            "slot": "105",
+            "type": "t_string_storage",
+            "contract": "ERC20Upgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC20\\ERC20Upgradeable.sol:43"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "106",
+            "type": "t_array(t_uint256)45_storage",
+            "contract": "ERC20Upgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC20\\ERC20Upgradeable.sol:361"
+          },
+          {
+            "label": "requestContract",
+            "offset": 0,
+            "slot": "151",
+            "type": "t_contract(RequestVRFNumber)2081",
+            "contract": "Lottery",
+            "src": "contracts\\Lottery.sol:19"
+          },
+          {
+            "label": "randomResult",
+            "offset": 0,
+            "slot": "152",
+            "type": "t_uint256",
+            "contract": "Lottery",
+            "src": "contracts\\Lottery.sol:20"
+          },
+          {
+            "label": "players",
+            "offset": 0,
+            "slot": "153",
+            "type": "t_array(t_address_payable)dyn_storage",
+            "contract": "Lottery",
+            "src": "contracts\\Lottery.sol:27"
+          },
+          {
+            "label": "winner",
+            "offset": 0,
+            "slot": "154",
+            "type": "t_address_payable",
+            "contract": "Lottery",
+            "src": "contracts\\Lottery.sol:28"
+          },
+          {
+            "label": "lotteryID",
+            "offset": 0,
+            "slot": "155",
+            "type": "t_uint256",
+            "contract": "Lottery",
+            "src": "contracts\\Lottery.sol:29"
+          },
+          {
+            "label": "costPerTicket",
+            "offset": 0,
+            "slot": "156",
+            "type": "t_uint256",
+            "contract": "Lottery",
+            "src": "contracts\\Lottery.sol:30"
+          },
+          {
+            "label": "startingTimestamp",
+            "offset": 0,
+            "slot": "157",
+            "type": "t_uint256",
+            "contract": "Lottery",
+            "src": "contracts\\Lottery.sol:31"
+          },
+          {
+            "label": "closingTimestamp",
+            "offset": 0,
+            "slot": "158",
+            "type": "t_uint256",
+            "contract": "Lottery",
+            "src": "contracts\\Lottery.sol:32"
+          },
+          {
+            "label": "isWinnerWithdraw",
+            "offset": 0,
+            "slot": "159",
+            "type": "t_bool",
+            "contract": "Lottery",
+            "src": "contracts\\Lottery.sol:33"
+          },
+          {
+            "label": "isRequest",
+            "offset": 1,
+            "slot": "159",
+            "type": "t_bool",
+            "contract": "Lottery",
+            "src": "contracts\\Lottery.sol:34"
+          },
+          {
+            "label": "_randomNumbers",
+            "offset": 0,
+            "slot": "160",
+            "type": "t_array(t_uint256)dyn_storage",
+            "contract": "Lottery",
+            "src": "contracts\\Lottery.sol:35"
+          },
+          {
+            "label": "availableCount",
+            "offset": 0,
+            "slot": "161",
+            "type": "t_uint256",
+            "contract": "Lottery",
+            "src": "contracts\\Lottery.sol:36"
+          },
+          {
+            "label": "count",
+            "offset": 0,
+            "slot": "162",
+            "type": "t_uint256",
+            "contract": "Lottery",
+            "src": "contracts\\Lottery.sol:37"
+          },
+          {
+            "label": "currentLottery",
+            "offset": 0,
+            "slot": "163",
+            "type": "t_struct(LotteryInfo)1099_storage",
+            "contract": "Lottery",
+            "src": "contracts\\Lottery.sol:48"
+          },
+          {
+            "label": "lotteryStatus",
+            "offset": 0,
+            "slot": "169",
+            "type": "t_enum(Status)1107",
+            "contract": "Lottery",
+            "src": "contracts\\Lottery.sol:57"
+          },
+          {
+            "label": "playerTicketNumbers",
+            "offset": 0,
+            "slot": "170",
+            "type": "t_mapping(t_address,t_array(t_uint256)dyn_storage)",
+            "contract": "Lottery",
+            "src": "contracts\\Lottery.sol:67"
+          },
+          {
+            "label": "allLotteries",
+            "offset": 0,
+            "slot": "171",
+            "type": "t_mapping(t_uint256,t_struct(LotteryInfo)1099_storage)",
+            "contract": "Lottery",
+            "src": "contracts\\Lottery.sol:68"
+          },
+          {
+            "label": "choosenNumber",
+            "offset": 0,
+            "slot": "172",
+            "type": "t_mapping(t_uint256,t_address)",
+            "contract": "Lottery",
+            "src": "contracts\\Lottery.sol:69"
+          },
+          {
+            "label": "limitedAmount",
+            "offset": 0,
+            "slot": "173",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "Lottery",
+            "src": "contracts\\Lottery.sol:70"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_address_payable": {
+            "label": "address payable",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_address_payable)dyn_storage": {
+            "label": "address payable[]",
+            "numberOfBytes": "32"
+          },
+          "t_array(t_uint256)45_storage": {
+            "label": "uint256[45]",
+            "numberOfBytes": "1440"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_array(t_uint256)dyn_storage": {
+            "label": "uint256[]",
+            "numberOfBytes": "32"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_contract(RequestVRFNumber)2081": {
+            "label": "contract RequestVRFNumber",
+            "numberOfBytes": "20"
+          },
+          "t_enum(Status)1107": {
+            "label": "enum Lottery.Status",
+            "members": [
+              "NOT_STARTED",
+              "OPEN",
+              "CLOSED",
+              "COMPLETED"
+            ],
+            "numberOfBytes": "1"
+          },
+          "t_mapping(t_address,t_array(t_uint256)dyn_storage)": {
+            "label": "mapping(address => uint256[])",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+            "label": "mapping(address => mapping(address => uint256))",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_address)": {
+            "label": "mapping(uint256 => address)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_struct(LotteryInfo)1099_storage)": {
+            "label": "mapping(uint256 => struct Lottery.LotteryInfo)",
+            "numberOfBytes": "32"
+          },
+          "t_string_storage": {
+            "label": "string",
+            "numberOfBytes": "32"
+          },
+          "t_struct(LotteryInfo)1099_storage": {
+            "label": "struct Lottery.LotteryInfo",
+            "members": [
+              {
+                "label": "_lotteryID",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "_costPerTicket",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "_startingTimestamp",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "_closingTimestamp",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "_winner",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "4"
+              },
+              {
+                "label": "_randomResult",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "5"
+              }
+            ],
+            "numberOfBytes": "192"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          }
+        }
+      }
+    },
+    "45f2cd90a4dfb386c2fcbf002f052d5cd0526a2834bd75060856c3ab7b34030e": {
+      "address": "0x1184367A2dfcfAf4dBf1c95Fc134bC7BA72c7D8A",
+      "txHash": "0x632435084aec4a704844d7f004fe65a3e1f0fffd82be54fb204356cd05a93cd7",
+      "layout": {
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:21"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:26"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\utils\\ContextUpgradeable.sol:30"
+          },
+          {
+            "label": "_owner",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_address",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:21"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "52",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:77"
+          },
+          {
+            "label": "_balances",
+            "offset": 0,
+            "slot": "101",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "ERC20Upgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC20\\ERC20Upgradeable.sol:36"
+          },
+          {
+            "label": "_allowances",
+            "offset": 0,
+            "slot": "102",
+            "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+            "contract": "ERC20Upgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC20\\ERC20Upgradeable.sol:38"
+          },
+          {
+            "label": "_totalSupply",
+            "offset": 0,
+            "slot": "103",
+            "type": "t_uint256",
+            "contract": "ERC20Upgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC20\\ERC20Upgradeable.sol:40"
+          },
+          {
+            "label": "_name",
+            "offset": 0,
+            "slot": "104",
+            "type": "t_string_storage",
+            "contract": "ERC20Upgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC20\\ERC20Upgradeable.sol:42"
+          },
+          {
+            "label": "_symbol",
+            "offset": 0,
+            "slot": "105",
+            "type": "t_string_storage",
+            "contract": "ERC20Upgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC20\\ERC20Upgradeable.sol:43"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "106",
+            "type": "t_array(t_uint256)45_storage",
+            "contract": "ERC20Upgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC20\\ERC20Upgradeable.sol:361"
+          },
+          {
+            "label": "requestContract",
+            "offset": 0,
+            "slot": "151",
+            "type": "t_contract(RequestVRFNumber)2087",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:19"
+          },
+          {
+            "label": "randomResult",
+            "offset": 0,
+            "slot": "152",
+            "type": "t_uint256",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:20"
+          },
+          {
+            "label": "players",
+            "offset": 0,
+            "slot": "153",
+            "type": "t_array(t_address_payable)dyn_storage",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:27"
+          },
+          {
+            "label": "winner",
+            "offset": 0,
+            "slot": "154",
+            "type": "t_address_payable",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:28"
+          },
+          {
+            "label": "lotteryID",
+            "offset": 0,
+            "slot": "155",
+            "type": "t_uint256",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:29"
+          },
+          {
+            "label": "costPerTicket",
+            "offset": 0,
+            "slot": "156",
+            "type": "t_uint256",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:30"
+          },
+          {
+            "label": "startingTimestamp",
+            "offset": 0,
+            "slot": "157",
+            "type": "t_uint256",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:31"
+          },
+          {
+            "label": "closingTimestamp",
+            "offset": 0,
+            "slot": "158",
+            "type": "t_uint256",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:32"
+          },
+          {
+            "label": "isWinnerWithdraw",
+            "offset": 0,
+            "slot": "159",
+            "type": "t_bool",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:33"
+          },
+          {
+            "label": "isRequest",
+            "offset": 1,
+            "slot": "159",
+            "type": "t_bool",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:34"
+          },
+          {
+            "label": "_randomNumbers",
+            "offset": 0,
+            "slot": "160",
+            "type": "t_array(t_uint256)dyn_storage",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:35"
+          },
+          {
+            "label": "availableCount",
+            "offset": 0,
+            "slot": "161",
+            "type": "t_uint256",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:36"
+          },
+          {
+            "label": "count",
+            "offset": 0,
+            "slot": "162",
+            "type": "t_uint256",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:37"
+          },
+          {
+            "label": "currentLottery",
+            "offset": 0,
+            "slot": "163",
+            "type": "t_struct(LotteryInfo)1099_storage",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:48"
+          },
+          {
+            "label": "lotteryStatus",
+            "offset": 0,
+            "slot": "169",
+            "type": "t_enum(Status)1107",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:57"
+          },
+          {
+            "label": "playerTicketNumbers",
+            "offset": 0,
+            "slot": "170",
+            "type": "t_mapping(t_address,t_array(t_uint256)dyn_storage)",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:67"
+          },
+          {
+            "label": "allLotteries",
+            "offset": 0,
+            "slot": "171",
+            "type": "t_mapping(t_uint256,t_struct(LotteryInfo)1099_storage)",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:68"
+          },
+          {
+            "label": "choosenNumber",
+            "offset": 0,
+            "slot": "172",
+            "type": "t_mapping(t_uint256,t_address)",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:69"
+          },
+          {
+            "label": "limitedAmount",
+            "offset": 0,
+            "slot": "173",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:70"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_address_payable": {
+            "label": "address payable",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_address_payable)dyn_storage": {
+            "label": "address payable[]",
+            "numberOfBytes": "32"
+          },
+          "t_array(t_uint256)45_storage": {
+            "label": "uint256[45]",
+            "numberOfBytes": "1440"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_array(t_uint256)dyn_storage": {
+            "label": "uint256[]",
+            "numberOfBytes": "32"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_contract(RequestVRFNumber)2087": {
+            "label": "contract RequestVRFNumber",
+            "numberOfBytes": "20"
+          },
+          "t_enum(Status)1107": {
+            "label": "enum LotteryUpgradable.Status",
+            "members": [
+              "NOT_STARTED",
+              "OPEN",
+              "CLOSED",
+              "COMPLETED"
+            ],
+            "numberOfBytes": "1"
+          },
+          "t_mapping(t_address,t_array(t_uint256)dyn_storage)": {
+            "label": "mapping(address => uint256[])",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+            "label": "mapping(address => mapping(address => uint256))",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_address)": {
+            "label": "mapping(uint256 => address)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_struct(LotteryInfo)1099_storage)": {
+            "label": "mapping(uint256 => struct LotteryUpgradable.LotteryInfo)",
+            "numberOfBytes": "32"
+          },
+          "t_string_storage": {
+            "label": "string",
+            "numberOfBytes": "32"
+          },
+          "t_struct(LotteryInfo)1099_storage": {
+            "label": "struct LotteryUpgradable.LotteryInfo",
+            "members": [
+              {
+                "label": "_lotteryID",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "_costPerTicket",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "_startingTimestamp",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "_closingTimestamp",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "_winner",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "4"
+              },
+              {
+                "label": "_randomResult",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "5"
+              }
+            ],
+            "numberOfBytes": "192"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          }
+        }
+      }
+    },
+    "4e51889320ff733ef10119ce600ab13cc443c845f50b53ee61fbd5017c364ad8": {
+      "address": "0x14DB26ce48591960b1B40c2acf0f1319FDDbF2B0",
+      "txHash": "0xa05f4d4d9be6efbcdc369b13a1f5c90131b9a78effb4cd1c79b57df50d5885bc",
+      "layout": {
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:21"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:26"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\utils\\ContextUpgradeable.sol:30"
+          },
+          {
+            "label": "_owner",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_address",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:21"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "52",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:77"
+          },
+          {
+            "label": "_balances",
+            "offset": 0,
+            "slot": "101",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "ERC20Upgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC20\\ERC20Upgradeable.sol:36"
+          },
+          {
+            "label": "_allowances",
+            "offset": 0,
+            "slot": "102",
+            "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+            "contract": "ERC20Upgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC20\\ERC20Upgradeable.sol:38"
+          },
+          {
+            "label": "_totalSupply",
+            "offset": 0,
+            "slot": "103",
+            "type": "t_uint256",
+            "contract": "ERC20Upgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC20\\ERC20Upgradeable.sol:40"
+          },
+          {
+            "label": "_name",
+            "offset": 0,
+            "slot": "104",
+            "type": "t_string_storage",
+            "contract": "ERC20Upgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC20\\ERC20Upgradeable.sol:42"
+          },
+          {
+            "label": "_symbol",
+            "offset": 0,
+            "slot": "105",
+            "type": "t_string_storage",
+            "contract": "ERC20Upgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC20\\ERC20Upgradeable.sol:43"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "106",
+            "type": "t_array(t_uint256)45_storage",
+            "contract": "ERC20Upgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC20\\ERC20Upgradeable.sol:361"
+          },
+          {
+            "label": "requestContract",
+            "offset": 0,
+            "slot": "151",
+            "type": "t_contract(RequestVRFNumber)2089",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:19"
+          },
+          {
+            "label": "randomResult",
+            "offset": 0,
+            "slot": "152",
+            "type": "t_uint256",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:20"
+          },
+          {
+            "label": "players",
+            "offset": 0,
+            "slot": "153",
+            "type": "t_array(t_address_payable)dyn_storage",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:27"
+          },
+          {
+            "label": "winner",
+            "offset": 0,
+            "slot": "154",
+            "type": "t_address_payable",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:28"
+          },
+          {
+            "label": "lotteryID",
+            "offset": 0,
+            "slot": "155",
+            "type": "t_uint256",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:29"
+          },
+          {
+            "label": "costPerTicket",
+            "offset": 0,
+            "slot": "156",
+            "type": "t_uint256",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:30"
+          },
+          {
+            "label": "startingTimestamp",
+            "offset": 0,
+            "slot": "157",
+            "type": "t_uint256",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:31"
+          },
+          {
+            "label": "closingTimestamp",
+            "offset": 0,
+            "slot": "158",
+            "type": "t_uint256",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:32"
+          },
+          {
+            "label": "isWinnerWithdraw",
+            "offset": 0,
+            "slot": "159",
+            "type": "t_bool",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:33"
+          },
+          {
+            "label": "isRequest",
+            "offset": 1,
+            "slot": "159",
+            "type": "t_bool",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:34"
+          },
+          {
+            "label": "_randomNumbers",
+            "offset": 0,
+            "slot": "160",
+            "type": "t_array(t_uint256)dyn_storage",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:35"
+          },
+          {
+            "label": "availableCount",
+            "offset": 0,
+            "slot": "161",
+            "type": "t_uint256",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:36"
+          },
+          {
+            "label": "count",
+            "offset": 0,
+            "slot": "162",
+            "type": "t_uint256",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:37"
+          },
+          {
+            "label": "currentLottery",
+            "offset": 0,
+            "slot": "163",
+            "type": "t_struct(LotteryInfo)1099_storage",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:48"
+          },
+          {
+            "label": "lotteryStatus",
+            "offset": 0,
+            "slot": "169",
+            "type": "t_enum(Status)1107",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:57"
+          },
+          {
+            "label": "playerTicketNumbers",
+            "offset": 0,
+            "slot": "170",
+            "type": "t_mapping(t_address,t_array(t_uint256)dyn_storage)",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:67"
+          },
+          {
+            "label": "allLotteries",
+            "offset": 0,
+            "slot": "171",
+            "type": "t_mapping(t_uint256,t_struct(LotteryInfo)1099_storage)",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:68"
+          },
+          {
+            "label": "choosenNumber",
+            "offset": 0,
+            "slot": "172",
+            "type": "t_mapping(t_uint256,t_address)",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:69"
+          },
+          {
+            "label": "limitedAmount",
+            "offset": 0,
+            "slot": "173",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:70"
+          },
+          {
+            "label": "x",
+            "offset": 0,
+            "slot": "174",
+            "type": "t_uint256",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:130"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_address_payable": {
+            "label": "address payable",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_address_payable)dyn_storage": {
+            "label": "address payable[]",
+            "numberOfBytes": "32"
+          },
+          "t_array(t_uint256)45_storage": {
+            "label": "uint256[45]",
+            "numberOfBytes": "1440"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_array(t_uint256)dyn_storage": {
+            "label": "uint256[]",
+            "numberOfBytes": "32"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_contract(RequestVRFNumber)2089": {
+            "label": "contract RequestVRFNumber",
+            "numberOfBytes": "20"
+          },
+          "t_enum(Status)1107": {
+            "label": "enum LotteryUpgradable.Status",
+            "members": [
+              "NOT_STARTED",
+              "OPEN",
+              "CLOSED",
+              "COMPLETED"
+            ],
+            "numberOfBytes": "1"
+          },
+          "t_mapping(t_address,t_array(t_uint256)dyn_storage)": {
+            "label": "mapping(address => uint256[])",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+            "label": "mapping(address => mapping(address => uint256))",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_address)": {
+            "label": "mapping(uint256 => address)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_struct(LotteryInfo)1099_storage)": {
+            "label": "mapping(uint256 => struct LotteryUpgradable.LotteryInfo)",
+            "numberOfBytes": "32"
+          },
+          "t_string_storage": {
+            "label": "string",
+            "numberOfBytes": "32"
+          },
+          "t_struct(LotteryInfo)1099_storage": {
+            "label": "struct LotteryUpgradable.LotteryInfo",
+            "members": [
+              {
+                "label": "_lotteryID",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "_costPerTicket",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "_startingTimestamp",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "_closingTimestamp",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "_winner",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "4"
+              },
+              {
+                "label": "_randomResult",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "5"
+              }
+            ],
+            "numberOfBytes": "192"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          }
+        }
+      }
+    },
+    "9e68ea01053701fd955ef9ad24928b8ae0b83c842d2edf8858f829c7aa4c2ec1": {
+      "address": "0x11B2bBe7E0CCBf502AAC0CB2d56BE3943A001480",
+      "txHash": "0x5a9428f32abedfbfdeee7ca5e8696d412bb68b70d2106150162f316b94b506d6",
+      "layout": {
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:21"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:26"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\utils\\ContextUpgradeable.sol:30"
+          },
+          {
+            "label": "_owner",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_address",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:21"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "52",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:77"
+          },
+          {
+            "label": "_balances",
+            "offset": 0,
+            "slot": "101",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "ERC20Upgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC20\\ERC20Upgradeable.sol:36"
+          },
+          {
+            "label": "_allowances",
+            "offset": 0,
+            "slot": "102",
+            "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+            "contract": "ERC20Upgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC20\\ERC20Upgradeable.sol:38"
+          },
+          {
+            "label": "_totalSupply",
+            "offset": 0,
+            "slot": "103",
+            "type": "t_uint256",
+            "contract": "ERC20Upgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC20\\ERC20Upgradeable.sol:40"
+          },
+          {
+            "label": "_name",
+            "offset": 0,
+            "slot": "104",
+            "type": "t_string_storage",
+            "contract": "ERC20Upgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC20\\ERC20Upgradeable.sol:42"
+          },
+          {
+            "label": "_symbol",
+            "offset": 0,
+            "slot": "105",
+            "type": "t_string_storage",
+            "contract": "ERC20Upgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC20\\ERC20Upgradeable.sol:43"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "106",
+            "type": "t_array(t_uint256)45_storage",
+            "contract": "ERC20Upgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC20\\ERC20Upgradeable.sol:361"
+          },
+          {
+            "label": "requestContract",
+            "offset": 0,
+            "slot": "151",
+            "type": "t_contract(RequestVRFNumber)2091",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:19"
+          },
+          {
+            "label": "randomResult",
+            "offset": 0,
+            "slot": "152",
+            "type": "t_uint256",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:20"
+          },
+          {
+            "label": "players",
+            "offset": 0,
+            "slot": "153",
+            "type": "t_array(t_address_payable)dyn_storage",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:27"
+          },
+          {
+            "label": "winner",
+            "offset": 0,
+            "slot": "154",
+            "type": "t_address_payable",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:28"
+          },
+          {
+            "label": "lotteryID",
+            "offset": 0,
+            "slot": "155",
+            "type": "t_uint256",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:29"
+          },
+          {
+            "label": "costPerTicket",
+            "offset": 0,
+            "slot": "156",
+            "type": "t_uint256",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:30"
+          },
+          {
+            "label": "startingTimestamp",
+            "offset": 0,
+            "slot": "157",
+            "type": "t_uint256",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:31"
+          },
+          {
+            "label": "closingTimestamp",
+            "offset": 0,
+            "slot": "158",
+            "type": "t_uint256",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:32"
+          },
+          {
+            "label": "isWinnerWithdraw",
+            "offset": 0,
+            "slot": "159",
+            "type": "t_bool",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:33"
+          },
+          {
+            "label": "isRequest",
+            "offset": 1,
+            "slot": "159",
+            "type": "t_bool",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:34"
+          },
+          {
+            "label": "_randomNumbers",
+            "offset": 0,
+            "slot": "160",
+            "type": "t_array(t_uint256)dyn_storage",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:35"
+          },
+          {
+            "label": "availableCount",
+            "offset": 0,
+            "slot": "161",
+            "type": "t_uint256",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:36"
+          },
+          {
+            "label": "count",
+            "offset": 0,
+            "slot": "162",
+            "type": "t_uint256",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:37"
+          },
+          {
+            "label": "currentLottery",
+            "offset": 0,
+            "slot": "163",
+            "type": "t_struct(LotteryInfo)1099_storage",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:48"
+          },
+          {
+            "label": "lotteryStatus",
+            "offset": 0,
+            "slot": "169",
+            "type": "t_enum(Status)1107",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:57"
+          },
+          {
+            "label": "playerTicketNumbers",
+            "offset": 0,
+            "slot": "170",
+            "type": "t_mapping(t_address,t_array(t_uint256)dyn_storage)",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:67"
+          },
+          {
+            "label": "allLotteries",
+            "offset": 0,
+            "slot": "171",
+            "type": "t_mapping(t_uint256,t_struct(LotteryInfo)1099_storage)",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:68"
+          },
+          {
+            "label": "choosenNumber",
+            "offset": 0,
+            "slot": "172",
+            "type": "t_mapping(t_uint256,t_address)",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:69"
+          },
+          {
+            "label": "limitedAmount",
+            "offset": 0,
+            "slot": "173",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:70"
+          },
+          {
+            "label": "x",
+            "offset": 0,
+            "slot": "174",
+            "type": "t_uint256",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:130"
+          },
+          {
+            "label": "y",
+            "offset": 0,
+            "slot": "175",
+            "type": "t_address",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:131"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_address_payable": {
+            "label": "address payable",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_address_payable)dyn_storage": {
+            "label": "address payable[]",
+            "numberOfBytes": "32"
+          },
+          "t_array(t_uint256)45_storage": {
+            "label": "uint256[45]",
+            "numberOfBytes": "1440"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_array(t_uint256)dyn_storage": {
+            "label": "uint256[]",
+            "numberOfBytes": "32"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_contract(RequestVRFNumber)2091": {
+            "label": "contract RequestVRFNumber",
+            "numberOfBytes": "20"
+          },
+          "t_enum(Status)1107": {
+            "label": "enum LotteryUpgradable.Status",
+            "members": [
+              "NOT_STARTED",
+              "OPEN",
+              "CLOSED",
+              "COMPLETED"
+            ],
+            "numberOfBytes": "1"
+          },
+          "t_mapping(t_address,t_array(t_uint256)dyn_storage)": {
+            "label": "mapping(address => uint256[])",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+            "label": "mapping(address => mapping(address => uint256))",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_address)": {
+            "label": "mapping(uint256 => address)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_struct(LotteryInfo)1099_storage)": {
+            "label": "mapping(uint256 => struct LotteryUpgradable.LotteryInfo)",
+            "numberOfBytes": "32"
+          },
+          "t_string_storage": {
+            "label": "string",
+            "numberOfBytes": "32"
+          },
+          "t_struct(LotteryInfo)1099_storage": {
+            "label": "struct LotteryUpgradable.LotteryInfo",
+            "members": [
+              {
+                "label": "_lotteryID",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "_costPerTicket",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "_startingTimestamp",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "_closingTimestamp",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "_winner",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "4"
+              },
+              {
+                "label": "_randomResult",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "5"
+              }
+            ],
+            "numberOfBytes": "192"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          }
+        }
+      }
+    },
+    "7a9311381af9a001e72ffdab48fd68236bd822d0123fb4738a86d5a71e1d1bd2": {
+      "address": "0x493C55d3977be66eb2901EAB7f13042a5c6Dda8F",
+      "txHash": "0x0f391b29540a372a2925e8cc63d46752a05ff48682e5db3b2ef1a6f96d70c537",
+      "layout": {
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:21"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:26"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\utils\\ContextUpgradeable.sol:30"
+          },
+          {
+            "label": "_owner",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_address",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:21"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "52",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:77"
+          },
+          {
+            "label": "_balances",
+            "offset": 0,
+            "slot": "101",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "ERC20Upgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC20\\ERC20Upgradeable.sol:36"
+          },
+          {
+            "label": "_allowances",
+            "offset": 0,
+            "slot": "102",
+            "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+            "contract": "ERC20Upgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC20\\ERC20Upgradeable.sol:38"
+          },
+          {
+            "label": "_totalSupply",
+            "offset": 0,
+            "slot": "103",
+            "type": "t_uint256",
+            "contract": "ERC20Upgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC20\\ERC20Upgradeable.sol:40"
+          },
+          {
+            "label": "_name",
+            "offset": 0,
+            "slot": "104",
+            "type": "t_string_storage",
+            "contract": "ERC20Upgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC20\\ERC20Upgradeable.sol:42"
+          },
+          {
+            "label": "_symbol",
+            "offset": 0,
+            "slot": "105",
+            "type": "t_string_storage",
+            "contract": "ERC20Upgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC20\\ERC20Upgradeable.sol:43"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "106",
+            "type": "t_array(t_uint256)45_storage",
+            "contract": "ERC20Upgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC20\\ERC20Upgradeable.sol:361"
+          },
+          {
+            "label": "requestContract",
+            "offset": 0,
+            "slot": "151",
+            "type": "t_contract(RequestVRFNumber)2094",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:19"
+          },
+          {
+            "label": "randomResult",
+            "offset": 0,
+            "slot": "152",
+            "type": "t_uint256",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:20"
+          },
+          {
+            "label": "players",
+            "offset": 0,
+            "slot": "153",
+            "type": "t_array(t_address_payable)dyn_storage",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:27"
+          },
+          {
+            "label": "winner",
+            "offset": 0,
+            "slot": "154",
+            "type": "t_address_payable",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:28"
+          },
+          {
+            "label": "lotteryID",
+            "offset": 0,
+            "slot": "155",
+            "type": "t_uint256",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:29"
+          },
+          {
+            "label": "costPerTicket",
+            "offset": 0,
+            "slot": "156",
+            "type": "t_uint256",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:30"
+          },
+          {
+            "label": "startingTimestamp",
+            "offset": 0,
+            "slot": "157",
+            "type": "t_uint256",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:31"
+          },
+          {
+            "label": "closingTimestamp",
+            "offset": 0,
+            "slot": "158",
+            "type": "t_uint256",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:32"
+          },
+          {
+            "label": "isWinnerWithdraw",
+            "offset": 0,
+            "slot": "159",
+            "type": "t_bool",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:33"
+          },
+          {
+            "label": "isRequest",
+            "offset": 1,
+            "slot": "159",
+            "type": "t_bool",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:34"
+          },
+          {
+            "label": "_randomNumbers",
+            "offset": 0,
+            "slot": "160",
+            "type": "t_array(t_uint256)dyn_storage",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:35"
+          },
+          {
+            "label": "availableCount",
+            "offset": 0,
+            "slot": "161",
+            "type": "t_uint256",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:36"
+          },
+          {
+            "label": "count",
+            "offset": 0,
+            "slot": "162",
+            "type": "t_uint256",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:37"
+          },
+          {
+            "label": "currentLottery",
+            "offset": 0,
+            "slot": "163",
+            "type": "t_struct(LotteryInfo)1099_storage",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:48"
+          },
+          {
+            "label": "lotteryStatus",
+            "offset": 0,
+            "slot": "169",
+            "type": "t_enum(Status)1107",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:57"
+          },
+          {
+            "label": "playerTicketNumbers",
+            "offset": 0,
+            "slot": "170",
+            "type": "t_mapping(t_address,t_array(t_uint256)dyn_storage)",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:67"
+          },
+          {
+            "label": "allLotteries",
+            "offset": 0,
+            "slot": "171",
+            "type": "t_mapping(t_uint256,t_struct(LotteryInfo)1099_storage)",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:68"
+          },
+          {
+            "label": "choosenNumber",
+            "offset": 0,
+            "slot": "172",
+            "type": "t_mapping(t_uint256,t_address)",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:69"
+          },
+          {
+            "label": "limitedAmount",
+            "offset": 0,
+            "slot": "173",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:70"
+          },
+          {
+            "label": "x",
+            "offset": 0,
+            "slot": "174",
+            "type": "t_uint256",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:130"
+          },
+          {
+            "label": "y",
+            "offset": 0,
+            "slot": "175",
+            "type": "t_address",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:131"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_address_payable": {
+            "label": "address payable",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_address_payable)dyn_storage": {
+            "label": "address payable[]",
+            "numberOfBytes": "32"
+          },
+          "t_array(t_uint256)45_storage": {
+            "label": "uint256[45]",
+            "numberOfBytes": "1440"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_array(t_uint256)dyn_storage": {
+            "label": "uint256[]",
+            "numberOfBytes": "32"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_contract(RequestVRFNumber)2094": {
+            "label": "contract RequestVRFNumber",
+            "numberOfBytes": "20"
+          },
+          "t_enum(Status)1107": {
+            "label": "enum LotteryUpgradable.Status",
+            "members": [
+              "NOT_STARTED",
+              "OPEN",
+              "CLOSED",
+              "COMPLETED"
+            ],
+            "numberOfBytes": "1"
+          },
+          "t_mapping(t_address,t_array(t_uint256)dyn_storage)": {
+            "label": "mapping(address => uint256[])",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+            "label": "mapping(address => mapping(address => uint256))",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_address)": {
+            "label": "mapping(uint256 => address)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_struct(LotteryInfo)1099_storage)": {
+            "label": "mapping(uint256 => struct LotteryUpgradable.LotteryInfo)",
+            "numberOfBytes": "32"
+          },
+          "t_string_storage": {
+            "label": "string",
+            "numberOfBytes": "32"
+          },
+          "t_struct(LotteryInfo)1099_storage": {
+            "label": "struct LotteryUpgradable.LotteryInfo",
+            "members": [
+              {
+                "label": "_lotteryID",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "_costPerTicket",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "_startingTimestamp",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "_closingTimestamp",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "_winner",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "4"
+              },
+              {
+                "label": "_randomResult",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "5"
+              }
+            ],
+            "numberOfBytes": "192"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          }
+        }
+      }
+    },
+    "f24892b8cbf6a87b23f95cb194e378e9fb495c91106fd720d47d40a2c7ad96f5": {
+      "address": "0x0Af1a0D69597d203D21156284B723C73C76EF82D",
+      "txHash": "0x0c91c067dc9071926834b790c37529645c19166a9ae117c65a1772d5f1aa205c",
+      "layout": {
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:21"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:26"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\utils\\ContextUpgradeable.sol:30"
+          },
+          {
+            "label": "_owner",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_address",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:21"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "52",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:77"
+          },
+          {
+            "label": "_balances",
+            "offset": 0,
+            "slot": "101",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "ERC20Upgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC20\\ERC20Upgradeable.sol:36"
+          },
+          {
+            "label": "_allowances",
+            "offset": 0,
+            "slot": "102",
+            "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+            "contract": "ERC20Upgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC20\\ERC20Upgradeable.sol:38"
+          },
+          {
+            "label": "_totalSupply",
+            "offset": 0,
+            "slot": "103",
+            "type": "t_uint256",
+            "contract": "ERC20Upgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC20\\ERC20Upgradeable.sol:40"
+          },
+          {
+            "label": "_name",
+            "offset": 0,
+            "slot": "104",
+            "type": "t_string_storage",
+            "contract": "ERC20Upgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC20\\ERC20Upgradeable.sol:42"
+          },
+          {
+            "label": "_symbol",
+            "offset": 0,
+            "slot": "105",
+            "type": "t_string_storage",
+            "contract": "ERC20Upgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC20\\ERC20Upgradeable.sol:43"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "106",
+            "type": "t_array(t_uint256)45_storage",
+            "contract": "ERC20Upgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC20\\ERC20Upgradeable.sol:361"
+          },
+          {
+            "label": "requestContract",
+            "offset": 0,
+            "slot": "151",
+            "type": "t_contract(RequestVRFNumber)2096",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:19"
+          },
+          {
+            "label": "randomResult",
+            "offset": 0,
+            "slot": "152",
+            "type": "t_uint256",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:20"
+          },
+          {
+            "label": "players",
+            "offset": 0,
+            "slot": "153",
+            "type": "t_array(t_address_payable)dyn_storage",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:27"
+          },
+          {
+            "label": "winner",
+            "offset": 0,
+            "slot": "154",
+            "type": "t_address_payable",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:28"
+          },
+          {
+            "label": "lotteryID",
+            "offset": 0,
+            "slot": "155",
+            "type": "t_uint256",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:29"
+          },
+          {
+            "label": "costPerTicket",
+            "offset": 0,
+            "slot": "156",
+            "type": "t_uint256",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:30"
+          },
+          {
+            "label": "startingTimestamp",
+            "offset": 0,
+            "slot": "157",
+            "type": "t_uint256",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:31"
+          },
+          {
+            "label": "closingTimestamp",
+            "offset": 0,
+            "slot": "158",
+            "type": "t_uint256",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:32"
+          },
+          {
+            "label": "isWinnerWithdraw",
+            "offset": 0,
+            "slot": "159",
+            "type": "t_bool",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:33"
+          },
+          {
+            "label": "isRequest",
+            "offset": 1,
+            "slot": "159",
+            "type": "t_bool",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:34"
+          },
+          {
+            "label": "_randomNumbers",
+            "offset": 0,
+            "slot": "160",
+            "type": "t_array(t_uint256)dyn_storage",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:35"
+          },
+          {
+            "label": "availableCount",
+            "offset": 0,
+            "slot": "161",
+            "type": "t_uint256",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:36"
+          },
+          {
+            "label": "count",
+            "offset": 0,
+            "slot": "162",
+            "type": "t_uint256",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:37"
+          },
+          {
+            "label": "currentLottery",
+            "offset": 0,
+            "slot": "163",
+            "type": "t_struct(LotteryInfo)1099_storage",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:48"
+          },
+          {
+            "label": "lotteryStatus",
+            "offset": 0,
+            "slot": "169",
+            "type": "t_enum(Status)1107",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:57"
+          },
+          {
+            "label": "playerTicketNumbers",
+            "offset": 0,
+            "slot": "170",
+            "type": "t_mapping(t_address,t_array(t_uint256)dyn_storage)",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:67"
+          },
+          {
+            "label": "allLotteries",
+            "offset": 0,
+            "slot": "171",
+            "type": "t_mapping(t_uint256,t_struct(LotteryInfo)1099_storage)",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:68"
+          },
+          {
+            "label": "choosenNumber",
+            "offset": 0,
+            "slot": "172",
+            "type": "t_mapping(t_uint256,t_address)",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:69"
+          },
+          {
+            "label": "limitedAmount",
+            "offset": 0,
+            "slot": "173",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:70"
+          },
+          {
+            "label": "x",
+            "offset": 0,
+            "slot": "174",
+            "type": "t_uint256",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:130"
+          },
+          {
+            "label": "y",
+            "offset": 0,
+            "slot": "175",
+            "type": "t_address",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:131"
+          },
+          {
+            "label": "z",
+            "offset": 0,
+            "slot": "176",
+            "type": "t_uint256",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:132"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_address_payable": {
+            "label": "address payable",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_address_payable)dyn_storage": {
+            "label": "address payable[]",
+            "numberOfBytes": "32"
+          },
+          "t_array(t_uint256)45_storage": {
+            "label": "uint256[45]",
+            "numberOfBytes": "1440"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_array(t_uint256)dyn_storage": {
+            "label": "uint256[]",
+            "numberOfBytes": "32"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_contract(RequestVRFNumber)2096": {
+            "label": "contract RequestVRFNumber",
+            "numberOfBytes": "20"
+          },
+          "t_enum(Status)1107": {
+            "label": "enum LotteryUpgradable.Status",
+            "members": [
+              "NOT_STARTED",
+              "OPEN",
+              "CLOSED",
+              "COMPLETED"
+            ],
+            "numberOfBytes": "1"
+          },
+          "t_mapping(t_address,t_array(t_uint256)dyn_storage)": {
+            "label": "mapping(address => uint256[])",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+            "label": "mapping(address => mapping(address => uint256))",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_address)": {
+            "label": "mapping(uint256 => address)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_struct(LotteryInfo)1099_storage)": {
+            "label": "mapping(uint256 => struct LotteryUpgradable.LotteryInfo)",
+            "numberOfBytes": "32"
+          },
+          "t_string_storage": {
+            "label": "string",
+            "numberOfBytes": "32"
+          },
+          "t_struct(LotteryInfo)1099_storage": {
+            "label": "struct LotteryUpgradable.LotteryInfo",
+            "members": [
+              {
+                "label": "_lotteryID",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "_costPerTicket",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "_startingTimestamp",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "_closingTimestamp",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "_winner",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "4"
+              },
+              {
+                "label": "_randomResult",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "5"
+              }
+            ],
+            "numberOfBytes": "192"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          }
+        }
+      }
+    },
+    "0e7e5c2770ef94e9a8a5a0a045877f9cec6985d1124dcb20a11f5d8f8c3ee262": {
+      "address": "0xcFB33dAf1E3e865Dc3C40a1154A450b3fC9BEf0D",
+      "txHash": "0x52053cc640faca34ada58be8d666514dab5c1c8b7d91ceba08c426ecaeb99ca9",
+      "layout": {
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:21"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:26"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\utils\\ContextUpgradeable.sol:30"
+          },
+          {
+            "label": "_owner",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_address",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:21"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "52",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:77"
+          },
+          {
+            "label": "_balances",
+            "offset": 0,
+            "slot": "101",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "ERC20Upgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC20\\ERC20Upgradeable.sol:36"
+          },
+          {
+            "label": "_allowances",
+            "offset": 0,
+            "slot": "102",
+            "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+            "contract": "ERC20Upgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC20\\ERC20Upgradeable.sol:38"
+          },
+          {
+            "label": "_totalSupply",
+            "offset": 0,
+            "slot": "103",
+            "type": "t_uint256",
+            "contract": "ERC20Upgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC20\\ERC20Upgradeable.sol:40"
+          },
+          {
+            "label": "_name",
+            "offset": 0,
+            "slot": "104",
+            "type": "t_string_storage",
+            "contract": "ERC20Upgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC20\\ERC20Upgradeable.sol:42"
+          },
+          {
+            "label": "_symbol",
+            "offset": 0,
+            "slot": "105",
+            "type": "t_string_storage",
+            "contract": "ERC20Upgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC20\\ERC20Upgradeable.sol:43"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "106",
+            "type": "t_array(t_uint256)45_storage",
+            "contract": "ERC20Upgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\token\\ERC20\\ERC20Upgradeable.sol:361"
+          },
+          {
+            "label": "requestContract",
+            "offset": 0,
+            "slot": "151",
+            "type": "t_contract(RequestVRFNumber)2095",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:19"
+          },
+          {
+            "label": "randomResult",
+            "offset": 0,
+            "slot": "152",
+            "type": "t_uint256",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:20"
+          },
+          {
+            "label": "players",
+            "offset": 0,
+            "slot": "153",
+            "type": "t_array(t_address_payable)dyn_storage",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:27"
+          },
+          {
+            "label": "winner",
+            "offset": 0,
+            "slot": "154",
+            "type": "t_address_payable",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:28"
+          },
+          {
+            "label": "lotteryID",
+            "offset": 0,
+            "slot": "155",
+            "type": "t_uint256",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:29"
+          },
+          {
+            "label": "costPerTicket",
+            "offset": 0,
+            "slot": "156",
+            "type": "t_uint256",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:30"
+          },
+          {
+            "label": "startingTimestamp",
+            "offset": 0,
+            "slot": "157",
+            "type": "t_uint256",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:31"
+          },
+          {
+            "label": "closingTimestamp",
+            "offset": 0,
+            "slot": "158",
+            "type": "t_uint256",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:32"
+          },
+          {
+            "label": "isWinnerWithdraw",
+            "offset": 0,
+            "slot": "159",
+            "type": "t_bool",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:33"
+          },
+          {
+            "label": "isRequest",
+            "offset": 1,
+            "slot": "159",
+            "type": "t_bool",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:34"
+          },
+          {
+            "label": "_randomNumbers",
+            "offset": 0,
+            "slot": "160",
+            "type": "t_array(t_uint256)dyn_storage",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:35"
+          },
+          {
+            "label": "availableCount",
+            "offset": 0,
+            "slot": "161",
+            "type": "t_uint256",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:36"
+          },
+          {
+            "label": "count",
+            "offset": 0,
+            "slot": "162",
+            "type": "t_uint256",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:37"
+          },
+          {
+            "label": "currentLottery",
+            "offset": 0,
+            "slot": "163",
+            "type": "t_struct(LotteryInfo)1099_storage",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:48"
+          },
+          {
+            "label": "lotteryStatus",
+            "offset": 0,
+            "slot": "169",
+            "type": "t_enum(Status)1107",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:57"
+          },
+          {
+            "label": "playerTicketNumbers",
+            "offset": 0,
+            "slot": "170",
+            "type": "t_mapping(t_address,t_array(t_uint256)dyn_storage)",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:67"
+          },
+          {
+            "label": "allLotteries",
+            "offset": 0,
+            "slot": "171",
+            "type": "t_mapping(t_uint256,t_struct(LotteryInfo)1099_storage)",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:68"
+          },
+          {
+            "label": "choosenNumber",
+            "offset": 0,
+            "slot": "172",
+            "type": "t_mapping(t_uint256,t_address)",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:69"
+          },
+          {
+            "label": "limitedAmount",
+            "offset": 0,
+            "slot": "173",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:70"
+          },
+          {
+            "label": "x",
+            "offset": 0,
+            "slot": "174",
+            "type": "t_uint256",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:130"
+          },
+          {
+            "label": "y",
+            "offset": 0,
+            "slot": "175",
+            "type": "t_address",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:131"
+          },
+          {
+            "label": "z",
+            "offset": 0,
+            "slot": "176",
+            "type": "t_uint256",
+            "contract": "LotteryUpgradable",
+            "src": "contracts\\LotteryUpgrade.sol:132"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_address_payable": {
+            "label": "address payable",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_address_payable)dyn_storage": {
+            "label": "address payable[]",
+            "numberOfBytes": "32"
+          },
+          "t_array(t_uint256)45_storage": {
+            "label": "uint256[45]",
+            "numberOfBytes": "1440"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_array(t_uint256)dyn_storage": {
+            "label": "uint256[]",
+            "numberOfBytes": "32"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_contract(RequestVRFNumber)2095": {
+            "label": "contract RequestVRFNumber",
+            "numberOfBytes": "20"
+          },
+          "t_enum(Status)1107": {
+            "label": "enum LotteryUpgradable.Status",
+            "members": [
+              "NOT_STARTED",
+              "OPEN",
+              "CLOSED",
+              "COMPLETED"
+            ],
+            "numberOfBytes": "1"
+          },
+          "t_mapping(t_address,t_array(t_uint256)dyn_storage)": {
+            "label": "mapping(address => uint256[])",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+            "label": "mapping(address => mapping(address => uint256))",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_address)": {
+            "label": "mapping(uint256 => address)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_struct(LotteryInfo)1099_storage)": {
+            "label": "mapping(uint256 => struct LotteryUpgradable.LotteryInfo)",
+            "numberOfBytes": "32"
+          },
+          "t_string_storage": {
+            "label": "string",
+            "numberOfBytes": "32"
+          },
+          "t_struct(LotteryInfo)1099_storage": {
+            "label": "struct LotteryUpgradable.LotteryInfo",
+            "members": [
+              {
+                "label": "_lotteryID",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "_costPerTicket",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "_startingTimestamp",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "_closingTimestamp",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "_winner",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "4"
+              },
+              {
+                "label": "_randomResult",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "5"
+              }
+            ],
+            "numberOfBytes": "192"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          }
+        }
+      }
+    }
+  }
+}

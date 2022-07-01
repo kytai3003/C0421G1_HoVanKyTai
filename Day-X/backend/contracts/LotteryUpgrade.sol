@@ -184,13 +184,19 @@ contract LotteryUpgradable is
     }
     
     function shuffleNumbers() private {
-        uint256 timestamp = block.timestamp;
-        for(uint256 i = _randomNumbers.length - 1 ; i > 0; i--) {
-            uint256 swapIndex = timestamp % (_randomNumbers.length - i);
-            uint256 currentIndex = _randomNumbers[i];
-            uint256 indexToSwap = _randomNumbers[swapIndex];
-            _randomNumbers[i] = indexToSwap;
-            _randomNumbers[swapIndex] = currentIndex;
+        // uint256 timestamp = block.timestamp;
+        // for(uint256 i = _randomNumbers.length - 1 ; i > 0; i--) {
+        //     uint256 swapIndex = timestamp % (_randomNumbers.length - i);
+        //     uint256 currentIndex = _randomNumbers[i];
+        //     uint256 indexToSwap = _randomNumbers[swapIndex];
+        //     _randomNumbers[i] = indexToSwap;
+        //     _randomNumbers[swapIndex] = currentIndex;
+        // }
+        for (uint256 i = 0; i < _randomNumbers.length; i++) {
+        uint256 n = i + uint256(keccak256(abi.encodePacked(block.timestamp))) % (_randomNumbers.length - i);
+        uint256 temp = _randomNumbers[n];
+        _randomNumbers[n] = _randomNumbers[i];
+        _randomNumbers[i] = temp;
         }
     }
 
@@ -200,6 +206,14 @@ contract LotteryUpgradable is
 
     function getAvailableTicket() public view returns(uint) {
         return availableCount;
+    }
+
+    function getResult() public view onlyOwner returns(uint) {
+        return requestContract.randomResult();
+    }
+
+    function getWinner() public view onlyOwner returns (address payable) {
+        return payable(choosenNumber[requestContract.randomResult()]);
     }
 
     function buyTickets(uint _ticketAmount) public limitedBuy(_ticketAmount) outOfTicket(_ticketAmount) ifOpen onlyPlayer {
@@ -220,7 +234,7 @@ contract LotteryUpgradable is
     }
 
 
-    function getContractTokenBalance() public onlyOwner view returns(uint256){
+    function getContractTokenBalance() public view returns(uint256){
        return balanceOf(address(this));
    }
 
@@ -271,7 +285,7 @@ contract LotteryUpgradable is
             startingTimestamp,
             closingTimestamp,
             winner,
-            randomResult
+            requestContract.randomResult()
         );
     }
 
@@ -297,7 +311,9 @@ contract LotteryUpgradable is
         for (uint256 i = 0; i < players.length; i++) {
             delete playerTicketNumbers[players[i]];
             limitedAmount[players[i]] = 0;
-            delete choosenNumber[i];
+        }
+        for (uint j = 1; j <= 99; j++) {
+            delete choosenNumber[j];
         }
     }
 
